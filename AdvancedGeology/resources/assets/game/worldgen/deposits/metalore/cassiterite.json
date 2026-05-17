@@ -1,0 +1,67 @@
+[
+	{
+		"code": "surfacecassiterite",
+		"generator": "disc-followsurface",
+		"triesPerChunk": 0.007,
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["granite", "gneiss", "diorite", "rhyolite"]
+			},
+			"placeblock": { "code": "ore-poor-cassiterite-{rock}" },
+			"surfaceBlock": { "code": "looseores-cassiterite-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
+			"yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	},
+	{
+		"code": "cassiterite",
+		"triesPerChunk": 7,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-cassiterite",
+		"generator": "disc-followsurface",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["granite", "gneiss", "diorite", "rhyolite"]
+			},
+			"placeblock": {
+				"code": "ore-*-cassiterite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-granite": ["poor", "medium", "rich", "bountiful"],
+					"rock-gneiss": ["poor", "medium", "rich"],
+					"rock-diorite": ["poor", "medium", "rich"],
+					"rock-rhyolite": ["poor", "medium", "rich"]
+				}
+			},
+			"radius": { "dist": "gaussian", "avg": 5, "var": 3 },
+			"yPosRel": { "dist": "uniform", "avg": 0.575, "var": 0.175 },
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	},
+	{
+		"code": "cassiterite-geoaddons-compat",
+		"triesPerChunk": 0,
+		"generator": "disc-followsurface",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": []
+			},
+			"placeblock": {
+				"code": "ore-*-cassiterite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {}
+			},
+			"radius": { "dist": "uniform", "avg": 1, "var": 0 },
+			"yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.5 },
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	}
+]

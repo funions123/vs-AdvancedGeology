@@ -1,0 +1,19 @@
+[
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-limonite-limestone", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-limonite-limestone", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-limonite-limestone", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-limonite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-limonite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-limonite-limestone", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-limonite-limestone", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-limonite-limestone", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-limonite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-limonite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-limonite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-limonite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-limonite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-limonite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-limonite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" }
+]

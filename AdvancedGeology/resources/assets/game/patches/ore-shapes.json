@@ -1,0 +1,105 @@
+[
+  {
+    "op": "add",
+    "path": "/shapeByType",
+    "value": {},
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-chalcopyrite-*",
+    "value": { "base": "item/ore/{grade}/chalcopyrite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-nickeline-*",
+    "value": { "base": "item/ore/{grade}/nickeline" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-cobaltite-*",
+    "value": { "base": "item/ore/{grade}/cobaltite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-garnierite-*",
+    "value": { "base": "item/ore/{grade}/garnierite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-tetrahedrite-*",
+    "value": { "base": "item/ore/{grade}/tetrahedrite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-siderite-*",
+    "value": { "base": "item/ore/{grade}/siderite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+
+  {
+    "op": "add",
+    "path": "/textures/oreByType",
+    "value": {},
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-chalcopyrite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/chalcopyrite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-nickeline-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/nickeline1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-cobaltite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/cobaltite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-garnierite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/garnierite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-tetrahedrite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/tetrahedrite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-siderite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/siderite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

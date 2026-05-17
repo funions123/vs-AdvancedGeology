@@ -1,0 +1,70 @@
+[
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-nickeline-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/nickeline1"],
+        "alternates": [
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/nickeline2"] },
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/nickeline3"] }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-garnierite-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/garnierite1"],
+        "alternates": [
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/garnierite2"] },
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/garnierite3"] }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/looseores-nickeline-*",
+    "value": {
+      "rock": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/nickeline1"]
+      }
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/looseores-garnierite-*",
+    "value": {
+      "rock": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/garnierite1"]
+      }
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-cobaltite-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/cobaltite1"],
+        "alternates": [
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/cobaltite2"] },
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/cobaltite3"] }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  }
+]

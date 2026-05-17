@@ -1,0 +1,34 @@
+[
+  {
+    "code": "nickeline",
+    "triesPerChunk": 6,
+    "oreMapScale": 1.5,
+    "oreMapContrast": 1.5,
+    "oreMapSub": 40,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-nickeline",
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": ["gneiss", "schist", "granite"]
+      },
+      "placeblock": {
+        "code": "ore-*-nickeline-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-gneiss": ["poor", "medium", "rich", "bountiful"],
+          "rock-schist": ["poor", "medium", "rich"],
+          "rock-granite": ["poor", "medium", "rich"]
+        }
+      },
+      "surfaceBlock": { "code": "looseores-nickeline-{rock}-free" },
+      "surfaceBlockChance": 0.2,
+      "radius": { "dist": "uniform", "avg": 8, "var": 3 },
+      "yPosRel": { "dist": "uniform", "avg": 0.25, "var": 0.2 },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": { "dist": "stronginvexp", "avg": 1, "var": 2 }
+    }
+  }
+]

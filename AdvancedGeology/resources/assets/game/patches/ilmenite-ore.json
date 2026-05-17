@@ -1,0 +1,32 @@
+[
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-ilmenite-diorite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-ilmenite-diorite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-ilmenite-diorite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-ilmenite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-ilmenite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-ilmenite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-ilmenite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-ilmenite-sandstone", "file": "game:blocktypes/stone/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-ilmenite-diorite-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-ilmenite-gabbro-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-ilmenite-sandstone-free", "file": "game:blocktypes/stone/looseores.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-ilmenite-diorite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-ilmenite-diorite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-ilmenite-diorite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-ilmenite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-ilmenite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-ilmenite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-ilmenite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-ilmenite-sandstone", "file": "game:itemtypes/resource/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-ilmenite-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-ilmenite-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-ilmenite-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-ilmenite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-ilmenite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-ilmenite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-ilmenite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-ilmenite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json" }
+]

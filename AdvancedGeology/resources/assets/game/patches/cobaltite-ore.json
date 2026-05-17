@@ -1,0 +1,62 @@
+[
+  { "op": "add", "path": "/variants/-", "value": { "Code": "cobaltite" }, "file": "game:worldproperties/block/ore-graded.json" },
+  { "op": "add", "path": "/variants/-", "value": { "Code": "cobaltite" }, "file": "game:worldproperties/block/ore-nugget.json" },
+  { "op": "add", "path": "/requiredMiningTierByType/ore-*-cobaltite-*", "value": 3, "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/combustiblePropsByType/*-cobaltite", "value": { "meltingPoint": 1455, "meltingDuration": 30, "smeltedRatio": 20, "smeltedStack": { "type": "item", "code": "ingot-nickel" } }, "file": "game:itemtypes/resource/nugget.json" },
+
+  // ==== ORE BLOCK VARIANTS (same rocks as nickeline) ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-cobaltite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-cobaltite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-schist", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-schist", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-cobaltite-schist", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-granite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-granite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-cobaltite-granite", "file": "game:blocktypes/stone/ore-graded.json" },
+
+  // ==== ORE ITEM VARIANTS ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-cobaltite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-cobaltite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-schist", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-schist", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-cobaltite-schist", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-granite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-granite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-cobaltite-granite", "file": "game:itemtypes/resource/ore-graded.json" },
+
+  // ==== CRYSTALLIZED ORE ITEM VARIANTS ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cobaltite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cobaltite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-cobaltite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-cobaltite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cobaltite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cobaltite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-cobaltite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cobaltite-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cobaltite-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-cobaltite-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+
+  // ==== NICKELINE DROP OVERRIDE — adds cobaltite as secondary drop ====
+  {
+    "op": "add",
+    "path": "/dropsByType/ore-*-nickeline-*",
+    "value": [
+      { "type": "item", "code": "crystalizedore-{grade}-{type}-{rock}", "quantity": { "avg": 0.01, "var": 0 } },
+      { "type": "item", "code": "ore-{grade}-{type}-{rock}", "quantity": { "avg": 1.25, "var": 0 } },
+      { "type": "item", "code": "ore-{grade}-cobaltite-{rock}", "quantity": { "avg": 0.05, "var": 0 } }
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+
+  // ==== GEOADDONS: cobaltite in amphibolite ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cobaltite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cobaltite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cobaltite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cobaltite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
+]

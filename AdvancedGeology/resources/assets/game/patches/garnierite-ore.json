@@ -1,0 +1,36 @@
+[
+  { "op": "add", "path": "/variants/-", "value": { "Code": "garnierite" }, "file": "game:worldproperties/block/ore-graded.json" },
+  { "op": "add", "path": "/variants/-", "value": { "Code": "garnierite" }, "file": "game:worldproperties/block/ore-nugget.json" },
+  { "op": "add", "path": "/requiredMiningTierByType/ore-*-garnierite-*", "value": 3, "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/combustiblePropsByType/*-garnierite", "value": { "meltingPoint": 1455, "meltingDuration": 30, "smeltedRatio": 20, "smeltedStack": { "type": "item", "code": "ingot-nickel" } }, "file": "game:itemtypes/resource/nugget.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-garnierite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-garnierite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-garnierite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-garnierite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-garnierite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-garnierite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-garnierite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-garnierite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-garnierite-peridotite-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-garnierite-gabbro-free", "file": "game:blocktypes/stone/looseores.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-garnierite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-garnierite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-garnierite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-garnierite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-garnierite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-garnierite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-garnierite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-garnierite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-garnierite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-garnierite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-garnierite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-garnierite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-garnierite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-garnierite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-garnierite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-garnierite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" }
+]

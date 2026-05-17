@@ -1,0 +1,21 @@
+[
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bituminouscoal-dolomite", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-anthracite-phyllite", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-anthracite-slate", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-anthracite-redmarble", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-anthracite-greenmarble", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-anthracite-whitemarble", "file": "game:blocktypes/stone/ore-ungraded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-bituminouscoal-dolomite-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-anthracite-phyllite-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-anthracite-slate-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-anthracite-redmarble-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-anthracite-greenmarble-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-anthracite-whitemarble-free", "file": "game:blocktypes/stone/looseores.json" },
+
+  // ==== GEOADDONS: lignite in siltstone and mudstone ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-lignite-siltstone", "file": "game:blocktypes/stone/ore-ungraded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-lignite-mudstone", "file": "game:blocktypes/stone/ore-ungraded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-lignite-siltstone-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-lignite-mudstone-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] }
+]

@@ -1,0 +1,33 @@
+[
+	{
+		"code": "tetrahedrite",
+		"triesPerChunk": 10,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-tetrahedrite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["phyllite", "andesite", "quartzite", "schist", "dacite"]
+			},
+			"placeblock": {
+				"code": "ore-*-tetrahedrite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-phyllite": ["poor", "medium"],
+					"rock-andesite": ["poor", "medium", "rich"],
+					"rock-quartzite": ["poor", "medium", "rich"],
+					"rock-schist": ["poor", "medium", "rich"],
+					"rock-dacite": ["poor", "medium", "rich", "bountiful"]
+				}
+			},
+			"surfaceBlock": { "code": "looseores-tetrahedrite-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 6, "var": 3 },
+			"yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.30 },
+			"gradeDistribution": "RandomPlusDepthBonus",
+			"thickness": { "dist": "stronginvexp", "avg": 1, "var": 2 }
+		}
+	}
+]

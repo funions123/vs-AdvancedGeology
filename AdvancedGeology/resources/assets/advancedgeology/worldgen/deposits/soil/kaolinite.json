@@ -1,0 +1,45 @@
+[
+	{
+		"code": "kaolinite",
+		"triesPerChunk": 0.005,
+		"handbookPageCode": "rock-kaolinite",
+		"generator": "disc-layeredsurface",
+		"attributes": {
+			"soilInBlock": {
+				"code": "soil-*",
+				"name": "fertcover",
+				"allowedVariants": ["low-none", "medium-none", "low-verysparse", "medium-verysparse", "low-sparse", "medium-sparse", "low-normal", "medium-normal"]
+			},
+			"topLayerBlock": {
+				"code": "rawclay-red-*",
+				"name": "clayfertcover",
+				"allowedVariantsByInBlock": {
+					"soil-low-none": ["none"],
+					"soil-medium-none": ["none"],
+					"soil-low-verysparse": ["verysparse"],
+					"soil-medium-verysparse": ["verysparse"],
+					"soil-low-sparse": ["verysparse"],
+					"soil-medium-sparse": ["verysparse"],
+					"soil-low-normal": ["verysparse"],
+					"soil-medium-normal": ["verysparse"]
+				}
+			},
+			"topLayerThickness": 3,
+			"middleLayerBlock": { "code": "advancedgeology:rawkaolinite-none" },
+			"middleLayerFillToBedrock": true,
+			"rockInBlock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": [ "granite", "diorite", "andesite", "shale", "slate", "phyllite", "claystone" ]
+			},
+			"requireImmediateRock": true,
+			"radius": { "dist": "uniform", "avg": 24, "var": 7 },
+			"maxYRoughness": 2,
+			"withLastLayerBlockCallback": true
+		},
+		"climate": {
+			"minRain": 0.35,
+			"maxRain": 1.0
+		}
+	}
+]

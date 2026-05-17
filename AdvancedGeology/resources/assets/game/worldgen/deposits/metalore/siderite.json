@@ -1,0 +1,32 @@
+[
+	{
+		"code": "siderite",
+		"triesPerChunk": 0.5,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-siderite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["claystone", "shale", "limestone", "dolomite"]
+			},
+			"placeblock": {
+				"code": "ore-*-siderite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-claystone": ["poor", "medium"],
+					"rock-shale": ["poor", "medium"],
+					"rock-limestone": ["medium", "rich"],
+					"rock-dolomite": ["medium", "rich"]
+				}
+			},
+			"surfaceBlock": { "code": "looseores-siderite-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 26, "var": 10 },
+			"yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+			"gradeDistribution": "RandomPlusDepthBonus",
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	}
+]

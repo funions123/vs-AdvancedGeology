@@ -1,0 +1,88 @@
+[
+	{
+		"code": "limonite",
+		"triesPerChunk": 0.8,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-limonite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["limestone", "peridotite", "basalt"]
+			},
+			"placeblock": {
+				"code": "ore-*-limonite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-limestone": ["poor", "medium", "rich"],
+					"rock-peridotite": ["poor", "medium"],
+					"rock-basalt": ["poor", "medium"]
+				}
+			},
+			"radius": { "dist": "uniform", "avg": 26, "var": 10 },
+			"yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+			"gradeDistribution": "RandomPlusDepthBonus",
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	},
+	{
+		"code": "hematite",
+		"triesPerChunk": 0.5,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-hematite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["chert", "limestone", "phyllite", "schist", "dolomite"]
+			},
+			"placeblock": {
+				"code": "ore-*-hematite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-chert": ["poor", "medium", "rich", "bountiful"],
+					"rock-limestone": ["poor", "medium", "rich"],
+					"rock-phyllite": ["poor", "medium", "rich"],
+					"rock-schist": ["poor", "medium", "rich"],
+					"rock-dolomite": ["poor", "medium", "rich"]
+				}
+			},
+			"radius": { "dist": "uniform", "avg": 26, "var": 10 },
+			"yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+			"gradeDistribution": "RandomPlusDepthBonus",
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	},
+	{
+		"code": "magnetite",
+		"triesPerChunk": 0.3,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-magnetite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["andesite", "peridotite", "gneiss", "schist", "diorite", "gabbro"]
+			},
+			"placeblock": {
+				"code": "ore-*-magnetite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-andesite": ["poor", "medium", "rich"],
+					"rock-peridotite": ["poor", "medium", "rich", "bountiful"],
+					"rock-gneiss": ["poor", "medium", "rich"],
+					"rock-schist": ["poor", "medium", "rich"],
+					"rock-diorite": ["poor", "medium", "rich"],
+					"rock-gabbro": ["poor", "medium", "rich", "bountiful"]
+				}
+			},
+			"radius": { "dist": "uniform", "avg": 26, "var": 10 },
+			"yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+			"gradeDistribution": "RandomPlusDepthBonus",
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	}
+]

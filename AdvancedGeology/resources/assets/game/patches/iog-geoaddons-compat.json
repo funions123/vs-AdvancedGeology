@@ -1,0 +1,282 @@
+[
+  // ============================================================================
+  // IOG + GEOADDONS COMPATIBILITY PATCHES
+  //
+  // Adds GeoAddons-only rocks (siltstone, mudstone, amphibolite) to IOG deposits
+  // when BOTH Interesting Ore Generation and Geology Additions are installed.
+  //
+  // Secondary mineral childDeposits are injected via C# from
+  // advancedgeology:config/iog-geoaddons-childdeposits.json. A Harmony patch
+  // on IOG's TiltedDiscDepositGenerator populates subDepositsToPlace so that
+  // vanilla's GenDeposits.GeneratePartial() processes the child deposits.
+  // ============================================================================
+
+  // ============================================================================
+  // GALENA — add siltstone, mudstone to hydrotubewithdepo
+  // iog-galena.json entry 0
+  // ============================================================================
+
+  // Add rocks to allowedVariants
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "siltstone",
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "mudstone",
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  // Add grade mappings
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone",
+    "value": ["poor", "medium", "rich"],
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-mudstone",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  // Add subdeposit grade mappings
+  {
+    "op": "add",
+    "path": "/0/attributes/subdeposit/allowedVariantsByInBlock/rock-siltstone",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/subdeposit/allowedVariantsByInBlock/rock-mudstone",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // SPHALERITE — add siltstone, mudstone to seam entry (entry 0)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "siltstone",
+    "file": "game:worldgen/deposits/metalore/iog-sphalerite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "mudstone",
+    "file": "game:worldgen/deposits/metalore/iog-sphalerite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone",
+    "value": ["poor", "medium", "rich"],
+    "file": "game:worldgen/deposits/metalore/iog-sphalerite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-mudstone",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-sphalerite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // BISMUTHINITE — add amphibolite to hydrotube entry (entry 1)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/1/attributes/inblock/allowedVariants/-",
+    "value": "amphibolite",
+    "file": "game:worldgen/deposits/metalore/iog-bismuthinite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/1/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-bismuthinite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // CASSITERITE — add amphibolite to chimney entry (entry 0)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "amphibolite",
+    "file": "game:worldgen/deposits/metalore/iog-cassiterite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-cassiterite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // NICKELINE — add amphibolite to hydrotube (entry 0)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "amphibolite",
+    "file": "game:worldgen/deposits/metalore/iog-nickeline.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-nickeline.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // MAGNETITE — add amphibolite to seam entry (entry 1)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/1/attributes/inblock/allowedVariants/-",
+    "value": "amphibolite",
+    "file": "game:worldgen/deposits/metalore/iog-magnetite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/1/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-magnetite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // SIDERITE — add siltstone, mudstone to seam (entry 0)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "siltstone",
+    "file": "game:worldgen/deposits/metalore/iog-siderite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "mudstone",
+    "file": "game:worldgen/deposits/metalore/iog-siderite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-siderite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-mudstone",
+    "value": ["poor", "medium"],
+    "file": "game:worldgen/deposits/metalore/iog-siderite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // COAL — add siltstone, mudstone to lignite entry (entry 0)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "siltstone",
+    "file": "game:worldgen/deposits/iog-coal.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "mudstone",
+    "file": "game:worldgen/deposits/iog-coal.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // BORAX — add siltstone, mudstone to seam (entry 0)
+  // ============================================================================
+
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "siltstone",
+    "file": "game:worldgen/deposits/mineralore/iog-borax.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/0/attributes/inblock/allowedVariants/-",
+    "value": "mudstone",
+    "file": "game:worldgen/deposits/mineralore/iog-borax.json",
+    "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // NOTE: Cannot disable IOG's own GeoAddons deposits for tetrahedrite,
+  // chalcopyrite, vanadinite, and wulfenite via patches because AG loads
+  // before IOG (alphabetically), so the interestingoregen: domain files are
+  // still empty [] when AG's patches run. Instead, the variant registrations
+  // in tetrahedrite-ore.json and chalcopyrite-ore.json prevent
+  // "No block with code/wildcard was found" warnings. IOG's tetrahedrite,
+  // vanadinite, and wulfenite entries have "enabled": false so they won't
+  // generate. IOG's chalcopyrite entry (0.001 triesPerChunk) may generate
+  // alongside AG's own IOG chalcopyrite deposit.
+  // ============================================================================
+]

@@ -1,0 +1,78 @@
+[
+  // ==== BASE: magnetite in non-vanilla rocks (from iron.json deep magnetite entry) ====
+  // peridotite [p,m,r,b]
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-magnetite-peridotite", "file": "game:blocktypes/stone/ore-graded.json" },
+  // gneiss [p,m,r]
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-gneiss", "file": "game:blocktypes/stone/ore-graded.json" },
+  // schist [p,m,r]
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-schist", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-schist", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-schist", "file": "game:blocktypes/stone/ore-graded.json" },
+  // diorite [p,m,r]
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-diorite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-diorite", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-diorite", "file": "game:blocktypes/stone/ore-graded.json" },
+  // gabbro [p,m,r,b]
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-magnetite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  // sandstone [poor] (from magnetite-shallow)
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-sandstone", "file": "game:blocktypes/stone/ore-graded.json" },
+
+  // looseores (magnetite-shallow has surfaceBlock)
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-magnetite-sandstone-free", "file": "game:blocktypes/stone/looseores.json" },
+
+  // itemtypes/ore-graded
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-magnetite-peridotite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-gneiss", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-schist", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-schist", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-schist", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-diorite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-diorite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-diorite", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-magnetite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-magnetite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-sandstone", "file": "game:itemtypes/resource/ore-graded.json" },
+
+  // crystalizedore-graded
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-magnetite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-magnetite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-magnetite-peridotite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-magnetite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-magnetite-gneiss", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-magnetite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-magnetite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-magnetite-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-magnetite-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-magnetite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-magnetite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-magnetite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+
+  // ==== GEOADDONS: magnetite in amphibolite ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-magnetite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-magnetite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-magnetite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-magnetite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
+]

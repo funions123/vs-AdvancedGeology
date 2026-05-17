@@ -1,0 +1,13 @@
+[
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pentlandite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pentlandite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-pentlandite-gabbro", "file": "game:blocktypes/stone/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pentlandite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pentlandite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-pentlandite-gabbro", "file": "game:itemtypes/resource/ore-graded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-pentlandite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-pentlandite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-pentlandite-gabbro", "file": "game:itemtypes/resource/crystalizedore-graded.json" }
+]

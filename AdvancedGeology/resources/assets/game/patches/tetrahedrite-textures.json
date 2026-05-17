@@ -1,0 +1,28 @@
+[
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-tetrahedrite-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/tetrahedrite1"],
+        "alternates": [
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/tetrahedrite2"] },
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/tetrahedrite3"] }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/looseores-tetrahedrite-*",
+    "value": {
+      "rock": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/tetrahedrite1"]
+      }
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

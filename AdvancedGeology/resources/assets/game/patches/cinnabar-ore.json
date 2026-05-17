@@ -1,0 +1,13 @@
+[
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-cinnabar-sandstone", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-cinnabar-conglomerate", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-cinnabar-limestone", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-cinnabar-dacite", "file": "game:blocktypes/stone/ore-ungraded.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-cinnabar-rhyolite", "file": "game:blocktypes/stone/ore-ungraded.json" },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-cinnabar-sandstone-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-cinnabar-conglomerate-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-cinnabar-limestone-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-cinnabar-dacite-free", "file": "game:blocktypes/stone/looseores.json" },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-cinnabar-rhyolite-free", "file": "game:blocktypes/stone/looseores.json" }
+]

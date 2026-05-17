@@ -1,0 +1,29 @@
+[
+  {
+    "code": "magnetite",
+    "triesPerChunk": 0.3,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-magnetite",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": ["sandstone"]
+      },
+      "placeblock": {
+        "code": "ore-*-magnetite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-sandstone": ["poor"]
+        }
+      },
+      "surfaceBlock": { "code": "looseores-magnetite-{rock}-free" },
+      "surfaceBlockChance": 0.33,
+      "radius": { "dist": "uniform", "avg": 26, "var": 10 },
+      "yPosRel": { "dist": "uniform", "avg": 1.35, "var": 0.65 },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/mineralore/halite.json",
+    "side": "Server"
+  },
+  {
+    "op": "replace",
+    "path": "/0/withOreMap",
+    "value": false,
+    "file": "game:worldgen/deposits/mineralore/halite.json",
+    "side": "Server"
+  },
+  {
+    "op": "replace",
+    "path": "/1/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/mineralore/halite.json",
+    "side": "Server"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "op": "replace",
+    "path": "/0/attributes/inblock/code",
+    "value": "rock-rhyolite",
+    "file": "game:worldgen/deposits/rock/obsidian.json",
+    "side": "Server"
+  }
+]

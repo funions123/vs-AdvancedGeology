@@ -1,0 +1,40 @@
+[
+	{
+		"code": "chalcopyrite",
+		"triesPerChunk": 12,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-chalcopyrite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["sandstone", "shale", "limestone", "andesite", "granite", "peridotite", "gneiss", "schist", "diorite", "gabbro", "dacite", "rhyolite"]
+			},
+			"placeblock": {
+				"code": "ore-*-chalcopyrite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-sandstone": ["poor", "medium"],
+					"rock-shale": ["poor", "medium"],
+					"rock-limestone": ["poor", "medium"],
+					"rock-andesite": ["poor", "medium", "rich"],
+					"rock-granite": ["poor", "medium", "rich"],
+					"rock-peridotite": ["poor", "medium", "rich"],
+					"rock-gneiss": ["poor", "medium", "rich", "bountiful"],
+					"rock-schist": ["poor", "medium", "rich", "bountiful"],
+					"rock-diorite": ["poor", "medium", "rich"],
+					"rock-gabbro": ["poor", "medium"],
+					"rock-dacite": ["poor", "medium", "rich"],
+					"rock-rhyolite": ["poor", "medium", "rich"]
+				}
+			},
+			"surfaceBlock": { "code": "looseores-chalcopyrite-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 7, "var": 3 },
+			"yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.36 },
+			"gradeDistribution": "RandomPlusDepthBonus",
+			"thickness": { "dist": "stronginvexp", "avg": 1, "var": 2 }
+		}
+	}
+]

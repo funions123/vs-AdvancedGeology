@@ -1,0 +1,99 @@
+[
+  // ============================================================================
+  // GEOADDONS COMPATIBILITY — Deposit modifications
+  //
+  // When GeoAddons is installed:
+  // 1. Add GeoAddons-only rocks (siltstone, mudstone, amphibolite) to deposits
+  // 2. Disable standalone GeoAddons secondary mineral deposits
+  //
+  // childDeposits are defined in advancedgeology:config/geoaddons-childdeposits.json
+  // and injected via C# in AssetsLoaded.
+  //
+  // AllowedVariants registration for the new ore-rock combos is in
+  // the various *-ore.json patch files.
+  // ============================================================================
+
+  // ==== ROCK ADDITIONS ====
+
+  // --- Galena: +siltstone [p,m,r], +mudstone [p,m] ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "siltstone", "file": "game:worldgen/deposits/metalore/galena.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "mudstone", "file": "game:worldgen/deposits/metalore/galena.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone", "value": ["poor", "medium", "rich"], "file": "game:worldgen/deposits/metalore/galena.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-mudstone", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/galena.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Sphalerite: +siltstone [p,m,r], +mudstone [p,m] ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "siltstone", "file": "game:worldgen/deposits/metalore/sphalerite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "mudstone", "file": "game:worldgen/deposits/metalore/sphalerite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone", "value": ["poor", "medium", "rich"], "file": "game:worldgen/deposits/metalore/sphalerite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-mudstone", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/sphalerite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Bismuthinite: +amphibolite [p,m] ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "amphibolite", "file": "game:worldgen/deposits/metalore/bismuthinite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/bismuthinite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Cassiterite[0] surface scatter: +amphibolite (poor only, no graded variants) ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "amphibolite", "file": "game:worldgen/deposits/metalore/cassiterite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  // --- Cassiterite[1] deep: +amphibolite [p,m] ---
+  { "op": "add", "path": "/1/attributes/inblock/allowedVariants/-", "value": "amphibolite", "file": "game:worldgen/deposits/metalore/cassiterite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/1/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/cassiterite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Nickeline: +amphibolite [p,m] ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "amphibolite", "file": "game:worldgen/deposits/metalore/nickeline.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/nickeline.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Iron[2] (magnetite): +amphibolite [p,m] ---
+  { "op": "add", "path": "/2/attributes/inblock/allowedVariants/-", "value": "amphibolite", "file": "game:worldgen/deposits/metalore/iron.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/2/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/iron.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Siderite: +siltstone [p,m], +mudstone [p,m] ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "siltstone", "file": "game:worldgen/deposits/metalore/siderite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "mudstone", "file": "game:worldgen/deposits/metalore/siderite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/siderite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-mudstone", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/siderite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Coal[0] (lignite): +siltstone, +mudstone (ungraded, no allowedVariantsByInBlock) ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "siltstone", "file": "game:worldgen/deposits/coal.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "mudstone", "file": "game:worldgen/deposits/coal.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // --- Borax: +siltstone, +mudstone (ungraded) ---
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "siltstone", "file": "game:worldgen/deposits/mineralore/borax.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "mudstone", "file": "game:worldgen/deposits/mineralore/borax.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // ==== CHILD DEPOSITS ====
+  // All childDeposit definitions are in advancedgeology:config/geoaddons-childdeposits.json
+  // and injected via C# in AssetsLoaded (after restoring any overridden deposit files).
+
+  // ==== DISABLE STANDALONE GEOADDONS SECONDARY MINERAL DEPOSITS ====
+  // These minerals are now childDeposits within primary veins, so disable standalone generation.
+  // GeoAddons places these files in the game: domain.
+
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/chalcocite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/chalcocite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/1/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/chalcocite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/1/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/chalcocite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/pyrite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/pyrite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/cerussite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/cerussite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/franckeite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/franckeite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/teallite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/teallite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/azurite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/azurite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/freibergite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/freibergite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/smithsonite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/smithsonite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/hemimorphite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/hemimorphite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/vanadinite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/vanadinite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 0, "file": "game:worldgen/deposits/metalore/wulfenite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/0/withOreMap", "value": false, "file": "game:worldgen/deposits/metalore/wulfenite.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+
+  // ==== BOG IRON — drop medium limonite instead of stone-bogiron, 3x spawn rate ====
+  { "op": "replace", "path": "/drops", "value": [{ "type": "item", "code": "ore-medium-limonite-shale", "quantity": { "avg": 1.5, "var": 0.5 } }], "file": "game:blocktypes/bogiron.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "replace", "path": "/0/triesPerChunk", "value": 3, "file": "game:worldgen/deposits/other/bogiron.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" },
+  { "op": "replace", "path": "/1/triesPerChunk", "value": 12, "file": "game:worldgen/deposits/other/bogiron.json", "dependsOn": [{ "modid": "geoaddons" }], "side": "Server" }
+]

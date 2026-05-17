@@ -1,0 +1,7 @@
+[
+  // ==== GEOADDONS: borax in siltstone and mudstone ====
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-borax-siltstone", "file": "game:blocktypes/stone/ore-ungraded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-borax-mudstone", "file": "game:blocktypes/stone/ore-ungraded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-borax-siltstone-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "looseores-borax-mudstone-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] }
+]

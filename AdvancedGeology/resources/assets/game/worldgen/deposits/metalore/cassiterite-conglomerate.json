@@ -1,0 +1,20 @@
+[
+	{
+		"code": "surfacecassiterite-conglomerate",
+		"generator": "disc-followsurface",
+		"triesPerChunk": 0.007,
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["conglomerate"]
+			},
+			"placeblock": { "code": "ore-poor-cassiterite-{rock}" },
+			"surfaceBlock": { "code": "looseores-cassiterite-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
+			"yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	}
+]

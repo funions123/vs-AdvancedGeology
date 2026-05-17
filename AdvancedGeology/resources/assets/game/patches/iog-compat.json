@@ -1,0 +1,1409 @@
+[
+  // ============================================================================
+  // IOG COMPATIBILITY PATCHES
+  //
+  // When Interesting Ore Generation is installed, this file:
+  //   1. Disables AG disc deposits not already disabled by IOG
+  //   2. Creates iog-gen deposits in our empty placeholder files
+  //
+  // IOG's own interestingoregen: domain deposits are cleared in C# (AssetsLoaded)
+  // to prevent block code validation errors from ore-rock combos AG doesn't register.
+  //
+  // Ore variant registrations are handled by base *-ore.json patches
+  // WITHOUT IOG dependency, so they work with or without IOG installed.
+  // ============================================================================
+
+  // ============================================================================
+  // 1. GALENA — hydrotubewithdepo (with nativesilver subdeposit)
+  // ============================================================================
+
+  // Create AG galena iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "galena",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-galena",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotubewithdepo",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["shale", "limestone", "phyllite", "slate", "schist", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-*-galena-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-shale": ["poor", "medium", "rich", "bountiful"],
+            "rock-limestone": ["poor", "medium", "rich"],
+            "rock-phyllite": ["poor", "medium", "rich", "bountiful"],
+            "rock-slate": ["poor", "medium", "rich", "bountiful"],
+            "rock-schist": ["poor", "medium", "rich"],
+            "rock-dolomite": ["poor", "medium", "rich"]
+          }
+        },
+        "subdeposit": {
+          "code": "ore-*-galena_nativesilver-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-shale": ["poor", "medium"],
+            "rock-limestone": ["poor", "medium"],
+            "rock-phyllite": ["poor", "medium"],
+            "rock-slate": ["poor", "medium"],
+            "rock-schist": ["poor", "medium"],
+            "rock-dolomite": ["poor", "medium"]
+          }
+        },
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-galena.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 2. SPHALERITE — seam + hydrotube (2 entries)
+  // ============================================================================
+
+  // Entry 1: sphalerite seam — sedimentary/metamorphic
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "sphalerite",
+      "triesPerChunk": 0.0005,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-sphalerite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["shale", "limestone", "phyllite", "slate", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-*-sphalerite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-shale": ["poor", "medium", "rich"],
+            "rock-limestone": ["poor", "medium", "rich"],
+            "rock-phyllite": ["poor", "medium", "rich", "bountiful"],
+            "rock-slate": ["poor", "medium", "rich", "bountiful"],
+            "rock-dolomite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-sphalerite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: sphalerite hydrotube — igneous/metamorphic
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "sphalerite",
+      "triesPerChunk": 0.0005,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-sphalerite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotube",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["basalt", "schist"]
+        },
+        "placeblock": {
+          "code": "ore-*-sphalerite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-basalt": ["poor", "medium"],
+            "rock-schist": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-sphalerite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 3. BISMUTHINITE — chimney + hydrotube (2 entries)
+  // ============================================================================
+
+  // Entry 1: bismuthinite chimney — granite
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "bismuthinite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-bismuthinite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "chimney",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["granite"]
+        },
+        "placeblock": {
+          "code": "ore-*-bismuthinite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-granite": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.4 },
+        "thickness": { "dist": "triangle", "avg": 60, "var": 30 },
+        "branchCount": { "dist": "uniform", "avg": 7, "var": 2 },
+        "branchLength": { "dist": "uniform", "avg": 80, "var": 30 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-bismuthinite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: bismuthinite hydrotube — metamorphic/volcanic
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "bismuthinite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-bismuthinite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotube",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["gneiss", "schist", "rhyolite"]
+        },
+        "placeblock": {
+          "code": "ore-*-bismuthinite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-gneiss": ["poor", "medium", "rich", "bountiful"],
+            "rock-schist": ["poor", "medium", "rich"],
+            "rock-rhyolite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-bismuthinite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 4. MALACHITE — seam + surface scatter
+  // ============================================================================
+
+  // Create AG malachite surface scatter (vanilla generator, replaces surfaceBlock from disabled main deposit)
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "surfacemalachite",
+      "triesPerChunk": 0.2,
+      "scaleWithWorldheight": false,
+      "generator": "disc-followsurface",
+      "attributes": {
+        "inblock": {
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["sandstone", "conglomerate", "limestone", "redmarble", "greenmarble", "whitemarble", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-*-malachite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-sandstone": ["poor"],
+            "rock-conglomerate": ["poor"],
+            "rock-limestone": ["poor", "medium"],
+            "rock-redmarble": ["poor", "medium"],
+            "rock-greenmarble": ["poor", "medium"],
+            "rock-whitemarble": ["poor", "medium"],
+            "rock-dolomite": ["poor", "medium"]
+          }
+        },
+        "surfaceBlock": { "code": "looseores-malachite-{rock}-free" },
+        "surfaceBlockChance": 0.2,
+        "radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
+        "yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
+        "thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/malachite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG malachite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "malachite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-malachite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["sandstone", "conglomerate", "limestone", "redmarble", "greenmarble", "whitemarble", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-*-malachite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-sandstone": ["poor", "medium"],
+            "rock-conglomerate": ["poor", "medium"],
+            "rock-limestone": ["poor", "medium", "rich", "bountiful"],
+            "rock-redmarble": ["poor", "medium", "rich"],
+            "rock-greenmarble": ["poor", "medium", "rich"],
+            "rock-whitemarble": ["poor", "medium", "rich"],
+            "rock-dolomite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-malachite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 5. CASSITERITE — chimney + hydrotube (2 entries)
+  // ============================================================================
+
+  // AG cassiterite entry 0 (surface scatter) is left enabled — IOG only disables entries 1,2
+
+  // Entry 1: cassiterite chimney — granite, diorite
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "cassiterite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-cassiterite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "chimney",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["granite", "diorite"]
+        },
+        "placeblock": {
+          "code": "ore-*-cassiterite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-granite": ["poor", "medium", "rich", "bountiful"],
+            "rock-diorite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.4 },
+        "thickness": { "dist": "triangle", "avg": 60, "var": 30 },
+        "branchCount": { "dist": "uniform", "avg": 7, "var": 2 },
+        "branchLength": { "dist": "uniform", "avg": 80, "var": 30 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-cassiterite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: cassiterite hydrotube — gneiss, rhyolite
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "cassiterite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-cassiterite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotube",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["gneiss", "rhyolite"]
+        },
+        "placeblock": {
+          "code": "ore-*-cassiterite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-gneiss": ["poor", "medium", "rich"],
+            "rock-rhyolite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-cassiterite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 6. NATIVECOPPER — fault
+  // ============================================================================
+
+  // AG nativecopper entry 0 (surface scatter) is left enabled — IOG only disables entry 1
+
+  // Create AG nativecopper iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "nativecopper",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-nativecopper",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["basalt"]
+        },
+        "placeblock": {
+          "code": "ore-*-nativecopper-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-basalt": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 48, "var": 16 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.30 },
+        "thickness": { "dist": "uniform", "avg": 3, "var": 2 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 10 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-nativecopper.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 7. PENTLANDITE — seam
+  // ============================================================================
+
+  // Create AG pentlandite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "pentlandite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-pentlandite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["peridotite", "gabbro"]
+        },
+        "placeblock": {
+          "code": "ore-*-pentlandite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-peridotite": ["poor", "medium", "rich", "bountiful"],
+            "rock-gabbro": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-pentlandite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 8. CHROMITE — chimney + seam (2 entries)
+  // ============================================================================
+
+  // Entry 1: chromite chimney — peridotite
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "chromite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-chromite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "chimney",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["peridotite"]
+        },
+        "placeblock": {
+          "code": "ore-*-chromite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-peridotite": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.4 },
+        "thickness": { "dist": "triangle", "avg": 60, "var": 30 },
+        "branchCount": { "dist": "uniform", "avg": 7, "var": 2 },
+        "branchLength": { "dist": "uniform", "avg": 80, "var": 30 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-chromite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: chromite seam — gabbro
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "chromite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-chromite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["gabbro"]
+        },
+        "placeblock": {
+          "code": "ore-*-chromite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-gabbro": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-chromite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 9. ILMENITE — seam
+  // ============================================================================
+
+  // Create AG ilmenite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "ilmenite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-ilmenite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["diorite", "gabbro"]
+        },
+        "placeblock": {
+          "code": "ore-*-ilmenite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-diorite": ["poor", "medium", "rich"],
+            "rock-gabbro": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-ilmenite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 10a. LIMONITE — seam
+  // ============================================================================
+
+  // Create AG limonite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "limonite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-limonite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["limestone", "peridotite", "basalt"]
+        },
+        "placeblock": {
+          "code": "ore-*-limonite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-limestone": ["poor", "medium", "rich"],
+            "rock-peridotite": ["poor", "medium"],
+            "rock-basalt": ["poor", "medium"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-limonite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 10b. HEMATITE — seam
+  // ============================================================================
+
+  // Entry 1: hematite seam — sedimentary
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "hematite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-hematite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["chert", "limestone", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-*-hematite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-chert": ["poor", "medium", "rich", "bountiful"],
+            "rock-limestone": ["poor", "medium", "rich"],
+            "rock-dolomite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-hematite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: hematite fault — metamorphic
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "hematite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-hematite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["phyllite", "schist"]
+        },
+        "placeblock": {
+          "code": "ore-*-hematite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-phyllite": ["poor", "medium", "rich"],
+            "rock-schist": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-hematite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 10c. MAGNETITE — chimney + seam (2 entries)
+  // ============================================================================
+
+  // Entry 1: magnetite chimney — andesite
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "magnetite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-magnetite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "chimney",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["andesite"]
+        },
+        "placeblock": {
+          "code": "ore-*-magnetite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-andesite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.4 },
+        "thickness": { "dist": "triangle", "avg": 60, "var": 30 },
+        "branchCount": { "dist": "uniform", "avg": 7, "var": 2 },
+        "branchLength": { "dist": "uniform", "avg": 80, "var": 30 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-magnetite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: magnetite seam — deep igneous/metamorphic
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "magnetite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-magnetite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["peridotite", "gneiss", "schist", "diorite", "gabbro"]
+        },
+        "placeblock": {
+          "code": "ore-*-magnetite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-peridotite": ["poor", "medium", "rich", "bountiful"],
+            "rock-gneiss": ["poor", "medium", "rich"],
+            "rock-schist": ["poor", "medium", "rich"],
+            "rock-diorite": ["poor", "medium", "rich"],
+            "rock-gabbro": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-magnetite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 11. COAL — lignite + bituminouscoal + anthracite (3 entries, seam, ungraded)
+  // ============================================================================
+
+  // Entry 1: lignite seam — claystone, sandstone
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "lignite",
+      "triesPerChunk": 0.005,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-lignite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["claystone", "sandstone"]
+        },
+        "placeblock": {
+          "code": "ore-lignite-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 3, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/iog-coal.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 2: bituminouscoal seam — chert, shale, limestone, dolomite
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "bituminouscoal",
+      "triesPerChunk": 0.001,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-bituminouscoal",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["chert", "shale", "limestone", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-bituminouscoal-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 3, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/iog-coal.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  // Entry 3: anthracite seam — phyllite, slate, marbles
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "anthracite",
+      "triesPerChunk": 0.005,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-anthracite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["phyllite", "slate", "redmarble", "greenmarble", "whitemarble"]
+        },
+        "placeblock": {
+          "code": "ore-anthracite-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 3, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/iog-coal.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 12. SULFUR — seam (ungraded)
+  // ============================================================================
+
+  // Create AG sulfur iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "sulfur",
+      "triesPerChunk": 0.003,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-sulfur",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["claystone", "shale", "limestone", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-sulfur-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/mineralore/iog-sulfur.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 13. CHALCOPYRITE — chimney + surface scatter
+  // ============================================================================
+
+  // AG chalcopyrite disc deposit is disabled in C# (after GeoAddons restore overwrites patches)
+
+  // Create AG chalcopyrite surface scatter in separate file (chalcopyrite.json is blanket-disabled in C#)
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "surfacechalcopyrite",
+      "triesPerChunk": 0.2,
+      "scaleWithWorldheight": false,
+      "generator": "disc-followsurface",
+      "attributes": {
+        "inblock": {
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["sandstone", "shale", "limestone", "andesite", "granite", "peridotite", "gneiss", "schist", "diorite", "gabbro", "dacite", "rhyolite"]
+        },
+        "placeblock": {
+          "code": "ore-*-chalcopyrite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-sandstone": ["poor"],
+            "rock-shale": ["poor"],
+            "rock-limestone": ["poor"],
+            "rock-andesite": ["poor", "medium"],
+            "rock-granite": ["poor", "medium"],
+            "rock-peridotite": ["poor", "medium"],
+            "rock-gneiss": ["poor", "medium"],
+            "rock-schist": ["poor", "medium"],
+            "rock-diorite": ["poor", "medium"],
+            "rock-gabbro": ["poor"],
+            "rock-dacite": ["poor", "medium"],
+            "rock-rhyolite": ["poor", "medium"]
+          }
+        },
+        "surfaceBlock": { "code": "looseores-chalcopyrite-{rock}-free" },
+        "surfaceBlockChance": 0.33,
+        "radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
+        "yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
+        "thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/chalcopyrite-shallow.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG chalcopyrite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "chalcopyrite",
+      "triesPerChunk": 0.002,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-chalcopyrite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "chimney",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["sandstone", "shale", "limestone", "andesite", "granite", "peridotite", "gneiss", "schist", "diorite", "gabbro", "dacite", "rhyolite"]
+        },
+        "placeblock": {
+          "code": "ore-*-chalcopyrite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-sandstone": ["poor", "medium"],
+            "rock-shale": ["poor", "medium"],
+            "rock-limestone": ["poor", "medium"],
+            "rock-andesite": ["poor", "medium", "rich"],
+            "rock-granite": ["poor", "medium", "rich"],
+            "rock-peridotite": ["poor", "medium", "rich"],
+            "rock-gneiss": ["poor", "medium", "rich", "bountiful"],
+            "rock-schist": ["poor", "medium", "rich", "bountiful"],
+            "rock-diorite": ["poor", "medium", "rich"],
+            "rock-gabbro": ["poor", "medium"],
+            "rock-dacite": ["poor", "medium", "rich"],
+            "rock-rhyolite": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.4 },
+        "thickness": { "dist": "triangle", "avg": 60, "var": 30 },
+        "branchCount": { "dist": "uniform", "avg": 7, "var": 2 },
+        "branchLength": { "dist": "uniform", "avg": 80, "var": 30 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-chalcopyrite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 14. TETRAHEDRITE — hydrotube + surface scatter
+  // ============================================================================
+
+  // Disable AG tetrahedrite disc deposit (entry 0 only)
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/metalore/tetrahedrite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG tetrahedrite surface scatter (appended as new entry, unaffected by /0 disable)
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "surfacetetrahedrite",
+      "triesPerChunk": 0.2,
+      "scaleWithWorldheight": false,
+      "generator": "disc-followsurface",
+      "attributes": {
+        "inblock": {
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["phyllite", "andesite", "quartzite", "schist", "dacite"]
+        },
+        "placeblock": {
+          "code": "ore-*-tetrahedrite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-phyllite": ["poor"],
+            "rock-andesite": ["poor", "medium"],
+            "rock-quartzite": ["poor", "medium"],
+            "rock-schist": ["poor", "medium"],
+            "rock-dacite": ["poor", "medium"]
+          }
+        },
+        "surfaceBlock": { "code": "looseores-tetrahedrite-{rock}-free" },
+        "surfaceBlockChance": 0.33,
+        "radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
+        "yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
+        "thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/tetrahedrite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG tetrahedrite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "tetrahedrite",
+      "triesPerChunk": 0.00125,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-tetrahedrite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotube",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["phyllite", "andesite", "quartzite", "schist", "dacite"]
+        },
+        "placeblock": {
+          "code": "ore-*-tetrahedrite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-phyllite": ["poor", "medium"],
+            "rock-andesite": ["poor", "medium", "rich"],
+            "rock-quartzite": ["poor", "medium", "rich"],
+            "rock-schist": ["poor", "medium", "rich"],
+            "rock-dacite": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-tetrahedrite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 15. SIDERITE — seam
+  // ============================================================================
+
+  // Disable AG siderite disc deposit
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/metalore/siderite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG siderite iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "siderite",
+      "triesPerChunk": 0.001,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-siderite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["claystone", "shale", "limestone", "dolomite"]
+        },
+        "placeblock": {
+          "code": "ore-*-siderite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-claystone": ["poor", "medium"],
+            "rock-shale": ["poor", "medium"],
+            "rock-limestone": ["medium", "rich"],
+            "rock-dolomite": ["medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-siderite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 16. NICKELINE — hydrotube
+  // ============================================================================
+
+  // Disable AG nickeline disc deposit
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/metalore/nickeline.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG nickeline iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "nickeline",
+      "triesPerChunk": 0.002,
+      "withOreMap": true,
+      "handbookPageCode": "item-nugget-nickeline",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotube",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["granite", "gneiss", "schist"]
+        },
+        "placeblock": {
+          "code": "ore-*-nickeline-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-granite": ["poor", "medium", "rich"],
+            "rock-gneiss": ["poor", "medium", "rich", "bountiful"],
+            "rock-schist": ["poor", "medium", "rich"]
+          }
+        },
+
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-nickeline.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 17. BORAX — seam (ungraded)
+  // ============================================================================
+
+  // Disable AG borax disc deposit
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/mineralore/borax.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG borax iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "borax",
+      "triesPerChunk": 0.001,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-borax",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["claystone", "sandstone", "conglomerate", "limestone"]
+        },
+        "placeblock": {
+          "code": "ore-borax-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/mineralore/iog-borax.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 18. CINNABAR — hydrotube (ungraded)
+  // ============================================================================
+
+  // Disable AG cinnabar disc deposit
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/mineralore/cinnabar.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG cinnabar iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "cinnabar",
+      "triesPerChunk": 0.001,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-cinnabar",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "hydrotube",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["sandstone", "conglomerate", "limestone", "andesite", "basalt", "dacite", "rhyolite"]
+        },
+        "placeblock": {
+          "code": "ore-cinnabar-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.4, "var": 0.2 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 8, "var": 4 },
+        "branchLength": { "dist": "uniform", "avg": 48, "var": 24 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/mineralore/iog-cinnabar.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // 19. ALUM — seam (ungraded)
+  // ============================================================================
+
+  // Disable AG alum disc deposit
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/mineralore/alum.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG alum iog-gen deposit
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "alum",
+      "triesPerChunk": 0.001,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-alum",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["shale"]
+        },
+        "placeblock": {
+          "code": "ore-alum-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/mineralore/iog-alum.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "rhyolite",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "diorite",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "dacite",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "gabbro",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "gneiss",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "schist",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "quartzite",
+    "file": "game:blocktypes/stone/quern.json"
+  },
+
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "rhyolite",
+    "file": "game:recipes/grid/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "diorite",
+    "file": "game:recipes/grid/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "dacite",
+    "file": "game:recipes/grid/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "gabbro",
+    "file": "game:recipes/grid/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "gneiss",
+    "file": "game:recipes/grid/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "schist",
+    "file": "game:recipes/grid/quern.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": "quartzite",
+    "file": "game:recipes/grid/quern.json"
+  }
+]

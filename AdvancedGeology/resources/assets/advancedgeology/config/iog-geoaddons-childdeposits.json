@@ -1,0 +1,179 @@
+{
+	"game:worldgen/deposits/metalore/iog-galena.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "cerussite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-cerussite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-chalcopyrite.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "chalcocite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-chalcocite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			},
+			{
+				"code": "pyrite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-pyrite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-cassiterite.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "franckeite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-franckeite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			},
+			{
+				"code": "teallite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-teallite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-malachite.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "azurite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-azurite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-tetrahedrite.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "freibergite",
+				"triesPerChunk": 2,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-freibergite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-sphalerite.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "smithsonite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-smithsonite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			},
+			{
+				"code": "hemimorphite",
+				"triesPerChunk": 4,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-hemimorphite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-chromite.json": {
+		"depositIndex": [0, 1],
+		"childDeposits": [
+			{
+				"code": "nativeplatinum",
+				"triesPerChunk": 2,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-nativeplatinum-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-pentlandite.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "nativeplatinum",
+				"triesPerChunk": 2,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-nativeplatinum-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	},
+	"game:worldgen/deposits/metalore/iog-nickeline.json": {
+		"depositIndex": 0,
+		"childDeposits": [
+			{
+				"code": "sperrylite",
+				"triesPerChunk": 2,
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 20 },
+					"placeblock": { "code": "ore-*-sperrylite-{rock}", "name": "grade", "allowedVariants": ["poor", "medium"] },
+					"radius": { "dist": "gaussian", "avg": 3, "var": 3 },
+					"thickness": { "dist": "invexp", "avg": 1.5, "var": 3 }
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "op": "add",
+    "path": "/texturesByType",
+    "value": {},
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-chalcopyrite-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/chalcopyrite1"],
+        "alternates": [
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/chalcopyrite2"] },
+          { "base": "block/stone/rock/{rock}1", "overlays": ["block/stone/ore/chalcopyrite3"] }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType",
+    "value": {},
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/looseores-chalcopyrite-*",
+    "value": {
+      "rock": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": ["block/stone/ore/chalcopyrite1"]
+      }
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

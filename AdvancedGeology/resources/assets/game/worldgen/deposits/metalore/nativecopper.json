@@ -1,0 +1,51 @@
+[
+	{
+		"code": "surfacecopper",
+		"triesPerChunk": 0.2,
+		"scaleWithWorldheight": false,
+		"generator": "disc-followsurface",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["basalt"]
+			},
+			"placeblock": {
+				"code": "ore-*-nativecopper-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-basalt": ["poor", "medium"]
+				}
+			},
+			"surfaceBlock": { "code": "looseores-nativecopper-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 4.25, "var": 1 },
+			"yPosRel": { "dist": "uniform", "avg": 0.965, "var": 0.03 },
+			"thickness": { "dist": "stronginvexp", "avg": 1, "var": 1 }
+		}
+	},
+	{
+		"code": "nativecopper",
+		"triesPerChunk": 25,
+		"withOreMap": true,
+		"handbookPageCode": "item-nugget-nativecopper",
+		"generator": "disc-followsurface",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["basalt"]
+			},
+			"placeblock": {
+				"code": "ore-*-nativecopper-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-basalt": ["poor", "medium", "rich", "bountiful"]
+				}
+			},
+			"radius": { "dist": "uniform", "avg": 7, "var": 3 },
+			"yPosRel": { "dist": "uniform", "avg": 0.3, "var": 0.3 },
+			"thickness": { "dist": "stronginvexp", "avg": 1, "var": 2 }
+		}
+	}
+]

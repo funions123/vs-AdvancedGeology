@@ -1,0 +1,15 @@
+[
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-sulfur-dolomite",
+    "file": "game:blocktypes/stone/ore-ungraded.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "looseores-sulfur-dolomite-free",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]
