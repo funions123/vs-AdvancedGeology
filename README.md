@@ -1,0 +1,1 @@
+Advanced Geology is a Vintage Story mod that adds various rock types, ores, and ore deposit generators to the game, while implementing advanced compatibility with other geological mods such as Interesting Ore Gen and Geology Additions.
