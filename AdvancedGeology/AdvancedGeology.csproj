@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>AdvancedGeology</ModName>
     <ModType>code</ModType>
-    <ModVersion>0.9.5</ModVersion>
+    <ModVersion>0.9.6</ModVersion>
     <ModId>advancedgeology</ModId>
     <Description>Adds new ores and adjusts vanilla oregen to be more realistic</Description>
     <Side>universal</Side>

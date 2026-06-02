@@ -1,0 +1,31 @@
+[
+	{
+		"code": "surfacetetrahedrite",
+		"triesPerChunk": 0.2,
+		"scaleWithWorldheight": false,
+		"generator": "disc-followsurface",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["phyllite", "andesite", "quartzite", "schist", "dacite"]
+			},
+			"placeblock": {
+				"code": "ore-*-tetrahedrite-{rock}",
+				"name": "grade",
+				"allowedVariantsByInBlock": {
+					"rock-phyllite": ["poor", "medium"],
+					"rock-andesite": ["poor", "medium"],
+					"rock-quartzite": ["poor", "medium"],
+					"rock-schist": ["poor", "medium"],
+					"rock-dacite": ["poor", "medium"]
+				}
+			},
+			"surfaceBlock": { "code": "looseores-tetrahedrite-{rock}-free" },
+			"surfaceBlockChance": 0.33,
+			"radius": { "dist": "uniform", "avg": 4.25, "var": 1 },
+			"yPosRel": { "dist": "uniform", "avg": 0.965, "var": 0.03 },
+			"thickness": { "dist": "stronginvexp", "avg": 1, "var": 1 }
+		}
+	}
+]
