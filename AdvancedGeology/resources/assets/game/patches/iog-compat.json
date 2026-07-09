@@ -4,7 +4,13 @@
   //
   // When Interesting Ore Generation is installed, this file:
   //   1. Disables AG disc deposits not already disabled by IOG
-  //   2. Creates iog-gen deposits in our empty placeholder files
+  //   2. Creates iog-gen deposits in our placeholder files
+  //   3. Adds AG ores to IOG's hydrothermal district configs (end of file)
+  //
+  // triesPerChunk values follow IOG 2.3.8's scale (0.5-1.5): vein density is
+  // now capped by IOG's global vein spacing (800 blocks same-ore / 100 blocks
+  // any-ore, TiltedDiscDepositGenerator.TryApproveOreSpawnSeed), not by tries.
+  // All iog-gen entries use withOreMap: false, matching IOG's own deposits.
   //
   // IOG's own interestingoregen: domain deposits are cleared in C# (AssetsLoaded)
   // to prevent block code validation errors from ore-rock combos AG doesn't register.
@@ -23,8 +29,8 @@
     "path": "/-",
     "value": {
       "code": "galena",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-galena",
       "generator": "iog-gen",
       "attributes": {
@@ -81,8 +87,8 @@
     "path": "/-",
     "value": {
       "code": "sphalerite",
-      "triesPerChunk": 0.0005,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-sphalerite",
       "generator": "iog-gen",
       "attributes": {
@@ -122,8 +128,8 @@
     "path": "/-",
     "value": {
       "code": "sphalerite",
-      "triesPerChunk": 0.0005,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-sphalerite",
       "generator": "iog-gen",
       "attributes": {
@@ -165,8 +171,8 @@
     "path": "/-",
     "value": {
       "code": "bismuthinite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-bismuthinite",
       "generator": "iog-gen",
       "attributes": {
@@ -202,8 +208,8 @@
     "path": "/-",
     "value": {
       "code": "bismuthinite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-bismuthinite",
       "generator": "iog-gen",
       "attributes": {
@@ -286,8 +292,8 @@
     "path": "/-",
     "value": {
       "code": "malachite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-malachite",
       "generator": "iog-gen",
       "attributes": {
@@ -336,8 +342,8 @@
     "path": "/-",
     "value": {
       "code": "cassiterite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-cassiterite",
       "generator": "iog-gen",
       "attributes": {
@@ -374,8 +380,8 @@
     "path": "/-",
     "value": {
       "code": "cassiterite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-cassiterite",
       "generator": "iog-gen",
       "attributes": {
@@ -419,8 +425,8 @@
     "path": "/-",
     "value": {
       "code": "nativecopper",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-nativecopper",
       "generator": "iog-gen",
       "attributes": {
@@ -461,13 +467,13 @@
     "path": "/-",
     "value": {
       "code": "pentlandite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-pentlandite",
       "generator": "iog-gen",
       "attributes": {
         "inblock": {
-          "veintype": "fault",
+          "veintype": "seam",
           "code": "rock-*",
           "name": "rock",
           "allowedVariants": ["peridotite", "gabbro"]
@@ -504,8 +510,8 @@
     "path": "/-",
     "value": {
       "code": "chromite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-chromite",
       "generator": "iog-gen",
       "attributes": {
@@ -541,13 +547,13 @@
     "path": "/-",
     "value": {
       "code": "chromite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-chromite",
       "generator": "iog-gen",
       "attributes": {
         "inblock": {
-          "veintype": "fault",
+          "veintype": "seam",
           "code": "rock-*",
           "name": "rock",
           "allowedVariants": ["gabbro"]
@@ -583,13 +589,13 @@
     "path": "/-",
     "value": {
       "code": "ilmenite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-ilmenite",
       "generator": "iog-gen",
       "attributes": {
         "inblock": {
-          "veintype": "fault",
+          "veintype": "seam",
           "code": "rock-*",
           "name": "rock",
           "allowedVariants": ["diorite", "gabbro"]
@@ -626,8 +632,8 @@
     "path": "/-",
     "value": {
       "code": "limonite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-limonite",
       "generator": "iog-gen",
       "attributes": {
@@ -670,8 +676,8 @@
     "path": "/-",
     "value": {
       "code": "hematite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-hematite",
       "generator": "iog-gen",
       "attributes": {
@@ -709,13 +715,13 @@
     "path": "/-",
     "value": {
       "code": "hematite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-hematite",
       "generator": "iog-gen",
       "attributes": {
         "inblock": {
-          "veintype": "fault",
+          "veintype": "seam",
           "code": "rock-*",
           "name": "rock",
           "allowedVariants": ["phyllite", "schist"]
@@ -752,8 +758,8 @@
     "path": "/-",
     "value": {
       "code": "magnetite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-magnetite",
       "generator": "iog-gen",
       "attributes": {
@@ -789,13 +795,13 @@
     "path": "/-",
     "value": {
       "code": "magnetite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-magnetite",
       "generator": "iog-gen",
       "attributes": {
         "inblock": {
-          "veintype": "fault",
+          "veintype": "seam",
           "code": "rock-*",
           "name": "rock",
           "allowedVariants": ["peridotite", "gneiss", "schist", "diorite", "gabbro"]
@@ -835,7 +841,7 @@
     "path": "/-",
     "value": {
       "code": "lignite",
-      "triesPerChunk": 0.005,
+      "triesPerChunk": 1.0,
       "withOreMap": false,
       "handbookPageCode": "item-ore-lignite",
       "generator": "iog-gen",
@@ -867,7 +873,7 @@
     "path": "/-",
     "value": {
       "code": "bituminouscoal",
-      "triesPerChunk": 0.001,
+      "triesPerChunk": 0.75,
       "withOreMap": false,
       "handbookPageCode": "item-ore-bituminouscoal",
       "generator": "iog-gen",
@@ -899,7 +905,7 @@
     "path": "/-",
     "value": {
       "code": "anthracite",
-      "triesPerChunk": 0.005,
+      "triesPerChunk": 0.5,
       "withOreMap": false,
       "handbookPageCode": "item-ore-anthracite",
       "generator": "iog-gen",
@@ -936,7 +942,7 @@
     "path": "/-",
     "value": {
       "code": "sulfur",
-      "triesPerChunk": 0.003,
+      "triesPerChunk": 0.5,
       "withOreMap": false,
       "handbookPageCode": "item-ore-sulfur",
       "generator": "iog-gen",
@@ -964,55 +970,11 @@
   },
 
   // ============================================================================
-  // 13. CHALCOPYRITE — chimney + surface scatter
+  // 13. CHALCOPYRITE — chimney
   // ============================================================================
 
-  // AG chalcopyrite disc deposit is disabled in C# (after GeoAddons restore overwrites patches)
-
-  // Create AG chalcopyrite surface scatter in separate file (chalcopyrite.json is blanket-disabled in C#)
-  {
-    "op": "add",
-    "path": "/-",
-    "value": {
-      "code": "surfacechalcopyrite",
-      "triesPerChunk": 0.2,
-      "scaleWithWorldheight": false,
-      "generator": "disc-followsurface",
-      "attributes": {
-        "inblock": {
-          "code": "rock-*",
-          "name": "rock",
-          "allowedVariants": ["sandstone", "shale", "limestone", "andesite", "granite", "peridotite", "gneiss", "schist", "diorite", "gabbro", "dacite", "rhyolite"]
-        },
-        "placeblock": {
-          "code": "ore-*-chalcopyrite-{rock}",
-          "name": "grade",
-          "allowedVariantsByInBlock": {
-            "rock-sandstone": ["poor"],
-            "rock-shale": ["poor"],
-            "rock-limestone": ["poor"],
-            "rock-andesite": ["poor", "medium"],
-            "rock-granite": ["poor", "medium"],
-            "rock-peridotite": ["poor", "medium"],
-            "rock-gneiss": ["poor", "medium"],
-            "rock-schist": ["poor", "medium"],
-            "rock-diorite": ["poor", "medium"],
-            "rock-gabbro": ["poor"],
-            "rock-dacite": ["poor", "medium"],
-            "rock-rhyolite": ["poor", "medium"]
-          }
-        },
-        "surfaceBlock": { "code": "looseores-chalcopyrite-{rock}-free" },
-        "surfaceBlockChance": 0.33,
-        "radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
-        "yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
-        "thickness": { "dist": "uniform", "avg": 1, "var": 0 }
-      }
-    },
-    "file": "game:worldgen/deposits/metalore/chalcopyrite-shallow.json",
-    "dependsOn": [{ "modid": "interestingoregen" }],
-    "side": "Server"
-  },
+  // AG chalcopyrite disc deposit (chalcopyrite.json) is zeroed in C# whenever IOG
+  // is installed; its surface scatter lives in chalcopyrite-shallow.json.
 
   // Create AG chalcopyrite iog-gen deposit
   {
@@ -1020,8 +982,8 @@
     "path": "/-",
     "value": {
       "code": "chalcopyrite",
-      "triesPerChunk": 0.002,
-      "withOreMap": true,
+      "triesPerChunk": 1.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-chalcopyrite",
       "generator": "iog-gen",
       "attributes": {
@@ -1064,7 +1026,7 @@
   },
 
   // ============================================================================
-  // 14. TETRAHEDRITE — hydrotube + surface scatter
+  // 14. TETRAHEDRITE — hydrotube
   // ============================================================================
 
   // Disable AG tetrahedrite disc deposit (entry 0 only)
@@ -1077,52 +1039,14 @@
     "side": "Server"
   },
 
-  // Create AG tetrahedrite surface scatter (appended as new entry, unaffected by /0 disable)
-  {
-    "op": "add",
-    "path": "/-",
-    "value": {
-      "code": "surfacetetrahedrite",
-      "triesPerChunk": 0.2,
-      "scaleWithWorldheight": false,
-      "generator": "disc-followsurface",
-      "attributes": {
-        "inblock": {
-          "code": "rock-*",
-          "name": "rock",
-          "allowedVariants": ["phyllite", "andesite", "quartzite", "schist", "dacite"]
-        },
-        "placeblock": {
-          "code": "ore-*-tetrahedrite-{rock}",
-          "name": "grade",
-          "allowedVariantsByInBlock": {
-            "rock-phyllite": ["poor"],
-            "rock-andesite": ["poor", "medium"],
-            "rock-quartzite": ["poor", "medium"],
-            "rock-schist": ["poor", "medium"],
-            "rock-dacite": ["poor", "medium"]
-          }
-        },
-        "surfaceBlock": { "code": "looseores-tetrahedrite-{rock}-free" },
-        "surfaceBlockChance": 0.33,
-        "radius": { "dist": "uniform", "avg": 3, "var": 0.5 },
-        "yPosRel": { "dist": "uniform", "avg": 0.95, "var": 0.03 },
-        "thickness": { "dist": "uniform", "avg": 1, "var": 0 }
-      }
-    },
-    "file": "game:worldgen/deposits/metalore/tetrahedrite.json",
-    "dependsOn": [{ "modid": "interestingoregen" }],
-    "side": "Server"
-  },
-
   // Create AG tetrahedrite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
     "value": {
       "code": "tetrahedrite",
-      "triesPerChunk": 0.00125,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-tetrahedrite",
       "generator": "iog-gen",
       "attributes": {
@@ -1177,8 +1101,8 @@
     "path": "/-",
     "value": {
       "code": "siderite",
-      "triesPerChunk": 0.001,
-      "withOreMap": true,
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-siderite",
       "generator": "iog-gen",
       "attributes": {
@@ -1232,8 +1156,8 @@
     "path": "/-",
     "value": {
       "code": "nickeline",
-      "triesPerChunk": 0.002,
-      "withOreMap": true,
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
       "handbookPageCode": "item-nugget-nickeline",
       "generator": "iog-gen",
       "attributes": {
@@ -1286,7 +1210,7 @@
     "path": "/-",
     "value": {
       "code": "borax",
-      "triesPerChunk": 0.001,
+      "triesPerChunk": 0.5,
       "withOreMap": false,
       "handbookPageCode": "item-ore-borax",
       "generator": "iog-gen",
@@ -1333,7 +1257,7 @@
     "path": "/-",
     "value": {
       "code": "cinnabar",
-      "triesPerChunk": 0.001,
+      "triesPerChunk": 0.5,
       "withOreMap": false,
       "handbookPageCode": "item-ore-cinnabar",
       "generator": "iog-gen",
@@ -1380,7 +1304,7 @@
     "path": "/-",
     "value": {
       "code": "alum",
-      "triesPerChunk": 0.001,
+      "triesPerChunk": 0.5,
       "withOreMap": false,
       "handbookPageCode": "item-ore-alum",
       "generator": "iog-gen",
@@ -1403,6 +1327,49 @@
       }
     },
     "file": "game:worldgen/deposits/mineralore/iog-alum.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
+  // HYDROTHERMAL DISTRICTS (IOG 2.3.8+)
+  //
+  // Chalcopyrite takes the copper slot in both granite districts; native copper
+  // stays basalt-only via IOG's own mafic district entry. Weight/density/zones
+  // mirror IOG's nativecopper-basalt entry. District configs are read at
+  // StartServerSide, after JSON patching, so plain adds work here.
+  // ============================================================================
+  {
+    "op": "add",
+    "path": "/ores/-",
+    "value": {
+      "oreCode": "ore-*-chalcopyrite-granite",
+      "variantName": "grade",
+      "weight": 1.0,
+      "density": 0.85,
+      "allowedZoneTypes": ["OreShoot", "LadderVein"],
+      "allowedVariantsByInBlock": {
+        "rock-granite": ["poor", "medium", "rich"]
+      }
+    },
+    "file": "interestingoregen:config/hydrothermal/magmatic-felsic-shallow.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/ores/-",
+    "value": {
+      "oreCode": "ore-*-chalcopyrite-granite",
+      "variantName": "grade",
+      "weight": 1.0,
+      "density": 0.85,
+      "allowedZoneTypes": ["OreShoot", "LadderVein"],
+      "allowedVariantsByInBlock": {
+        "rock-granite": ["poor", "medium", "rich"]
+      }
+    },
+    "file": "interestingoregen:config/hydrothermal/magmatic-granitic-deep.json",
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   }

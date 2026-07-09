@@ -70,6 +70,8 @@ namespace AdvancedGeology
             if (api.ModLoader.IsModEnabled("interestingoregen"))
             {
                 ClearIogDeposits(api);
+
+                ZeroDepositTries(api, "game:worldgen/deposits/metalore/chalcopyrite.json");
             }
 
             if (api.ModLoader.IsModEnabled("geoaddons"))
@@ -196,20 +198,10 @@ namespace AdvancedGeology
             {
                 removed++;
 
-                // The restore overwrites the iog-compat.json patch that set triesPerChunk: 0,
-                // so re-disable it here when IOG is installed
+                // The restore undoes the zeroing done in AssetsLoaded, so re-apply it here when IOG is installed
                 if (api.ModLoader.IsModEnabled("interestingoregen"))
                 {
-                    IAsset? chalcopyrite = api.Assets.TryGet(new AssetLocation("game:worldgen/deposits/metalore/chalcopyrite.json"));
-                    if (chalcopyrite != null)
-                    {
-                        JArray arr = JArray.Parse(chalcopyrite.ToText());
-                        foreach (JObject entry in arr.OfType<JObject>())
-                        {
-                            entry["triesPerChunk"] = 0;
-                        }
-                        chalcopyrite.Data = Encoding.UTF8.GetBytes(arr.ToString());
-                    }
+                    ZeroDepositTries(api, "game:worldgen/deposits/metalore/chalcopyrite.json");
                 }
             }
 
@@ -254,7 +246,7 @@ namespace AdvancedGeology
                 "interestingoregen:worldgen/deposits/metalore/tetrahedrite.json",
                 "interestingoregen:worldgen/deposits/mineralore/sulfur.json",
                 "interestingoregen:worldgen/deposits/mineralore/borax.json",
-                "interestingoregen:worldgen/deposits/coal.json"
+                "interestingoregen:worldgen/deposits/mineralore/coal.json"
             ];
 
             // GeoAddons-only IOG deposits
@@ -289,6 +281,25 @@ namespace AdvancedGeology
             }
 
             api.Logger.Notification("[AdvancedGeology] IOG compat: cleared {0} interestingoregen: deposit files", cleared);
+        }
+
+        /// <summary>
+        /// Sets triesPerChunk to 0 on every entry of a deposit file, disabling it without removing it (keeps handbook/ore variant resolution intact).
+        /// </summary>
+        private void ZeroDepositTries(ICoreAPI api, string assetPath)
+        {
+            IAsset? asset = api.Assets.TryGet(new AssetLocation(assetPath));
+            if (asset == null) return;
+
+            JArray arr;
+            try { arr = JArray.Parse(asset.ToText()); }
+            catch { return; }
+
+            foreach (JObject entry in arr.OfType<JObject>())
+            {
+                entry["triesPerChunk"] = 0;
+            }
+            asset.Data = Encoding.UTF8.GetBytes(arr.ToString());
         }
 
         /// <summary>
