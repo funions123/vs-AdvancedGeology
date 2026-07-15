@@ -1332,6 +1332,53 @@
   },
 
   // ============================================================================
+  // 20. GRAPHITE — seam (ungraded)
+  // ============================================================================
+
+  // Disable AG graphite disc deposit (AG's graphite.json overrides the vanilla one)
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/mineralore/graphite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // Create AG graphite iog-gen deposit — seam through all metamorphic rocks
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "graphite",
+      "triesPerChunk": 0.5,
+      "withOreMap": false,
+      "handbookPageCode": "item-ore-graphite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["phyllite", "slate", "whitemarble", "redmarble", "greenmarble", "gneiss", "schist", "quartzite"]
+        },
+        "placeblock": {
+          "code": "ore-graphite-{rock}"
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/mineralore/iog-graphite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+
+  // ============================================================================
   // HYDROTHERMAL DISTRICTS (IOG 2.3.8+)
   //
   // Chalcopyrite takes the copper slot in both granite districts; native copper

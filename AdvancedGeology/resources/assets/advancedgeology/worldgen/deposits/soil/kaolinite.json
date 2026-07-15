@@ -24,9 +24,8 @@
 					"soil-medium-normal": ["verysparse"]
 				}
 			},
-			"topLayerThickness": 3,
 			"middleLayerBlock": { "code": "advancedgeology:rawkaolinite-none" },
-			"middleLayerFillToBedrock": true,
+			"middleLayerThickness": 1,
 			"rockInBlock": {
 				"code": "rock-*",
 				"name": "rock",

@@ -1,0 +1,41 @@
+[
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-graphite-gneiss",
+    "file": "game:blocktypes/stone/ore-ungraded.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-graphite-schist",
+    "file": "game:blocktypes/stone/ore-ungraded.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-graphite-quartzite",
+    "file": "game:blocktypes/stone/ore-ungraded.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "looseores-graphite-gneiss-free",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "looseores-graphite-schist-free",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "looseores-graphite-quartzite-free",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

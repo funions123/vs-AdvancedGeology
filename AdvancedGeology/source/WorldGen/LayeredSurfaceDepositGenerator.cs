@@ -106,8 +106,10 @@ public class LayeredDepositBlock
 }
 
 /// <summary>
-/// Deposit generator for layered surface deposits. Supports up to 3 layers — top (in soil),
-/// middle (in soil above specific rock), bottom (in rock) — all generated together for alignment.
+/// Deposit generator for layered surface deposits. Supports up to 3 layers, generated bottom-up
+/// and anchored on the rock surface: bottom (in rock), middle (a fixed thin layer in soil directly
+/// above rock), and top, which repeats through all remaining soil up to the surface. Anchoring at
+/// the rock keeps the column continuous under thick soil (worldgen mods generate soil 8+ deep).
 /// </summary>
 [JsonObject(MemberSerialization.OptIn)]
 public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
@@ -126,17 +128,8 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     [JsonProperty]
     public LayeredDepositBlock TopLayerBlock;
 
-    /// <summary>
-    /// How many top-block layers to place in soil. Ignored if TopLayerFillToBedrock.
-    /// </summary>
-    [JsonProperty]
-    public int TopLayerThickness = 2;
-
-    /// <summary>
-    /// If true, replace all soil with TopLayerBlock until we hit rock.
-    /// </summary>
-    [JsonProperty]
-    public bool TopLayerFillToBedrock = false;
+    // The top layer has no thickness setting; it always fills all soil above the middle layer
+    // up to the surface, so thicker-than-vanilla soil extends the cap.
 
     // Middle layer
 
@@ -147,16 +140,10 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     public LayeredDepositBlock MiddleLayerBlock;
 
     /// <summary>
-    /// How many middle-block layers to place. Ignored if MiddleLayerFillToBedrock.
+    /// How many middle-block layers to place directly above the rock.
     /// </summary>
     [JsonProperty]
     public int MiddleLayerThickness = 0;
-
-    /// <summary>
-    /// If true, the middle layer fills all remaining soil between top layer and rock.
-    /// </summary>
-    [JsonProperty]
-    public bool MiddleLayerFillToBedrock = false;
 
     // Bottom layer
 
@@ -271,7 +258,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                     bottomLayerBlockByInBlockId[block.BlockId] = BottomLayerBlock.Resolve(variant.fromFile, Api, block, key, value);
                 }
 
-                if (MiddleLayerBlock != null && (MiddleLayerThickness > 0 || MiddleLayerFillToBedrock))
+                if (MiddleLayerBlock != null && MiddleLayerThickness > 0)
                 {
                     middleLayerBlockByInBlockId[block.BlockId] = MiddleLayerBlock.Resolve(variant.fromFile, Api, block, key, value);
                 }
@@ -333,7 +320,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                 // Check Y roughness
                 if (Math.Abs(depoCenterPos.Y - surfaceY) > MaxYRoughness) continue;
 
-                // First, find where rock starts and check if it's valid
+                // Find where rock starts and check if it's valid
                 int rockStartY = -1;
                 int rockBlockId = 0;
                 bool foundValidRock = false;
@@ -360,107 +347,19 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                     break;
                 }
 
+                if (rockStartY <= 0) continue;
+
                 // Determine which layers can be placed based on rock validity
                 bool canPlaceOnRock = !RequireImmediateRock || foundValidRock;
                 bool shouldPlaceBottomLayer = canPlaceOnRock && bottomLayerBlockByInBlockId.Count > 0;
                 bool shouldPlaceMiddleLayer = canPlaceOnRock && middleLayerBlockByInBlockId.Count > 0;
 
-                // Generate top layer (soil -> clay) starting from surface going down
-                int topLayersPlaced = 0;
-                int maxTopLayers = TopLayerFillToBedrock ? 999 : TopLayerThickness;
-                int lastSoilY = surfaceY;
+                // Layers are generated bottom-up, anchored on the rock surface, so soil columns of
+                // any thickness (worldgen mods make them 8+ deep) get a continuous deposit column:
+                // bottom layer in rock, middle layer directly above rock, then the top layer
+                // repeated through all remaining soil up to the surface.
 
-                for (int y = surfaceY; y > 0 && topLayersPlaced < maxTopLayers; y--)
-                {
-                    int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
-                    IChunkBlocks chunkdata = chunks[y / chunksize].Data;
-                    int blockId = chunkdata.GetBlockIdUnsafe(index3d);
-
-                    if (topLayerBlockByInBlockId.TryGetValue(blockId, out LayeredResolvedDepositBlock resolvedTopBlock) && resolvedTopBlock.Blocks.Length > 0)
-                    {
-                        // Check if we should reserve space for middle layer (fixed-thickness mode only)
-                        bool isMiddleLayerZone = !MiddleLayerFillToBedrock &&
-                                                 MiddleLayerThickness > 0 &&
-                                                 rockStartY > 0 &&
-                                                 y < rockStartY + MiddleLayerThickness &&
-                                                 shouldPlaceMiddleLayer;
-
-                        if (isMiddleLayerZone)
-                        {
-                            // Don't place top layer here - leave room for middle layer
-                            lastSoilY = y;
-                            break;
-                        }
-
-                        Block placeblock = resolvedTopBlock.Blocks[0];
-
-                        if (WithLastLayerBlockCallback && !TopLayerFillToBedrock && topLayersPlaced == TopLayerThickness - 1)
-                        {
-                            BlockPos targetPos = new BlockPos(posx, y, posz);
-                            placeblock.TryPlaceBlockForWorldGen(blockAccessor, targetPos, BlockFacing.UP, DepositRand);
-                        }
-                        else
-                        {
-                            chunkdata.SetBlockUnsafe(index3d, placeblock.BlockId);
-                            chunkdata.SetFluid(index3d, 0);
-                        }
-
-                        lastSoilY = y;
-                        topLayersPlaced++;
-                    }
-                    else
-                    {
-                        // We've hit non-soil (rock or other), stop placing top layer
-                        break;
-                    }
-                }
-
-                if (rockStartY <= 0) continue;
-
-                // Generate middle layer (soil -> middle block) above rock
-                if (shouldPlaceMiddleLayer &&
-                    middleLayerBlockByInBlockId.TryGetValue(rockBlockId, out LayeredResolvedDepositBlock resolvedMiddleBlock) &&
-                    resolvedMiddleBlock.Blocks.Length > 0)
-                {
-                    Block middlePlaceBlock = resolvedMiddleBlock.Blocks[0];
-
-                    if (MiddleLayerFillToBedrock)
-                    {
-                        // Fill all remaining soil between top layer and rock
-                        for (int y = lastSoilY - 1; y > rockStartY; y--)
-                        {
-                            if (y <= 0) continue;
-
-                            int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
-                            IChunkBlocks chunkdata = chunks[y / chunksize].Data;
-                            int blockId = chunkdata.GetBlockIdUnsafe(index3d);
-
-                            if (topLayerBlockByInBlockId.ContainsKey(blockId))
-                            {
-                                chunkdata.SetBlockUnsafe(index3d, middlePlaceBlock.BlockId);
-                                chunkdata.SetFluid(index3d, 0);
-                            }
-                        }
-                    }
-                    else if (MiddleLayerThickness > 0)
-                    {
-                        // Fixed-thickness middle layer just above rock
-                        int middleLayersPlaced = 0;
-                        for (int y = rockStartY + MiddleLayerThickness; y > rockStartY && middleLayersPlaced < MiddleLayerThickness; y--)
-                        {
-                            if (y <= 0 || y > surfaceY) continue;
-
-                            int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
-                            IChunkBlocks chunkdata = chunks[y / chunksize].Data;
-
-                            chunkdata.SetBlockUnsafe(index3d, middlePlaceBlock.BlockId);
-                            chunkdata.SetFluid(index3d, 0);
-                            middleLayersPlaced++;
-                        }
-                    }
-                }
-
-                // Generate bottom layer (rock -> ore) in the rock
+                // Generate bottom layer (rock -> ore) in the rock, downward from the rock surface
                 if (shouldPlaceBottomLayer)
                 {
                     int bottomLayersPlaced = 0;
@@ -483,6 +382,61 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                         }
                     }
                 }
+
+                // Generate middle layer (soil -> middle block) upward from the rock surface,
+                // exactly MiddleLayerThickness blocks (clamped to the available soil)
+                int middleLayersPlaced = 0;
+                if (shouldPlaceMiddleLayer &&
+                    middleLayerBlockByInBlockId.TryGetValue(rockBlockId, out LayeredResolvedDepositBlock resolvedMiddleBlock) &&
+                    resolvedMiddleBlock.Blocks.Length > 0)
+                {
+                    Block middlePlaceBlock = resolvedMiddleBlock.Blocks[0];
+
+                    int middleCount = Math.Min(MiddleLayerThickness, surfaceY - rockStartY);
+
+                    for (int y = rockStartY + 1; y <= rockStartY + middleCount; y++)
+                    {
+                        int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
+                        IChunkBlocks chunkdata = chunks[y / chunksize].Data;
+                        int blockId = chunkdata.GetBlockIdUnsafe(index3d);
+
+                        // Interrupted column (air pocket, water, non-soil): stop stacking
+                        if (!topLayerBlockByInBlockId.ContainsKey(blockId)) break;
+
+                        chunkdata.SetBlockUnsafe(index3d, middlePlaceBlock.BlockId);
+                        chunkdata.SetFluid(index3d, 0);
+                        middleLayersPlaced++;
+                    }
+                }
+
+                // Generate top layer (soil -> clay) upward from above the middle layer, repeating
+                // the top block through all remaining soil up to the surface
+                for (int y = rockStartY + middleLayersPlaced + 1; y <= surfaceY; y++)
+                {
+                    int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
+                    IChunkBlocks chunkdata = chunks[y / chunksize].Data;
+                    int blockId = chunkdata.GetBlockIdUnsafe(index3d);
+
+                    if (!topLayerBlockByInBlockId.TryGetValue(blockId, out LayeredResolvedDepositBlock resolvedTopBlock) || resolvedTopBlock.Blocks.Length == 0)
+                    {
+                        // Interrupted column: stop stacking
+                        break;
+                    }
+
+                    Block placeblock = resolvedTopBlock.Blocks[0];
+
+                    if (WithLastLayerBlockCallback && y == surfaceY)
+                    {
+                        // Surface block goes through the world gen callback so grass coverage forms
+                        BlockPos targetPos = new BlockPos(posx, y, posz);
+                        placeblock.TryPlaceBlockForWorldGen(blockAccessor, targetPos, BlockFacing.UP, DepositRand);
+                    }
+                    else
+                    {
+                        chunkdata.SetBlockUnsafe(index3d, placeblock.BlockId);
+                        chunkdata.SetFluid(index3d, 0);
+                    }
+                }
             }
         }
     }
@@ -501,7 +455,8 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
 
     public override void GetYMinMax(BlockPos pos, out double miny, out double maxy)
     {
-        miny = pos.Y - TopLayerThickness - MiddleLayerThickness - BottomLayerThickness;
+        // Top layer depth varies with soil thickness; 8 covers the deepest modded soil stacks.
+        miny = pos.Y - 8 - MiddleLayerThickness - BottomLayerThickness;
         maxy = pos.Y;
     }
 }

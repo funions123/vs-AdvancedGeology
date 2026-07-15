@@ -1,0 +1,24 @@
+[
+	{
+		"code": "graphite",
+		"triesPerChunk": 7,
+		"withOreMap": true,
+		"oreMapScale": 1.5,
+		"oreMapContrast": 1.5,
+		"oreMapSub": -30,
+		"handbookPageCode": "item-ore-graphite",
+		"generator": "disc-followsealevel",
+		"attributes": {
+			"inblock": {
+				"code": "rock-*",
+				"name": "rock",
+				"allowedVariants": ["phyllite", "slate", "whitemarble", "redmarble", "greenmarble", "gneiss", "schist", "quartzite"]
+			},
+			"placeblock": { "code": "ore-graphite-{rock}" },
+			"surfaceBlock": { "code": "looseores-graphite-{rock}-free" },
+			"radius": { "dist": "invexp", "avg": 10, "var": 10 },
+			"yPosRel": { "dist": "uniform", "avg": 0.65, "var": 0.6 },
+			"thickness": { "dist": "uniform", "avg": 1, "var": 0 }
+		}
+	}
+]

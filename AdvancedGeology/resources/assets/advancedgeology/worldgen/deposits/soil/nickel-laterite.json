@@ -24,7 +24,6 @@
 					"soil-medium-normal": ["verysparse"]
 				}
 			},
-			"topLayerFillToBedrock": true,
 			"rockInBlock": {
 				"code": "rock-*",
 				"name": "rock",
