@@ -1,0 +1,8 @@
+[
+  {
+    "op": "addeach",
+    "path": "/ingredients/1/allowedVariants/0",
+    "value": ["gneiss", "schist", "quartzite", "dolomite", "diorite", "gabbro", "dacite", "rhyolite"],
+    "file": "game:recipes/barrel/mortar.json"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-gneiss" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-gneiss" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-gneiss-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-schist" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-schist" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-schist-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-quartzite" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-quartzite" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-quartzite-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-dolomite" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-dolomite" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-dolomite-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-diorite" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-diorite" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-diorite-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-gabbro" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-gabbro" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-gabbro-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-dacite" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-dacite" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-dacite-north", "quantity": 2 }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": { "type": "block", "code": "gravel-rhyolite" },
+      "S": { "type": "block", "code": "sand-*" },
+      "L": { "type": "item", "code": "stone-rhyolite" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "cobblestonefan-rhyolite-north", "quantity": 2 }
+  }
+]
