@@ -750,8 +750,9 @@ public class SaltDomeDepositGenerator : DepositGeneratorBase
             // Handle child deposits (like sylvite) - only if we placed blocks
             if (variant.ChildDeposits != null)
             {
-                foreach (var childVariant in variant.ChildDeposits)
+                for (int childIndex = 0; childIndex < variant.ChildDeposits.Length; childIndex++)
                 {
+                    var childVariant = variant.ChildDeposits[childIndex];
                     // Initialize child deposit generator if not already done
                     if (childVariant.GeneratorInst == null)
                     {
@@ -761,9 +762,17 @@ public class SaltDomeDepositGenerator : DepositGeneratorBase
                         {
                             JsonUtil.Populate(childVariant.Attributes.Token, childVariant.GeneratorInst);
                         }
+                        if (childVariant.GeneratorInst is ChildDepositGenerator childGenerator)
+                        {
+                            foreach (Block parentBlock in placeBlocks)
+                            {
+                                childGenerator.ResolveAdd(parentBlock, InBlock?.Name ?? "rock", string.Empty);
+                            }
+                        }
                     }
 
-                    // Add child deposit at dome center position
+                    // Point-cloud children must start inside halite, not at the terrain-surface
+                    // position supplied to the climate-dependent parent deposit.
                     float rndVal = DepositRand.NextFloat();
                     if (childVariant.TriesPerChunk > rndVal)
                     {
@@ -771,7 +780,10 @@ public class SaltDomeDepositGenerator : DepositGeneratorBase
                         {
                             subDepositsToPlace = new Dictionary<BlockPos, DepositVariant>();
                         }
-                        subDepositsToPlace[depoCenterPos.Copy()] = childVariant;
+
+                        int childY = GameMath.Clamp(domeTopY - 4 - childIndex * 4, domeBaseY + 3, domeTopY - 3);
+                        BlockPos childCenter = new BlockPos(depoCenterPos.X, childY, depoCenterPos.Z);
+                        subDepositsToPlace[childCenter] = childVariant;
                     }
                 }
             }

@@ -23,7 +23,7 @@
   },
   {
     "op": "add",
-    "path": "/combustiblePropsByType/ore-*-pyrolusite-*",
+    "path": "/combustiblePropsByType/*-pyrolusite",
     "value": {
       "meltingPoint": 1400,
       "meltingDuration": 30,
@@ -34,7 +34,7 @@
         "stacksize": 1
       }
     },
-    "file": "game:itemtypes/resource/ore-graded.json"
+    "file": "game:itemtypes/resource/nugget.json"
   },
   {
     "op": "add",
