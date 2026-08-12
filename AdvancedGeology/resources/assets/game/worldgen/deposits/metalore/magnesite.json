@@ -1,0 +1,155 @@
+[
+  {
+    "code": "magnesite",
+    "triesPerChunk": 5,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-magnesite",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "peridotite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-*-magnesite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 6,
+        "var": 3
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.3
+      },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      }
+    }
+  },
+  {
+    "code": "magnesite",
+    "triesPerChunk": 5,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-magnesite",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "dolomite",
+          "limestone"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-*-magnesite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-dolomite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 6,
+        "var": 3
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.3
+      },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      }
+    }
+  },
+  {
+    "code": "magnesite",
+    "triesPerChunk": 5,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-magnesite",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "redmarble",
+          "greenmarble",
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-*-magnesite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-redmarble": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-greenmarble": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-whitemarble": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 6,
+        "var": 3
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.3
+      },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      }
+    }
+  }
+]

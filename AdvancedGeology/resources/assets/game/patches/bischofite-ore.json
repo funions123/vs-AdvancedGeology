@@ -1,0 +1,22 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "bischofite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bischofite-halite",
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-bischofite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  }
+]

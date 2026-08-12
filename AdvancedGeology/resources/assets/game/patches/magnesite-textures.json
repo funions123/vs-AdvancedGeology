@@ -1,0 +1,29 @@
+[
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-magnesite-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": [
+          "block/stone/ore/magnesite1"
+        ],
+        "alternates": [
+          {
+            "base": "block/stone/rock/{rock}1",
+            "overlays": [
+              "block/stone/ore/magnesite2"
+            ]
+          },
+          {
+            "base": "block/stone/rock/{rock}1",
+            "overlays": [
+              "block/stone/ore/magnesite3"
+            ]
+          }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  }
+]

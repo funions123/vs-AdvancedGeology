@@ -44,6 +44,18 @@
 
   {
     "op": "add",
+    "path": "/shapeByType/ore-*-magnesite-*",
+    "value": { "base": "item/ore/{grade}/magnesite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/ore-*-pyrolusite-*",
+    "value": { "base": "item/ore/{grade}/pyrolusite" },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
     "path": "/textures/oreByType",
     "value": {},
     "file": "game:itemtypes/resource/crystalizedore-graded.json"
@@ -99,6 +111,25 @@
     "value": {
       "base": "block/stone/rock/{rock}1",
       "overlays": ["block/stone/ore/siderite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+  ,
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-magnesite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/magnesite1"]
+    },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/oreByType/crystalizedore-*-pyrolusite-*",
+    "value": {
+      "base": "block/stone/rock/{rock}1",
+      "overlays": ["block/stone/ore/pyrolusite1"]
     },
     "file": "game:itemtypes/resource/crystalizedore-graded.json"
   }

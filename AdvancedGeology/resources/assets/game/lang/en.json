@@ -318,4 +318,20 @@
   "item-nugget-siderite": "Nugget (Siderite)",
   "item-crystalizedore-siderite": "Crystallized siderite",
   "block-looseores-siderite-*": "Siderite",
+  "game:block-ore-bischofite-halite": "Bischofite ore",
+  "ore-bischofite": "Bischofite",
+  "item-ore-bischofite": "Bischofite chunk",
+  "item-bischofite-halite": "Bischofite in halite",
+
+  "game:block-ore-*-magnesite-*": "Magnesite ore",
+  "ore-magnesite": "Magnesite",
+  "item-ore-magnesite": "Magnesite chunk",
+  "item-nugget-magnesite": "Nugget (Magnesite)",
+  "item-crystalizedore-magnesite": "Crystallized magnesite",
+
+  "game:block-ore-*-pyrolusite-*": "Pyrolusite ore",
+  "ore-pyrolusite": "Pyrolusite",
+  "item-ore-pyrolusite": "Pyrolusite chunk",
+  "item-nugget-pyrolusite": "Nugget (Pyrolusite)",
+  "item-crystalizedore-pyrolusite": "Crystallized pyrolusite",
 }

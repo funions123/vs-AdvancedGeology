@@ -1,0 +1,903 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pyrolusite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pyrolusite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-pyrolusite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/ore-*-pyrolusite-*",
+    "value": {
+      "meltingPoint": 1400,
+      "meltingDuration": 30,
+      "smeltedRatio": 10,
+      "smeltedStack": {
+        "type": "block",
+        "code": "glass-blue",
+        "stacksize": 1
+      }
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-chalk",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-chalk",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-chalk",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-chalk",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-shale",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-shale",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-shale",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-shale",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-claystone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-claystone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-claystone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-claystone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-chert",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-chert",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-chert",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-chert",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-granite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-granite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-granite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-granite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-gneiss",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-gneiss",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-gneiss",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-gneiss",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-schist",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-schist",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-schist",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-schist",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-slate",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-slate",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-slate",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-slate",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-basalt",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-basalt",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-basalt",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-basalt",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-andesite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-andesite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-andesite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-andesite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-shale",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-shale",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-shale",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-shale",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-chert",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-chert",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-chert",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-chert",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-granite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-granite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-granite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-granite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-schist",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-schist",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-schist",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-schist",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-slate",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-slate",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-slate",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-slate",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-chalk",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-shale",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-shale",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-shale",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-shale",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-claystone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-chert",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-chert",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-chert",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-chert",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-granite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-granite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-granite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-granite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-gneiss",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-schist",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-schist",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-schist",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-schist",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-slate",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-slate",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-slate",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-slate",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-basalt",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-pyrolusite-andesite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

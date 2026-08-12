@@ -1,0 +1,29 @@
+[
+  {
+    "op": "add",
+    "path": "/texturesByType/ore-*-pyrolusite-*",
+    "value": {
+      "all": {
+        "base": "block/stone/rock/{rock}1",
+        "overlays": [
+          "block/stone/ore/pyrolusite1"
+        ],
+        "alternates": [
+          {
+            "base": "block/stone/rock/{rock}1",
+            "overlays": [
+              "block/stone/ore/pyrolusite2"
+            ]
+          },
+          {
+            "base": "block/stone/rock/{rock}1",
+            "overlays": [
+              "block/stone/ore/pyrolusite3"
+            ]
+          }
+        ]
+      }
+    },
+    "file": "game:blocktypes/stone/ore-graded.json"
+  }
+]

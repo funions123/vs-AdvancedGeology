@@ -1,0 +1,522 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "magnesite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "magnesite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-magnesite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "magnesite",
+    "file": "game:itemtypes/resource/crushed/crushed.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-poor-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 1
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-medium-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 1.33
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-rich-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 1.66
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-bountiful-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 2.33
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-peridotite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-peridotite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-peridotite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-peridotite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-dolomite",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-limestone",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-redmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-redmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-redmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-redmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-greenmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-greenmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-greenmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-greenmarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-whitemarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-whitemarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-whitemarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-whitemarble",
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-peridotite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-peridotite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-peridotite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-peridotite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-dolomite",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-limestone",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-redmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-redmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-redmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-redmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-poor-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-medium-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-rich-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-bountiful-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-magnesite-peridotite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-magnesite-peridotite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-magnesite-peridotite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-magnesite-peridotite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-magnesite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-magnesite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-magnesite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-magnesite-dolomite",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-magnesite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-magnesite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-magnesite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-magnesite-limestone",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-magnesite-redmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-magnesite-redmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-magnesite-redmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-magnesite-redmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-magnesite-greenmarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-poor-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-medium-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-rich-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "crystalizedore-bountiful-magnesite-whitemarble",
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

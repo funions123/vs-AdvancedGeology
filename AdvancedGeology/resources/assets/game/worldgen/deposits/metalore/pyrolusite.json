@@ -1,0 +1,160 @@
+[
+  {
+    "code": "pyrolusite",
+    "triesPerChunk": 5,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-pyrolusite",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "chalk",
+          "dolomite",
+          "shale",
+          "claystone",
+          "chert"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-*-pyrolusite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-dolomite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 6,
+        "var": 3
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.3
+      },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      }
+    }
+  },
+  {
+    "code": "pyrolusite",
+    "triesPerChunk": 5,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-pyrolusite",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "gneiss",
+          "schist",
+          "slate",
+          "basalt",
+          "andesite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-*-pyrolusite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-gneiss": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-schist": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 6,
+        "var": 3
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.3
+      },
+      "gradeDistribution": "RandomPlusDepthBonus",
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      }
+    }
+  }
+]

@@ -42,6 +42,18 @@
 					"radius": { "dist": "gaussian", "avg": 2, "var": 0 },
 					"thickness": { "dist": "invexp", "avg": 2, "var": 1 }
 				}
+			},
+			{
+				"code": "bischofite",
+				"triesPerChunk": 0.05,
+				"handbookPageCode": "item-bischofite-halite",
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 40, "var": 5 },
+					"placeblock": { "code": "ore-bischofite-halite" },
+					"radius": { "dist": "gaussian", "avg": 2, "var": 0 },
+					"thickness": { "dist": "invexp", "avg": 2, "var": 1 }
+				}
 			}
 		]
 	},
@@ -91,6 +103,18 @@
 				"attributes": {
 					"randomTries": { "avg": 40, "var": 5 },
 					"placeblock": { "code": "ore-sylvite-halite" },
+					"radius": { "dist": "gaussian", "avg": 2, "var": 0 },
+					"thickness": { "dist": "invexp", "avg": 2, "var": 1 }
+				}
+			},
+			{
+				"code": "bischofite",
+				"triesPerChunk": 0.05,
+				"handbookPageCode": "item-bischofite-halite",
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 40, "var": 5 },
+					"placeblock": { "code": "ore-bischofite-halite" },
 					"radius": { "dist": "gaussian", "avg": 2, "var": 0 },
 					"thickness": { "dist": "invexp", "avg": 2, "var": 1 }
 				}
@@ -147,6 +171,18 @@
 				"attributes": {
 					"randomTries": { "avg": 50, "var": 10 },
 					"placeblock": { "code": "ore-sylvite-halite" },
+					"radius": { "dist": "gaussian", "avg": 2, "var": 0 },
+					"thickness": { "dist": "invexp", "avg": 2, "var": 1 }
+				}
+			},
+			{
+				"code": "bischofite",
+				"triesPerChunk": 0.05,
+				"handbookPageCode": "item-bischofite-halite",
+				"generator": "childdeposit-pointcloud",
+				"attributes": {
+					"randomTries": { "avg": 50, "var": 10 },
+					"placeblock": { "code": "ore-bischofite-halite" },
 					"radius": { "dist": "gaussian", "avg": 2, "var": 0 },
 					"thickness": { "dist": "invexp", "avg": 2, "var": 1 }
 				}

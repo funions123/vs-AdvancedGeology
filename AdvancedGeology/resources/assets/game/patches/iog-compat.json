@@ -1419,5 +1419,209 @@
     "file": "interestingoregen:config/hydrothermal/magmatic-granitic-deep.json",
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
+  },
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/metalore/magnesite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "magnesite",
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
+      "handbookPageCode": "item-nugget-magnesite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "chimney",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["peridotite"]
+        },
+        "placeblock": {
+          "code": "ore-*-magnesite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-peridotite": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+        "radius": { "dist": "uniform", "avg": 5, "var": 2 },
+        "yPosRel": { "dist": "uniform", "avg": 0.5, "var": 0.4 },
+        "thickness": { "dist": "triangle", "avg": 60, "var": 30 },
+        "branchCount": { "dist": "uniform", "avg": 7, "var": 2 },
+        "branchLength": { "dist": "uniform", "avg": 80, "var": 30 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-magnesite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "magnesite",
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
+      "handbookPageCode": "item-nugget-magnesite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["dolomite", "limestone"]
+        },
+        "placeblock": {
+          "code": "ore-*-magnesite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-dolomite": ["poor", "medium", "rich", "bountiful"],
+            "rock-limestone": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-magnesite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "magnesite",
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
+      "handbookPageCode": "item-nugget-magnesite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["redmarble", "greenmarble", "whitemarble"]
+        },
+        "placeblock": {
+          "code": "ore-*-magnesite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-redmarble": ["poor", "medium", "rich", "bountiful"],
+            "rock-greenmarble": ["poor", "medium", "rich", "bountiful"],
+            "rock-whitemarble": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+        "radius": { "dist": "uniform", "avg": 48, "var": 16 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.30 },
+        "thickness": { "dist": "uniform", "avg": 3, "var": 2 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 10 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-magnesite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 0,
+    "file": "game:worldgen/deposits/metalore/pyrolusite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "pyrolusite",
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
+      "handbookPageCode": "item-nugget-pyrolusite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "seam",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["limestone", "chalk", "dolomite", "shale", "claystone", "chert"]
+        },
+        "placeblock": {
+          "code": "ore-*-pyrolusite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-limestone": ["poor", "medium", "rich", "bountiful"],
+            "rock-chalk": ["poor", "medium", "rich", "bountiful"],
+            "rock-dolomite": ["poor", "medium", "rich", "bountiful"],
+            "rock-shale": ["poor", "medium", "rich", "bountiful"],
+            "rock-claystone": ["poor", "medium", "rich", "bountiful"],
+            "rock-chert": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+        "radius": { "dist": "uniform", "avg": 96, "var": 32 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.4 },
+        "thickness": { "dist": "uniform", "avg": 2, "var": 1 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 5 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-pyrolusite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "code": "pyrolusite",
+      "triesPerChunk": 1.0,
+      "withOreMap": false,
+      "handbookPageCode": "item-nugget-pyrolusite",
+      "generator": "iog-gen",
+      "attributes": {
+        "inblock": {
+          "veintype": "fault",
+          "code": "rock-*",
+          "name": "rock",
+          "allowedVariants": ["granite", "gneiss", "schist", "slate", "basalt", "andesite"]
+        },
+        "placeblock": {
+          "code": "ore-*-pyrolusite-{rock}",
+          "name": "grade",
+          "allowedVariantsByInBlock": {
+            "rock-granite": ["poor", "medium", "rich", "bountiful"],
+            "rock-gneiss": ["poor", "medium", "rich", "bountiful"],
+            "rock-schist": ["poor", "medium", "rich", "bountiful"],
+            "rock-slate": ["poor", "medium", "rich", "bountiful"],
+            "rock-basalt": ["poor", "medium", "rich", "bountiful"],
+            "rock-andesite": ["poor", "medium", "rich", "bountiful"]
+          }
+        },
+        "radius": { "dist": "uniform", "avg": 48, "var": 16 },
+        "yPosRel": { "dist": "uniform", "avg": 0.45, "var": 0.30 },
+        "thickness": { "dist": "uniform", "avg": 3, "var": 2 },
+        "branchCount": { "dist": "uniform", "avg": 10, "var": 10 },
+        "branchLength": { "dist": "uniform", "avg": 3, "var": 2 },
+        "OreSpongePercent": 0.3
+      }
+    },
+    "file": "game:worldgen/deposits/metalore/iog-pyrolusite.json",
+    "dependsOn": [{ "modid": "interestingoregen" }],
+    "side": "Server"
   }
 ]
