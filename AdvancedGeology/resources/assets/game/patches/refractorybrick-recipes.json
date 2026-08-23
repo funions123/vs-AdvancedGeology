@@ -5,15 +5,69 @@
     "value": {
       "ingredientPattern": "FF,QB,P_",
       "ingredients": {
-        "F": { "type": "item", "code": "clay-fire" },
-        "Q": { "type": "item", "code": "crushed-quartz" },
-        "B": { "type": "item", "code": "crushed-bauxite" },
-        "P": { "type": "item", "code": "crushed-magnesite" }
+        "F": {
+          "type": "item",
+          "code": "clay-fire"
+        },
+        "Q": {
+          "type": "item",
+          "code": "crushed-quartz"
+        },
+        "B": {
+          "type": "item",
+          "code": "crushed-bauxite"
+        },
+        "P": {
+          "type": "item",
+          "code": "crushed-magnesite"
+        }
       },
       "width": 2,
       "height": 3,
       "shapeless": true,
-      "output": { "type": "item", "code": "refractorybrick-raw-tier2", "quantity": 1 }
+      "output": {
+        "type": "item",
+        "code": "refractorybrick-raw-tier2",
+        "quantity": 1
+      }
+    },
+    "file": "game:recipes/grid/rawrefractorybrick.json"
+  },
+  {
+    "op": "add",
+    "path": "/-",
+    "value": {
+      "ingredientPattern": "FF,QB,PT",
+      "ingredients": {
+        "F": {
+          "type": "item",
+          "code": "clay-fire"
+        },
+        "Q": {
+          "type": "item",
+          "code": "crushed-quartz"
+        },
+        "B": {
+          "type": "item",
+          "code": "crushed-bauxite"
+        },
+        "P": {
+          "type": "item",
+          "code": "crushed-magnesite"
+        },
+        "T": {
+          "type": "item",
+          "code": "crushed-ilmenite"
+        }
+      },
+      "width": 2,
+      "height": 3,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "refractorybrick-raw-tier3",
+        "quantity": 1
+      }
     },
     "file": "game:recipes/grid/rawrefractorybrick.json"
   }

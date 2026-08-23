@@ -1421,14 +1421,6 @@
     "side": "Server"
   },
   {
-    "op": "replace",
-    "path": "/0/triesPerChunk",
-    "value": 0,
-    "file": "game:worldgen/deposits/metalore/magnesite.json",
-    "dependsOn": [{ "modid": "interestingoregen" }],
-    "side": "Server"
-  },
-  {
     "op": "add",
     "path": "/-",
     "value": {
@@ -1533,14 +1525,6 @@
       }
     },
     "file": "game:worldgen/deposits/metalore/iog-magnesite.json",
-    "dependsOn": [{ "modid": "interestingoregen" }],
-    "side": "Server"
-  },
-  {
-    "op": "replace",
-    "path": "/0/triesPerChunk",
-    "value": 0,
-    "file": "game:worldgen/deposits/metalore/pyrolusite.json",
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },

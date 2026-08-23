@@ -29,12 +29,12 @@ namespace AdvancedGeology
                 IogChildDepositPatch.Apply(api);
             }
 
-            // Hidden silver grade system only runs when AdvancedMetallurgy is installed.
-            SilverGradeSystem.SetActive(api.ModLoader.IsModEnabled("advancedmetallurgy"));
+            // Hidden silver grade system only runs when Industrial Story is installed.
+            SilverGradeSystem.SetActive(api.ModLoader.IsModEnabled("industrialstory"));
             if (SilverGradeSystem.Active)
             {
                 SilverGradeSystem.RegisterIgnoredAttribute();
-                api.Logger.Notification("[AdvancedGeology] AdvancedMetallurgy detected: hidden silver grade system enabled");
+                api.Logger.Notification("[AdvancedGeology] Industrial Story detected: hidden silver grade system enabled");
             }
         }
 
@@ -72,6 +72,8 @@ namespace AdvancedGeology
                 ClearIogDeposits(api);
 
                 ZeroDepositTries(api, "game:worldgen/deposits/metalore/chalcopyrite.json");
+                ZeroDepositTries(api, "game:worldgen/deposits/metalore/magnesite.json");
+                ZeroDepositTries(api, "game:worldgen/deposits/metalore/pyrolusite.json");
             }
 
             if (api.ModLoader.IsModEnabled("geoaddons"))
@@ -115,24 +117,41 @@ namespace AdvancedGeology
                 bool changed = false;
                 foreach (JObject deposit in root.OfType<JObject>())
                 {
-                    if (deposit["childDeposits"] is not JArray children) continue;
-
-                    for (int i = children.Count - 1; i >= 0; i--)
+                    if (deposit["childDeposits"] is JArray children)
                     {
-                        string entry = children[i].ToString();
-                        if (silverMarkers.Any(m => entry.Contains(m)))
+                        for (int i = children.Count - 1; i >= 0; i--)
                         {
-                            children.RemoveAt(i);
-                            removed++;
-                            changed = true;
+                            string entry = children[i].ToString();
+                            if (silverMarkers.Any(m => entry.Contains(m)))
+                            {
+                                children.RemoveAt(i);
+                                removed++;
+                                changed = true;
+                            }
                         }
                     }
+
+                    if (deposit["attributes"] is not JObject attributes ||
+                        attributes["subdeposit"] is not JObject subdeposit) continue;
+
+                    string subdepositEntry = subdeposit.ToString();
+                    if (!silverMarkers.Any(m => subdepositEntry.Contains(m))) continue;
+
+                    attributes.Remove("subdeposit");
+                    if (attributes["inblock"] is JObject inblock)
+                    {
+                        string? veinType = inblock["veintype"]?.ToString();
+                        if (veinType == "hydrotubewithdepo") inblock["veintype"] = "hydrotube";
+                        else if (veinType == "chimneywithdepo") inblock["veintype"] = "chimney";
+                    }
+                    removed++;
+                    changed = true;
                 }
 
                 if (changed) asset.Data = Encoding.UTF8.GetBytes(root.ToString());
             }
 
-            api.Logger.Notification("[AdvancedGeology] AdvancedMetallurgy detected: removed {0} native-silver childDeposits", removed);
+            api.Logger.Notification("[AdvancedGeology] Industrial Story detected: removed {0} native-silver deposits", removed);
         }
 
         /// <summary>

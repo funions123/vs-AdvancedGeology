@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using AdvancedGeology.Silver;
 using HarmonyLib;
 using Vintagestory.API.Common;
-using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
@@ -30,54 +28,6 @@ public static class Patch_Block_GetDrops
     }
 }
 
-/// <summary>
-/// Carries the grade from a crushed ore stack onto the nugget item entities it spawns.
-/// </summary>
-[HarmonyPatch(typeof(ItemOre), nameof(ItemOre.OnContainedInteractStop))]
-public static class Patch_ItemOre_Crush
-{
-    public class CrushState
-    {
-        public double Grade;
-        public readonly HashSet<long> PreExisting = new();
-    }
-
-    private static IEnumerable<Entity> NuggetEntitiesAround(IWorldAccessor world, BlockSelection blockSel)
-    {
-        Vec3d center = blockSel.Position.ToVec3d().Add(0.5, 0.5, 0.5);
-        return world.GetEntitiesAround(center, 2f, 2f, e => e is EntityItem);
-    }
-
-    public static void Prefix(ItemSlot slot, BlockEntityContainer be, BlockSelection blockSel, out CrushState __state)
-    {
-        __state = new CrushState();
-        if (!SilverGradeSystem.Active || blockSel == null || be?.Api?.Side != EnumAppSide.Server) return;
-
-        __state.Grade = SilverGradeSystem.GetGrade(slot?.Itemstack);
-        if (__state.Grade <= 0.0) return;
-
-        foreach (Entity e in NuggetEntitiesAround(be.Api.World, blockSel))
-        {
-            __state.PreExisting.Add(e.EntityId);
-        }
-    }
-
-    public static void Postfix(BlockEntityContainer be, BlockSelection blockSel, CrushState __state)
-    {
-        if (__state.Grade <= 0.0 || blockSel == null || be?.Api?.Side != EnumAppSide.Server) return;
-
-        foreach (Entity e in NuggetEntitiesAround(be.Api.World, blockSel))
-        {
-            if (__state.PreExisting.Contains(e.EntityId)) continue;
-
-            ItemStack? stack = (e as EntityItem)?.Itemstack;
-            if (stack?.Collectible?.Code?.Path is string path && path.StartsWith("nugget-"))
-            {
-                SilverGradeSystem.SetGrade(stack, __state.Grade);
-            }
-        }
-    }
-}
 
 /// <summary>
 /// Firepit smelt carries silver from the consumed nugget to the produced metal. Recomputed from pre-smelt state so it

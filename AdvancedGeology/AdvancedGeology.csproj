@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>AdvancedGeology</ModName>
     <ModType>code</ModType>
-    <ModVersion>1.0.0</ModVersion>
+    <ModVersion>1.0.1</ModVersion>
     <ModId>advancedgeology</ModId>
     <Description>Adds new ores and adjusts vanilla oregen to be more realistic</Description>
     <Side>universal</Side>
@@ -29,6 +29,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <JsonIndent>2</JsonIndent>
     <JsonMaxLineLength>200</JsonMaxLineLength>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Keep compiler-generated source and symbol paths independent of the build workstation. -->
+    <PathMap>$(MSBuildProjectDirectory)=/_/AdvancedGeology</PathMap>
+    <Deterministic>true</Deterministic>
+    <!-- Generated SourceLink JSON embeds the physical checkout root even when PathMap is set. -->
+    <EnableSourceLink>false</EnableSourceLink>
+    <EmbedUntrackedSources>false</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- Preserve line information without distributing a separate PDB. -->
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <!-- Loading local settings file -->
@@ -155,7 +169,7 @@
   <Target Name="ZipFiles" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
     <Message Text="Pachaging into '$(ReleaseFile)'" Importance="high" />
     <Delete Files="$(OutputPath)\$(ModId).dll" Condition="'$(ModType)' != 'code'" />
-    <Delete Files="$(OutputPath)\$(ModId).pdb" Condition="'$(ModType)' != 'code'" />
+    <Delete Files="$(OutputPath)\$(AssemblyName).pdb" />
     <Delete Files="$(OutputPath)\$(ModId).deps.json" Condition="'$(ModType)' != 'code'" />
     <MakeDir Directories="$(ReleasesDir)" />
     <Delete Files="$(ReleasePath)" />

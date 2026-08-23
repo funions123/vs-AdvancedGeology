@@ -8,7 +8,7 @@ namespace AdvancedGeology.Silver;
 
 /// <summary>
 /// Certain ores may have a silver content stored in their attributes.
-/// Active only when AdvancedMetallurgy is installed.
+/// Active only when Industrial Story is installed.
 /// </summary>
 public static class SilverGradeSystem
 {

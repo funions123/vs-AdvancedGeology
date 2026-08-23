@@ -328,6 +328,7 @@
   "item-ore-magnesite": "Magnesite chunk",
   "item-nugget-magnesite": "Nugget (Magnesite)",
   "item-crystalizedore-magnesite": "Crystallized magnesite",
+  "item-crushed-magnesite": "Crushed magnesite",
 
   "game:block-ore-*-pyrolusite-*": "Pyrolusite ore",
   "ore-pyrolusite": "Pyrolusite",
