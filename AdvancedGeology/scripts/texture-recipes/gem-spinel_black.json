@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "spinel_black",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#191c1c",
+  "midtone": "#343a3b",
+  "highlight": "#4a5254",
+  "midpoint": 0.5
+}

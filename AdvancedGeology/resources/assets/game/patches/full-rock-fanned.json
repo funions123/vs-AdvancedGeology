@@ -1,0 +1,38 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "granulite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "greenstone",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "amphibolite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "migmatite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "tonalite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "serpentinite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  }
+]

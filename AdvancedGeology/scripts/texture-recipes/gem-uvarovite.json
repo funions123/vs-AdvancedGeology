@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "uvarovite",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#092d25",
+  "midtone": "#18734d",
+  "highlight": "#63c78b",
+  "midpoint": 0.5
+}

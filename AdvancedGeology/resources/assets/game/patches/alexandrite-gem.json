@@ -1,0 +1,20 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "alexandrite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-gem-alexandrite-pegmatite",
+      "ore-gem-alexandrite-phyllite",
+      "ore-gem-alexandrite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-gem.json"
+  }
+]

@@ -79,53 +79,43 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-galena_nativesilver-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-galena_nativesilver-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: galena in siltstone/mudstone, galena_nativesilver in siltstone/mudstone, cerussite childDeposit variants ====
 
-  // --- galena in GA rocks: blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-galena-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- galena_nativesilver in GA rocks: blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena_nativesilver-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena_nativesilver-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena_nativesilver-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena_nativesilver-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- galena looseores in GA rocks ---
   { "op": "add", "path": "/allowedVariants/-", "value": "looseores-galena-siltstone-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "looseores-galena-mudstone-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- galena in GA rocks: itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-galena-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- galena_nativesilver in GA rocks: itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena_nativesilver-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena_nativesilver-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-galena_nativesilver-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-galena_nativesilver-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- galena in GA rocks: crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-galena-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-galena-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-galena-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-galena-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-galena-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- galena_nativesilver in GA rocks: crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-galena_nativesilver-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-galena_nativesilver-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-galena_nativesilver-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-galena_nativesilver-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- cerussite childDeposit variants (all galena rocks + GA rocks, poor+medium) ---
-  // blocktypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-limestone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -142,7 +132,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // itemtypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-limestone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -159,7 +148,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // crystalizedore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cerussite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cerussite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cerussite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },

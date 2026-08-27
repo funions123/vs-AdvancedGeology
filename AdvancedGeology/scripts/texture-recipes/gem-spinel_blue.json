@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "spinel_blue",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#223a56",
+  "midtone": "#4778b4",
+  "highlight": "#65aaff",
+  "midpoint": 0.5
+}

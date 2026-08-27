@@ -1,0 +1,6 @@
+[
+  "block/stone/ore/{sourcePrefix}1.png",
+  "block/stone/ore/{sourcePrefix}2.png",
+  "block/stone/ore/{sourcePrefix}3.png",
+  "item/resource/ungraded/{sourcePrefix}.png"
+]

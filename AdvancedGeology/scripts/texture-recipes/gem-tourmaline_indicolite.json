@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "tourmaline_indicolite",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#1b3b47",
+  "midtone": "#397b93",
+  "highlight": "#51afd1",
+  "midpoint": 0.5
+}

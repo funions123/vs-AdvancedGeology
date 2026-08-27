@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "demantoid",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#0b3528",
+  "midtone": "#2c8a5b",
+  "highlight": "#a4e0ae",
+  "midpoint": 0.5
+}

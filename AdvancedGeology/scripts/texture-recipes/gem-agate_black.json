@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "agate_black",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#1d1f1f",
+  "midtone": "#3d4140",
+  "highlight": "#575c5b",
+  "midpoint": 0.5
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "code": "alexandrite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-alexandrite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "phyllite",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-alexandrite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "alexandrite",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-alexandrite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-alexandrite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  }
+]

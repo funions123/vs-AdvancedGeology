@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "jade_khotan",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#4f4437",
+  "midtone": "#a58d73",
+  "highlight": "#eac8a3",
+  "midpoint": 0.5
+}

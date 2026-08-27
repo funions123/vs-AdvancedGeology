@@ -1,0 +1,2655 @@
+[
+  {
+    "code": "chrysoberyl",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-chrysoberyl-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-chrysoberyl-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "chrysoberyl",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-chrysoberyl-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-chrysoberyl-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "aquamarine",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-aquamarine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-aquamarine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "aquamarine",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-aquamarine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-aquamarine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "heliodor",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-heliodor-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-heliodor-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "heliodor",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-heliodor-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-heliodor-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "opalwhite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-opalwhite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "rhyolite",
+          "sandstone"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-opalwhite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "opalblack",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-opalblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "claystone",
+          "sandstone"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-opalblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "opalcrystal",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-opalcrystal-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "rhyolite",
+          "sandstone"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-opalcrystal-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "opalfire",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-opalfire-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "basalt",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-opalfire-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalineschorl",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalineschorl-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalineschorl-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalineschorl",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalineschorl-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalineschorl-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalinerubellite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalinerubellite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalinerubellite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalinerubellite",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalinerubellite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalinerubellite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalineverdelite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalineverdelite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalineverdelite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalineverdelite",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalineverdelite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalineverdelite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalineindicolite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalineindicolite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalineindicolite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalineindicolite",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalineindicolite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalineindicolite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalinedravite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalinedravite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalinedravite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalinedravite",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalinedravite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenmarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalinedravite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalinechrome",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalinechrome-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "schist",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalinechrome-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tourmalinechrome",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tourmalinechrome-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenmarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tourmalinechrome-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelred",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "gneiss"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelred",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelblue",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "gneiss"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelblue",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelorange",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelorange-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "gneiss"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelorange-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelorange",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelorange-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelorange-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelgreen",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelgreen-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelgreen-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelgreen",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelgreen-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenmarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelgreen-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelblack",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gabbro",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spinelblack",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spinelblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenmarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spinelblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "ruby",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-ruby-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "basalt",
+          "gneiss"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-ruby-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "ruby",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-ruby-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-ruby-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "sapphire",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-sapphire-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "basalt",
+          "gneiss"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-sapphire-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "sapphire",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-sapphire-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-sapphire-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tanzanite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tanzanite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "gneiss",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tanzanite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jadeimperial",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jadeimperial-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "greenstone",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jadeimperial-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jadeblack",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jadeblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "peridotite",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jadeblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jadelavender",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jadelavender-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "greenstone",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jadelavender-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jadekhotan",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jadekhotan-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jadekhotan-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jadekhotan",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jadekhotan-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jadekhotan-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconwhite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconwhite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconwhite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconwhite",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconwhite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconwhite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconred",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconred",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zircongreen",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zircongreen-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zircongreen-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zircongreen",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zircongreen-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zircongreen-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconyellow",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconyellow-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconyellow-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconyellow",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconyellow-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconyellow-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconbrown",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconbrown-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconbrown-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconbrown",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconbrown-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconbrown-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconblue",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "zirconblue",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-zirconblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-zirconblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazblue",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazblue",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazimperial",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazimperial-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazimperial-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazimperial",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazimperial-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazimperial-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazred",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazred",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazsherry",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazsherry-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazsherry-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "topazsherry",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-topazsherry-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-topazsherry-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "agatewhite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-agatewhite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "basalt",
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-agatewhite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "agatered",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-agatered-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "basalt",
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-agatered-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "agateblue",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-agateblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "basalt",
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-agateblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "agateblack",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-agateblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "basalt",
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-agateblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperred",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperred",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperred-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "tuff"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperred-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperyellow",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperyellow-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperyellow-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperyellow",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperyellow-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "tuff"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperyellow-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jaspergreen",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jaspergreen-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jaspergreen-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jaspergreen",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jaspergreen-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "tuff"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jaspergreen-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperblack",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperblack",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperblack-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "tuff"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperblack-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperblue",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenstone",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "jasperblue",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-jasperblue-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "tuff"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-jasperblue-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  }
+]

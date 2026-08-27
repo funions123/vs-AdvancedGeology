@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gneiss",
+  "targetPrefix": "migmatite",
+  "sourceFilesFile": "full-rock-profile.json",
+  "shadow": "#493f39",
+  "midtone": "#8b776c",
+  "highlight": "#d0bdb1",
+  "midpoint": 0.5
+}

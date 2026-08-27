@@ -1,0 +1,33 @@
+[
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "serpentinite", "file": "game:worldgen/deposits/metalore/chromite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-serpentinite", "value": ["poor", "medium", "rich", "bountiful"], "file": "game:worldgen/deposits/metalore/chromite.json" },
+
+  { "op": "add", "path": "/2/attributes/inblock/allowedVariants/-", "value": "serpentinite", "file": "game:worldgen/deposits/metalore/iron.json" },
+  { "op": "add", "path": "/2/attributes/placeblock/allowedVariantsByInBlock/rock-serpentinite", "value": ["poor", "medium", "rich", "bountiful"], "file": "game:worldgen/deposits/metalore/iron.json" },
+
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "serpentinite", "file": "game:worldgen/deposits/metalore/magnesite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-serpentinite", "value": ["poor", "medium", "rich", "bountiful"], "file": "game:worldgen/deposits/metalore/magnesite.json" },
+
+  { "op": "add", "path": "/0/attributes/inblock/allowedVariants/-", "value": "serpentinite", "file": "game:worldgen/deposits/metalore/pentlandite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-serpentinite", "value": ["poor", "medium", "rich", "bountiful"], "file": "game:worldgen/deposits/metalore/pentlandite.json" },
+
+  { "op": "addeach", "path": "/0/attributes/inblock/allowedVariants/-", "value": ["greenstone", "amphibolite", "tonalite"], "file": "game:worldgen/deposits/metalore/chalcopyrite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-greenstone", "value": ["poor", "medium", "rich"], "file": "game:worldgen/deposits/metalore/chalcopyrite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/chalcopyrite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-tonalite", "value": ["poor", "medium", "rich"], "file": "game:worldgen/deposits/metalore/chalcopyrite.json" },
+
+  { "op": "addeach", "path": "/0/attributes/inblock/allowedVariants/-", "value": ["greenstone", "amphibolite", "tonalite"], "file": "game:worldgen/deposits/metalore/chalcopyrite-shallow.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-greenstone", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/chalcopyrite-shallow.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/chalcopyrite-shallow.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-tonalite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/chalcopyrite-shallow.json" },
+
+  { "op": "addeach", "path": "/0/attributes/inblock/allowedVariants/-", "value": ["greenstone", "amphibolite"], "file": "game:worldgen/deposits/metalore/sphalerite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-greenstone", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/sphalerite.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium"], "file": "game:worldgen/deposits/metalore/sphalerite.json" },
+
+  { "op": "addeach", "path": "/0/attributes/inblock/allowedVariants/-", "value": ["greenstone", "amphibolite"], "file": "game:worldgen/deposits/metalore/galena.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-greenstone", "value": ["poor", "medium", "rich"], "file": "game:worldgen/deposits/metalore/galena.json" },
+  { "op": "add", "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-amphibolite", "value": ["poor", "medium", "rich"], "file": "game:worldgen/deposits/metalore/galena.json" },
+
+  { "op": "addeach", "path": "/0/attributes/inblock/allowedVariants/-", "value": ["granulite", "migmatite"], "file": "game:worldgen/deposits/mineralore/graphite.json" }
+]

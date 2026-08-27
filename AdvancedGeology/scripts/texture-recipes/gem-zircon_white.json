@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "zircon_white",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#686763",
+  "midtone": "#d8d7cf",
+  "highlight": "#ffffff",
+  "midpoint": 0.5
+}

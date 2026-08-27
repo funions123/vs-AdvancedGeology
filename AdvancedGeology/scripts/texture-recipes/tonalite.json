@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diorite",
+  "targetPrefix": "tonalite",
+  "sourceFilesFile": "full-rock-profile.json",
+  "shadow": "#4a5050",
+  "midtone": "#858d8b",
+  "highlight": "#c8cdc3",
+  "midpoint": 0.5
+}

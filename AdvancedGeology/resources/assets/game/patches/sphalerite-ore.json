@@ -20,9 +20,7 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-sphalerite-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-sphalerite-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: sphalerite in siltstone/mudstone + smithsonite/hemimorphite childDeposit variants ====
 
-  // --- sphalerite in GA rocks ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-sphalerite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-sphalerite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-sphalerite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -39,8 +37,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-sphalerite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-sphalerite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- smithsonite (all sphalerite rocks + GA rocks, poor+medium) ---
-  // blocktypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-limestone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -59,7 +55,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // itemtypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-limestone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -78,7 +73,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // crystalizedore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-smithsonite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-smithsonite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-smithsonite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -98,8 +92,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-smithsonite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-smithsonite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- hemimorphite (same rocks as smithsonite) ---
-  // blocktypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-limestone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -118,7 +110,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // itemtypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-limestone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -137,7 +128,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-siltstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-mudstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // crystalizedore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-hemimorphite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-hemimorphite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-hemimorphite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -157,7 +147,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-hemimorphite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-hemimorphite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- smithsonite in extra GA-patched sphalerite rocks (gabbro, diorite, rhyolite) ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-gabbro", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-smithsonite-gabbro", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-smithsonite-diorite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -177,7 +166,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-smithsonite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-smithsonite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- hemimorphite in extra GA-patched sphalerite rocks (gabbro, diorite, rhyolite) ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-gabbro", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-hemimorphite-gabbro", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-hemimorphite-diorite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },

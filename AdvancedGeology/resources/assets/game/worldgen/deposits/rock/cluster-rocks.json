@@ -1,0 +1,268 @@
+[
+  {
+    "code": "soapstone",
+    "triesPerChunk": 0.04,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-dolomite"
+      },
+      "placeblock": {
+        "code": "rock-soapstone"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      }
+    }
+  },
+  {
+    "code": "gypsum",
+    "triesPerChunk": 0.04,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "shale"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-gypsum"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 18,
+        "var": 9
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 5
+      }
+    }
+  },
+  {
+    "code": "anorthosite",
+    "triesPerChunk": 0.025,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gabbro",
+          "diorite"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-anorthosite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.7
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      }
+    }
+  },
+  {
+    "code": "phosphorite",
+    "triesPerChunk": 0.04,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "sandstone",
+          "shale"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-phosphorite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 18,
+        "var": 9
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 5
+      }
+    }
+  },
+  {
+    "code": "pegmatite",
+    "triesPerChunk": 0.01,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "gneiss",
+          "diorite"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-pegmatite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 40,
+        "var": 20
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.7
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 4,
+        "var": 8
+      }
+    }
+  },
+  {
+    "code": "pyroxenite",
+    "triesPerChunk": 0.01,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gabbro",
+          "peridotite",
+          "amphibolite"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-pyroxenite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 40,
+        "var": 20
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.7
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 4,
+        "var": 8
+      }
+    }
+  },
+  {
+    "code": "syenite",
+    "triesPerChunk": 0.01,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite",
+          "diorite",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-syenite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 40,
+        "var": 20
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.7
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 4,
+        "var": 8
+      }
+    }
+  },
+  {
+    "code": "carbonatite",
+    "triesPerChunk": 0.01,
+    "generator": "disc-followsurface",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite",
+          "granulite",
+          "tonalite"
+        ]
+      },
+      "placeblock": {
+        "code": "rock-carbonatite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 40,
+        "var": 20
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.7
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 4,
+        "var": 8
+      }
+    }
+  }
+]

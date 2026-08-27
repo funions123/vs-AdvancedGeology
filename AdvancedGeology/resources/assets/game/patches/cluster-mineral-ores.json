@@ -1,0 +1,167 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "periclase"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "microcline"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "cryolite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "alunite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "orthoclase"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-orthoclase-granite",
+      "ore-orthoclase-rhyolite",
+      "ore-orthoclase-syenite",
+      "ore-microcline-granite",
+      "ore-microcline-migmatite",
+      "ore-microcline-pegmatite",
+      "ore-cryolite-granite",
+      "ore-cryolite-pegmatite",
+      "ore-cryolite-syenite",
+      "ore-alunite-rhyolite",
+      "ore-alunite-dacite",
+      "ore-alunite-andesite",
+      "ore-alunite-tuff",
+      "ore-periclase-dolomite",
+      "ore-periclase-greenmarble",
+      "ore-periclase-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-periclase-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-microcline-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-cryolite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-alunite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-orthoclase-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-orthoclase-granite-free",
+      "looseores-orthoclase-rhyolite-free",
+      "looseores-orthoclase-syenite-free",
+      "looseores-microcline-granite-free",
+      "looseores-microcline-migmatite-free",
+      "looseores-microcline-pegmatite-free",
+      "looseores-cryolite-granite-free",
+      "looseores-cryolite-pegmatite-free",
+      "looseores-cryolite-syenite-free",
+      "looseores-alunite-rhyolite-free",
+      "looseores-alunite-dacite-free",
+      "looseores-alunite-andesite-free",
+      "looseores-alunite-tuff-free",
+      "looseores-periclase-dolomite-free",
+      "looseores-periclase-greenmarble-free",
+      "looseores-periclase-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-periclase-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ],
+      "looseores-microcline-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ],
+      "looseores-cryolite-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ],
+      "looseores-alunite-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ],
+      "looseores-orthoclase-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:blocktypes/stone/polished/polishedrock.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:blocktypes/stone/polished/polishedrockslab.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/1/states/-",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:blocktypes/stone/polished/polishedrockold.json"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "blockcode": "rock-granulite",
+      "amplitudes": [
+        4,
+        2,
+        1
+      ],
+      "thresholds": [
+        2.2,
+        1.1,
+        0.5
+      ],
+      "frequencies": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "genDir": "BottomUp",
+      "rockGroup": "Metamorphic"
+    },
+    "file": "game:worldgen/rockstrata.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "blockcode": "rock-greenstone",
+      "amplitudes": [
+        4,
+        2,
+        1
+      ],
+      "thresholds": [
+        2.2,
+        1.1,
+        0.5
+      ],
+      "frequencies": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "genDir": "BottomUp",
+      "rockGroup": "Metamorphic"
+    },
+    "file": "game:worldgen/rockstrata.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "blockcode": "rock-amphibolite",
+      "amplitudes": [
+        4,
+        2,
+        1
+      ],
+      "thresholds": [
+        2.2,
+        1.1,
+        0.5
+      ],
+      "frequencies": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "genDir": "BottomUp",
+      "rockGroup": "Metamorphic"
+    },
+    "file": "game:worldgen/rockstrata.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "blockcode": "rock-migmatite",
+      "amplitudes": [
+        4,
+        2,
+        1
+      ],
+      "thresholds": [
+        2.2,
+        1.1,
+        0.5
+      ],
+      "frequencies": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "genDir": "BottomUp",
+      "rockGroup": "Metamorphic"
+    },
+    "file": "game:worldgen/rockstrata.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "blockcode": "rock-tonalite",
+      "amplitudes": [
+        4,
+        2,
+        1
+      ],
+      "thresholds": [
+        2.2,
+        1.1,
+        0.5
+      ],
+      "frequencies": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "genDir": "TopDown",
+      "rockGroup": "Igneous"
+    },
+    "file": "game:worldgen/rockstrata.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "blockcode": "rock-serpentinite",
+      "amplitudes": [
+        4,
+        2,
+        1
+      ],
+      "thresholds": [
+        2.2,
+        1.1,
+        0.5
+      ],
+      "frequencies": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "genDir": "BottomUp",
+      "rockGroup": "Metamorphic"
+    },
+    "file": "game:worldgen/rockstrata.json"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "olivine_peridot",
+  "targetPrefix": "pyrope",
+  "sourceFiles": [
+    "block/stone/ore/{sourcePrefix}1.png",
+    "block/stone/ore/{sourcePrefix}2.png",
+    "block/stone/ore/{sourcePrefix}3.png"
+  ],
+  "shadow": "#3b1118",
+  "midtone": "#8c2631",
+  "highlight": "#dd7071",
+  "midpoint": 0.5
+}

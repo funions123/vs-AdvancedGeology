@@ -1,0 +1,50 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "soapstone",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "gypsum",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "anorthosite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "phosphorite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "pegmatite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "pyroxenite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "syenite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "carbonatite",
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  }
+]

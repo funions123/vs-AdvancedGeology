@@ -1,0 +1,120 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "moonstone"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "labradorite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "amazonite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "sunstone"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "almandine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pyrope"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tsavorite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "demantoid"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "uvarovite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spessartine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-gem-moonstone-granite",
+      "ore-gem-moonstone-rhyolite",
+      "ore-gem-labradorite-anorthosite",
+      "ore-gem-labradorite-gabbro",
+      "ore-gem-labradorite-granulite",
+      "ore-gem-amazonite-granite",
+      "ore-gem-amazonite-pegmatite",
+      "ore-gem-sunstone-andesite",
+      "ore-gem-sunstone-anorthosite",
+      "ore-gem-sunstone-basalt",
+      "ore-gem-almandine-amphibolite",
+      "ore-gem-almandine-gneiss",
+      "ore-gem-almandine-granulite",
+      "ore-gem-almandine-schist",
+      "ore-gem-pyrope-peridotite",
+      "ore-gem-pyrope-pyroxenite",
+      "ore-gem-pyrope-serpentinite",
+      "ore-gem-tsavorite-gneiss",
+      "ore-gem-tsavorite-greenmarble",
+      "ore-gem-tsavorite-greenstone",
+      "ore-gem-demantoid-gabbro",
+      "ore-gem-demantoid-peridotite",
+      "ore-gem-demantoid-pyroxenite",
+      "ore-gem-demantoid-serpentinite",
+      "ore-gem-uvarovite-gabbro",
+      "ore-gem-uvarovite-peridotite",
+      "ore-gem-uvarovite-serpentinite",
+      "ore-gem-spessartine-gneiss",
+      "ore-gem-spessartine-granite",
+      "ore-gem-spessartine-pegmatite",
+      "ore-gem-spessartine-rhyolite"
+    ],
+    "file": "game:blocktypes/stone/ore-gem.json"
+  }
+]

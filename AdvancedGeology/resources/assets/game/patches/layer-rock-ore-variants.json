@@ -1,0 +1,84 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-chromite-serpentinite", "ore-medium-chromite-serpentinite", "ore-rich-chromite-serpentinite", "ore-bountiful-chromite-serpentinite",
+      "ore-poor-magnetite-serpentinite", "ore-medium-magnetite-serpentinite", "ore-rich-magnetite-serpentinite", "ore-bountiful-magnetite-serpentinite",
+      "ore-poor-magnesite-serpentinite", "ore-medium-magnesite-serpentinite", "ore-rich-magnesite-serpentinite", "ore-bountiful-magnesite-serpentinite",
+      "ore-poor-pentlandite-serpentinite", "ore-medium-pentlandite-serpentinite", "ore-rich-pentlandite-serpentinite", "ore-bountiful-pentlandite-serpentinite",
+      "ore-poor-chalcopyrite-greenstone", "ore-medium-chalcopyrite-greenstone", "ore-rich-chalcopyrite-greenstone",
+      "ore-poor-sphalerite-greenstone", "ore-medium-sphalerite-greenstone",
+      "ore-poor-galena-greenstone", "ore-medium-galena-greenstone", "ore-rich-galena-greenstone",
+      "ore-poor-galena_nativesilver-greenstone", "ore-medium-galena_nativesilver-greenstone",
+      "ore-poor-chalcopyrite-amphibolite", "ore-medium-chalcopyrite-amphibolite",
+      "ore-poor-sphalerite-amphibolite", "ore-medium-sphalerite-amphibolite",
+      "ore-poor-galena-amphibolite", "ore-medium-galena-amphibolite", "ore-rich-galena-amphibolite",
+      "ore-poor-galena_nativesilver-amphibolite", "ore-medium-galena_nativesilver-amphibolite",
+      "ore-poor-chalcopyrite-tonalite", "ore-medium-chalcopyrite-tonalite", "ore-rich-chalcopyrite-tonalite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-chromite-serpentinite", "ore-medium-chromite-serpentinite", "ore-rich-chromite-serpentinite", "ore-bountiful-chromite-serpentinite",
+      "ore-poor-magnetite-serpentinite", "ore-medium-magnetite-serpentinite", "ore-rich-magnetite-serpentinite", "ore-bountiful-magnetite-serpentinite",
+      "ore-poor-magnesite-serpentinite", "ore-medium-magnesite-serpentinite", "ore-rich-magnesite-serpentinite", "ore-bountiful-magnesite-serpentinite",
+      "ore-poor-pentlandite-serpentinite", "ore-medium-pentlandite-serpentinite", "ore-rich-pentlandite-serpentinite", "ore-bountiful-pentlandite-serpentinite",
+      "ore-poor-chalcopyrite-greenstone", "ore-medium-chalcopyrite-greenstone", "ore-rich-chalcopyrite-greenstone",
+      "ore-poor-sphalerite-greenstone", "ore-medium-sphalerite-greenstone",
+      "ore-poor-galena-greenstone", "ore-medium-galena-greenstone", "ore-rich-galena-greenstone",
+      "ore-poor-galena_nativesilver-greenstone", "ore-medium-galena_nativesilver-greenstone",
+      "ore-poor-chalcopyrite-amphibolite", "ore-medium-chalcopyrite-amphibolite",
+      "ore-poor-sphalerite-amphibolite", "ore-medium-sphalerite-amphibolite",
+      "ore-poor-galena-amphibolite", "ore-medium-galena-amphibolite", "ore-rich-galena-amphibolite",
+      "ore-poor-galena_nativesilver-amphibolite", "ore-medium-galena_nativesilver-amphibolite",
+      "ore-poor-chalcopyrite-tonalite", "ore-medium-chalcopyrite-tonalite", "ore-rich-chalcopyrite-tonalite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-chromite-serpentinite", "crystalizedore-medium-chromite-serpentinite", "crystalizedore-rich-chromite-serpentinite", "crystalizedore-bountiful-chromite-serpentinite",
+      "crystalizedore-poor-magnetite-serpentinite", "crystalizedore-medium-magnetite-serpentinite", "crystalizedore-rich-magnetite-serpentinite", "crystalizedore-bountiful-magnetite-serpentinite",
+      "crystalizedore-poor-magnesite-serpentinite", "crystalizedore-medium-magnesite-serpentinite", "crystalizedore-rich-magnesite-serpentinite", "crystalizedore-bountiful-magnesite-serpentinite",
+      "crystalizedore-poor-pentlandite-serpentinite", "crystalizedore-medium-pentlandite-serpentinite", "crystalizedore-rich-pentlandite-serpentinite", "crystalizedore-bountiful-pentlandite-serpentinite",
+      "crystalizedore-poor-chalcopyrite-greenstone", "crystalizedore-medium-chalcopyrite-greenstone", "crystalizedore-rich-chalcopyrite-greenstone",
+      "crystalizedore-poor-sphalerite-greenstone", "crystalizedore-medium-sphalerite-greenstone",
+      "crystalizedore-poor-galena-greenstone", "crystalizedore-medium-galena-greenstone", "crystalizedore-rich-galena-greenstone",
+      "crystalizedore-poor-galena_nativesilver-greenstone", "crystalizedore-medium-galena_nativesilver-greenstone",
+      "crystalizedore-poor-chalcopyrite-amphibolite", "crystalizedore-medium-chalcopyrite-amphibolite",
+      "crystalizedore-poor-sphalerite-amphibolite", "crystalizedore-medium-sphalerite-amphibolite",
+      "crystalizedore-poor-galena-amphibolite", "crystalizedore-medium-galena-amphibolite", "crystalizedore-rich-galena-amphibolite",
+      "crystalizedore-poor-galena_nativesilver-amphibolite", "crystalizedore-medium-galena_nativesilver-amphibolite",
+      "crystalizedore-poor-chalcopyrite-tonalite", "crystalizedore-medium-chalcopyrite-tonalite", "crystalizedore-rich-chalcopyrite-tonalite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-chalcopyrite-greenstone-free", "looseores-chalcopyrite-amphibolite-free", "looseores-chalcopyrite-tonalite-free",
+      "looseores-galena-greenstone-free", "looseores-galena-amphibolite-free",
+      "looseores-graphite-granulite-free", "looseores-graphite-migmatite-free",
+      "looseores-quartz-granulite-free", "looseores-quartz-greenstone-free", "looseores-quartz-amphibolite-free",
+      "looseores-quartz-migmatite-free", "looseores-quartz-tonalite-free", "looseores-quartz-serpentinite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-graphite-granulite", "ore-graphite-migmatite",
+      "ore-quartz-granulite", "ore-quartz-greenstone", "ore-quartz-amphibolite",
+      "ore-quartz-migmatite", "ore-quartz-tonalite", "ore-quartz-serpentinite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  }
+]

@@ -1,0 +1,1 @@
+{"sourceRoot": "resources/assets/game/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "gabbro", "targetPrefix": "anorthosite", "sourceFilesFile": "marble-profile.json", "shadow": "#4a4c4a", "midtone": "#858985", "highlight": "#c8cbc3", "midpoint": 0.5}

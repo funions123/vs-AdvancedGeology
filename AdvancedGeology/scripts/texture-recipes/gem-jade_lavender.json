@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "jade_lavender",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#463c54",
+  "midtone": "#927cae",
+  "highlight": "#cfb0f7",
+  "midpoint": 0.5
+}

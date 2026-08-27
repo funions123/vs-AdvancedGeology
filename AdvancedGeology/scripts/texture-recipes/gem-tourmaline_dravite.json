@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "tourmaline_dravite",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#3d3426",
+  "midtone": "#806d50",
+  "highlight": "#b69b72",
+  "midpoint": 0.5
+}

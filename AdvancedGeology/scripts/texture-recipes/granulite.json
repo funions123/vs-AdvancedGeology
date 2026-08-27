@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gneiss",
+  "targetPrefix": "granulite",
+  "sourceFilesFile": "full-rock-profile.json",
+  "shadow": "#42454a",
+  "midtone": "#858b90",
+  "highlight": "#d0d3d0",
+  "midpoint": 0.5
+}

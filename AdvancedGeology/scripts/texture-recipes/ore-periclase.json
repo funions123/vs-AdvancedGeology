@@ -1,0 +1,1 @@
+{"sourceRoot": "${VINTAGE_STORY}/assets/survival/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "borax", "targetPrefix": "periclase", "sourceFilesFile": "ore-ungraded-profile.json", "shadow": "#55574f", "midtone": "#a8aa9d", "highlight": "#e6e7db", "midpoint": 0.5}

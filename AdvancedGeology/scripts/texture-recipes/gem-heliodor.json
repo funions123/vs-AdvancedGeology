@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "heliodor",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#64511e",
+  "midtone": "#d0a83f",
+  "highlight": "#ffef59",
+  "midpoint": 0.5
+}

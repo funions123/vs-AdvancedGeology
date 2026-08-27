@@ -73,7 +73,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-tetrahedrite-dacite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-tetrahedrite-dacite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: freibergite childDeposit variants (all tetrahedrite rocks, poor+medium) ====
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-freibergite-phyllite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-freibergite-phyllite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-freibergite-andesite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -105,11 +104,7 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-freibergite-dacite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-freibergite-dacite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // ==== IOG+GEOADDONS: Register variants for IOG's GeoAddons tetrahedrite deposit ====
-  // These resolve "No block with code/wildcard was found" warnings from IOG's GeoAddons compat
-  // entry in interestingoregen:worldgen/deposits/metalore/tetrahedrite.json
 
-  // --- tetrahedrite: blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-tetrahedrite-bauxite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-tetrahedrite-bauxite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-tetrahedrite-bauxite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -131,7 +126,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-tetrahedrite-schist", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-tetrahedrite-migmatite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
 
-  // --- tetrahedrite: itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-tetrahedrite-bauxite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-tetrahedrite-bauxite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-tetrahedrite-bauxite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -153,7 +147,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-tetrahedrite-schist", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-tetrahedrite-migmatite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
 
-  // --- tetrahedrite: crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-tetrahedrite-bauxite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-tetrahedrite-bauxite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-tetrahedrite-bauxite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -175,7 +168,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-tetrahedrite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-tetrahedrite-migmatite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
 
-  // --- freibergite (subdeposit): blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-freibergite-bauxite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-freibergite-bauxite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-freibergite-bauxite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -201,7 +193,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-freibergite-gneiss", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-freibergite-migmatite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
 
-  // --- freibergite (subdeposit): itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-freibergite-bauxite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-freibergite-bauxite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-freibergite-bauxite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -227,7 +218,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-freibergite-gneiss", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-freibergite-migmatite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
 
-  // --- freibergite (subdeposit): crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-freibergite-bauxite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-freibergite-bauxite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-freibergite-bauxite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },

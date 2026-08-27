@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gabbro",
+  "targetPrefix": "pyroxenite",
+  "sourceFilesFile": "marble-profile.json",
+  "shadow": "#2f3434",
+  "midtone": "#656d69",
+  "highlight": "#adb7ad",
+  "midpoint": 0.5
+}

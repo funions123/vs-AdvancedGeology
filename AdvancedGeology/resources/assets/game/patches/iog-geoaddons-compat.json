@@ -1,22 +1,6 @@
 [
-  // ============================================================================
-  // IOG + GEOADDONS COMPATIBILITY PATCHES
-  //
-  // Adds GeoAddons-only rocks (siltstone, mudstone, amphibolite) to IOG deposits
-  // when BOTH Interesting Ore Generation and Geology Additions are installed.
-  //
-  // Secondary mineral childDeposits are injected via C# from
-  // advancedgeology:config/iog-geoaddons-childdeposits.json. A Harmony patch
-  // on IOG's TiltedDiscDepositGenerator populates subDepositsToPlace so that
-  // vanilla's GenDeposits.GeneratePartial() processes the child deposits.
-  // ============================================================================
 
-  // ============================================================================
-  // GALENA — add siltstone, mudstone to hydrotubewithdepo
-  // iog-galena.json entry 0
-  // ============================================================================
 
-  // Add rocks to allowedVariants
   {
     "op": "add",
     "path": "/0/attributes/inblock/allowedVariants/-",
@@ -33,7 +17,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
     "side": "Server"
   },
-  // Add grade mappings
   {
     "op": "add",
     "path": "/0/attributes/placeblock/allowedVariantsByInBlock/rock-siltstone",
@@ -50,7 +33,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }],
     "side": "Server"
   },
-  // Add subdeposit grade mappings
   {
     "op": "add",
     "path": "/0/attributes/subdeposit/allowedVariantsByInBlock/rock-siltstone",
@@ -68,9 +50,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // SPHALERITE — add siltstone, mudstone to seam entry (entry 0)
-  // ============================================================================
 
   {
     "op": "add",
@@ -105,9 +84,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // BISMUTHINITE — add amphibolite to hydrotube entry (entry 1)
-  // ============================================================================
 
   {
     "op": "add",
@@ -126,9 +102,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // CASSITERITE — add amphibolite to chimney entry (entry 0)
-  // ============================================================================
 
   {
     "op": "add",
@@ -147,9 +120,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // NICKELINE — add amphibolite to hydrotube (entry 0)
-  // ============================================================================
 
   {
     "op": "add",
@@ -168,9 +138,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // MAGNETITE — add amphibolite to seam entry (entry 1)
-  // ============================================================================
 
   {
     "op": "add",
@@ -189,9 +156,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // SIDERITE — add siltstone, mudstone to seam (entry 0)
-  // ============================================================================
 
   {
     "op": "add",
@@ -226,9 +190,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // COAL — add siltstone, mudstone to lignite entry (entry 0)
-  // ============================================================================
 
   {
     "op": "add",
@@ -247,9 +208,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // BORAX — add siltstone, mudstone to seam (entry 0)
-  // ============================================================================
 
   {
     "op": "add",
@@ -268,15 +226,4 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // NOTE: Cannot disable IOG's own GeoAddons deposits for tetrahedrite,
-  // chalcopyrite, vanadinite, and wulfenite via patches because AG loads
-  // before IOG (alphabetically), so the interestingoregen: domain files are
-  // still empty [] when AG's patches run. Instead, the variant registrations
-  // in tetrahedrite-ore.json and chalcopyrite-ore.json prevent
-  // "No block with code/wildcard was found" warnings. IOG's tetrahedrite,
-  // vanadinite, and wulfenite entries have "enabled": false so they won't
-  // generate. IOG's chalcopyrite entry (0.001 triesPerChunk) may generate
-  // alongside AG's own IOG chalcopyrite deposit.
-  // ============================================================================
 ]

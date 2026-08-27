@@ -27,8 +27,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-malachite-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-malachite-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: azurite childDeposit variants (all malachite rocks, poor+medium) ====
-  // blocktypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-azurite-sandstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-azurite-sandstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-azurite-conglomerate", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -43,7 +41,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-azurite-whitemarble", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-azurite-dolomite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-azurite-dolomite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // itemtypes/ore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-azurite-sandstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-azurite-sandstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-azurite-conglomerate", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -58,7 +55,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-azurite-whitemarble", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-azurite-dolomite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-azurite-dolomite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // crystalizedore-graded
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-azurite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-azurite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-azurite-conglomerate", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },

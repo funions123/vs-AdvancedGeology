@@ -1,0 +1,106 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "soapstone",
+      "Weight": "20",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "gypsum",
+      "Weight": "20",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "sedimentary"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "anorthosite",
+      "Weight": "20",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "phosphorite",
+      "Weight": "20",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "sedimentary"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pegmatite",
+      "Weight": "10",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pyroxenite",
+      "Weight": "10",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "syenite",
+      "Weight": "10",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "carbonatite",
+      "Weight": "10",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  }
+]

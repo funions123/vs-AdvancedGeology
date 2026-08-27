@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gabbro",
+  "targetPrefix": "amphibolite",
+  "sourceFilesFile": "full-rock-profile.json",
+  "shadow": "#252b30",
+  "midtone": "#505d61",
+  "highlight": "#9ba9a9",
+  "midpoint": 0.5
+}

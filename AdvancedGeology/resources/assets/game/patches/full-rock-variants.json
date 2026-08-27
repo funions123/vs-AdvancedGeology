@@ -1,0 +1,152 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "granulite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "granulite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "greenstone",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "greenstone",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "amphibolite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "amphibolite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "migmatite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "migmatite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tonalite",
+      "Weight": "40",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tonalite",
+      "Weight": "40",
+      "SoilpH": "7.0",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "serpentinite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rockwithdeposit.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "serpentinite",
+      "Weight": "40",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "metamorphic"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  }
+]

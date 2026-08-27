@@ -1,29 +1,6 @@
 [
-  // ============================================================================
-  // IOG COMPATIBILITY PATCHES
-  //
-  // When Interesting Ore Generation is installed, this file:
-  //   1. Disables AG disc deposits not already disabled by IOG
-  //   2. Creates iog-gen deposits in our placeholder files
-  //   3. Adds AG ores to IOG's hydrothermal district configs (end of file)
-  //
-  // triesPerChunk values follow IOG 2.3.8's scale (0.5-1.5): vein density is
-  // now capped by IOG's global vein spacing (800 blocks same-ore / 100 blocks
-  // any-ore, TiltedDiscDepositGenerator.TryApproveOreSpawnSeed), not by tries.
-  // All iog-gen entries use withOreMap: false, matching IOG's own deposits.
-  //
-  // IOG's own interestingoregen: domain deposits are cleared in C# (AssetsLoaded)
-  // to prevent block code validation errors from ore-rock combos AG doesn't register.
-  //
-  // Ore variant registrations are handled by base *-ore.json patches
-  // WITHOUT IOG dependency, so they work with or without IOG installed.
-  // ============================================================================
 
-  // ============================================================================
-  // 1. GALENA — hydrotubewithdepo (with nativesilver subdeposit)
-  // ============================================================================
 
-  // Create AG galena iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -77,11 +54,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 2. SPHALERITE — seam + hydrotube (2 entries)
-  // ============================================================================
 
-  // Entry 1: sphalerite seam — sedimentary/metamorphic
   {
     "op": "add",
     "path": "/-",
@@ -122,7 +95,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: sphalerite hydrotube — igneous/metamorphic
   {
     "op": "add",
     "path": "/-",
@@ -161,11 +133,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 3. BISMUTHINITE — chimney + hydrotube (2 entries)
-  // ============================================================================
 
-  // Entry 1: bismuthinite chimney — granite
   {
     "op": "add",
     "path": "/-",
@@ -202,7 +170,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: bismuthinite hydrotube — metamorphic/volcanic
   {
     "op": "add",
     "path": "/-",
@@ -242,11 +209,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 4. MALACHITE — seam + surface scatter
-  // ============================================================================
 
-  // Create AG malachite surface scatter (vanilla generator, replaces surfaceBlock from disabled main deposit)
   {
     "op": "add",
     "path": "/-",
@@ -286,7 +249,6 @@
     "side": "Server"
   },
 
-  // Create AG malachite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -330,13 +292,8 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 5. CASSITERITE — chimney + hydrotube (2 entries)
-  // ============================================================================
 
-  // AG cassiterite entry 0 (surface scatter) is left enabled — IOG only disables entries 1,2
 
-  // Entry 1: cassiterite chimney — granite, diorite
   {
     "op": "add",
     "path": "/-",
@@ -374,7 +331,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: cassiterite hydrotube — gneiss, rhyolite
   {
     "op": "add",
     "path": "/-",
@@ -413,13 +369,8 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 6. NATIVECOPPER — fault
-  // ============================================================================
 
-  // AG nativecopper entry 0 (surface scatter) is left enabled — IOG only disables entry 1
 
-  // Create AG nativecopper iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -457,11 +408,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 7. PENTLANDITE — seam
-  // ============================================================================
 
-  // Create AG pentlandite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -500,11 +447,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 8. CHROMITE — chimney + seam (2 entries)
-  // ============================================================================
 
-  // Entry 1: chromite chimney — peridotite
   {
     "op": "add",
     "path": "/-",
@@ -541,7 +484,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: chromite seam — gabbro
   {
     "op": "add",
     "path": "/-",
@@ -579,11 +521,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 9. ILMENITE — seam
-  // ============================================================================
 
-  // Create AG ilmenite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -622,11 +560,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 10a. LIMONITE — seam
-  // ============================================================================
 
-  // Create AG limonite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -666,11 +600,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 10b. HEMATITE — seam
-  // ============================================================================
 
-  // Entry 1: hematite seam — sedimentary
   {
     "op": "add",
     "path": "/-",
@@ -709,7 +639,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: hematite fault — metamorphic
   {
     "op": "add",
     "path": "/-",
@@ -748,11 +677,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 10c. MAGNETITE — chimney + seam (2 entries)
-  // ============================================================================
 
-  // Entry 1: magnetite chimney — andesite
   {
     "op": "add",
     "path": "/-",
@@ -789,7 +714,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: magnetite seam — deep igneous/metamorphic
   {
     "op": "add",
     "path": "/-",
@@ -831,11 +755,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 11. COAL — lignite + bituminouscoal + anthracite (3 entries, seam, ungraded)
-  // ============================================================================
 
-  // Entry 1: lignite seam — claystone, sandstone
   {
     "op": "add",
     "path": "/-",
@@ -867,7 +787,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 2: bituminouscoal seam — chert, shale, limestone, dolomite
   {
     "op": "add",
     "path": "/-",
@@ -899,7 +818,6 @@
     "dependsOn": [{ "modid": "interestingoregen" }],
     "side": "Server"
   },
-  // Entry 3: anthracite seam — phyllite, slate, marbles
   {
     "op": "add",
     "path": "/-",
@@ -932,11 +850,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 12. SULFUR — seam (ungraded)
-  // ============================================================================
 
-  // Create AG sulfur iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -969,14 +883,8 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 13. CHALCOPYRITE — chimney
-  // ============================================================================
 
-  // AG chalcopyrite disc deposit (chalcopyrite.json) is zeroed in C# whenever IOG
-  // is installed; its surface scatter lives in chalcopyrite-shallow.json.
 
-  // Create AG chalcopyrite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1025,11 +933,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 14. TETRAHEDRITE — hydrotube
-  // ============================================================================
 
-  // Disable AG tetrahedrite disc deposit (entry 0 only)
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1039,7 +943,6 @@
     "side": "Server"
   },
 
-  // Create AG tetrahedrite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1081,11 +984,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 15. SIDERITE — seam
-  // ============================================================================
 
-  // Disable AG siderite disc deposit
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1095,7 +994,6 @@
     "side": "Server"
   },
 
-  // Create AG siderite iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1136,11 +1034,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 16. NICKELINE — hydrotube
-  // ============================================================================
 
-  // Disable AG nickeline disc deposit
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1150,7 +1044,6 @@
     "side": "Server"
   },
 
-  // Create AG nickeline iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1190,11 +1083,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 17. BORAX — seam (ungraded)
-  // ============================================================================
 
-  // Disable AG borax disc deposit
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1204,7 +1093,6 @@
     "side": "Server"
   },
 
-  // Create AG borax iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1237,11 +1125,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 18. CINNABAR — hydrotube (ungraded)
-  // ============================================================================
 
-  // Disable AG cinnabar disc deposit
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1251,7 +1135,6 @@
     "side": "Server"
   },
 
-  // Create AG cinnabar iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1284,11 +1167,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 19. ALUM — seam (ungraded)
-  // ============================================================================
 
-  // Disable AG alum disc deposit
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1298,7 +1177,6 @@
     "side": "Server"
   },
 
-  // Create AG alum iog-gen deposit
   {
     "op": "add",
     "path": "/-",
@@ -1331,11 +1209,7 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // 20. GRAPHITE — seam (ungraded)
-  // ============================================================================
 
-  // Disable AG graphite disc deposit (AG's graphite.json overrides the vanilla one)
   {
     "op": "replace",
     "path": "/0/triesPerChunk",
@@ -1345,7 +1219,6 @@
     "side": "Server"
   },
 
-  // Create AG graphite iog-gen deposit — seam through all metamorphic rocks
   {
     "op": "add",
     "path": "/-",
@@ -1378,14 +1251,6 @@
     "side": "Server"
   },
 
-  // ============================================================================
-  // HYDROTHERMAL DISTRICTS (IOG 2.3.8+)
-  //
-  // Chalcopyrite takes the copper slot in both granite districts; native copper
-  // stays basalt-only via IOG's own mafic district entry. Weight/density/zones
-  // mirror IOG's nativecopper-basalt entry. District configs are read at
-  // StartServerSide, after JSON patching, so plain adds work here.
-  // ============================================================================
   {
     "op": "add",
     "path": "/ores/-",

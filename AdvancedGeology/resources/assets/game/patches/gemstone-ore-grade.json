@@ -1,0 +1,50 @@
+[
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "gem",
+    "file": "game:blocktypes/stone/ore-gem.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "ore-gem-*": [
+        {
+          "type": "item",
+          "code": "gem-{type}-rough",
+          "attributes": {
+            "potential": "low"
+          },
+          "quantity": {
+            "avg": 0.8,
+            "var": 0
+          }
+        },
+        {
+          "type": "item",
+          "code": "gem-{type}-rough",
+          "attributes": {
+            "potential": "medium"
+          },
+          "quantity": {
+            "avg": 0.3,
+            "var": 0
+          }
+        },
+        {
+          "type": "item",
+          "code": "gem-{type}-rough",
+          "attributes": {
+            "potential": "high"
+          },
+          "quantity": {
+            "avg": 0.1,
+            "var": 0
+          }
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/ore-gem.json"
+  }
+]

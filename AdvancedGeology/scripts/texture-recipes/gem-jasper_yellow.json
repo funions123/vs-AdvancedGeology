@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "jasper_yellow",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#5a4b1e",
+  "midtone": "#bc9d3e",
+  "highlight": "#ffdf58",
+  "midpoint": 0.5
+}

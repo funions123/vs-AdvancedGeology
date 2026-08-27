@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "topaz_sherry",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#4a2b19",
+  "midtone": "#9a5a34",
+  "highlight": "#db804a",
+  "midpoint": 0.5
+}

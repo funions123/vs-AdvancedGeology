@@ -67,7 +67,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-siderite-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-siderite-dolomite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: siderite in siltstone and mudstone ====
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-siderite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-siderite-siltstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-siderite-mudstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },

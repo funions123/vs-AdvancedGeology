@@ -1,0 +1,398 @@
+[
+  {
+    "code": "periclase",
+    "triesPerChunk": 0.0625,
+    "handbookPageCode": "item-ore-periclase",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "dolomite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-periclase-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-periclase-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "periclase",
+    "triesPerChunk": 0.25,
+    "handbookPageCode": "item-ore-periclase",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenmarble",
+          "whitemarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-periclase-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-periclase-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "microcline",
+    "triesPerChunk": 0.125,
+    "handbookPageCode": "item-ore-microcline",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "migmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-microcline-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-microcline-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "microcline",
+    "triesPerChunk": 0.25,
+    "handbookPageCode": "item-ore-microcline",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-microcline-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-microcline-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "cryolite",
+    "triesPerChunk": 0.005,
+    "handbookPageCode": "item-ore-cryolite",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-cryolite-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-cryolite-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "cryolite",
+    "triesPerChunk": 0.01,
+    "handbookPageCode": "item-ore-cryolite",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite",
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-cryolite-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-cryolite-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "alunite",
+    "triesPerChunk": 0.0625,
+    "handbookPageCode": "item-ore-alunite",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "rhyolite",
+          "dacite",
+          "andesite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-alunite-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-alunite-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 16.0,
+        "var": 16.0
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "alunite",
+    "triesPerChunk": 0.125,
+    "handbookPageCode": "item-ore-alunite",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "tuff"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-alunite-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-alunite-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 16.0,
+        "var": 16.0
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "orthoclase",
+    "triesPerChunk": 0.125,
+    "handbookPageCode": "item-ore-orthoclase",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-orthoclase-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-orthoclase-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  },
+  {
+    "code": "orthoclase",
+    "triesPerChunk": 0.25,
+    "handbookPageCode": "item-ore-orthoclase",
+    "generator": "disc-anywhere",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "syenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-orthoclase-{rock}"
+      },
+      "surfaceBlock": {
+        "code": "looseores-orthoclase-{rock}-free"
+      },
+      "genSurfaceBlockChance": 0.35,
+      "surfaceBlockChance": 0.05,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      }
+    },
+    "withOreMap": false
+  }
+]

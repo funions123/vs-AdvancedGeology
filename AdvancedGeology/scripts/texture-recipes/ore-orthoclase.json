@@ -1,0 +1,1 @@
+{"sourceRoot": "${VINTAGE_STORY}/assets/survival/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "fluorite", "targetPrefix": "orthoclase", "sourceFilesFile": "ore-ungraded-profile.json", "shadow": "#6b5747", "midtone": "#bb9a7c", "highlight": "#efdcc0", "midpoint": 0.5}

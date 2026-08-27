@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "tourmaline_rubellite",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#562532",
+  "midtone": "#b34d69",
+  "highlight": "#fe6d95",
+  "midpoint": 0.5
+}

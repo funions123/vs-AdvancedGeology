@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gabbro",
+  "targetPrefix": "greenstone",
+  "sourceFilesFile": "full-rock-profile.json",
+  "shadow": "#263c36",
+  "midtone": "#55796b",
+  "highlight": "#a6c1ab",
+  "midpoint": 0.5
+}

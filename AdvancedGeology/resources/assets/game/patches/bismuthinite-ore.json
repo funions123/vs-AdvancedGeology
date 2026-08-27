@@ -35,7 +35,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-bismuthinite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-bismuthinite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: bismuthinite in amphibolite ====
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-bismuthinite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-bismuthinite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-bismuthinite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },

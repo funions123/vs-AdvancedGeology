@@ -1,7 +1,4 @@
 [
-  // ==== GEOADDONS: sperrylite in nickeline host rocks (gneiss, schist, granite) ====
-  // Required for sperrylite childDeposits in nickeline veins.
-  // GeoAddons only registers sperrylite for peridotite, basalt, gabbro.
 
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-sperrylite-gneiss", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-sperrylite-gneiss", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },

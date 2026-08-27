@@ -1,0 +1,1 @@
+{"sourceRoot": "${VINTAGE_STORY}/assets/survival/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "quartz", "targetPrefix": "microcline", "sourceFilesFile": "ore-ungraded-profile.json", "shadow": "#735247", "midtone": "#c6a08f", "highlight": "#ead8c7", "midpoint": 0.5}

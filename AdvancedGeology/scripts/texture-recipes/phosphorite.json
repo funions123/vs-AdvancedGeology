@@ -1,0 +1,1 @@
+{"sourceRoot": "resources/assets/game/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "diorite", "targetPrefix": "phosphorite", "sourceFilesFile": "marble-profile.json", "shadow": "#332c24", "midtone": "#7d6d55", "highlight": "#c6b590", "midpoint": 0.5, "autocontrast": 2, "contrastStrength": 0.4}

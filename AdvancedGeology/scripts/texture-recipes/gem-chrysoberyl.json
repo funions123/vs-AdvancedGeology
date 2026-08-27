@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "chrysoberyl",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#3d5134",
+  "midtone": "#80a96d",
+  "highlight": "#b6f09b",
+  "midpoint": 0.5
+}

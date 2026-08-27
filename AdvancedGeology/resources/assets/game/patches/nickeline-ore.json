@@ -41,7 +41,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-nickeline-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-nickeline-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: nickeline in amphibolite ====
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nickeline-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nickeline-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "looseores-nickeline-amphibolite-free", "file": "game:blocktypes/stone/looseores.json", "dependsOn": [{ "modid": "geoaddons" }] },

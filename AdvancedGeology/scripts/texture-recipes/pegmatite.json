@@ -1,0 +1,1 @@
+{"sourceRoot": "resources/assets/game/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "gabbro", "targetPrefix": "pegmatite", "sourceFilesFile": "marble-profile.json", "shadow": "#514840", "midtone": "#ab9d8d", "highlight": "#ece0cd", "midpoint": 0.5, "autocontrast": 2, "contrastStrength": 0.2}

@@ -1,0 +1,1 @@
+{"sourceRoot": "${VINTAGE_STORY}/assets/survival/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "alum", "targetPrefix": "alunite", "sourceFiles": ["block/stone/ore/{sourcePrefix}1.png", "block/stone/ore/{sourcePrefix}2.png", "block/stone/ore/{sourcePrefix}3.png"], "shadow": "#6b5750", "midtone": "#bfa093", "highlight": "#eddbd0", "midpoint": 0.5}

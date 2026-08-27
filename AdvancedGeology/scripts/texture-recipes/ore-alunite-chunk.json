@@ -1,0 +1,1 @@
+{"sourceRoot": "${VINTAGE_STORY}/assets/survival/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "quartz", "targetPrefix": "alunite", "sourceFiles": [{"source": "item/resource/ungraded/{sourcePrefix}.png", "target": "item/resource/ungraded/{targetPrefix}.png"}], "shadow": "#6b5750", "midtone": "#bfa093", "highlight": "#eddbd0", "midpoint": 0.5}

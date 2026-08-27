@@ -199,11 +199,16 @@
     },
     "file": "game:worldproperties/block/rock.json"
   },
-
   {
     "op": "add",
     "path": "/grindingPropsByType/*-dolomite",
-    "value": { "groundStack": { "type": "item", "code": "lime", "stacksize": 1 } },
+    "value": {
+      "groundStack": {
+        "type": "item",
+        "code": "lime",
+        "stacksize": 1
+      }
+    },
     "file": "game:itemtypes/resource/stone.json"
   }
 ]

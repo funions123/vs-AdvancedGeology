@@ -1,0 +1,13 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gabbro",
+  "targetPrefix": "serpentinite",
+  "sourceFilesFile": "full-rock-profile.json",
+  "shadow": "#263b32",
+  "midtone": "#5a8066",
+  "highlight": "#b3cfad",
+  "midpoint": 0.5,
+  "autocontrast": 1,
+  "contrastStrength": 0.5
+}

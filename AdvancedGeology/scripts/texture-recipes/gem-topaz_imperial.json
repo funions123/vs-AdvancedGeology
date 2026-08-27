@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "topaz_imperial",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#644d25",
+  "midtone": "#d0a04e",
+  "highlight": "#ffe36f",
+  "midpoint": 0.5
+}

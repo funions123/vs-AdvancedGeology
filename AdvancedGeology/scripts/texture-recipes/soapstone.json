@@ -1,0 +1,1 @@
+{"sourceRoot": "resources/assets/game/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "schist", "targetPrefix": "soapstone", "sourceFilesFile": "marble-profile.json", "shadow": "#4e554e", "midtone": "#879386", "highlight": "#c4c9b7", "midpoint": 0.5}

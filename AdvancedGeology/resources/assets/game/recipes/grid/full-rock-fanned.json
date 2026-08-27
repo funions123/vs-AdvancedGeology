@@ -1,0 +1,146 @@
+[
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
+        "code": "gravel-granulite"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-granulite"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-granulite-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
+        "code": "gravel-greenstone"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-greenstone"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-greenstone-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
+        "code": "gravel-amphibolite"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-amphibolite"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-amphibolite-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
+        "code": "gravel-migmatite"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-migmatite"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-migmatite-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
+        "code": "gravel-tonalite"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-tonalite"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-tonalite-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
+        "code": "gravel-serpentinite"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-serpentinite"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-serpentinite-north",
+      "quantity": 2
+    }
+  }
+]

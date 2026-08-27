@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "zircon_green",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#2b4c32",
+  "midtone": "#5a9f69",
+  "highlight": "#80e295",
+  "midpoint": 0.5
+}

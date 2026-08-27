@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "resources/assets/game/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "gabbro",
+  "targetPrefix": "carbonatite",
+  "sourceFilesFile": "marble-profile.json",
+  "shadow": "#5d5a52",
+  "midtone": "#a9a391",
+  "highlight": "#e5dfcf",
+  "midpoint": 0.5
+}

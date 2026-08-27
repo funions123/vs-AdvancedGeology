@@ -80,6 +80,7 @@ namespace AdvancedGeology
             {
                 RemoveGeoAddonsRockOverlaps(api);
                 RemoveGeoAddonsOreOverlaps(api);
+                RemoveGeoAddonsGemOverlaps(api);
             }
 
             if (SilverGradeSystem.Active)
@@ -240,6 +241,39 @@ namespace AdvancedGeology
             }
 
             api.Logger.Notification("[AdvancedGeology] GeoAddons compat: removed {0} overlapping ore entries", removed);
+        }
+
+        /// <summary>
+        /// GeoAddons registers five gemstones under codes we also use (spinelred, topazblue and
+        /// three tourmalines). Duplicate worldproperty variants would register the same
+        /// gem-&lt;code&gt;-rough item twice, and both mods' deposits would stack on top of each other,
+        /// so we drop the duplicate variant, reclaim the shape/overlay assets geoaddons overrides
+        /// by path, and zero their deposits in favour of ours.
+        /// </summary>
+        private void RemoveGeoAddonsGemOverlaps(ICoreAPI api)
+        {
+            string[] sharedGems = ["spinelred", "topazblue", "tourmalinerubellite", "tourmalineschorl", "tourmalineverdelite"];
+
+            int removed = DeduplicateWorldPropertyVariants(api, "game:worldproperties/block/ore-gem-rough.json", "Code", [], sharedGems);
+
+            int restored = 0;
+            foreach (string gem in sharedGems)
+            {
+                if (RestoreAssetFromModOrigin(api, $"game:shapes/item/gem/rough/normal/{gem}.json")) restored++;
+                for (int i = 1; i <= 3; i++)
+                {
+                    if (RestoreAssetFromModOrigin(api, $"game:textures/block/stone/ore/{gem}{i}.png")) restored++;
+                }
+            }
+
+            // GeoAddons runs these at 1-8 triesPerChunk against our 0.12; ours define the host rocks we ship overlays for
+            ZeroDepositTries(api, "game:worldgen/deposits/gem/spinel-red.json");
+            ZeroDepositTries(api, "game:worldgen/deposits/gem/topaz-blue.json");
+            ZeroDepositTries(api, "game:worldgen/deposits/gem/tourmaline-rubellite.json");
+            ZeroDepositTries(api, "game:worldgen/deposits/gem/tourmaline-schorl.json");
+            ZeroDepositTries(api, "game:worldgen/deposits/gem/tourmaline-verdelite.json");
+
+            api.Logger.Notification("[AdvancedGeology] GeoAddons compat: removed {0} duplicate gem variants, restored {1} gem assets", removed, restored);
         }
 
         /// <summary>

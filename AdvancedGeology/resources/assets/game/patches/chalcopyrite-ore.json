@@ -122,9 +122,7 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-chalcopyrite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-chalcopyrite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json" },
 
-  // ==== GEOADDONS: chalcocite + pyrite childDeposit variants (poor+medium in all chalcopyrite rocks) ====
 
-  // --- chalcocite: blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcocite-sandstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcocite-sandstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcocite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -149,7 +147,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcocite-dacite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcocite-rhyolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcocite-rhyolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // --- chalcocite: itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcocite-sandstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcocite-sandstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcocite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -174,7 +171,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcocite-dacite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcocite-rhyolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcocite-rhyolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // --- chalcocite: crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-chalcocite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-chalcocite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-chalcocite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -200,7 +196,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-chalcocite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-chalcocite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // --- pyrite: blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pyrite-sandstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pyrite-sandstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pyrite-shale", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -225,7 +220,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pyrite-dacite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pyrite-rhyolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pyrite-rhyolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // --- pyrite: itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pyrite-sandstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pyrite-sandstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pyrite-shale", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -250,7 +244,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pyrite-dacite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-pyrite-rhyolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-pyrite-rhyolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  // --- pyrite: crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-pyrite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-pyrite-sandstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-pyrite-shale", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
@@ -276,11 +269,7 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-pyrite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-pyrite-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
 
-  // ==== IOG+GEOADDONS: Register variants for IOG's GeoAddons chalcopyrite deposit ====
-  // These resolve "No block with code/wildcard was found" warnings from IOG's GeoAddons compat
-  // entry in interestingoregen:worldgen/deposits/metalore/chalcopyrite.json
 
-  // --- chalcopyrite: blocktypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-chalcopyrite-limestone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-chalcopyrite-limestone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcopyrite-dolostone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -296,7 +285,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcopyrite-phyllite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcopyrite-phyllite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcopyrite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
-  // --- chalcopyrite: itemtypes/ore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-rich-chalcopyrite-limestone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-bountiful-chalcopyrite-limestone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcopyrite-dolostone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
@@ -312,7 +300,6 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcopyrite-phyllite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-chalcopyrite-phyllite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-chalcopyrite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
-  // --- chalcopyrite: crystalizedore-graded ---
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-rich-chalcopyrite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-bountiful-chalcopyrite-limestone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-chalcopyrite-dolostone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "interestingoregen" }, { "modid": "geoaddons" }] },

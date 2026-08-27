@@ -1,0 +1,1 @@
+{"sourceRoot": "${VINTAGE_STORY}/assets/survival/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "kernite", "targetPrefix": "cryolite", "sourceFilesFile": "ore-ungraded-profile.json", "shadow": "#4c5560", "midtone": "#9fb0b8", "highlight": "#e8f0f2", "midpoint": 0.5}

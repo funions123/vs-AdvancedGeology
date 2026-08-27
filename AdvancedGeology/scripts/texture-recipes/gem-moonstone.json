@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "moonstone",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#3e5362",
+  "midtone": "#94b8c8",
+  "highlight": "#e4f2f1",
+  "midpoint": 0.5
+}

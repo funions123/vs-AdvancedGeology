@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "opal_black",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#212425",
+  "midtone": "#454a4d",
+  "highlight": "#62696d",
+  "midpoint": 0.5
+}

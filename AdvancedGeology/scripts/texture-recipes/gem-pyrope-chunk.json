@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "olivine",
+  "targetPrefix": "pyrope",
+  "sourceFiles": ["block/stone/gem/{sourcePrefix}.png"],
+  "shadow": "#3b1118",
+  "midtone": "#8c2631",
+  "highlight": "#dd7071",
+  "midpoint": 0.5
+}

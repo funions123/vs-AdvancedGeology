@@ -1,0 +1,1 @@
+{"sourceRoot": "resources/assets/game/textures", "targetRoot": "resources/assets/game/textures", "sourcePrefix": "rhyolite", "targetPrefix": "gypsum", "sourceFilesFile": "marble-profile.json", "shadow": "#6f6a60", "midtone": "#c3bfb0", "highlight": "#f2efe4", "midpoint": 0.5, "autocontrast": 2, "contrastStrength": 0.5}

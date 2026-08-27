@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "emerald",
+  "targetPrefix": "amazonite",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#174d45",
+  "midtone": "#3b9680",
+  "highlight": "#a8dfc4",
+  "midpoint": 0.5
+}

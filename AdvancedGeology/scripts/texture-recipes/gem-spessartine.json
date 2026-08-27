@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "spessartine",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#54210d",
+  "midtone": "#b45425",
+  "highlight": "#f0a15d",
+  "midpoint": 0.5
+}

@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "tourmaline_schorl",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#17191a",
+  "midtone": "#303536",
+  "highlight": "#444b4d",
+  "midpoint": 0.5
+}
