@@ -140,6 +140,10 @@
 					"thickness": { "dist": "uniform", "avg": 2, "var": 1 }
 				},
 				{
+					"code": "rock-gypsum",
+					"thickness": { "dist": "uniform", "avg": 2, "var": 1 }
+				},
+				{
 					"code": "rock-limestone",
 					"thickness": { "dist": "uniform", "avg": 4, "var": 2 }
 				}

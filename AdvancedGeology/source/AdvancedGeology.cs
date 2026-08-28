@@ -15,10 +15,33 @@ namespace AdvancedGeology
     public sealed class AdvancedGeologyModSystem : ModSystem
     {
         private Harmony? harmony;
+        private const string ConfigFileName = "advancedgeology.json";
+        private AdvancedGeologyConfig config = new();
 
         public override void StartPre(ICoreAPI api)
         {
             base.StartPre(api);
+
+            try
+            {
+                AdvancedGeologyConfig? loaded = api.LoadModConfig<AdvancedGeologyConfig>(ConfigFileName);
+                if (loaded == null)
+                {
+                    api.StoreModConfig(config, ConfigFileName);
+                }
+                else
+                {
+                    config = loaded;
+                }
+            }
+            catch (Exception exception)
+            {
+                api.Logger.Warning(
+                    "[AdvancedGeology] Could not load {0}; using defaults: {1}",
+                    ConfigFileName,
+                    exception.Message);
+                config = new AdvancedGeologyConfig();
+            }
 
             DepositGeneratorRegistry.RegisterDepositGenerator<LayeredSurfaceDepositGenerator>("disc-layeredsurface");
             DepositGeneratorRegistry.RegisterDepositGenerator<SaltDomeDepositGenerator>("saltdome");
@@ -77,6 +100,11 @@ namespace AdvancedGeology
 
         public override void AssetsLoaded(ICoreAPI api)
         {
+            if (api.Side == EnumAppSide.Server && config.DisableNonVanillaProgressionGenerators)
+            {
+                DisableNonVanillaProgressionGenerators(api);
+            }
+
             if (api.ModLoader.IsModEnabled("canjewelry"))
             {
                 CanJewelryGemCompatibility.InitializeAndReconcile(api);
@@ -349,6 +377,80 @@ namespace AdvancedGeology
             }
 
             api.Logger.Notification("[AdvancedGeology] IOG compat: cleared {0} interestingoregen: deposit files", cleared);
+        }
+
+        private void DisableNonVanillaProgressionGenerators(ICoreAPI api)
+        {
+            HashSet<string> disabledCodes = new(StringComparer.Ordinal)
+            {
+                "kaolinite",
+                "microcline",
+                "alunite",
+                "orthoclase",
+                "periclase",
+                "cryolite",
+                "bischofite"
+            };
+
+            int disabled = 0;
+            foreach (string path in new[]
+                     {
+                         "game:worldgen/deposits/mineralore/cluster-minerals.json",
+                         "advancedgeology:worldgen/deposits/soil/kaolinite.json",
+                         "advancedgeology:worldgen/deposits/mineralore/halite.json"
+                     })
+            {
+                IAsset? asset = api.Assets.TryGet(new AssetLocation(path));
+                if (asset == null)
+                {
+                    api.Logger.Warning(
+                        "[AdvancedGeology] Non-vanilla progression deposit asset not found: {0}",
+                        path);
+                    continue;
+                }
+
+                JArray root;
+                try { root = JArray.Parse(asset.ToText()); }
+                catch
+                {
+                    api.Logger.Warning(
+                        "[AdvancedGeology] Could not parse non-vanilla progression deposit asset: {0}",
+                        path);
+                    continue;
+                }
+
+                int disabledInAsset = DisableMatchingDepositRecords(root, disabledCodes);
+                if (disabledInAsset == 0) continue;
+                asset.Data = Encoding.UTF8.GetBytes(root.ToString());
+                disabled += disabledInAsset;
+            }
+
+            api.Logger.Notification(
+                "[AdvancedGeology] Config disabled {0} non-vanilla progression deposit generators: kaolinite, microcline, alunite, orthoclase, periclase, cryolite, bischofite",
+                disabled);
+        }
+
+        private static int DisableMatchingDepositRecords(JToken token, HashSet<string> disabledCodes)
+        {
+            int disabled = 0;
+            if (token is JObject obj)
+            {
+                string? code = obj.Value<string>("code");
+                if (code != null && disabledCodes.Contains(code) && obj["triesPerChunk"] != null)
+                {
+                    obj["triesPerChunk"] = 0;
+                    disabled++;
+                }
+            }
+
+            if (token is JContainer container)
+            {
+                foreach (JToken child in container.Children().ToArray())
+                {
+                    disabled += DisableMatchingDepositRecords(child, disabledCodes);
+                }
+            }
+            return disabled;
         }
 
         /// <summary>
