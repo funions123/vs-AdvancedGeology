@@ -16,6 +16,7 @@ internal static class CanJewelryGemCompatibility
 {
     private const string CanSystemTypeName = "canjewelry.src.canjewelry";
     private const string CanConfigTypeName = "canjewelry.src.Config";
+    private const string CanEncrustableTypeName = "canjewelry.src.CB.EncrustableCB";
     private const string CanCuttableTypeName = "canjewelry.src.cb.CANGemCuttableCB";
     private const string RuntimeDataPath = "advancedgeology:config/canjewelry-gems.json";
 
@@ -44,10 +45,12 @@ internal static class CanJewelryGemCompatibility
     private static readonly Dictionary<string, GemDefinition> Gems = new(StringComparer.Ordinal);
     private static readonly HashSet<string> MissingTargetWarnings = new(StringComparer.Ordinal);
     private static ICoreAPI? coreApi;
+    private static bool adornmentsEnabled;
 
     public static void Apply(Harmony harmony, ICoreAPI api)
     {
         coreApi = api;
+        adornmentsEnabled = api.ModLoader.IsModEnabled("canjewelryadornments");
 
         Type? cuttableType = AccessTools.TypeByName(CanCuttableTypeName);
         MethodInfo? getMatchingRecipes = cuttableType == null
@@ -80,6 +83,31 @@ internal static class CanJewelryGemCompatibility
             api.Logger.Warning(
                 "[AdvancedGeology] CAN Jewelry compat: Config.ExpandItemGroups was not found; received client configs cannot be extended");
         }
+
+        if (adornmentsEnabled)
+        {
+            Type? encrustableType = AccessTools.TypeByName(CanEncrustableTypeName);
+            MethodInfo? getSocketTiers = encrustableType == null
+                ? null
+                : AccessTools.Method(encrustableType, "GetSocketsTiers", [typeof(ItemStack)]);
+            MethodInfo? getMaxSockets = encrustableType == null
+                ? null
+                : AccessTools.Method(encrustableType, "GetMaxAmountSockets", [typeof(ItemStack)]);
+            if (getSocketTiers != null && getMaxSockets != null)
+            {
+                harmony.Patch(
+                    getSocketTiers,
+                    postfix: new HarmonyMethod(typeof(CanJewelryGemCompatibility), nameof(AfterGetSocketTiers)));
+                harmony.Patch(
+                    getMaxSockets,
+                    postfix: new HarmonyMethod(typeof(CanJewelryGemCompatibility), nameof(AfterGetMaxSockets)));
+            }
+            else
+            {
+                api.Logger.Warning(
+                    "[AdvancedGeology] CAN Jewelry balance: socket query methods were not found; Adornments material balance is unchanged");
+            }
+        }
     }
 
     public static void InitializeAndReconcile(ICoreAPI api)
@@ -102,15 +130,17 @@ internal static class CanJewelryGemCompatibility
 
         object? config = GetCanConfig();
         int injected = config == null ? 0 : InjectMissingConfig(config);
+        int socketItemsBalanced = config == null ? 0 : ApplySocketItemBalance(config);
 
         api.Logger.Notification(
-            "[AdvancedGeology] CAN Jewelry compat: loaded {0} gems, reordered {1} texture fallbacks, removed {2} duplicate states and {3} shared base-recipe entries, disabled {4} unloaded-GeoAddons grid bridges, injected {5} config entries",
+            "[AdvancedGeology] CAN Jewelry compat: loaded {0} gems, reordered {1} texture fallbacks, removed {2} duplicate states and {3} shared base-recipe entries, disabled {4} unloaded-GeoAddons grid bridges, injected {5} config entries, balanced {6} socket items",
             Gems.Count,
             reordered,
             deduplicated,
             recipeEntriesRemoved,
             disabledGridBridges,
-            injected);
+            injected,
+            socketItemsBalanced);
     }
 
     public static void ScheduleRuntimeVerification(ICoreServerAPI api)
@@ -178,18 +208,107 @@ internal static class CanJewelryGemCompatibility
             if (matches is not ICollection collection || collection.Count != 3) directCutFailures++;
         }
 
-        if (missingItems > 0 || missingConfigEntries > 0 || directCutFailures > 0)
+        int socketBalanceFailures = VerifySocketBalance(api, config);
+
+        if (missingItems > 0 || missingConfigEntries > 0 || directCutFailures > 0 || socketBalanceFailures > 0)
         {
             api.Logger.Warning(
-                "[AdvancedGeology] CAN Jewelry compat verification failed: {0} missing processed items, {1} missing config entries, {2} direct-cut sample failures",
+                "[AdvancedGeology] CAN Jewelry compat verification failed: {0} missing processed items, {1} missing config entries, {2} direct-cut sample failures, {3} socket-balance failures",
                 missingItems,
                 missingConfigEntries,
-                directCutFailures);
+                directCutFailures,
+                socketBalanceFailures);
             return;
         }
 
         api.Logger.Notification(
-            "[AdvancedGeology] CAN Jewelry compat verification passed: 336 AG processed items, 147 injected config entries, 4 direct-cut samples with 3 shapes each");
+            "[AdvancedGeology] CAN Jewelry compat verification passed: 336 AG processed items, 147 injected config entries, 4 direct-cut samples with 3 shapes each, gold-first socket balance");
+    }
+
+    private static int VerifySocketBalance(ICoreServerAPI api, object? config)
+    {
+        int failures = 0;
+        IDictionary? levels = config == null ? null : FieldDictionary(config, "LevelOfSocketByType");
+        Dictionary<string, int> expectedLevels = new(StringComparer.Ordinal)
+        {
+            ["canjewelry:cansocket-tinbronze"] = 1,
+            ["canjewelry:cansocket-bismuthbronze"] = 1,
+            ["canjewelry:cansocket-blackbronze"] = 2,
+            ["canjewelry:cansocket-iron"] = 1,
+            ["canjewelry:cansocket-meteoriciron"] = 1,
+            ["canjewelry:cansocket-steel"] = 2,
+            ["canjewelry:cansocket-gold"] = 3,
+            ["canjewelry:cansocket-silver"] = 2
+        };
+        foreach ((string code, int expected) in expectedLevels)
+        {
+            if (levels?[code] is not int actual || actual != expected) failures++;
+        }
+
+        if (!adornmentsEnabled) return failures;
+
+        Type? encrustableType = AccessTools.TypeByName(CanEncrustableTypeName);
+        MethodInfo? getSocketTiers = encrustableType == null
+            ? null
+            : AccessTools.Method(encrustableType, "GetSocketsTiers", [typeof(ItemStack)]);
+        Item? tiara = api.World.GetItem(new AssetLocation("canjewelry", "cantiara-normal-tiara"));
+        if (getSocketTiers == null || tiara == null) return failures + 1;
+
+        Dictionary<string, int[]> expectedJewelry = new(StringComparer.Ordinal)
+        {
+            ["gold"] = [3, 3, 3],
+            ["silver"] = [2, 2],
+            ["steel"] = [2, 2],
+            ["blackbronze"] = [2, 2],
+            ["iron"] = [1],
+            ["blacksteel"] = [1]
+        };
+        foreach ((string material, int[] expected) in expectedJewelry)
+        {
+            ItemStack stack = new(tiara);
+            stack.Attributes.SetString("carcassus", material);
+            object? result = getSocketTiers.Invoke(null, [stack]);
+            if (result is not int[] tiers || !tiers.SequenceEqual(expected)) failures++;
+        }
+
+        foreach (string material in new[] { "gold", "steel" })
+        {
+            Item? coronet = api.World.SearchItems(new AssetLocation("canjewelry:cancoronet-*"))
+                .FirstOrDefault(item => item.Variant?["loop"] == material);
+            if (coronet == null)
+            {
+                failures++;
+                continue;
+            }
+            ItemStack stack = new(coronet);
+            object? result = getSocketTiers.Invoke(null, [stack]);
+            int[] expected = material == "gold" ? [3, 3, 3] : [2, 2];
+            if (result is not int[] tiers || !tiers.SequenceEqual(expected)) failures++;
+        }
+
+        Item? necklace = api.World.GetItem(new AssetLocation("canjewelry", "cansimplenecklace-normal-neck"));
+        if (necklace == null)
+        {
+            failures++;
+        }
+        else
+        {
+            foreach ((string material, int expected) in new[]
+                     {
+                         ("gold", 3),
+                         ("silver", 2),
+                         ("steel", 2),
+                         ("blackbronze", 2),
+                         ("meteoriciron", 1)
+                     })
+            {
+                ItemStack stack = new(necklace);
+                stack.Attributes.SetString("loop", material);
+                object? result = getSocketTiers.Invoke(null, [stack]);
+                if (result is not int[] tiers || !tiers.SequenceEqual([expected])) failures++;
+            }
+        }
+        return failures;
     }
     private static void BeforeGetMatchingRecipes(ref ItemStack stack)
     {
@@ -228,7 +347,86 @@ internal static class CanJewelryGemCompatibility
 
     private static void BeforeExpandItemGroups(object __instance)
     {
+        ApplySocketItemBalance(__instance);
         if (Gems.Count > 0) InjectMissingConfig(__instance);
+    }
+
+    private static void AfterGetSocketTiers(ItemStack itemstack, ref int[] __result)
+    {
+        int[]? balanced = BalancedAdornmentsTiers(itemstack);
+        if (balanced != null) __result = balanced;
+    }
+
+    private static void AfterGetMaxSockets(ItemStack itemstack, ref int __result)
+    {
+        int[]? balanced = BalancedAdornmentsTiers(itemstack);
+        if (balanced != null) __result = balanced.Length;
+    }
+
+    private static int[]? BalancedAdornmentsTiers(ItemStack stack)
+    {
+        if (!adornmentsEnabled || stack?.Collectible?.Code?.Domain != "canjewelry") return null;
+
+        string path = stack.Collectible.Code.Path;
+        bool isCoronet = path.StartsWith("cancoronet-", StringComparison.Ordinal);
+        bool isTiara = path.StartsWith("cantiara-", StringComparison.Ordinal);
+        bool supported = isCoronet || isTiara ||
+            path.StartsWith("canring-", StringComparison.Ordinal) ||
+            path.StartsWith("canarmband-", StringComparison.Ordinal) ||
+            path.StartsWith("cannadiyannecklace-", StringComparison.Ordinal) ||
+            path.StartsWith("canrottenkingmask-", StringComparison.Ordinal) ||
+            path.StartsWith("cansimplenecklace-", StringComparison.Ordinal) ||
+            path.StartsWith("canmonocle-", StringComparison.Ordinal) ||
+            path.StartsWith("canhoruseye-", StringComparison.Ordinal);
+        if (!supported) return null;
+
+        string? material = MaterialValue(stack, "metal") ??
+            MaterialValue(stack, "loop") ??
+            MaterialValue(stack, "carcassus");
+        if (material == null) return null;
+
+        int tier = material switch
+        {
+            "gold" => 3,
+            "silver" or "steel" or "blackbronze" => 2,
+            _ => 1
+        };
+        int sockets = isCoronet || isTiara ? tier : 1;
+        return Enumerable.Repeat(tier, sockets).ToArray();
+    }
+
+    private static string? MaterialValue(ItemStack stack, string key)
+    {
+        string? value = stack.Attributes.GetString(key, null);
+        if (!string.IsNullOrWhiteSpace(value)) return value;
+        return stack.Collectible.Variant?.TryGetValue(key, out string? variant) == true ? variant : null;
+    }
+
+    private static int ApplySocketItemBalance(object config)
+    {
+        IDictionary? levels = FieldDictionary(config, "LevelOfSocketByType");
+        if (levels == null) return 0;
+
+        Dictionary<string, int> desired = new(StringComparer.Ordinal)
+        {
+            ["canjewelry:cansocket-tinbronze"] = 1,
+            ["canjewelry:cansocket-bismuthbronze"] = 1,
+            ["canjewelry:cansocket-blackbronze"] = 2,
+            ["canjewelry:cansocket-iron"] = 1,
+            ["canjewelry:cansocket-meteoriciron"] = 1,
+            ["canjewelry:cansocket-steel"] = 2,
+            ["canjewelry:cansocket-gold"] = 3,
+            ["canjewelry:cansocket-silver"] = 2
+        };
+
+        int changed = 0;
+        foreach ((string code, int tier) in desired)
+        {
+            if (levels[code] is int current && current == tier) continue;
+            levels[code] = tier;
+            changed++;
+        }
+        return changed;
     }
 
     private static bool LoadDefinitions(ICoreAPI api)
