@@ -7,7 +7,6 @@
   "rock-gabbro": "Gabbro",
   "rock-dacite": "Dacite",
   "rock-rhyolite": "Rhyolite",
-
   "block-rock-gneiss": "Gneiss rock",
   "block-rock-schist": "Schist rock",
   "block-rock-quartzite": "Quartzite rock",
@@ -16,7 +15,6 @@
   "block-rock-gabbro": "Gabbro rock",
   "block-rock-dacite": "Dacite rock",
   "block-rock-rhyolite": "Rhyolite rock",
-
   "block-quern-gneiss": "Gneiss Quern",
   "block-quern-schist": "Schist Quern",
   "block-quern-quartzite": "Quartzite Quern",
@@ -24,7 +22,6 @@
   "block-quern-gabbro": "Gabbro Quern",
   "block-quern-dacite": "Dacite Quern",
   "block-quern-rhyolite": "Rhyolite Quern",
-
   "block-rockpolished-gneiss": "Gneiss rock (Polished)",
   "block-rockpolished-schist": "Schist rock (Polished)",
   "block-rockpolished-quartzite": "Quartzite rock (Polished)",
@@ -33,7 +30,6 @@
   "block-rockpolished-gabbro": "Gabbro rock (Polished)",
   "block-rockpolished-dacite": "Dacite rock (Polished)",
   "block-rockpolished-rhyolite": "Rhyolite rock (Polished)",
-
   "block-polishedrockslab-gneiss-*": "Gneiss rock slab (Polished)",
   "block-polishedrockslab-schist-*": "Schist rock slab (Polished)",
   "block-polishedrockslab-quartzite-*": "Quartzite rock slab (Polished)",
@@ -42,7 +38,6 @@
   "block-polishedrockslab-gabbro-*": "Gabbro rock slab (Polished)",
   "block-polishedrockslab-dacite-*": "Dacite rock slab (Polished)",
   "block-polishedrockslab-rhyolite-*": "Rhyolite rock slab (Polished)",
-
   "block-sand-gneiss": "Gneiss sand",
   "block-sand-schist": "Schist sand",
   "block-sand-quartzite": "Quartzite sand",
@@ -51,7 +46,6 @@
   "block-sand-gabbro": "Gabbro sand",
   "block-sand-dacite": "Dacite sand",
   "block-sand-rhyolite": "Rhyolite sand",
-
   "block-sand-gneiss-*": "Gneiss sand",
   "block-sand-schist-*": "Schist sand",
   "block-sand-quartzite-*": "Quartzite sand",
@@ -60,7 +54,6 @@
   "block-sand-gabbro-*": "Gabbro sand",
   "block-sand-dacite-*": "Dacite sand",
   "block-sand-rhyolite-*": "Rhyolite sand",
-
   "block-sandwavy-gneiss": "Gneiss sand",
   "block-sandwavy-schist": "Schist sand",
   "block-sandwavy-quartzite": "Quartzite sand",
@@ -69,7 +62,6 @@
   "block-sandwavy-gabbro": "Gabbro sand",
   "block-sandwavy-dacite": "Dacite sand",
   "block-sandwavy-rhyolite": "Rhyolite sand",
-
   "block-gravel-gneiss": "Gneiss gravel",
   "block-gravel-schist": "Schist gravel",
   "block-gravel-quartzite": "Quartzite gravel",
@@ -78,7 +70,6 @@
   "block-gravel-gabbro": "Gabbro gravel",
   "block-gravel-dacite": "Dacite gravel",
   "block-gravel-rhyolite": "Rhyolite gravel",
-
   "block-gravel-gneiss-*": "Gneiss gravel",
   "block-gravel-schist-*": "Schist gravel",
   "block-gravel-quartzite-*": "Quartzite gravel",
@@ -87,7 +78,6 @@
   "block-gravel-gabbro-*": "Gabbro gravel",
   "block-gravel-dacite-*": "Dacite gravel",
   "block-gravel-rhyolite-*": "Rhyolite gravel",
-
   "block-cobblestone-gneiss": "Gneiss cobblestone",
   "block-cobblestone-schist": "Schist cobblestone",
   "block-cobblestone-quartzite": "Quartzite cobblestone",
@@ -96,7 +86,6 @@
   "block-cobblestone-gabbro": "Gabbro cobblestone",
   "block-cobblestone-dacite": "Dacite cobblestone",
   "block-cobblestone-rhyolite": "Rhyolite cobblestone",
-
   "block-cobblestoneslab-gneiss-*": "Gneiss cobblestone slab",
   "block-cobblestoneslab-schist-*": "Schist cobblestone slab",
   "block-cobblestoneslab-quartzite-*": "Quartzite cobblestone slab",
@@ -105,7 +94,6 @@
   "block-cobblestoneslab-gabbro-*": "Gabbro cobblestone slab",
   "block-cobblestoneslab-dacite-*": "Dacite cobblestone slab",
   "block-cobblestoneslab-rhyolite-*": "Rhyolite cobblestone slab",
-
   "block-cobblestonestairs-gneiss-*": "Gneiss cobblestone stairs",
   "block-cobblestonestairs-schist-*": "Schist cobblestone stairs",
   "block-cobblestonestairs-quartzite-*": "Quartzite cobblestone stairs",
@@ -114,7 +102,6 @@
   "block-cobblestonestairs-gabbro-*": "Gabbro cobblestone stairs",
   "block-cobblestonestairs-dacite-*": "Dacite cobblestone stairs",
   "block-cobblestonestairs-rhyolite-*": "Rhyolite cobblestone stairs",
-
   "block-cobblestonefan-gneiss-*": "Fanned gneiss cobblestone",
   "block-cobblestonefan-schist-*": "Fanned schist cobblestone",
   "block-cobblestonefan-quartzite-*": "Fanned quartzite cobblestone",
@@ -123,7 +110,6 @@
   "block-cobblestonefan-gabbro-*": "Fanned gabbro cobblestone",
   "block-cobblestonefan-dacite-*": "Fanned dacite cobblestone",
   "block-cobblestonefan-rhyolite-*": "Fanned rhyolite cobblestone",
-
   "block-drystone-gneiss": "Gneiss dry stone",
   "block-drystone-schist": "Schist dry stone",
   "block-drystone-quartzite": "Quartzite dry stone",
@@ -132,7 +118,6 @@
   "block-drystone-gabbro": "Gabbro dry stone",
   "block-drystone-dacite": "Dacite dry stone",
   "block-drystone-rhyolite": "Rhyolite dry stone",
-
   "block-drystonefence-gneiss-*": "Gneiss dry stone fence",
   "block-drystonefence-schist-*": "Schist dry stone fence",
   "block-drystonefence-quartzite-*": "Quartzite dry stone fence",
@@ -141,7 +126,6 @@
   "block-drystonefence-gabbro-*": "Gabbro dry stone fence",
   "block-drystonefence-dacite-*": "Dacite dry stone fence",
   "block-drystonefence-rhyolite-*": "Rhyolite dry stone fence",
-
   "item-stone-gneiss": "Gneiss stone",
   "item-stone-schist": "Schist stone",
   "item-stone-quartzite": "Quartzite stone",
@@ -150,7 +134,6 @@
   "item-stone-gabbro": "Gabbro stone",
   "item-stone-dacite": "Dacite stone",
   "item-stone-rhyolite": "Rhyolite stone",
-
   "block-loosestones-gneiss-*": "Gneiss stones",
   "block-loosestones-schist-*": "Schist stones",
   "block-loosestones-quartzite-*": "Quartzite stones",
@@ -159,7 +142,6 @@
   "block-loosestones-gabbro-*": "Gabbro stones",
   "block-loosestones-dacite-*": "Dacite stones",
   "block-loosestones-rhyolite-*": "Rhyolite stones",
-
   "block-looseboulders-gneiss-*": "Gneiss boulders",
   "block-looseboulders-schist-*": "Schist boulders",
   "block-looseboulders-quartzite-*": "Quartzite boulders",
@@ -168,36 +150,30 @@
   "block-looseboulders-gabbro-*": "Gabbro boulders",
   "block-looseboulders-dacite-*": "Dacite boulders",
   "block-looseboulders-rhyolite-*": "Rhyolite boulders",
-
   "ore-chalcopyrite": "Chalcopyrite",
   "ore-tetrahedrite": "Tetrahedrite",
   "ore-nickeline": "Nickeline",
   "ore-cobaltite": "Cobaltite",
   "ore-garnierite": "Garnierite",
-
   "item-ore-chalcopyrite": "Chalcopyrite chunk",
   "item-ore-tetrahedrite": "Tetrahedrite chunk",
   "item-ore-nickeline": "Nickeline chunk",
   "item-ore-cobaltite": "Cobaltite chunk",
   "item-ore-garnierite": "Garnierite chunk",
-
   "item-nugget-chalcopyrite": "Nugget (Chalcopyrite)",
   "item-nugget-tetrahedrite": "Nugget (Tetrahedrite)",
   "item-nugget-nickeline": "Nugget (Nickeline)",
   "item-nugget-cobaltite": "Nugget (Cobaltite)",
   "item-nugget-garnierite": "Nugget (Garnierite)",
-
   "item-crystalizedore-chalcopyrite": "Crystallized chalcopyrite",
   "item-crystalizedore-tetrahedrite": "Crystallized tetrahedrite",
   "item-crystalizedore-nickeline": "Crystallized nickeline",
   "item-crystalizedore-cobaltite": "Crystallized cobaltite",
   "item-crystalizedore-garnierite": "Crystallized garnierite",
-
   "block-looseores-chalcopyrite-*": "Chalcopyrite",
   "block-looseores-tetrahedrite-*": "Tetrahedrite",
   "block-looseores-nickeline-*": "Nickeline",
   "block-looseores-garnierite-*": "Garnierite",
-
   "game:block-crackedrock-gneiss": "Cracked gneiss",
   "game:block-crackedrock-schist": "Cracked schist",
   "game:block-crackedrock-quartzite": "Cracked quartzite",
@@ -206,7 +182,6 @@
   "game:block-crackedrock-gabbro": "Cracked gabbro",
   "game:block-crackedrock-dacite": "Cracked dacite",
   "game:block-crackedrock-rhyolite": "Cracked rhyolite",
-
   "game:block-cobbleskull-gneiss": "Gneiss cobble skull",
   "game:block-cobbleskull-schist": "Schist cobble skull",
   "game:block-cobbleskull-quartzite": "Quartzite cobble skull",
@@ -215,7 +190,6 @@
   "game:block-cobbleskull-gabbro": "Gabbro cobble skull",
   "game:block-cobbleskull-dacite": "Dacite cobble skull",
   "game:block-cobbleskull-rhyolite": "Rhyolite cobble skull",
-
   "item-snowball-gneiss": "Gneiss stone in snowball",
   "item-snowball-schist": "Schist stone in snowball",
   "item-snowball-quartzite": "Quartzite stone in snowball",
@@ -224,7 +198,6 @@
   "item-snowball-gabbro": "Gabbro stone in snowball",
   "item-snowball-dacite": "Dacite stone in snowball",
   "item-snowball-rhyolite": "Rhyolite stone in snowball",
-
   "item-stonebrick-gneiss": "Gneiss ashlar block",
   "item-stonebrick-schist": "Schist ashlar block",
   "item-stonebrick-quartzite": "Quartzite ashlar block",
@@ -233,7 +206,6 @@
   "item-stonebrick-gabbro": "Gabbro ashlar block",
   "item-stonebrick-dacite": "Dacite ashlar block",
   "item-stonebrick-rhyolite": "Rhyolite ashlar block",
-
   "block-ore-flint-gneiss": "Flint in gneiss",
   "block-ore-flint-schist": "Flint in schist",
   "block-ore-flint-quartzite": "Flint in quartzite",
@@ -242,7 +214,6 @@
   "block-ore-flint-gabbro": "Flint in gabbro",
   "block-ore-flint-dacite": "Flint in dacite",
   "block-ore-flint-rhyolite": "Flint in rhyolite",
-
   "block-stonebrickstairs-gneiss-*": "Gneiss ashlar block stairs",
   "block-stonebrickstairs-schist-*": "Schist ashlar block stairs",
   "block-stonebrickstairs-quartzite-*": "Quartzite ashlar block stairs",
@@ -251,7 +222,6 @@
   "block-stonebrickstairs-gabbro-*": "Gabbro ashlar block stairs",
   "block-stonebrickstairs-dacite-*": "Dacite ashlar block stairs",
   "block-stonebrickstairs-rhyolite-*": "Rhyolite ashlar block stairs",
-
   "block-stonebrickslab-gneiss-*": "Gneiss ashlar block slab",
   "block-stonebrickslab-schist-*": "Schist ashlar block slab",
   "block-stonebrickslab-quartzite-*": "Quartzite ashlar block slab",
@@ -260,7 +230,6 @@
   "block-stonebrickslab-gabbro-*": "Gabbro ashlar block slab",
   "block-stonebrickslab-dacite-*": "Dacite ashlar block slab",
   "block-stonebrickslab-rhyolite-*": "Rhyolite ashlar block slab",
-
   "block-stonebricks-gneiss": "Gneiss ashlar blocks",
   "block-stonebricks-schist": "Schist ashlar blocks",
   "block-stonebricks-quartzite": "Quartzite ashlar blocks",
@@ -269,7 +238,6 @@
   "block-stonebricks-gabbro": "Gabbro ashlar blocks",
   "block-stonebricks-dacite": "Dacite ashlar blocks",
   "block-stonebricks-rhyolite": "Rhyolite ashlar blocks",
-
   "block-crackedstonebricks-gneiss": "Cracked gneiss ashlar blocks",
   "block-crackedstonebricks-schist": "Cracked schist ashlar blocks",
   "block-crackedstonebricks-quartzite": "Cracked quartzite ashlar blocks",
@@ -278,7 +246,6 @@
   "block-crackedstonebricks-gabbro": "Cracked gabbro ashlar blocks",
   "block-crackedstonebricks-dacite": "Cracked dacite ashlar blocks",
   "block-crackedstonebricks-rhyolite": "Cracked rhyolite ashlar blocks",
-
   "block-agedstonebricks-gneiss": "Aged gneiss ashlar blocks",
   "block-agedstonebricks-schist": "Aged schist ashlar blocks",
   "block-agedstonebricks-quartzite": "Aged quartzite ashlar blocks",
@@ -287,7 +254,6 @@
   "block-agedstonebricks-gabbro": "Aged gabbro ashlar blocks",
   "block-agedstonebricks-dacite": "Aged dacite ashlar blocks",
   "block-agedstonebricks-rhyolite": "Aged rhyolite ashlar blocks",
-
   "block-polishedrockold-cobbled-gneiss": "Aged polished cobbled rock (Gneiss)",
   "block-polishedrockold-cobbled-schist": "Aged polished cobbled rock (Schist)",
   "block-polishedrockold-cobbled-quartzite": "Aged polished cobbled rock (Quartzite)",
@@ -296,7 +262,6 @@
   "block-polishedrockold-cobbled-gabbro": "Aged polished cobbled rock (Gabbro)",
   "block-polishedrockold-cobbled-dacite": "Aged polished cobbled rock (Dacite)",
   "block-polishedrockold-cobbled-rhyolite": "Aged polished cobbled rock (Rhyolite)",
-
   "block-polishedrockold-full-gneiss": "Aged polished rock (Gneiss)",
   "block-polishedrockold-full-schist": "Aged polished rock (Schist)",
   "block-polishedrockold-full-quartzite": "Aged polished rock (Quartzite)",
@@ -305,14 +270,12 @@
   "block-polishedrockold-full-gabbro": "Aged polished rock (Gabbro)",
   "block-polishedrockold-full-dacite": "Aged polished rock (Dacite)",
   "block-polishedrockold-full-rhyolite": "Aged polished rock (Rhyolite)",
-
   "game:block-ore-*-chalcopyrite-*": "Chalcopyrite ore",
   "game:block-ore-*-tetrahedrite-*": "Tetrahedrite ore",
   "game:block-ore-*-nickeline-*": "Nickeline ore",
   "game:block-ore-*-cobaltite-*": "Cobaltite ore",
   "game:block-ore-*-garnierite-*": "Garnierite ore",
   "game:block-ore-*-siderite-*": "Siderite ore",
-
   "ore-siderite": "Siderite",
   "item-ore-siderite": "Siderite chunk",
   "item-nugget-siderite": "Nugget (Siderite)",
@@ -322,20 +285,17 @@
   "ore-bischofite": "Bischofite",
   "item-ore-bischofite": "Bischofite chunk",
   "item-bischofite-halite": "Bischofite in halite",
-
   "game:block-ore-*-magnesite-*": "Magnesite ore",
   "ore-magnesite": "Magnesite",
   "item-ore-magnesite": "Magnesite chunk",
   "item-nugget-magnesite": "Nugget (Magnesite)",
   "item-crystalizedore-magnesite": "Crystallized magnesite",
   "item-crushed-magnesite": "Crushed magnesite",
-
   "game:block-ore-*-pyrolusite-*": "Pyrolusite ore",
   "ore-pyrolusite": "Pyrolusite",
   "item-ore-pyrolusite": "Pyrolusite chunk",
   "item-nugget-pyrolusite": "Nugget (Pyrolusite)",
   "item-crystalizedore-pyrolusite": "Crystallized pyrolusite",
-
   "ore-alexandrite": "Alexandrite",
   "item-gem-alexandrite-rough": "Rough Alexandrite",
   "block-ore-*-alexandrite-*": "Alexandrite ore",
@@ -408,7 +368,6 @@
   "block-polishedrockslab-pegmatite-*": "Pegmatite rock slab (Polished)",
   "game:block-crackedrock-pegmatite": "Cracked pegmatite",
   "block-polishedrockold-full-pegmatite": "Aged polished rock (Pegmatite)",
-
   "ore-periclase": "Periclase",
   "item-ore-periclase": "Periclase chunk",
   "block-ore-periclase-*": "Periclase",
@@ -429,7 +388,6 @@
   "block-looseores-cryolite-*": "Cryolite",
   "block-looseores-alunite-*": "Alunite",
   "block-looseores-orthoclase-*": "Orthoclase",
-
   "ore-moonstone": "Moonstone",
   "item-gem-moonstone-rough": "Rough Moonstone",
   "block-ore-*-moonstone-*": "Moonstone ore",
@@ -460,8 +418,6 @@
   "ore-spessartine": "Spessartine",
   "item-gem-spessartine-rough": "Rough Spessartine",
   "block-ore-*-spessartine-*": "Spessartine ore",
-
-
   "rock-granulite": "Granulite",
   "block-rock-granulite": "Granulite rock",
   "item-stone-granulite": "Granulite stone",
@@ -592,7 +548,6 @@
   "game:block-cobbleskull-tonalite": "Tonalite cobble skull",
   "block-loosestones-tonalite-*": "Tonalite stones",
   "block-looseboulders-tonalite-*": "Tonalite boulders",
-
   "rock-pyroxenite": "Pyroxenite",
   "block-rock-pyroxenite": "Pyroxenite rock",
   "item-stone-pyroxenite": "Pyroxenite stone",
@@ -617,7 +572,6 @@
   "block-rockpolished-syenite": "Syenite rock (Polished)",
   "block-polishedrockslab-syenite-*": "Syenite rock slab (Polished)",
   "game:block-crackedrock-syenite": "Cracked syenite",
-
   "ore-chrysoberyl": "Chrysoberyl",
   "item-gem-chrysoberyl-rough": "Rough Chrysoberyl",
   "block-ore-*-chrysoberyl-*": "Chrysoberyl ore",
@@ -750,7 +704,6 @@
   "ore-jadekhotan": "Khotan Jade",
   "item-gem-jadekhotan-rough": "Rough Khotan Jade",
   "block-ore-*-jadekhotan-*": "Khotan Jade ore",
-
   "rock-carbonatite": "Carbonatite",
   "block-rock-carbonatite": "Carbonatite rock",
   "item-stone-carbonatite": "Carbonatite stone",
@@ -868,5 +821,8 @@
   "block-polishedrockold-cobbled-serpentinite": "Aged polished cobbled rock (Serpentinite)",
   "block-polishedrockold-full-serpentinite": "Aged polished rock (Serpentinite)",
   "block-ore-*-chalcopyrite-*": "Chalcopyrite ore",
-  "block-ore-*-magnesite-*": "Magnesite ore"
+  "block-ore-*-magnesite-*": "Magnesite ore",
+  "ore-citrine": "Citrine",
+  "item-gem-citrine-rough": "Rough Citrine",
+  "block-ore-*-citrine-*": "Citrine ore"
 }

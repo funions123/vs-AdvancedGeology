@@ -1,0 +1,11 @@
+{
+  "sourceRoot": "${VINTAGE_STORY}/assets/survival/textures",
+  "targetRoot": "resources/assets/game/textures",
+  "sourcePrefix": "diamond",
+  "targetPrefix": "citrine",
+  "sourceFilesFile": "gem-rough-profile.json",
+  "shadow": "#70400f",
+  "midtone": "#c98627",
+  "highlight": "#f4d77a",
+  "midpoint": 0.5
+}

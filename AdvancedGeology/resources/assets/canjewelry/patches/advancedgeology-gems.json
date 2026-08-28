@@ -1,0 +1,1292 @@
+[
+  {
+    "op": "addeach",
+    "path": "/variantgroups/2/states/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:itemtypes/resource/gem-rough.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/2/states/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:itemtypes/resource/gem-cut.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType",
+    "value": {
+      "*-moonstone": {
+        "gem": {
+          "base": "game:block/stone/gem/moonstone"
+        }
+      },
+      "*-labradorite": {
+        "gem": {
+          "base": "game:block/stone/gem/labradorite"
+        }
+      },
+      "*-amazonite": {
+        "gem": {
+          "base": "game:block/stone/gem/amazonite"
+        }
+      },
+      "*-sunstone": {
+        "gem": {
+          "base": "game:block/stone/gem/sunstone"
+        }
+      },
+      "*-almandine": {
+        "gem": {
+          "base": "game:block/stone/gem/almandine"
+        }
+      },
+      "*-pyrope": {
+        "gem": {
+          "base": "game:block/stone/gem/pyrope"
+        }
+      },
+      "*-tsavorite": {
+        "gem": {
+          "base": "game:block/stone/gem/tsavorite"
+        }
+      },
+      "*-demantoid": {
+        "gem": {
+          "base": "game:block/stone/gem/demantoid"
+        }
+      },
+      "*-uvarovite": {
+        "gem": {
+          "base": "game:block/stone/gem/uvarovite"
+        }
+      },
+      "*-spessartine": {
+        "gem": {
+          "base": "game:block/stone/gem/spessartine"
+        }
+      },
+      "*-chrysoberyl": {
+        "gem": {
+          "base": "game:block/stone/gem/chrysoberyl"
+        }
+      },
+      "*-aquamarine": {
+        "gem": {
+          "base": "game:block/stone/gem/aquamarine"
+        }
+      },
+      "*-heliodor": {
+        "gem": {
+          "base": "game:block/stone/gem/heliodor"
+        }
+      },
+      "*-opalwhite": {
+        "gem": {
+          "base": "game:block/stone/gem/opalwhite"
+        }
+      },
+      "*-opalblack": {
+        "gem": {
+          "base": "game:block/stone/gem/opalblack"
+        }
+      },
+      "*-opalcrystal": {
+        "gem": {
+          "base": "game:block/stone/gem/opalcrystal"
+        }
+      },
+      "*-opalfire": {
+        "gem": {
+          "base": "game:block/stone/gem/opalfire"
+        }
+      },
+      "*-zirconwhite": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconwhite"
+        }
+      },
+      "*-zirconred": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconred"
+        }
+      },
+      "*-zircongreen": {
+        "gem": {
+          "base": "game:block/stone/gem/zircongreen"
+        }
+      },
+      "*-zirconyellow": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconyellow"
+        }
+      },
+      "*-zirconbrown": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconbrown"
+        }
+      },
+      "*-zirconblue": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconblue"
+        }
+      },
+      "*-tourmalineschorl": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalineschorl"
+        }
+      },
+      "*-tourmalinerubellite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalinerubellite"
+        }
+      },
+      "*-tourmalineverdelite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalineverdelite"
+        }
+      },
+      "*-tourmalineindicolite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalineindicolite"
+        }
+      },
+      "*-tourmalinedravite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalinedravite"
+        }
+      },
+      "*-tourmalinechrome": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalinechrome"
+        }
+      },
+      "*-spinelred": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelred"
+        }
+      },
+      "*-spinelblue": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelblue"
+        }
+      },
+      "*-spinelorange": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelorange"
+        }
+      },
+      "*-spinelgreen": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelgreen"
+        }
+      },
+      "*-spinelblack": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelblack"
+        }
+      },
+      "*-sapphire": {
+        "gem": {
+          "base": "game:block/stone/gem/sapphire"
+        }
+      },
+      "*-tanzanite": {
+        "gem": {
+          "base": "game:block/stone/gem/tanzanite"
+        }
+      },
+      "*-topazblue": {
+        "gem": {
+          "base": "game:block/stone/gem/topazblue"
+        }
+      },
+      "*-topazimperial": {
+        "gem": {
+          "base": "game:block/stone/gem/topazimperial"
+        }
+      },
+      "*-topazred": {
+        "gem": {
+          "base": "game:block/stone/gem/topazred"
+        }
+      },
+      "*-topazsherry": {
+        "gem": {
+          "base": "game:block/stone/gem/topazsherry"
+        }
+      },
+      "*-agatewhite": {
+        "gem": {
+          "base": "game:block/stone/gem/agatewhite"
+        }
+      },
+      "*-agatered": {
+        "gem": {
+          "base": "game:block/stone/gem/agatered"
+        }
+      },
+      "*-agateblue": {
+        "gem": {
+          "base": "game:block/stone/gem/agateblue"
+        }
+      },
+      "*-agateblack": {
+        "gem": {
+          "base": "game:block/stone/gem/agateblack"
+        }
+      },
+      "*-jasperred": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperred"
+        }
+      },
+      "*-jasperyellow": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperyellow"
+        }
+      },
+      "*-jaspergreen": {
+        "gem": {
+          "base": "game:block/stone/gem/jaspergreen"
+        }
+      },
+      "*-jasperblack": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperblack"
+        }
+      },
+      "*-jasperblue": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperblue"
+        }
+      },
+      "*-jadeimperial": {
+        "gem": {
+          "base": "game:block/stone/gem/jadeimperial"
+        }
+      },
+      "*-jadeblack": {
+        "gem": {
+          "base": "game:block/stone/gem/jadeblack"
+        }
+      },
+      "*-jadelavender": {
+        "gem": {
+          "base": "game:block/stone/gem/jadelavender"
+        }
+      },
+      "*-jadekhotan": {
+        "gem": {
+          "base": "game:block/stone/gem/jadekhotan"
+        }
+      },
+      "*-alexandrite": {
+        "gem": {
+          "base": "game:block/stone/gem/alexandrite"
+        }
+      }
+    },
+    "file": "canjewelry:itemtypes/resource/gem-rough.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addmerge",
+    "path": "/texturesByType",
+    "value": {
+      "*-moonstone": {
+        "gem": {
+          "base": "game:block/stone/gem/moonstone"
+        }
+      },
+      "*-labradorite": {
+        "gem": {
+          "base": "game:block/stone/gem/labradorite"
+        }
+      },
+      "*-amazonite": {
+        "gem": {
+          "base": "game:block/stone/gem/amazonite"
+        }
+      },
+      "*-sunstone": {
+        "gem": {
+          "base": "game:block/stone/gem/sunstone"
+        }
+      },
+      "*-almandine": {
+        "gem": {
+          "base": "game:block/stone/gem/almandine"
+        }
+      },
+      "*-pyrope": {
+        "gem": {
+          "base": "game:block/stone/gem/pyrope"
+        }
+      },
+      "*-tsavorite": {
+        "gem": {
+          "base": "game:block/stone/gem/tsavorite"
+        }
+      },
+      "*-demantoid": {
+        "gem": {
+          "base": "game:block/stone/gem/demantoid"
+        }
+      },
+      "*-uvarovite": {
+        "gem": {
+          "base": "game:block/stone/gem/uvarovite"
+        }
+      },
+      "*-spessartine": {
+        "gem": {
+          "base": "game:block/stone/gem/spessartine"
+        }
+      },
+      "*-chrysoberyl": {
+        "gem": {
+          "base": "game:block/stone/gem/chrysoberyl"
+        }
+      },
+      "*-aquamarine": {
+        "gem": {
+          "base": "game:block/stone/gem/aquamarine"
+        }
+      },
+      "*-heliodor": {
+        "gem": {
+          "base": "game:block/stone/gem/heliodor"
+        }
+      },
+      "*-opalwhite": {
+        "gem": {
+          "base": "game:block/stone/gem/opalwhite"
+        }
+      },
+      "*-opalblack": {
+        "gem": {
+          "base": "game:block/stone/gem/opalblack"
+        }
+      },
+      "*-opalcrystal": {
+        "gem": {
+          "base": "game:block/stone/gem/opalcrystal"
+        }
+      },
+      "*-opalfire": {
+        "gem": {
+          "base": "game:block/stone/gem/opalfire"
+        }
+      },
+      "*-zirconwhite": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconwhite"
+        }
+      },
+      "*-zirconred": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconred"
+        }
+      },
+      "*-zircongreen": {
+        "gem": {
+          "base": "game:block/stone/gem/zircongreen"
+        }
+      },
+      "*-zirconyellow": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconyellow"
+        }
+      },
+      "*-zirconbrown": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconbrown"
+        }
+      },
+      "*-zirconblue": {
+        "gem": {
+          "base": "game:block/stone/gem/zirconblue"
+        }
+      },
+      "*-tourmalineschorl": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalineschorl"
+        }
+      },
+      "*-tourmalinerubellite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalinerubellite"
+        }
+      },
+      "*-tourmalineverdelite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalineverdelite"
+        }
+      },
+      "*-tourmalineindicolite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalineindicolite"
+        }
+      },
+      "*-tourmalinedravite": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalinedravite"
+        }
+      },
+      "*-tourmalinechrome": {
+        "gem": {
+          "base": "game:block/stone/gem/tourmalinechrome"
+        }
+      },
+      "*-spinelred": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelred"
+        }
+      },
+      "*-spinelblue": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelblue"
+        }
+      },
+      "*-spinelorange": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelorange"
+        }
+      },
+      "*-spinelgreen": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelgreen"
+        }
+      },
+      "*-spinelblack": {
+        "gem": {
+          "base": "game:block/stone/gem/spinelblack"
+        }
+      },
+      "*-sapphire": {
+        "gem": {
+          "base": "game:block/stone/gem/sapphire"
+        }
+      },
+      "*-tanzanite": {
+        "gem": {
+          "base": "game:block/stone/gem/tanzanite"
+        }
+      },
+      "*-topazblue": {
+        "gem": {
+          "base": "game:block/stone/gem/topazblue"
+        }
+      },
+      "*-topazimperial": {
+        "gem": {
+          "base": "game:block/stone/gem/topazimperial"
+        }
+      },
+      "*-topazred": {
+        "gem": {
+          "base": "game:block/stone/gem/topazred"
+        }
+      },
+      "*-topazsherry": {
+        "gem": {
+          "base": "game:block/stone/gem/topazsherry"
+        }
+      },
+      "*-agatewhite": {
+        "gem": {
+          "base": "game:block/stone/gem/agatewhite"
+        }
+      },
+      "*-agatered": {
+        "gem": {
+          "base": "game:block/stone/gem/agatered"
+        }
+      },
+      "*-agateblue": {
+        "gem": {
+          "base": "game:block/stone/gem/agateblue"
+        }
+      },
+      "*-agateblack": {
+        "gem": {
+          "base": "game:block/stone/gem/agateblack"
+        }
+      },
+      "*-jasperred": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperred"
+        }
+      },
+      "*-jasperyellow": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperyellow"
+        }
+      },
+      "*-jaspergreen": {
+        "gem": {
+          "base": "game:block/stone/gem/jaspergreen"
+        }
+      },
+      "*-jasperblack": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperblack"
+        }
+      },
+      "*-jasperblue": {
+        "gem": {
+          "base": "game:block/stone/gem/jasperblue"
+        }
+      },
+      "*-jadeimperial": {
+        "gem": {
+          "base": "game:block/stone/gem/jadeimperial"
+        }
+      },
+      "*-jadeblack": {
+        "gem": {
+          "base": "game:block/stone/gem/jadeblack"
+        }
+      },
+      "*-jadelavender": {
+        "gem": {
+          "base": "game:block/stone/gem/jadelavender"
+        }
+      },
+      "*-jadekhotan": {
+        "gem": {
+          "base": "game:block/stone/gem/jadekhotan"
+        }
+      },
+      "*-alexandrite": {
+        "gem": {
+          "base": "game:block/stone/gem/alexandrite"
+        }
+      }
+    },
+    "file": "canjewelry:itemtypes/resource/gem-cut.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/round_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/1/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/round_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/2/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/round_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/pear_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/1/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/pear_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/2/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/pear_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/baguette_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/1/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/baguette_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  },
+  {
+    "op": "addeach",
+    "path": "/2/ingredient/allowedVariants/-",
+    "value": [
+      "moonstone",
+      "labradorite",
+      "amazonite",
+      "sunstone",
+      "almandine",
+      "pyrope",
+      "tsavorite",
+      "demantoid",
+      "uvarovite",
+      "spessartine",
+      "chrysoberyl",
+      "aquamarine",
+      "heliodor",
+      "opalwhite",
+      "opalblack",
+      "opalcrystal",
+      "opalfire",
+      "zirconwhite",
+      "zirconred",
+      "zircongreen",
+      "zirconyellow",
+      "zirconbrown",
+      "zirconblue",
+      "tourmalineschorl",
+      "tourmalinerubellite",
+      "tourmalineverdelite",
+      "tourmalineindicolite",
+      "tourmalinedravite",
+      "tourmalinechrome",
+      "spinelred",
+      "spinelblue",
+      "spinelorange",
+      "spinelgreen",
+      "spinelblack",
+      "sapphire",
+      "tanzanite",
+      "topazblue",
+      "topazimperial",
+      "topazred",
+      "topazsherry",
+      "agatewhite",
+      "agatered",
+      "agateblue",
+      "agateblack",
+      "jasperred",
+      "jasperyellow",
+      "jaspergreen",
+      "jasperblack",
+      "jasperblue",
+      "jadeimperial",
+      "jadeblack",
+      "jadelavender",
+      "jadekhotan",
+      "alexandrite"
+    ],
+    "file": "canjewelry:recipes/gemcutting/baguette_cutting.json",
+    "dependsOn": [
+      {
+        "modid": "canjewelry"
+      }
+    ]
+  }
+]

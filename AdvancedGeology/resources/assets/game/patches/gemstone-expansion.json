@@ -352,6 +352,14 @@
     "file": "game:worldproperties/block/ore-gem-rough.json"
   },
   {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "citrine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
@@ -499,7 +507,10 @@
       "ore-gem-jasperblack-tuff",
       "ore-gem-jasperblue-greenstone",
       "ore-gem-jasperblue-rhyolite",
-      "ore-gem-jasperblue-tuff"
+      "ore-gem-jasperblue-tuff",
+      "ore-gem-citrine-granite",
+      "ore-gem-citrine-rhyolite",
+      "ore-gem-citrine-pegmatite"
     ],
     "file": "game:blocktypes/stone/ore-gem.json"
   }

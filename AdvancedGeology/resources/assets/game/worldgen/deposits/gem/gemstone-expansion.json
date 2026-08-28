@@ -2651,5 +2651,74 @@
         "var": 0
       }
     }
+  },
+  {
+    "code": "citrine",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-citrine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-citrine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "citrine",
+    "triesPerChunk": 16,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-citrine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-citrine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.6
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
   }
 ]

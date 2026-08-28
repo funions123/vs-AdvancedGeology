@@ -42,16 +42,26 @@ namespace AdvancedGeology
         {
             base.Start(api);
 
-            if (SilverGradeSystem.Active)
+            bool canJewelryEnabled = api.ModLoader.IsModEnabled("canjewelry");
+            if (!SilverGradeSystem.Active && !canJewelryEnabled) return;
+
+            harmony = new Harmony("advancedgeology");
+            if (SilverGradeSystem.Active) harmony.PatchAll();
+            if (canJewelryEnabled)
             {
-                harmony = new Harmony("advancedgeology.silvergrade");
-                harmony.PatchAll();
+                CanJewelryAcquisitionPatch.Apply(harmony, api);
+                CanJewelryGemCompatibility.Apply(harmony, api);
             }
         }
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             api.Event.InitWorldGenerator(() => VerifyBlockLayerMappings(api), "standard");
+
+            if (api.ModLoader.IsModEnabled("canjewelry"))
+            {
+                CanJewelryGemCompatibility.ScheduleRuntimeVerification(api);
+            }
 
             if (SilverGradeSystem.Active)
             {
@@ -61,12 +71,17 @@ namespace AdvancedGeology
 
         public override void Dispose()
         {
-            harmony?.UnpatchAll("advancedgeology.silvergrade");
+            harmony?.UnpatchAll("advancedgeology");
             base.Dispose();
         }
 
         public override void AssetsLoaded(ICoreAPI api)
         {
+            if (api.ModLoader.IsModEnabled("canjewelry"))
+            {
+                CanJewelryGemCompatibility.InitializeAndReconcile(api);
+            }
+
             if (api.ModLoader.IsModEnabled("interestingoregen"))
             {
                 ClearIogDeposits(api);
