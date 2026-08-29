@@ -19,5 +19,12 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-sperrylite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-sperrylite-schist", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-sperrylite-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-sperrylite-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-sperrylite-granite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-sperrylite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-sperrylite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-sperrylite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-sperrylite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-sperrylite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-sperrylite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
 ]

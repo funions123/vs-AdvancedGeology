@@ -1,0 +1,22 @@
+[
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nativeplatinum-diorite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nativeplatinum-diorite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nativeplatinum-rhyolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nativeplatinum-rhyolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nativeplatinum-serpentinite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nativeplatinum-serpentinite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nativeplatinum-diorite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nativeplatinum-diorite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nativeplatinum-rhyolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nativeplatinum-rhyolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-nativeplatinum-serpentinite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-nativeplatinum-serpentinite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-nativeplatinum-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-nativeplatinum-diorite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-nativeplatinum-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-nativeplatinum-rhyolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-nativeplatinum-serpentinite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-nativeplatinum-serpentinite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
+]

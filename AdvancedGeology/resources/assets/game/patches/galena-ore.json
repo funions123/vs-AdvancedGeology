@@ -163,5 +163,18 @@
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cerussite-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cerussite-siltstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
   { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cerussite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
-  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cerussite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cerussite-mudstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-greenstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-greenstone", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-amphibolite", "file": "game:blocktypes/stone/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-greenstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-greenstone", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-poor-cerussite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "ore-medium-cerussite-amphibolite", "file": "game:itemtypes/resource/ore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cerussite-greenstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cerussite-greenstone", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-poor-cerussite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] },
+  { "op": "add", "path": "/allowedVariants/-", "value": "crystalizedore-medium-cerussite-amphibolite", "file": "game:itemtypes/resource/crystalizedore-graded.json", "dependsOn": [{ "modid": "geoaddons" }] }
 ]

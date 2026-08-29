@@ -199,20 +199,23 @@ namespace AdvancedGeology
         }
 
         /// <summary>
-        /// Removes GeoAddons' overlapping rock entries from worldproperties.
+        /// Makes our rock definitions win over GeoAddons' for every code both mods define.
         /// </summary>
         private void RemoveGeoAddonsRockOverlaps(ICoreAPI api)
         {
             string[] removeEntirely = ["dolostone", "Gabbro"];
-            string[] deduplicateCodes = ["quartzite", "gneiss", "schist", "diorite", "rhyolite"];
+            string[] rockPatchFiles = [
+                "game:patches/rock-variants.json",
+                "game:patches/full-rock-variants.json",
+                "game:patches/cluster-rock-variants.json"
+            ];
 
             int removed = 0;
-            removed += DeduplicateWorldPropertyVariants(api, "game:worldproperties/block/rock.json", "Code", removeEntirely, deduplicateCodes);
-            removed += DeduplicateWorldPropertyVariants(api, "game:worldproperties/block/rockwithdeposit.json", "Code", removeEntirely, deduplicateCodes);
+            removed += EnforceAGWorldPropertyVariants(api, "game:worldproperties/block/rock.json", "Code", removeEntirely, rockPatchFiles);
+            removed += EnforceAGWorldPropertyVariants(api, "game:worldproperties/block/rockwithdeposit.json", "Code", removeEntirely, rockPatchFiles);
 
-            string[] removeEntirelyStrata = ["rock-dolostone"];
-            string[] deduplicateStrata = ["rock-quartzite", "rock-gneiss", "rock-schist", "rock-diorite", "rock-gabbro", "rock-rhyolite"];
-            removed += DeduplicateWorldPropertyVariants(api, "game:worldgen/rockstrata.json", "blockcode", removeEntirelyStrata, deduplicateStrata);
+            string[] strataPatchFiles = ["game:patches/rock-strata.json", "game:patches/full-rock-strata.json"];
+            removed += EnforceAGWorldPropertyVariants(api, "game:worldgen/rockstrata.json", "blockcode", ["rock-dolostone"], strataPatchFiles);
 
             // Fanned cobblestone: geoaddons adds "dolostone" and duplicates of our rocks
             removed += CleanupFannedCobblestoneVariants(api);
@@ -229,7 +232,8 @@ namespace AdvancedGeology
         /// <summary>
         /// Removes GeoAddons' chalcopyrite/tetrahedrite ore overlaps; deduplicates worldproperty
         /// variants and allowedVariants, restores our chalcopyrite deposit (geoaddons overrides
-        /// it via same filename), and removes geoaddons' double-spawning tetrahedritewithsilver.
+        /// it via same filename), and suppresses their oregen for every ore we place ourselves -
+        /// the double-spawning tetrahedritewithsilver plus the byproduct ores our child deposits own.
         /// </summary>
         private void RemoveGeoAddonsOreOverlaps(ICoreAPI api)
         {
@@ -241,7 +245,7 @@ namespace AdvancedGeology
 
             // Clean allowedVariants: deduplicate overlapping entries and remove geoaddons-only rock entries
             // Only keep ore variants for rocks that our deposits actually use
-            string[] chalcopyriteRocks = ["sandstone", "shale", "limestone", "andesite", "granite", "peridotite", "gneiss", "schist", "diorite", "gabbro", "dacite", "rhyolite"];
+            string[] chalcopyriteRocks = ["sandstone", "shale", "limestone", "andesite", "granite", "peridotite", "gneiss", "schist", "diorite", "gabbro", "dacite", "rhyolite", "greenstone", "amphibolite", "tonalite"];
             string[] tetrahedriteRocks = ["phyllite", "andesite", "quartzite", "schist", "dacite"];
 
             string[] allowedVariantFiles = [
@@ -272,6 +276,28 @@ namespace AdvancedGeology
             if (api.Assets.AllAssets.Remove(new AssetLocation("game", "worldgen/deposits/metalore/tetrahedritewithsilver.json")))
             {
                 removed++;
+            }
+
+            // GeoAddons ships standalone deposits for the byproduct ores we place ourselves as child
+            // deposits of their parent ore; drop theirs so ours is the only generator. vanadinite and
+            // wulfenite stay: we never place them, so removing them would delete the ore outright
+            string[] supersededDeposits = [
+                "azurite", "cerussite", "chalcocite", "franckeite", "freibergite", "hemimorphite",
+                "nativeplatinum", "pyrite", "smithsonite", "sperrylite", "teallite"
+            ];
+            List<string> suppressed = [];
+            foreach (string ore in supersededDeposits)
+            {
+                if (api.Assets.AllAssets.Remove(new AssetLocation("game", $"worldgen/deposits/metalore/{ore}.json")))
+                {
+                    suppressed.Add(ore);
+                    removed++;
+                }
+            }
+
+            if (suppressed.Count > 0)
+            {
+                api.Logger.VerboseDebug("[AdvancedGeology] Suppressed GeoAddons oregen: {0}", string.Join(", ", suppressed));
             }
 
             if (api.ModLoader.IsModEnabled("interestingoregen"))
@@ -492,7 +518,7 @@ namespace AdvancedGeology
             if (states == null) return 0;
 
             HashSet<string> toRemove = new(["dolostone"]);
-            HashSet<string> toDedup = new(["quartzite", "gneiss", "schist", "diorite", "gabbro", "rhyolite"]);
+            HashSet<string> toDedup = new(["quartzite", "gneiss", "schist", "diorite", "gabbro", "rhyolite", "amphibolite", "migmatite"]);
             HashSet<string> seen = new();
             int removed = 0;
 
@@ -506,7 +532,7 @@ namespace AdvancedGeology
                 }
             }
 
-            // Deduplicate overlapping rocks (keep first occurrence = ours)
+            // Deduplicate overlapping rocks; both mods add the same plain state string, so either copy will do
             for (int i = 0; i < states.Count; i++)
             {
                 string? val = states[i]?.ToString();
@@ -877,7 +903,8 @@ namespace AdvancedGeology
                 }
             }
 
-            // Deduplicate: iterate forward, keep first occurrence, remove subsequent
+            // Deduplicate: keep first occurrence, remove subsequent. Only used for codes whose entry is
+            // just { "Code": ... } in both mods, so which copy survives makes no difference
             seen.Clear();
             for (int i = 0; i < variants.Count; i++)
             {
@@ -901,6 +928,134 @@ namespace AdvancedGeology
             }
 
             return removed;
+        }
+
+        /// <summary>
+        /// Enforces that AG versions of blocks and items are the only ones that get registered.
+        /// </summary>
+        private int EnforceAGWorldPropertyVariants(ICoreAPI api, string assetPath, string codeField, string[] removeEntirely, string[] ourPatchFiles)
+        {
+            IAsset? asset = api.Assets.TryGet(new AssetLocation(assetPath));
+            if (asset == null) return 0;
+
+            JObject root;
+            try
+            {
+                root = JObject.Parse(asset.ToText());
+            }
+            catch
+            {
+                api.Logger.Warning("[AdvancedGeology] Failed to parse {0} for GeoAddons compat", assetPath);
+                return 0;
+            }
+
+            if (root["variants"] is not JArray variants) return 0;
+
+            HashSet<string> toRemove = new(removeEntirely);
+            int removed = 0;
+
+            for (int i = variants.Count - 1; i >= 0; i--)
+            {
+                string? code = variants[i][codeField]?.ToString();
+                if (code != null && toRemove.Contains(code))
+                {
+                    variants.RemoveAt(i);
+                    removed++;
+                }
+            }
+
+            Dictionary<string, int> occurrences = [];
+            foreach (JToken variant in variants)
+            {
+                string? code = variant[codeField]?.ToString();
+                if (code != null) occurrences[code] = occurrences.GetValueOrDefault(code) + 1;
+            }
+
+            Dictionary<string, JObject> ours = CollectAGVariants(api, assetPath, codeField, ourPatchFiles);
+            HashSet<string> kept = [];
+            List<string> overridden = [];
+
+            for (int i = 0; i < variants.Count; i++)
+            {
+                string? code = variants[i][codeField]?.ToString();
+                if (code == null || occurrences.GetValueOrDefault(code) < 2) continue;
+
+                if (kept.Add(code))
+                {
+                    if (ours.TryGetValue(code, out JObject? ourEntry))
+                    {
+                        variants[i] = ourEntry.DeepClone();
+                        overridden.Add(code);
+                    }
+                    continue;
+                }
+
+                variants.RemoveAt(i);
+                i--;
+                removed++;
+            }
+
+            if (removed > 0)
+            {
+                asset.Data = Encoding.UTF8.GetBytes(root.ToString());
+            }
+
+            if (overridden.Count > 0)
+            {
+                api.Logger.VerboseDebug("[AdvancedGeology] {0}: our definition now owns {1}", assetPath, string.Join(", ", overridden));
+            }
+
+            return removed;
+        }
+
+        /// <summary>
+        /// Reads the variant objects our own patch files add to <paramref name="assetPath"/>, keyed by
+        /// their code, so a duplicate can be rewritten to our values regardless of patch order.
+        /// </summary>
+        private Dictionary<string, JObject> CollectAGVariants(ICoreAPI api, string assetPath, string codeField, string[] ourPatchFiles)
+        {
+            Dictionary<string, JObject> ours = [];
+            AssetLocation target = new(assetPath);
+
+            foreach (string patchFile in ourPatchFiles)
+            {
+                IAsset? patchAsset = api.Assets.TryGet(new AssetLocation(patchFile));
+                if (patchAsset == null)
+                {
+                    api.Logger.Warning("[AdvancedGeology] Patch file {0} not found, cannot enforce our {1} entries", patchFile, assetPath);
+                    continue;
+                }
+
+                JArray patches;
+                try
+                {
+                    patches = JArray.Parse(patchAsset.ToText());
+                }
+                catch
+                {
+                    api.Logger.Warning("[AdvancedGeology] Failed to parse patch file {0}", patchFile);
+                    continue;
+                }
+
+                foreach (JObject patch in patches.OfType<JObject>())
+                {
+                    string? file = patch["file"]?.ToString();
+                    if (file == null || !new AssetLocation(file).Equals(target)) continue;
+                    if (patch["path"]?.ToString() != "/variants/-") continue;
+
+                    JToken? value = patch["value"];
+                    if (value == null) continue;
+
+                    IEnumerable<JToken> values = patch["op"]?.ToString() == "addeach" && value is JArray each ? each : [value];
+                    foreach (JObject entry in values.OfType<JObject>())
+                    {
+                        string? code = entry[codeField]?.ToString();
+                        if (code != null) ours[code] = entry;
+                    }
+                }
+            }
+
+            return ours;
         }
 
         /// <summary>
