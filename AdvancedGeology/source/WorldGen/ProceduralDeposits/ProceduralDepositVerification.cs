@@ -3440,6 +3440,82 @@ public static class ProceduralDepositVerification
             $"uranium={uraniumOre} hematite={uraniumHematite}/{hematiteColumns.Count} finiteHematite={finiteHematite}";
     }
 
+    /// <summary>
+    /// Scatter surface nuggets for shallow base metal ore deposits.
+    /// </summary>
+    public static string RunSurfaceNuggets()
+    {
+        var settings = new SurfaceNuggetDefinition();
+        if (!settings.Enabled || settings.MaxDepth != 30 || settings.Chance is <= 0 or > 1)
+        {
+            throw new InvalidOperationException(
+                $"Surface nugget defaults changed: enabled={settings.Enabled} maxDepth={settings.MaxDepth} chance={settings.Chance}");
+        }
+
+        const int surfaceY = 120;
+        bool depthWindow = ProceduralDepositWorldGenSystem.SurfaceNuggetDepthAllowed(surfaceY, surfaceY, settings.MaxDepth)
+            && ProceduralDepositWorldGenSystem.SurfaceNuggetDepthAllowed(surfaceY, surfaceY - 1, settings.MaxDepth)
+            && ProceduralDepositWorldGenSystem.SurfaceNuggetDepthAllowed(surfaceY, surfaceY - settings.MaxDepth, settings.MaxDepth)
+            && !ProceduralDepositWorldGenSystem.SurfaceNuggetDepthAllowed(surfaceY, surfaceY - settings.MaxDepth - 1, settings.MaxDepth)
+            && !ProceduralDepositWorldGenSystem.SurfaceNuggetDepthAllowed(surfaceY, surfaceY - 90, settings.MaxDepth)
+            && !ProceduralDepositWorldGenSystem.SurfaceNuggetDepthAllowed(surfaceY, surfaceY + 1, settings.MaxDepth);
+
+        bool metalGate = ProceduralDepositWorldGenSystem.IsVanillaMetalProduct("ingot-copper")
+            && ProceduralDepositWorldGenSystem.IsVanillaMetalProduct("ingot-zinc")
+            && ProceduralDepositWorldGenSystem.IsVanillaMetalProduct("ironbloom")
+            && !ProceduralDepositWorldGenSystem.IsVanillaMetalProduct(null)
+            && !ProceduralDepositWorldGenSystem.IsVanillaMetalProduct(string.Empty)
+            && !ProceduralDepositWorldGenSystem.IsVanillaMetalProduct("crushed-iron")
+            && !ProceduralDepositWorldGenSystem.IsVanillaMetalProduct("glass-blue");
+
+        bool parseGate = ProceduralDepositWorldGenSystem.TryParseGradedOrePath(
+                "ore-poor-galena-limestone",
+                out string parsedOre,
+                out string parsedRock)
+            && parsedOre == "galena"
+            && parsedRock == "limestone"
+            && ProceduralDepositWorldGenSystem.TryParseGradedOrePath("ore-bountiful-titanomagnetite-gabbro", out _, out _)
+            && !ProceduralDepositWorldGenSystem.TryParseGradedOrePath("ore-celestine", out _, out _)
+            && !ProceduralDepositWorldGenSystem.TryParseGradedOrePath("ore-quartz-granite", out _, out _)
+            && !ProceduralDepositWorldGenSystem.TryParseGradedOrePath("nugget-galena", out _, out _)
+            && !ProceduralDepositWorldGenSystem.TryParseGradedOrePath("looseores-galena-limestone-free", out _, out _)
+            && !ProceduralDepositWorldGenSystem.TryParseGradedOrePath(null, out _, out _);
+
+        const ulong featureId = 0x5FACE0UL;
+        int seededColumns = 0;
+        bool deterministic = true;
+        for (int x = -60; x <= 60; x++)
+        {
+            for (int z = -60; z <= 60; z++)
+            {
+                bool seeded = ProceduralDepositWorldGenSystem.ShouldSeedSurfaceNugget(featureId, x, z, settings.Chance);
+                if (seeded != ProceduralDepositWorldGenSystem.ShouldSeedSurfaceNugget(featureId, x, z, settings.Chance))
+                {
+                    deterministic = false;
+                }
+                if (seeded) seededColumns++;
+            }
+        }
+
+        int columns = 121 * 121;
+        double seededFraction = (double)seededColumns / columns;
+        bool chanceGate = Math.Abs(seededFraction - settings.Chance) < 0.02
+            && !ProceduralDepositWorldGenSystem.ShouldSeedSurfaceNugget(featureId, 0, 0, 0.0)
+            && ProceduralDepositWorldGenSystem.ShouldSeedSurfaceNugget(featureId, 0, 0, 1.0);
+
+        if (!depthWindow || !metalGate || !parseGate || !deterministic || !chanceGate)
+        {
+            throw new InvalidOperationException(
+                $"Surface nugget contract failed: depthWindow={depthWindow} metalGate={metalGate} " +
+                $"parseGate={parseGate} deterministic={deterministic} chanceGate={chanceGate} " +
+                $"fraction={seededFraction:F3}");
+        }
+
+        return $"surfaceNuggets maxDepth={settings.MaxDepth} chance={settings.Chance:F2} " +
+            $"seeded={seededColumns}/{columns} fraction={seededFraction:F3} depthWindow={depthWindow} " +
+            $"metalGate={metalGate} parseGate={parseGate} deterministic={deterministic}";
+    }
+
     public static string RunMessinianSulfur()
     {
         var instance = new ProceduralDepositInstance(0x51F0A7UL, 0, 100, 0, 1, 0, 0, 0);

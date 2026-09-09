@@ -1,0 +1,24 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-bismuthinite-gneiss-free",
+      "looseores-bismuthinite-schist-free",
+      "looseores-chromite-serpentinite-free",
+      "looseores-limonite-peridotite-free",
+      "looseores-magnetite-diorite-free",
+      "looseores-magnetite-gabbro-free",
+      "looseores-magnetite-gneiss-free",
+      "looseores-magnetite-peridotite-free",
+      "looseores-magnetite-serpentinite-free",
+      "looseores-pentlandite-gabbro-free",
+      "looseores-pentlandite-serpentinite-free",
+      "looseores-quartz_acanthite-andesite-free",
+      "looseores-quartz_electrum-andesite-free",
+      "looseores-sphalerite-amphibolite-free",
+      "looseores-sphalerite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

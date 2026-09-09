@@ -25,6 +25,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     private const ulong GradeSalt = 0x475241444553454CUL;
     private const ulong AlbiteSalt = 0x414C4249544553UL;
     private const ulong SchorlSalt = 0x5343484F524C53UL;
+    private const ulong SurfaceNuggetSalt = 0x4E55474745545355UL;
     private const int SplineZoneCount = 13;
     private const int MaximumSoilDepth = 4;
     private const int PlanCacheCapacity = 64;
@@ -37,6 +38,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     private readonly Dictionary<PlanKey, object> planCache = new(PlanCacheCapacity);
     private readonly Queue<PlanKey> planCacheOrder = new(PlanCacheCapacity);
     private readonly HashSet<ulong> missingTerrainContext = new();
+    private readonly Dictionary<int, int> surfaceNuggetBlocks = new();
 
     public override double ExecuteOrder() => 0.21;
 
@@ -241,6 +243,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         {
             candidate.Template.Realize(this, candidate, request, baseX, baseZ);
         }
+
+        PlaceSurfaceNuggets(request, baseX, baseZ, candidates);
     }
 
     private void CollectCandidates(
@@ -2443,6 +2447,12 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             return false;
         }
 
+        if (definition.SurfaceNuggets.Chance is < 0 or > 1 || definition.SurfaceNuggets.MaxDepth < 0)
+        {
+            api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid surface nugget settings", definition.Code);
+            return false;
+        }
+
         if (!HasValidClimateBounds(definition.Climate))
         {
             api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid climate settings", definition.Code);
@@ -2534,10 +2544,209 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         return true;
     }
 
+    /// <summary>
+    /// Splits an ore block path of the form <c>ore-{grade}-{ore}-{rock}</c>.
+    /// </summary>
+    internal static bool TryParseGradedOrePath(string? path, out string ore, out string rock)
+    {
+        ore = string.Empty;
+        rock = string.Empty;
+        if (string.IsNullOrEmpty(path) || !path.StartsWith("ore-", StringComparison.Ordinal)) return false;
+
+        string[] parts = path.Split('-');
+        if (parts.Length != 4) return false;
+        if (parts[1] is not ("poor" or "medium" or "rich" or "bountiful")) return false;
+        if (parts[2].Length == 0 || parts[3].Length == 0) return false;
+
+        ore = parts[2];
+        rock = parts[3];
+        return true;
+    }
+
+    /// <summary>
+    /// True when a nugget smelts into a vanilla metal, which is the only case that earns
+    /// loose surface nuggets. Mineral concentrates without a metal product are excluded.
+    /// </summary>
+    internal static bool IsVanillaMetalProduct(string? smeltedPath)
+    {
+        if (string.IsNullOrEmpty(smeltedPath)) return false;
+        return smeltedPath.StartsWith("ingot-", StringComparison.Ordinal)
+            || string.Equals(smeltedPath, "ironbloom", StringComparison.Ordinal);
+    }
+
+    /// <summary>
+    /// Ore must sit no deeper than the configured block count below the terrain surface.
+    /// </summary>
+    internal static bool SurfaceNuggetDepthAllowed(int surfaceY, int oreY, int maxDepth)
+    {
+        int depth = surfaceY - oreY;
+        return depth >= 0 && depth <= maxDepth;
+    }
+
+    internal static bool ShouldSeedSurfaceNugget(ulong featureId, int worldX, int worldZ, double chance)
+    {
+        if (chance <= 0) return false;
+        if (chance >= 1) return true;
+        return ProceduralDepositMath.CoordinateNoise(featureId, worldX, 0, worldZ, SurfaceNuggetSalt) < chance;
+    }
+
+    /// <summary>
+    /// Resolves the loose surface block for an ore block, or 0 when the ore yields no vanilla metal.
+    /// </summary>
+    private int GetSurfaceNuggetBlockId(int oreBlockId)
+    {
+        if (surfaceNuggetBlocks.TryGetValue(oreBlockId, out int cached)) return cached;
+
+        int resolved = 0;
+        Block? ore = (uint)oreBlockId < (uint)serverApi!.World.Blocks.Count
+            ? serverApi.World.Blocks[oreBlockId]
+            : null;
+        if (ore?.Code != null && TryParseGradedOrePath(ore.Code.Path, out string oreName, out string rock))
+        {
+            Item? nugget = serverApi.World.GetItem(new AssetLocation(ore.Code.Domain, "nugget-" + oreName));
+            string? smeltedPath = nugget?.CombustibleProps?.SmeltedStack?.Code?.Path;
+            if (IsVanillaMetalProduct(smeltedPath))
+            {
+                Block? loose = serverApi.World.GetBlock(
+                    new AssetLocation(ore.Code.Domain, $"looseores-{oreName}-{rock}-free"));
+                if (loose?.Code != null) resolved = loose.BlockId;
+            }
+        }
+
+        surfaceNuggetBlocks[oreBlockId] = resolved;
+        return resolved;
+    }
+
+    /// <summary>
+    /// Places loose surface nuggets above shallow smeltable ore, mirroring the vanilla surface
+    /// indicator but only when the ore itself lies within the configured depth of the surface.
+    /// </summary>
+    private void PlaceSurfaceNuggets(
+        IChunkColumnGenerateRequest request,
+        int baseX,
+        int baseZ,
+        List<DepositCandidate> candidates)
+    {
+        if (candidates.Count == 0) return;
+
+        ushort[] heightMap = request.Chunks[0].MapChunk.WorldGenTerrainHeightMap;
+        int worldHeight = serverApi!.World.BlockAccessor.MapSizeY;
+        Span<bool> seeded = stackalloc bool[ChunkSize * ChunkSize];
+
+        foreach (DepositCandidate candidate in candidates)
+        {
+            SurfaceNuggetDefinition settings = candidate.Compiled.Definition.SurfaceNuggets;
+            if (!settings.Enabled || settings.Chance <= 0 || settings.MaxDepth < 0) continue;
+
+            int reach = candidate.Compiled.MaximumHorizontalReach;
+            int fromX = Math.Max(0, candidate.Instance.CenterX - reach - baseX);
+            int toX = Math.Min(ChunkSize - 1, candidate.Instance.CenterX + reach - baseX);
+            int fromZ = Math.Max(0, candidate.Instance.CenterZ - reach - baseZ);
+            int toZ = Math.Min(ChunkSize - 1, candidate.Instance.CenterZ + reach - baseZ);
+
+            for (int localX = fromX; localX <= toX; localX++)
+            {
+                int worldX = baseX + localX;
+                for (int localZ = fromZ; localZ <= toZ; localZ++)
+                {
+                    int columnIndex = localZ * ChunkSize + localX;
+                    if (seeded[columnIndex]) continue;
+
+                    int worldZ = baseZ + localZ;
+                    if (!ShouldSeedSurfaceNugget(candidate.Instance.FeatureId, worldX, worldZ, settings.Chance))
+                    {
+                        continue;
+                    }
+
+                    int surfaceY = heightMap[columnIndex];
+                    if (surfaceY <= 0 || surfaceY >= worldHeight - 2) continue;
+
+                    int nuggetBlockId = FindShallowSurfaceNugget(
+                        request,
+                        localX,
+                        localZ,
+                        surfaceY,
+                        settings.MaxDepth);
+                    if (nuggetBlockId == 0) continue;
+
+                    if (TryPlaceSurfaceNugget(request, localX, localZ, surfaceY, nuggetBlockId))
+                    {
+                        seeded[columnIndex] = true;
+                    }
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Returns the loose block for the shallowest smeltable procedural ore inside the depth window.
+    /// </summary>
+    private int FindShallowSurfaceNugget(
+        IChunkColumnGenerateRequest request,
+        int localX,
+        int localZ,
+        int surfaceY,
+        int maxDepth)
+    {
+        int lowestY = Math.Max(1, surfaceY - maxDepth);
+        for (int y = surfaceY; y >= lowestY; y--)
+        {
+            if (!SurfaceNuggetDepthAllowed(surfaceY, y, maxDepth)) break;
+
+            int chunkY = y / ChunkSize;
+            if ((uint)chunkY >= (uint)request.Chunks.Length) continue;
+            int index3d = ((y % ChunkSize) * ChunkSize + localZ) * ChunkSize + localX;
+            int blockId = request.Chunks[chunkY].Data.GetBlockIdUnsafe(index3d);
+            if (blockId == 0 || !IsProceduralOutput(blockId)) continue;
+
+            int nuggetBlockId = GetSurfaceNuggetBlockId(blockId);
+            if (nuggetBlockId != 0) return nuggetBlockId;
+        }
+
+        return 0;
+    }
+
+    private bool TryPlaceSurfaceNugget(
+        IChunkColumnGenerateRequest request,
+        int localX,
+        int localZ,
+        int surfaceY,
+        int nuggetBlockId)
+    {
+        int supportChunkY = surfaceY / ChunkSize;
+        int placeY = surfaceY + 1;
+        int placeChunkY = placeY / ChunkSize;
+        if ((uint)supportChunkY >= (uint)request.Chunks.Length) return false;
+        if ((uint)placeChunkY >= (uint)request.Chunks.Length) return false;
+
+        int supportIndex = ((surfaceY % ChunkSize) * ChunkSize + localZ) * ChunkSize + localX;
+        IChunkBlocks supportData = request.Chunks[supportChunkY].Data;
+        if (!IsSurfaceNuggetSupport(supportData.GetBlockIdUnsafe(supportIndex))) return false;
+
+        int placeIndex = ((placeY % ChunkSize) * ChunkSize + localZ) * ChunkSize + localX;
+        IChunkBlocks placeData = request.Chunks[placeChunkY].Data;
+        if (placeData.GetBlockIdUnsafe(placeIndex) != 0) return false;
+        if (placeData.GetFluid(placeIndex) != 0) return false;
+
+        placeData.SetBlockUnsafe(placeIndex, nuggetBlockId);
+        placeData.SetFluid(placeIndex, 0);
+        return true;
+    }
+
+    private bool IsSurfaceNuggetSupport(int blockId)
+    {
+        if (blockId == 0 || (uint)blockId >= (uint)serverApi!.World.Blocks.Count) return false;
+        EnumBlockMaterial? material = serverApi.World.Blocks[blockId]?.BlockMaterial;
+        return material is EnumBlockMaterial.Soil
+            or EnumBlockMaterial.Stone
+            or EnumBlockMaterial.Gravel
+            or EnumBlockMaterial.Sand
+            or EnumBlockMaterial.Ore;
+    }
+
     private readonly record struct LoadedDefinition(
         AssetLocation Location,
         ProceduralDepositDefinition Definition);
 
     private readonly record struct PlanKey(ulong FeatureId, int CenterY);
-
 }

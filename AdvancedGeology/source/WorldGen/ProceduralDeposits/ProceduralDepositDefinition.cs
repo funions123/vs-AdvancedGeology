@@ -176,6 +176,9 @@ public sealed class ProceduralDepositDefinition
     public SurfaceWeatheringDefinition Weathering { get; set; } = new();
 
     [JsonProperty]
+    public SurfaceNuggetDefinition SurfaceNuggets { get; set; } = new();
+
+    [JsonProperty]
     public ProceduralPaletteDefinition Palette { get; set; } = new();
 }
 
@@ -620,6 +623,25 @@ public sealed class SurfaceWeatheringDefinition
 
     [JsonProperty]
     public int GossanSmearHeightMax { get; set; } = 10;
+}
+
+[JsonObject(MemberSerialization.OptIn)]
+public sealed class SurfaceNuggetDefinition
+{
+    [JsonProperty]
+    public bool Enabled { get; set; } = true;
+
+    /// <summary>
+    /// Per-column probability that a shallow smeltable ore leaves loose surface nuggets.
+    /// </summary>
+    [JsonProperty]
+    public double Chance { get; set; } = 0.12;
+
+    /// <summary>
+    /// Greatest number of blocks an ore may sit below the terrain surface and still seed nuggets.
+    /// </summary>
+    [JsonProperty]
+    public int MaxDepth { get; set; } = 30;
 }
 
 [JsonObject(MemberSerialization.OptIn)]
