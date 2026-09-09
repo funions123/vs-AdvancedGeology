@@ -1,0 +1,42 @@
+[
+  {
+    "ingredientPattern": "H\tS",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true },
+      "S": { "type": "item", "code": "ore-*-quartz_acanthite-*" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "nugget-acanthite", "quantity": 1 }
+  },
+  {
+    "ingredientPattern": "H\tS",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true },
+      "S": { "type": "item", "code": "crystalizedore-*-quartz_acanthite-*" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "nugget-acanthite", "quantity": 1 }
+  },
+  {
+    "ingredientPattern": "H\tS",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true },
+      "S": { "type": "item", "code": "ore-*-quartz_electrum-*" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "nugget-electrum", "quantity": 1 }
+  },
+  {
+    "ingredientPattern": "H\tS",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true },
+      "S": { "type": "item", "code": "crystalizedore-*-quartz_electrum-*" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "nugget-electrum", "quantity": 1 }
+  }
+]

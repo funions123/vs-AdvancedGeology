@@ -23,20 +23,6 @@
   },
   {
     "op": "add",
-    "path": "/combustiblePropsByType/*-cobaltite",
-    "value": {
-      "meltingPoint": 1455,
-      "meltingDuration": 30,
-      "smeltedRatio": 20,
-      "smeltedStack": {
-        "type": "item",
-        "code": "ingot-nickel"
-      }
-    },
-    "file": "game:itemtypes/resource/nugget.json"
-  },
-  {
-    "op": "add",
     "path": "/allowedVariants/-",
     "value": "ore-poor-cobaltite-gneiss",
     "file": "game:blocktypes/stone/ore-graded.json"

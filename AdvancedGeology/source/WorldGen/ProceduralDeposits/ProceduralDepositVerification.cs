@@ -3392,6 +3392,8 @@ public static class ProceduralDepositVerification
             && uranium.Evaluate(100, 80, 100) == UnconformityUraniumPlan.Create(instance, new UnconformityUraniumDefinition()).Evaluate(100, 80, 100)
             && hree.Evaluate(100, 80, 100) == PeralkalineHreePlan.Create(instance, new PeralkalineHreeDefinition()).Evaluate(100, 80, 100);
         int olivine = 0, soapstone = 0, magnesite = 0, quartz = 0;
+        int uraniumOre = 0, uraniumHematite = 0;
+        var hematiteColumns = new HashSet<(int X, int Z)>();
         for (int x = 66; x <= 134; x++)
         {
             for (int z = 66; z <= 134; z++)
@@ -3406,14 +3408,36 @@ public static class ProceduralDepositVerification
                 }
             }
         }
-        if (!counts || !deterministic || olivine == 0 || soapstone == 0 || magnesite == 0 || quartz == 0)
+        for (int x = 62; x <= 138; x++)
+        {
+            for (int z = 62; z <= 138; z++)
+            {
+                for (int y = 46; y <= 114; y++)
+                {
+                    AdditionalDepositSample sample = uranium.Evaluate(x, y, z);
+                    if (sample.Slot == ProceduralMaterialSlots.Uraninite) uraniumOre++;
+                    else if (sample.Slot == ProceduralMaterialSlots.Hematite)
+                    {
+                        uraniumHematite++;
+                        hematiteColumns.Add((x, z));
+                    }
+                }
+            }
+        }
+        bool finiteHematite = uraniumHematite > 0
+            && hematiteColumns.Count < 1800
+            && hematiteColumns.All(column => column.X is > 62 and < 138 && column.Z is > 62 and < 138);
+        if (!counts || !deterministic || olivine == 0 || soapstone == 0 || magnesite == 0 || quartz == 0
+            || uraniumOre == 0 || !finiteHematite)
         {
             throw new InvalidOperationException(
                 $"Six-deposit plan contract failed: counts={counts} deterministic={deterministic} " +
-                $"olivine={olivine} soapstone={soapstone} magnesite={magnesite} quartz={quartz}");
+                $"olivine={olivine} soapstone={soapstone} magnesite={magnesite} quartz={quartz} " +
+                $"uranium={uraniumOre} hematite={uraniumHematite}/{hematiteColumns.Count} finiteHematite={finiteHematite}");
         }
         return $"sixDeposits counts={counts} deterministic={deterministic} " +
-            $"olivine={olivine} soapstone={soapstone} magnesite={magnesite} quartz={quartz}";
+            $"olivine={olivine} soapstone={soapstone} magnesite={magnesite} quartz={quartz} " +
+            $"uranium={uraniumOre} hematite={uraniumHematite}/{hematiteColumns.Count} finiteHematite={finiteHematite}";
     }
 
     public static string RunMessinianSulfur()

@@ -2,8 +2,6 @@
   { "op": "add", "path": "/variants/-", "value": { "Code": "titanomagnetite" }, "file": "game:worldproperties/block/ore-graded.json" },
   { "op": "add", "path": "/variants/-", "value": { "Code": "titanomagnetite" }, "file": "game:worldproperties/block/ore-nugget.json" },
   { "op": "add", "path": "/requiredMiningTierByType/ore-*-titanomagnetite-*", "value": 4, "file": "game:blocktypes/stone/ore-graded.json" },
-  { "op": "add", "path": "/crushingPropsByType/nugget-titanomagnetite", "value": { "crushedStack": { "type": "item", "code": "crushed-iron" }, "quantity": { "avg": 0.33 }, "hardnessTier": 4 }, "file": "game:itemtypes/resource/nugget.json" },
-  { "op": "add", "path": "/combustiblePropsByType/*-titanomagnetite", "value": { "meltingPoint": 1482, "meltingDuration": 30, "smeltedRatio": 20, "smeltedStack": { "type": "item", "code": "ironbloom" } }, "file": "game:itemtypes/resource/nugget.json" },
   { "op": "addeach", "path": "/allowedVariants/-", "value": [
     "ore-poor-titanomagnetite-peridotite", "ore-medium-titanomagnetite-peridotite", "ore-rich-titanomagnetite-peridotite", "ore-bountiful-titanomagnetite-peridotite",
     "ore-poor-titanomagnetite-pyroxenite", "ore-medium-titanomagnetite-pyroxenite", "ore-rich-titanomagnetite-pyroxenite", "ore-bountiful-titanomagnetite-pyroxenite",
