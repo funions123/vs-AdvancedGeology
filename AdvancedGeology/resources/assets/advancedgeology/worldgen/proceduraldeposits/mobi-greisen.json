@@ -1,0 +1,61 @@
+[
+  {
+    "code": "mobi-greisen",
+    "enabled": true,
+    "template": "greisenStockwork",
+    "priority": 94,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.20,
+      "yMode": "worldRelative",
+      "minYRel": 0.10,
+      "maxYRel": 0.42
+    },
+    "greisen": {
+      "family": "MolybdenumBismuth",
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 36,
+      "cupolaRadiusX": 29,
+      "cupolaRadiusZ": 25,
+      "cupolaHeight": 21,
+      "lodeThickness": 2.2,
+      "veinMin": 6,
+      "veinMax": 10,
+      "mainStrikeDeg": 25,
+      "weatheringDepthMax": 4
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": ["granite", "slate", "schist", "gneiss"],
+      "materials": {
+        "molybdenite": "game:ore-{grade}-molybdenite-{rock}",
+        "bismuthinite": "game:ore-{grade}-bismuthinite-{rock}",
+        "native-bismuth": "game:ore-{grade}-nativebismuth-{rock}",
+        "wolframite": "game:ore-{grade}-wolframite-{rock}",
+        "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
+        "arsenopyrite": "game:ore-arsenopyrite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "topaz": "game:ore-gem-topazblue-{rock}",
+        "tourmaline": "game:ore-gem-tourmalineschorl-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "kaolinite": "advancedgeology:rawkaolinite-sparse"
+      }
+    }
+  }
+]

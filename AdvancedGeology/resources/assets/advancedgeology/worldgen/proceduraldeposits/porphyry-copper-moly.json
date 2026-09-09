@@ -1,0 +1,51 @@
+[
+  {
+    "code": "porphyry-copper-moly",
+    "enabled": true,
+    "template": "porphyryCopperMoly",
+    "priority": 94,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 448,
+      "chance": 0.16,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.46
+    },
+    "porphyryCopperMoly": {
+      "horizontalRadius": 36,
+      "verticalHalfHeight": 30,
+      "supergeneDepth": 8,
+      "centerSpread": 4.0,
+      "radiusXMin": 18.0,
+      "radiusXMax": 23.0,
+      "radiusZMin": 16.0,
+      "radiusZMax": 21.0,
+      "bottomMin": -29.0,
+      "bottomMax": -24.0,
+      "topMin": 17.0,
+      "topMax": 22.0,
+      "supergeneChance": 0.68,
+      "veinletCountMin": 28,
+      "veinletCountMax": 40
+    },
+    "terrainOrientation": { "enabled": false },
+    "source": { "enabled": false },
+    "supergene": { "enabled": false },
+    "weathering": { "enabled": true },
+    "palette": {
+      "replaceableRockVariants": ["granite", "rhyolite", "dacite", "andesite"],
+      "materials": {
+        "bornite": "game:ore-{grade}-bornite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "molybdenite": "game:ore-{grade}-molybdenite-{rock}",
+        "chalcocite": "game:ore-{grade}-chalcocite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "limonite": "game:ore-{grade}-limonite-{rock}"
+      }
+    }
+  }
+]

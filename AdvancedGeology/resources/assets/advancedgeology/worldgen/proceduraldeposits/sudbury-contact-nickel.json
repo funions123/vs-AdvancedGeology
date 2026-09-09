@@ -1,0 +1,77 @@
+[
+  {
+    "code": "sudbury-contact-nickel",
+    "enabled": true,
+    "template": "sudburyContactNickel",
+    "priority": 98,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 512,
+      "chance": 0.14,
+      "yMode": "worldRelative",
+      "minYRel": 0.14,
+      "maxYRel": 0.44
+    },
+    "sudburyNickel": {
+      "horizontalRadius": 62,
+      "verticalHalfHeight": 53,
+      "depositScale": 1.5,
+      "regionalDipDegMin": 8.0,
+      "regionalDipDegMax": 18.0,
+      "systemOffsetSpread": 5.0,
+      "embayCountMin": 2,
+      "embayCountMax": 4,
+      "noriteThicknessMin": 7.0,
+      "noriteThicknessMax": 11.0,
+      "embayAngleJitter": 0.35,
+      "embayDistanceMin": 9.0,
+      "embayDistanceMax": 18.0,
+      "embayRadiusXMin": 8.0,
+      "embayRadiusXMax": 13.0,
+      "embayRadiusZMin": 6.0,
+      "embayRadiusZMax": 10.0,
+      "embayDepthMin": 6.0,
+      "embayDepthMax": 11.0,
+      "podCenterJitter": 1.5,
+      "podDepthFractionMin": 0.35,
+      "podDepthFractionMax": 0.55,
+      "podRadiusFactorMin": 0.55,
+      "podRadiusFactorMax": 0.75,
+      "podRadiusVerticalMin": 3.0,
+      "podRadiusVerticalMax": 5.5,
+      "contactVeinletCountMin": 2,
+      "contactVeinletCountMax": 4,
+      "footwallVeinCountMin": 3,
+      "footwallVeinCountMax": 6,
+      "offsetDikeCountMin": 1,
+      "offsetDikeCountMax": 2,
+      "offsetDikeDistanceMin": 22.0,
+      "offsetDikeDistanceMax": 34.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["gabbro", "peridotite", "basalt", "gneiss"],
+      "materials": {
+        "pentlandite": "game:ore-{grade}-pentlandite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "intermediate": "game:rock-diorite",
+        "breccia": "game:crackedrock-{rock}"
+      }
+    }
+  }
+]

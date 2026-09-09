@@ -1,0 +1,84 @@
+[
+  {
+    "code": "cyclothem-bituminous-coal",
+    "enabled": true,
+    "template": "cyclothemCoal",
+    "priority": 80,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 320,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.40,
+      "maxYRel": 0.70
+    },
+    "cyclothemCoal": {
+      "horizontalRadius": 44,
+      "verticalHalfHeight": 30,
+      "strikeDegMin": 0.0,
+      "strikeDegMax": 180.0,
+      "bedDipDegMin": 1.5,
+      "bedDipDegMax": 7.0,
+      "seamCountMin": 2,
+      "seamCountMax": 4,
+      "firstSeamLevelMin": -17.0,
+      "firstSeamLevelMax": -13.0,
+      "seamLevelStepMin": 5.5,
+      "seamLevelStepMax": 8.0,
+      "seamHalfThicknessMin": 1.2,
+      "seamHalfThicknessMax": 2.0,
+      "seamCenterAlongSpread": 8.0,
+      "seamCenterAcrossSpread": 10.0,
+      "seamRadiusAlongMin": 20.0,
+      "seamRadiusAlongMax": 25.0,
+      "seamRadiusAcrossMin": 13.0,
+      "seamRadiusAcrossMax": 17.0,
+      "partingProbability": 0.62,
+      "riderProbability": 0.42,
+      "riderLevelOffsetMin": 2.5,
+      "riderLevelOffsetMax": 4.0,
+      "riderHalfThicknessMin": 0.55,
+      "riderHalfThicknessMax": 0.9,
+      "riderAlongJitter": 3.0,
+      "riderAcrossJitter": 2.0,
+      "riderRadiusScaleMin": 0.65,
+      "riderRadiusScaleMax": 0.85,
+      "channelCountMin": 1,
+      "channelCountMax": 3,
+      "channelHalfLengthMin": 7.0,
+      "channelHalfLengthMax": 12.0,
+      "channelAlongJitter": 3.0,
+      "channelStratYOffsetMin": 0.6,
+      "channelStratYOffsetMax": 1.6,
+      "channelWidthMin": 3.5,
+      "channelWidthMax": 6.0,
+      "channelHalfThicknessMin": 2.2,
+      "channelHalfThicknessMax": 3.6,
+      "channelBendMin": -2.5,
+      "channelBendMax": 2.5
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["shale", "sandstone", "claystone", "limestone"],
+      "materials": {
+        "bituminous-coal": "game:ore-bituminouscoal-{rock}",
+        "shale-parting": "game:rock-shale",
+        "seat-earth": "game:rock-claystone",
+        "fireclay": "advancedgeology:rawkaolinite-none",
+        "channel-sand": "game:rock-sandstone"
+      }
+    }
+  }
+]

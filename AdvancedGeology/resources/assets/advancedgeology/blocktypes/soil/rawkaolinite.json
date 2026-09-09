@@ -2,7 +2,7 @@
 	"code": "rawkaolinite",
 	"class": "BlockSoilDeposit",
 	"variantgroups": [
-		{ "code": "grasscoverage", "states": ["none", "verysparse"] }
+		{ "code": "grasscoverage", "states": ["none", "verysparse", "sparse"] }
 	],
 	"shape": { "base": "game:block/basic/cube" },
 	"drawtype": "TopSoil",
@@ -16,8 +16,8 @@
 		"growthLightLevel": 7,
 		"tallGrassGrowthChance": 0.6,
 		"spreadsGrassByType": {
-			"*-verysparse": true,
-			"*-none": false
+			"*-none": false,
+			"*": true
 		}
 	},
 	"creativeinventory": {

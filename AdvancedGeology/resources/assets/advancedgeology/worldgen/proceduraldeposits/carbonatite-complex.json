@@ -1,0 +1,77 @@
+[
+  {
+    "code": "carbonatite-complex",
+    "enabled": true,
+    "template": "carbonatiteComplex",
+    "priority": 110,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 192,
+      "chance": 0.015,
+      "yMode": "worldRelative",
+      "minYRel": 0.05,
+      "maxYRel": 0.35
+    },
+    "carbonatite": {
+      "dykeCountMin": 2,
+      "dykeCountMax": 5,
+      "feederCountMin": 1,
+      "feederCountMax": 2,
+      "ringCountMin": 1,
+      "ringCountMax": 3,
+      "capVeinCountMin": 2,
+      "capVeinCountMax": 5,
+      "regionalStrikeMinDeg": 8.0,
+      "regionalStrikeMaxDeg": 48.0,
+      "topTiltMinDeg": 2.0,
+      "topTiltMaxDeg": 7.0,
+      "sillRadiusAlongMin": 23.0,
+      "sillRadiusAlongMax": 29.0,
+      "sillRadiusAcrossMin": 13.0,
+      "sillRadiusAcrossMax": 18.0,
+      "sillRadiusVerticalMin": 2.6,
+      "sillRadiusVerticalMax": 3.8,
+      "horizontalRadius": 50,
+      "verticalHalfHeight": 45
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "granite",
+        "gneiss",
+        "schist",
+        "slate",
+        "chert",
+        "serpentinite",
+        "limestone",
+        "syenite",
+        "andesite",
+        "dacite",
+        "rhyolite"
+      ],
+      "materials": {
+        "carbonatite": "game:rock-carbonatite",
+        "carbonatite-matrix": "game:rock-carbonatite",
+        "pyrochlore": "game:ore-{grade}-pyrochlore-carbonatite",
+        "monazite": "game:ore-{grade}-monazite-carbonatite",
+        "bastnasite": "game:ore-{grade}-bastnasite-carbonatite",
+        "fluorite": "game:ore-fluorite-carbonatite",
+        "apatite": "game:ore-apatite-carbonatite",
+        "magnetite": "game:ore-medium-magnetite-carbonatite",
+        "breccia": "game:crackedrock-{rock}"
+      }
+    }
+  }
+]

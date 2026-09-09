@@ -1,0 +1,96 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-limonite-sandstone",
+      "ore-medium-limonite-sandstone",
+      "ore-rich-limonite-sandstone",
+      "ore-bountiful-limonite-sandstone",
+      "ore-poor-chalcopyrite-claystone",
+      "ore-medium-chalcopyrite-claystone",
+      "ore-rich-chalcopyrite-claystone",
+      "ore-bountiful-chalcopyrite-claystone",
+      "ore-poor-chalcocite-claystone",
+      "ore-medium-chalcocite-claystone",
+      "ore-rich-chalcocite-claystone",
+      "ore-bountiful-chalcocite-claystone",
+      "ore-poor-limonite-claystone",
+      "ore-medium-limonite-claystone",
+      "ore-rich-limonite-claystone",
+      "ore-bountiful-limonite-claystone",
+      "ore-bountiful-sphalerite-claystone"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-limonite-sandstone",
+      "ore-medium-limonite-sandstone",
+      "ore-rich-limonite-sandstone",
+      "ore-bountiful-limonite-sandstone",
+      "ore-poor-chalcopyrite-claystone",
+      "ore-medium-chalcopyrite-claystone",
+      "ore-rich-chalcopyrite-claystone",
+      "ore-bountiful-chalcopyrite-claystone",
+      "ore-poor-chalcocite-claystone",
+      "ore-medium-chalcocite-claystone",
+      "ore-rich-chalcocite-claystone",
+      "ore-bountiful-chalcocite-claystone",
+      "ore-poor-limonite-claystone",
+      "ore-medium-limonite-claystone",
+      "ore-rich-limonite-claystone",
+      "ore-bountiful-limonite-claystone",
+      "ore-bountiful-sphalerite-claystone"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-limonite-sandstone",
+      "crystalizedore-medium-limonite-sandstone",
+      "crystalizedore-rich-limonite-sandstone",
+      "crystalizedore-bountiful-limonite-sandstone",
+      "crystalizedore-poor-chalcopyrite-claystone",
+      "crystalizedore-medium-chalcopyrite-claystone",
+      "crystalizedore-rich-chalcopyrite-claystone",
+      "crystalizedore-bountiful-chalcopyrite-claystone",
+      "crystalizedore-poor-chalcocite-claystone",
+      "crystalizedore-medium-chalcocite-claystone",
+      "crystalizedore-rich-chalcocite-claystone",
+      "crystalizedore-bountiful-chalcocite-claystone",
+      "crystalizedore-poor-limonite-claystone",
+      "crystalizedore-medium-limonite-claystone",
+      "crystalizedore-rich-limonite-claystone",
+      "crystalizedore-bountiful-limonite-claystone",
+      "crystalizedore-bountiful-sphalerite-claystone"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-pyrite-sandstone",
+      "ore-pyrite-claystone"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-pyrite-sandstone-free",
+      "looseores-limonite-sandstone-free",
+      "looseores-pyrite-claystone-free",
+      "looseores-chalcopyrite-claystone-free",
+      "looseores-chalcocite-claystone-free",
+      "looseores-limonite-claystone-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

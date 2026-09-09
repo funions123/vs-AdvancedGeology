@@ -1,0 +1,110 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-molybdenite-rhyolite",
+      "ore-medium-molybdenite-rhyolite",
+      "ore-rich-molybdenite-rhyolite",
+      "ore-bountiful-molybdenite-rhyolite",
+      "ore-poor-molybdenite-dacite",
+      "ore-medium-molybdenite-dacite",
+      "ore-rich-molybdenite-dacite",
+      "ore-bountiful-molybdenite-dacite",
+      "ore-poor-molybdenite-andesite",
+      "ore-medium-molybdenite-andesite",
+      "ore-rich-molybdenite-andesite",
+      "ore-bountiful-molybdenite-andesite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-molybdenite-rhyolite",
+      "ore-medium-molybdenite-rhyolite",
+      "ore-rich-molybdenite-rhyolite",
+      "ore-bountiful-molybdenite-rhyolite",
+      "ore-poor-molybdenite-dacite",
+      "ore-medium-molybdenite-dacite",
+      "ore-rich-molybdenite-dacite",
+      "ore-bountiful-molybdenite-dacite",
+      "ore-poor-molybdenite-andesite",
+      "ore-medium-molybdenite-andesite",
+      "ore-rich-molybdenite-andesite",
+      "ore-bountiful-molybdenite-andesite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-molybdenite-rhyolite",
+      "crystalizedore-medium-molybdenite-rhyolite",
+      "crystalizedore-rich-molybdenite-rhyolite",
+      "crystalizedore-bountiful-molybdenite-rhyolite",
+      "crystalizedore-poor-molybdenite-dacite",
+      "crystalizedore-medium-molybdenite-dacite",
+      "crystalizedore-rich-molybdenite-dacite",
+      "crystalizedore-bountiful-molybdenite-dacite",
+      "crystalizedore-poor-molybdenite-andesite",
+      "crystalizedore-medium-molybdenite-andesite",
+      "crystalizedore-rich-molybdenite-andesite",
+      "crystalizedore-bountiful-molybdenite-andesite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-molybdenite-rhyolite-free",
+      "looseores-molybdenite-dacite-free",
+      "looseores-molybdenite-andesite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-bornite-sandstone",
+      "ore-medium-bornite-sandstone",
+      "ore-rich-bornite-sandstone",
+      "ore-bountiful-bornite-sandstone"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-bornite-sandstone",
+      "ore-medium-bornite-sandstone",
+      "ore-rich-bornite-sandstone",
+      "ore-bountiful-bornite-sandstone"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-bornite-sandstone",
+      "crystalizedore-medium-bornite-sandstone",
+      "crystalizedore-rich-bornite-sandstone",
+      "crystalizedore-bountiful-bornite-sandstone"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-bornite-sandstone-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

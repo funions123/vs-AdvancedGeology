@@ -1,0 +1,99 @@
+[
+  {
+    "code": "orogenic-quartz-gold", "enabled": true, "template": "orogenicQuartzGold", "priority": 96, "overlapPolicy": "higherPriorityWins", "intrude": false,
+    "placement": { "cellSize": 448, "chance": 0.12, "yMode": "worldRelative", "minYRel": 0.14, "maxYRel": 0.46 },
+    "orogenicQuartzGold": { "horizontalRadius": 34, "verticalHalfHeight": 30, "lodeMin": 3, "lodeMax": 5, "splayMin": 2, "splayMax": 4 },
+    "source": { "enabled": false }, "supergene": { "enabled": false }, "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["greenstone", "slate", "schist", "phyllite", "amphibolite"],
+      "materials": {
+        "gold": "game:ore-{grade}-quartz_nativegold-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "arsenopyrite": "game:ore-arsenopyrite-{rock}",
+        "carbonate": "game:rock-limestone"
+      }
+    }
+  },
+  {
+    "code": "stratiform-chromitite", "enabled": true, "template": "stratiformChromitite", "priority": 90, "overlapPolicy": "higherPriorityWins", "intrude": true,
+    "placement": { "cellSize": 416, "chance": 0.13, "yMode": "worldRelative", "minYRel": 0.16, "maxYRel": 0.46 },
+    "stratiformChromitite": { "horizontalRadius": 34, "verticalHalfHeight": 34, "seamMin": 2, "seamMax": 3, "titanomagnetiteLayerMin": 3, "titanomagnetiteLayerMax": 5, "dykeMin": 1, "dykeMax": 3 },
+    "source": { "enabled": false }, "supergene": { "enabled": false }, "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["peridotite", "pyroxenite", "gabbro", "anorthosite"],
+      "materials": {
+        "chromite": "game:ore-{grade}-chromite-{rock}",
+        "titanomagnetite": "game:ore-{grade}-titanomagnetite-{rock}",
+        "ilmenite": "game:ore-{grade}-ilmenite-{rock}",
+        "critical-zone": "game:rock-pyroxenite",
+        "main-zone": "game:rock-gabbro",
+        "upper-zone": "game:rock-anorthosite",
+        "dyke": "game:rock-basalt"
+      }
+    }
+  },
+  {
+    "code": "marine-phosphorite", "enabled": true, "template": "marinePhosphorite", "priority": 82, "overlapPolicy": "higherPriorityWins", "intrude": false,
+    "placement": { "cellSize": 352, "chance": 0.18, "yMode": "worldRelative", "minYRel": 0.24, "maxYRel": 0.56 },
+    "marinePhosphorite": { "horizontalRadius": 34, "verticalHalfHeight": 28, "bedMin": 2, "bedMax": 4, "marginDensity": 0.30 },
+    "source": { "enabled": false }, "supergene": { "enabled": false }, "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["shale", "claystone", "limestone", "chalk", "chert", "sandstone", "conglomerate"],
+      "materials": {
+        "phosphorite": "game:ore-phosphorite-{rock}",
+        "apatite": "game:ore-apatite-{rock}"
+      }
+    }
+  },
+  {
+    "code": "lapis-lazuli-marble", "enabled": true, "template": "lapisLazuliMarble", "priority": 91, "overlapPolicy": "higherPriorityWins", "intrude": false,
+    "placement": { "cellSize": 448, "chance": 0.10, "yMode": "worldRelative", "minYRel": 0.18, "maxYRel": 0.48 },
+    "lapisLazuliMarble": { "horizontalRadius": 34, "verticalHalfHeight": 28, "lensMin": 3, "lensMax": 5, "lapisDensity": 0.70, "calciteRichDensity": 0.35 },
+    "source": { "enabled": false }, "supergene": { "enabled": false }, "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["limestone", "whitemarble", "greenmarble", "redmarble"],
+      "materials": {
+        "lapis": "game:ore-lapislazuli-{rock}",
+        "calcite": "game:rock-limestone",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "matrix": "game:rock-whitemarble"
+      }
+    }
+  },
+  {
+    "code": "ivittuut-cryolite", "enabled": true, "template": "ivittuutCryolite", "priority": 99, "overlapPolicy": "higherPriorityWins", "intrude": true,
+    "placement": { "cellSize": 640, "chance": 0.05, "yMode": "worldRelative", "minYRel": 0.14, "maxYRel": 0.42 },
+    "ivittuutCryolite": { "horizontalRadius": 34, "verticalHalfHeight": 30, "veinMin": 3, "veinMax": 5 },
+    "source": { "enabled": false }, "supergene": { "enabled": false }, "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["granite", "gneiss", "syenite", "pegmatite"],
+      "materials": {
+        "cryolite": "game:ore-cryolite-granite",
+        "fluorite": "game:ore-fluorite-granite",
+        "topaz": "game:ore-medium-topazblue-granite",
+        "quartz": "game:ore-quartz-granite",
+        "siderite": "game:ore-{grade}-siderite-granite",
+        "microcline": "game:ore-microcline-granite",
+        "matrix": "game:rock-granite"
+      }
+    }
+  },
+  {
+    "code": "anorthosite-ilmenite", "enabled": true, "template": "anorthositeIlmenite", "priority": 93, "overlapPolicy": "higherPriorityWins", "intrude": true,
+    "placement": { "cellSize": 416, "chance": 0.12, "yMode": "worldRelative", "minYRel": 0.16, "maxYRel": 0.46 },
+    "anorthositeIlmenite": { "horizontalRadius": 34, "verticalHalfHeight": 28, "satelliteMin": 2, "satelliteMax": 5, "dykeMin": 1, "dykeMax": 2 },
+    "source": { "enabled": false }, "supergene": { "enabled": false }, "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["anorthosite", "gabbro", "diorite", "granulite"],
+      "materials": {
+        "ilmenite": "game:ore-{grade}-ilmenite-{rock}",
+        "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "apatite": "game:ore-apatite-{rock}",
+        "raft": "game:rock-anorthosite",
+        "root": "game:rock-gabbro",
+        "dyke": "game:rock-basalt"
+      }
+    }
+  }
+]

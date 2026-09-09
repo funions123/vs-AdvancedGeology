@@ -1,0 +1,62 @@
+[
+  {
+    "code": "banded-iron-formation",
+    "enabled": true,
+    "template": "bandedIronFormation",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.48
+    },
+    "bandedIron": {
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 35,
+      "strikeMin": 8.0,
+      "strikeMax": 32.0,
+      "dipMin": 3.0,
+      "dipMax": 10.0,
+      "dipDirectionMin": 72.0,
+      "dipDirectionMax": 108.0,
+      "bandCountMin": 7,
+      "bandCountMax": 11,
+      "enrichmentCountMin": 2,
+      "enrichmentCountMax": 4,
+      "contactYMin": -1.0,
+      "contactYMax": 4.0,
+      "foldAmplitudeMin": 2.0,
+      "foldAmplitudeMax": 4.5,
+      "weatheringDepth": 8.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["chert", "slate", "schist", "phyllite"],
+      "materials": {
+        "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "hematite": "game:ore-{grade}-hematite-{rock}",
+        "siderite": "game:ore-{grade}-siderite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "chert": "game:rock-chert",
+        "limonite": "game:ore-rich-limonite-{rock}",
+        "primary": "game:ore-bountiful-hematite-{rock}",
+        "alteration": "game:ore-poor-hematite-{rock}",
+        "breccia": "game:crackedrock-{rock}"
+      }
+    }
+  }
+]

@@ -1,20 +1,46 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedGeology", "AdvancedGeology\AdvancedGeology.csproj", "{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedGeology.Verification", "AdvancedGeology.Verification\AdvancedGeology.Verification.csproj", "{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Debug|x64.Build.0 = Debug|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Debug|x86.Build.0 = Debug|Any CPU
 		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Release|x64.ActiveCfg = Release|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Release|x64.Build.0 = Release|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Release|x86.ActiveCfg = Release|Any CPU
+		{69C02473-E92E-4CE5-BD15-EE0E7BAA3705}.Release|x86.Build.0 = Release|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Debug|x64.Build.0 = Debug|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Release|x64.Build.0 = Release|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7DCC2DA-6789-4A39-A7CA-BBD9DFB7C8EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

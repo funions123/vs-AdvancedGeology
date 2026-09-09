@@ -1,0 +1,76 @@
+[
+  {
+    "code": "iocg-breccia",
+    "enabled": true,
+    "template": "iocgBreccia",
+    "priority": 96,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.16,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.46
+    },
+    "iocgBreccia": {
+      "horizontalRadius": 40,
+      "verticalHalfHeight": 30,
+      "strikeDegMin": 0.0,
+      "strikeDegMax": 180.0,
+      "roofBaseYMin": 15.0,
+      "roofBaseYMax": 20.0,
+      "brecciaCountMin": 1,
+      "brecciaCountMax": 3,
+      "brecciaAlongSpacingMin": 12.0,
+      "brecciaAlongSpacingMax": 18.0,
+      "brecciaAcrossSpread": 5.0,
+      "brecciaCenterYSpread": 3.0,
+      "brecciaRadiusXMin": 8.0,
+      "brecciaRadiusXMax": 12.0,
+      "brecciaRadiusZMin": 7.0,
+      "brecciaRadiusZMax": 10.0,
+      "brecciaRadiusYMin": 16.0,
+      "brecciaRadiusYMax": 23.0,
+      "faultCountMin": 2,
+      "faultCountMax": 5,
+      "faultStrikeJitter": 35.0,
+      "faultDipDegMin": 60.0,
+      "faultDipDegMax": 84.0,
+      "faultOffsetSpread": 10.0,
+      "faultCenterYMin": -5.0,
+      "faultCenterYMax": 2.0,
+      "faultLengthMin": 16.0,
+      "faultLengthMax": 28.0,
+      "faultHeightMin": 18.0,
+      "faultHeightMax": 28.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["granite", "rhyolite", "dacite", "andesite"],
+      "materials": {
+        "bornite": "game:ore-{grade}-bornite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "chalcocite": "game:ore-{grade}-chalcocite-{rock}",
+        "hematite": "game:ore-{grade}-hematite-{rock}",
+        "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "apatite": "game:ore-apatite-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}",
+        "barite": "game:ore-barite-{rock}"
+      }
+    }
+  }
+]

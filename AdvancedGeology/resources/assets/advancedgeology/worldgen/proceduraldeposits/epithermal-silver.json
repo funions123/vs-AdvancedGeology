@@ -1,0 +1,56 @@
+[
+  {
+    "code": "epithermal-silver",
+    "enabled": true,
+    "template": "epithermalVein",
+    "priority": 100,
+    "overlapPolicy": "higherPriorityWins",
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.2,
+      "yMode": "worldRelative",
+      "minYRel": 0.18,
+      "maxYRel": 0.41
+    },
+    "epithermal": {
+      "horizontalRadius": 76,
+      "verticalHalfHeight": 44,
+      "principalVeinMin": 3,
+      "principalVeinMax": 7,
+      "splayMin": 1,
+      "splayMax": 3,
+      "leachedDepth": 12,
+      "supergeneDepth": 22,
+      "geyseriteCapMin": 3,
+      "geyseriteCapMax": 6,
+      "geyseritePipeCenterRatio": 0.42,
+      "boilingMinY": -9,
+      "boilingMaxY": 14,
+      "smearSeedFraction": 0.25,
+      "smearHeightMin": 5,
+      "smearHeightMax": 10
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["andesite", "rhyolite", "dacite", "basalt"],
+      "materials": {
+        "primary": "game:ore-quartz-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "acanthite": "game:ore-medium-quartz_acanthite-{rock}",
+        "electrum": "game:ore-poor-quartz_electrum-{rock}",
+        "native-silver": "game:ore-medium-quartz_nativesilver-{rock}",
+        "geyserite": "advancedgeology:geyserite",
+        "gossan": "advancedgeology:gossansoil-sparse"
+      },
+      "gossanSurfaceExclusions": ["game:muddygravel"]
+    }
+  }
+]

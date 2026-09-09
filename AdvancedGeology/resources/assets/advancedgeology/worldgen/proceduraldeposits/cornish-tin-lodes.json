@@ -1,0 +1,60 @@
+[
+  {
+    "code": "cornish-tin-lodes",
+    "enabled": true,
+    "template": "greisenStockwork",
+    "priority": 95,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.22,
+      "yMode": "worldRelative",
+      "minYRel": 0.12,
+      "maxYRel": 0.45
+    },
+    "greisen": {
+      "family": "CornishTin",
+      "horizontalRadius": 54,
+      "verticalHalfHeight": 38,
+      "cupolaRadiusX": 34,
+      "cupolaRadiusZ": 30,
+      "cupolaHeight": 21,
+      "lodeThickness": 3.3,
+      "mainStrikeDeg": 27,
+      "mainDipDeg": 76,
+      "crossStrikeDeg": -54,
+      "crossDipDeg": 68,
+      "weatheringDepthMax": 4
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": ["granite", "slate", "schist", "gneiss"],
+      "materials": {
+        "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
+        "wolframite": "game:ore-{grade}-wolframite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "arsenopyrite": "game:ore-arsenopyrite-{rock}",
+        "sphalerite": "game:ore-{grade}-sphalerite-{rock}",
+        "galena": "game:ore-{grade}-galena-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}",
+        "tourmaline": "game:ore-gem-tourmalineschorl-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "kaolinite": "advancedgeology:rawkaolinite-sparse"
+      }
+    }
+  }
+]

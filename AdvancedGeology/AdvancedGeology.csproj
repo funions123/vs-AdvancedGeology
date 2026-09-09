@@ -3,9 +3,9 @@
   <PropertyGroup>
     <ModName>AdvancedGeology</ModName>
     <ModType>code</ModType>
-    <ModVersion>1.1.1</ModVersion>
+    <ModVersion>1.2.0-dev.1</ModVersion>
     <ModId>advancedgeology</ModId>
-    <Description>Adds new ores and adjusts vanilla oregen to be more realistic</Description>
+    <Description>Overhauls ore generation to be highly realistic</Description>
     <Side>universal</Side>
     <RequiredOnClient>true</RequiredOnClient>
     <RequiredOnServer>true</RequiredOnServer>

@@ -1,0 +1,88 @@
+[
+  {
+    "code": "tin-skarn-replacement",
+    "enabled": true,
+    "template": "tinSkarn",
+    "priority": 92,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.18,
+      "yMode": "worldRelative",
+      "minYRel": 0.22,
+      "maxYRel": 0.52
+    },
+    "tinSkarn": {
+      "horizontalRadius": 44,
+      "verticalHalfHeight": 30,
+      "strikeDegMin": 0.0,
+      "strikeDegMax": 180.0,
+      "bedDipDegMin": 4.0,
+      "bedDipDegMax": 12.0,
+      "sourceSpread": 5.0,
+      "mantoCountMin": 2,
+      "mantoCountMax": 4,
+      "mantoFirstLevelMin": -10.0,
+      "mantoFirstLevelMax": -5.0,
+      "mantoLevelStepMin": 4.0,
+      "mantoLevelStepMax": 7.0,
+      "mantoStrikeJitter": 9.0,
+      "mantoCenterXSpread": 14.0,
+      "mantoCenterZSpread": 11.0,
+      "mantoRadiusAlongMin": 13.0,
+      "mantoRadiusAlongMax": 21.0,
+      "mantoRadiusAcrossMin": 6.0,
+      "mantoRadiusAcrossMax": 11.0,
+      "mantoRadiusVerticalMin": 1.8,
+      "mantoRadiusVerticalMax": 3.4,
+      "chimneyCountMin": 2,
+      "chimneyCountMax": 4,
+      "chimneyStrikeJitter": 35.0,
+      "chimneyDipDegMin": 68.0,
+      "chimneyDipDegMax": 86.0,
+      "chimneyCenterJitter": 3.0,
+      "chimneyDropMin": 4.0,
+      "chimneyDropMax": 9.0,
+      "chimneyHeightMin": 10.0,
+      "chimneyHeightMax": 18.0,
+      "chimneyRadiusMin": 1.5,
+      "chimneyRadiusMax": 2.8,
+      "podCenterJitter": 2.5,
+      "podLevelJitter": 1.0,
+      "podRadiusXMin": 3.5,
+      "podRadiusXMax": 6.0,
+      "podRadiusYMin": 2.2,
+      "podRadiusYMax": 4.0,
+      "podRadiusZMin": 3.0,
+      "podRadiusZMax": 5.0,
+      "stratigraphicFloor": -27.0,
+      "stratigraphicCeiling": 15.0,
+      "fluoriteSpeckleThreshold": 0.90
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["limestone", "whitemarble", "dolomite"],
+      "materials": {
+        "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
+        "scheelite": "game:ore-{grade}-scheelite-{rock}",
+        "sphalerite": "game:ore-{grade}-sphalerite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "galena": "game:ore-{grade}-galena-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}"
+      }
+    }
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "code": "lacustrine-borates",
+    "enabled": true,
+    "template": "lacustrineBorate",
+    "priority": 76,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 320,
+      "chance": 0.20,
+      "yMode": "surfaceOffset",
+      "surfaceOffsetMin": -22,
+      "surfaceOffsetMax": -8
+    },
+    "climate": {
+      "enabled": true,
+      "minRain": 0.0,
+      "maxRain": 0.35,
+      "minTemp": 3.0,
+      "maxTemp": 50.0
+    },
+    "lacustrineBorate": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 26,
+      "strikeDegMin": 0.0,
+      "strikeDegMax": 180.0,
+      "dipDegMin": 0.0,
+      "dipDegMax": 4.0,
+      "sodiumBiasMin": 0.35,
+      "sodiumBiasMax": 0.8,
+      "lensCountMin": 1,
+      "lensCountMax": 3,
+      "firstLevelMin": -12.0,
+      "firstLevelMax": -9.0,
+      "levelStepMin": 4.5,
+      "levelStepMax": 7.0,
+      "lensCenterAlongSpread": 6.0,
+      "lensCenterAlongDrift": 3.0,
+      "lensCenterAcrossMin": -3.0,
+      "lensCenterAcrossMax": 5.0,
+      "lensRadiusAlongMin": 13.0,
+      "lensRadiusAlongMax": 20.0,
+      "lensRadiusAcrossMin": 8.0,
+      "lensRadiusAcrossMax": 14.0,
+      "lensHalfThicknessMin": 1.6,
+      "lensHalfThicknessMax": 3.0,
+      "partingChance": 0.65,
+      "claystoneTop": 8.0,
+      "claystoneBase": -17.0,
+      "tuffMarkerLevel": -2.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["claystone", "sandstone", "shale", "limestone", "chalk", "conglomerate", "chert"],
+      "materials": {
+        "borax": "game:ore-borax-{rock}",
+        "kernite": "game:ore-kernite-{rock}",
+        "trona": "game:ore-trona-{rock}",
+        "gypsum": "game:rock-gypsum",
+        "clay-parting": "game:rock-claystone"
+      }
+    }
+  }
+]

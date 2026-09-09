@@ -1,0 +1,57 @@
+[
+  {
+    "code": "mississippi-valley-galena",
+    "enabled": true,
+    "template": "mississippiValley",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.55
+    },
+    "mvt": {
+      "horizontalRadius": 42,
+      "verticalHalfHeight": 35
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "dolomite",
+        "limestone",
+        "chalk",
+        "shale",
+        "sandstone"
+      ],
+      "materials": {
+        "galena": "game:ore-{grade}-galena-{rock}",
+        "sphalerite": "game:ore-{grade}-sphalerite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "barite": "game:ore-barite-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}",
+        "limonite": "game:ore-{grade}-limonite-{rock}",
+        "smithsonite": "game:ore-{grade}-smithsonite-{rock}",
+        "cerussite": "game:ore-{grade}-cerussite-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "grey-gossan": "advancedgeology:greygossansoil-sparse",
+        "yellow-gossan": "advancedgeology:yellowgossansoil-sparse"
+      }
+    }
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "code": "oolitic-ironstone",
+    "enabled": true,
+    "template": "ooliticIronstone",
+    "priority": 80,
+    "overlapPolicy": "higherPriorityWins",
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.45,
+      "yMode": "worldRelative",
+      "minYRel": 0.30,
+      "maxYRel": 0.40
+    },
+    "oolitic": {
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 22,
+      "bedMin": 3,
+      "bedMax": 5,
+      "dipMinDeg": 3,
+      "dipMaxDeg": 10,
+      "bedSpacingMin": 3,
+      "bedSpacingMax": 5,
+      "radiusAlongMin": 27,
+      "radiusAlongMax": 42,
+      "radiusAcrossMin": 25,
+      "radiusAcrossMax": 38,
+      "thicknessMin": 1.4,
+      "thicknessMax": 3.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "limestone",
+        "dolomite",
+        "shale"
+      ],
+      "materials": {
+        "hematite": "game:ore-medium-hematite-{rock}",
+        "limonite": "game:ore-medium-limonite-{rock}",
+        "siderite": "game:ore-medium-siderite-{rock}",
+        "magnetite": "game:ore-medium-magnetite-{rock}",
+        "breccia": "game:crackedrock-{rock}"
+      }
+    }
+  }
+]

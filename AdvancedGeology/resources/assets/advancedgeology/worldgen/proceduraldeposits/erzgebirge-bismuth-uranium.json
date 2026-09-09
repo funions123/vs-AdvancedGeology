@@ -1,0 +1,57 @@
+[
+  {
+    "code": "erzgebirge-bismuth-uranium",
+    "enabled": true,
+    "template": "reopenedArsenideVein",
+    "priority": 100,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.18,
+      "yMode": "worldRelative",
+      "minYRel": 0.18,
+      "maxYRel": 0.45
+    },
+    "arsenideVein": {
+      "horizontalRadius": 42,
+      "verticalHalfHeight": 35,
+      "supergeneDepth": 9
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "gneiss",
+        "schist"
+      ],
+      "materials": {
+        "uraninite": "game:ore-{grade}-uranium-{rock}",
+        "native-bismuth": "game:ore-{grade}-nativebismuth-{rock}",
+        "nickeline": "game:ore-{grade}-nickeline-{rock}",
+        "cobaltite": "game:ore-{grade}-cobaltite-{rock}",
+        "native-silver": "game:ore-{grade}-quartz_nativesilver-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}",
+        "barite": "game:ore-barite-{rock}",
+        "carbonate": "game:rock-dolomite",
+        "torbernite": "game:ore-{grade}-torbernite-{rock}",
+        "annabergite": "game:ore-{grade}-annabergite-{rock}",
+        "erythrite": "game:ore-{grade}-erythrite-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "green-gossan": "advancedgeology:greengossansoil-sparse",
+        "pink-gossan": "advancedgeology:pinkgossansoil-sparse"
+      }
+    }
+  }
+]

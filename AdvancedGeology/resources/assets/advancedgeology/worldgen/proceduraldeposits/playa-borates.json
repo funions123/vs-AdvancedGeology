@@ -1,0 +1,68 @@
+[
+  {
+    "code": "playa-borates",
+    "enabled": true,
+    "template": "playaBorate",
+    "priority": 78,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 320,
+      "chance": 0.22,
+      "yMode": "surfaceOffset",
+      "surfaceOffsetMin": -10,
+      "surfaceOffsetMax": -2
+    },
+    "climate": {
+      "enabled": true,
+      "minRain": 0.0,
+      "maxRain": 0.20,
+      "minTemp": 5.0,
+      "maxTemp": 50.0
+    },
+    "playaBorate": {
+      "horizontalRadius": 36,
+      "verticalHalfHeight": 18,
+      "playaRadiusXMin": 22.0,
+      "playaRadiusXMax": 30.0,
+      "playaRadiusZMin": 16.0,
+      "playaRadiusZMax": 24.0,
+      "playaCenterSpread": 5.0,
+      "basinDepthMin": 2.4,
+      "basinDepthMax": 4.4,
+      "fanWidthMin": 12.0,
+      "fanWidthMax": 20.0,
+      "sodiumBiasMin": 0.3,
+      "sodiumBiasMax": 0.8,
+      "noduleCountMin": 85,
+      "noduleCountMax": 130,
+      "noduleDepthMin": 0.6,
+      "noduleDepthMax": 7.5,
+      "noduleRadiusMin": 1.3,
+      "noduleRadiusMax": 2.7,
+      "noduleSquashMin": 0.45,
+      "noduleSquashMax": 0.8,
+      "calciumJitter": 0.25,
+      "colemaniteThreshold": 0.45
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["claystone", "sandstone", "limestone", "chalk", "conglomerate"],
+      "materials": {
+        "borax": "game:ore-borax-{rock}",
+        "gypsum": "game:rock-gypsum"
+      }
+    }
+  }
+]

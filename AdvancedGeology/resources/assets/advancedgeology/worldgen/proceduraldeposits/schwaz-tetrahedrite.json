@@ -1,0 +1,52 @@
+[
+  {
+    "code": "schwaz-tetrahedrite",
+    "enabled": true,
+    "template": "schwazTetrahedrite",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.25,
+      "maxYRel": 0.55
+    },
+    "tetrahedrite": {
+      "horizontalRadius": 42,
+      "verticalHalfHeight": 35,
+      "supergeneDepth": 8
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "dolomite",
+        "slate",
+        "schist"
+      ],
+      "materials": {
+        "tetrahedrite": "game:ore-{grade}-tetrahedrite-{rock}",
+        "malachite": "game:ore-{grade}-malachite-{rock}",
+        "azurite": "game:ore-{grade}-azurite-{rock}",
+        "barite": "game:ore-barite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "chalcocite": "game:ore-{grade}-chalcocite-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "green-gossan": "advancedgeology:greengossansoil-sparse",
+        "limonite": "game:ore-{grade}-limonite-{rock}"
+      }
+    }
+  }
+]

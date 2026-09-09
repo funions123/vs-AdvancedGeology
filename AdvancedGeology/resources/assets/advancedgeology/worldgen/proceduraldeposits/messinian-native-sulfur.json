@@ -1,0 +1,45 @@
+[
+  {
+    "code": "messinian-native-sulfur",
+    "enabled": true,
+    "template": "messinianSulfur",
+    "priority": 83,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.16,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.52
+    },
+    "messinianSulfur": {
+      "horizontalRadius": 35,
+      "verticalHalfHeight": 30,
+      "lensMin": 3,
+      "lensMax": 5,
+      "brecciaMin": 2,
+      "brecciaMax": 4,
+      "basinRadiusAlongMin": 28.0,
+      "basinRadiusAlongMax": 32.0,
+      "basinRadiusAcrossMin": 24.0,
+      "basinRadiusAcrossMax": 28.0,
+      "primaryGypsumHalfThickness": 0.55,
+      "celestineGemFraction": 0.10
+    },
+    "source": { "enabled": false },
+    "supergene": { "enabled": false },
+    "weathering": { "enabled": false },
+    "palette": {
+      "replaceableRockVariants": ["limestone", "gypsum", "shale", "claystone", "chalk", "dolomite"],
+      "materials": {
+        "sulfur": "game:ore-sulfur-limestone",
+        "authigenic-carbonate": "game:rock-limestone",
+        "gypsum": "game:rock-gypsum",
+        "breccia": "game:crackedrock-gypsum",
+        "celestine": "game:ore-celestine-limestone",
+        "celestine-gem": "game:ore-medium-celestine-limestone"
+      }
+    }
+  }
+]

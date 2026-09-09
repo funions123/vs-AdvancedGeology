@@ -1,0 +1,138 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-magnetite-granite",
+      "ore-medium-magnetite-granite",
+      "ore-rich-magnetite-granite",
+      "ore-bountiful-magnetite-granite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-magnetite-granite",
+      "ore-medium-magnetite-granite",
+      "ore-rich-magnetite-granite",
+      "ore-bountiful-magnetite-granite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-magnetite-granite",
+      "crystalizedore-medium-magnetite-granite",
+      "crystalizedore-rich-magnetite-granite",
+      "crystalizedore-bountiful-magnetite-granite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-magnetite-granite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-pentlandite-gneiss",
+      "ore-medium-pentlandite-gneiss",
+      "ore-rich-pentlandite-gneiss",
+      "ore-bountiful-pentlandite-gneiss"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-pentlandite-gneiss",
+      "ore-medium-pentlandite-gneiss",
+      "ore-rich-pentlandite-gneiss",
+      "ore-bountiful-pentlandite-gneiss"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-pentlandite-gneiss",
+      "crystalizedore-medium-pentlandite-gneiss",
+      "crystalizedore-rich-pentlandite-gneiss",
+      "crystalizedore-bountiful-pentlandite-gneiss"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-pentlandite-gneiss-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-fluorite-granite",
+      "ore-fluorite-rhyolite",
+      "ore-fluorite-dacite",
+      "ore-fluorite-andesite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-fluorite-granite-free",
+      "looseores-fluorite-rhyolite-free",
+      "looseores-fluorite-dacite-free",
+      "looseores-fluorite-andesite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-barite-granite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-barite-granite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-quartz-gabbro"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-quartz-gabbro-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

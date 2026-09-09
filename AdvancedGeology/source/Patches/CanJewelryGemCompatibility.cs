@@ -20,14 +20,6 @@ internal static class CanJewelryGemCompatibility
     private const string CanCuttableTypeName = "canjewelry.src.cb.CANGemCuttableCB";
     private const string RuntimeDataPath = "advancedgeology:config/canjewelry-gems.json";
 
-    private static readonly HashSet<string> GeoAddonsSharedGems =
-    [
-        "spinelred",
-        "topazblue",
-        "tourmalinerubellite",
-        "tourmalineschorl",
-        "tourmalineverdelite"
-    ];
 
     private static readonly string[] JewelryEligibility =
     [
@@ -116,29 +108,16 @@ internal static class CanJewelryGemCompatibility
 
         int reordered = ReorderTextureFallbacks(api);
         int deduplicated = DeduplicateGemStates(api);
-        int recipeEntriesRemoved = 0;
-        int disabledGridBridges = 0;
-
-        if (api.ModLoader.IsModEnabled("geoaddons"))
-        {
-            recipeEntriesRemoved = RemoveSharedGemsFromBaseRecipes(api);
-        }
-        else
-        {
-            disabledGridBridges = DisableUnloadedGeoAddonsGridBridges(api);
-        }
 
         object? config = GetCanConfig();
         int injected = config == null ? 0 : InjectMissingConfig(config);
         int socketItemsBalanced = config == null ? 0 : ApplySocketItemBalance(config);
 
         api.Logger.Notification(
-            "[AdvancedGeology] CAN Jewelry compat: loaded {0} gems, reordered {1} texture fallbacks, removed {2} duplicate states and {3} shared base-recipe entries, disabled {4} unloaded-GeoAddons grid bridges, injected {5} config entries, balanced {6} socket items",
+            "[AdvancedGeology] CAN Jewelry compat: loaded {0} gems, reordered {1} texture fallbacks, removed {2} duplicate states, injected {3} config entries, balanced {4} socket items",
             Gems.Count,
             reordered,
             deduplicated,
-            recipeEntriesRemoved,
-            disabledGridBridges,
             injected,
             socketItemsBalanced);
     }
@@ -172,7 +151,7 @@ internal static class CanJewelryGemCompatibility
                     missingItems++;
             }
 
-            if (!definition.ProvidedByCanBase && !definition.ProvidedByCanGeoAddons)
+            if (!definition.ProvidedByCanBase)
             {
                 if (gemToBuff?.Contains(code) != true) missingConfigEntries++;
                 if (possibleBuffs?.Contains(code) != true) missingConfigEntries++;
@@ -458,14 +437,13 @@ internal static class CanJewelryGemCompatibility
 
             Gems[code] = new GemDefinition(
                 buff,
-                gem.Value<bool>("providedByCanBase"),
-                gem.Value<bool>("providedByCanGeoAddons"));
+                gem.Value<bool>("providedByCanBase"));
         }
 
-        if (Gems.Count != 56)
+        if (Gems.Count != 57)
         {
             api.Logger.Warning(
-                "[AdvancedGeology] CAN Jewelry compat data contains {0} gems instead of 56; compatibility disabled",
+                "[AdvancedGeology] CAN Jewelry compat data contains {0} gems instead of 57; compatibility disabled",
                 Gems.Count);
             Gems.Clear();
             return false;
@@ -490,7 +468,7 @@ internal static class CanJewelryGemCompatibility
         int injected = 0;
         foreach ((string code, GemDefinition definition) in Gems)
         {
-            if (definition.ProvidedByCanBase || definition.ProvidedByCanGeoAddons) continue;
+            if (definition.ProvidedByCanBase) continue;
 
             if (!possibleBuffs.Contains(code))
             {
@@ -564,48 +542,6 @@ internal static class CanJewelryGemCompatibility
         return removed;
     }
 
-    private static int RemoveSharedGemsFromBaseRecipes(ICoreAPI api)
-    {
-        int removed = 0;
-        foreach (string recipe in new[] { "round_cutting.json", "pear_cutting.json", "baguette_cutting.json" })
-        {
-            string path = $"canjewelry:recipes/gemcutting/{recipe}";
-            if (!TryReadArray(api, path, out IAsset asset, out JArray recipes)) continue;
-            int removedFromAsset = 0;
-
-            foreach (JObject entry in recipes.OfType<JObject>())
-            {
-                if (entry.SelectToken("ingredient.allowedVariants") is not JArray variants) continue;
-                for (int index = 0; index < variants.Count; index++)
-                {
-                    string? code = variants[index]?.ToString();
-                    if (code == null || !GeoAddonsSharedGems.Contains(code)) continue;
-                    variants.RemoveAt(index--);
-                    removed++;
-                    removedFromAsset++;
-                }
-            }
-            if (removedFromAsset > 0) SaveAsset(asset, recipes);
-        }
-        return removed;
-    }
-
-    private static int DisableUnloadedGeoAddonsGridBridges(ICoreAPI api)
-    {
-        int disabled = 0;
-        foreach (string path in new[]
-                 {
-                     "canjewelry:recipes/grid/can-geology-gems-to-new.json",
-                     "canjewelry:recipes/grid/can-new-gems-to-geology.json"
-                 })
-        {
-            IAsset? asset = api.Assets.TryGet(new AssetLocation(path));
-            if (asset == null) continue;
-            asset.Data = Encoding.UTF8.GetBytes("[]");
-            disabled++;
-        }
-        return disabled;
-    }
 
     private static bool TryReadObject(ICoreAPI api, string path, out IAsset asset, out JObject root)
     {
@@ -634,5 +570,5 @@ internal static class CanJewelryGemCompatibility
     private static void SaveAsset(IAsset asset, JToken root) =>
         asset.Data = Encoding.UTF8.GetBytes(root.ToString());
 
-    private sealed record GemDefinition(string Buff, bool ProvidedByCanBase, bool ProvidedByCanGeoAddons);
+    private sealed record GemDefinition(string Buff, bool ProvidedByCanBase);
 }

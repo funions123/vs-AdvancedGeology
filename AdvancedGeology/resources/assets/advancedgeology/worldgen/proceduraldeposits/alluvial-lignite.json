@@ -1,0 +1,82 @@
+[
+  {
+    "code": "alluvial-lignite",
+    "enabled": true,
+    "template": "alluvialLignite",
+    "priority": 80,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 320,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.42,
+      "maxYRel": 0.72
+    },
+    "lignite": {
+      "horizontalRadius": 36,
+      "verticalHalfHeight": 30,
+      "trendDegMin": 0.0,
+      "trendDegMax": 180.0,
+      "bedDipDegMin": 0.3,
+      "bedDipDegMax": 2.0,
+      "unitCountMin": 1,
+      "unitCountMax": 3,
+      "lensesPerUnit": 3,
+      "mainLevelMin": -1.0,
+      "mainLevelMax": 1.5,
+      "lensRadiusAlongMin": 9.0,
+      "lensRadiusAlongMax": 10.0,
+      "lensRadiusAcrossMin": 8.0,
+      "lensRadiusAcrossMax": 9.0,
+      "lensHalfThicknessMin": 4.0,
+      "lensHalfThicknessMax": 4.5,
+      "alongScaleOneUnit": 2.2,
+      "alongScaleTwoUnits": 1.5,
+      "alongScaleThreeUnits": 0.9,
+      "acrossScaleOneUnit": 2.0,
+      "acrossScaleTwoUnits": 1.55,
+      "acrossScaleThreeUnits": 1.7,
+      "thicknessScaleOneUnit": 1.94,
+      "thicknessScaleTwoUnits": 1.82,
+      "thicknessScaleThreeUnits": 1.97,
+      "centerJitterOneUnit": 4.0,
+      "centerJitterTwoUnits": 2.0,
+      "centerJitterThreeUnits": 1.5,
+      "minorBedCountMin": 0,
+      "minorBedCountMax": 1,
+      "minorBedLevelDropMin": 4.0,
+      "minorBedLevelDropMax": 6.0,
+      "minorBedRadiusMin": 10.0,
+      "minorBedRadiusMax": 15.0,
+      "minorBedHalfThicknessMin": 0.6,
+      "minorBedHalfThicknessMax": 1.0,
+      "channelWidthMin": 4.0,
+      "channelWidthMax": 6.0,
+      "channelHalfThicknessMin": 2.5,
+      "channelHalfThicknessMax": 3.8,
+      "channelBendMin": -2.5,
+      "channelBendMax": 2.5
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["claystone", "sandstone", "shale", "conglomerate"],
+      "materials": {
+        "lignite": "game:ore-lignite-{rock}",
+        "clay-parting": "game:rock-claystone",
+        "channel-sand": "game:rock-sandstone"
+      }
+    }
+  }
+]

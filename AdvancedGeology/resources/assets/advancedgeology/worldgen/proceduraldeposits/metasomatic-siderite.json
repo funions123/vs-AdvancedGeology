@@ -1,0 +1,63 @@
+[
+  {
+    "code": "metasomatic-siderite",
+    "enabled": true,
+    "template": "metasomaticSiderite",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.50
+    },
+    "metasomaticSiderite": {
+      "horizontalRadius": 42,
+      "verticalHalfHeight": 35,
+      "bedDipDegMin": 5.0,
+      "bedDipDegMax": 13.0,
+      "bedDirectionDegMin": 72.0,
+      "bedDirectionDegMax": 108.0,
+      "bodyCountMin": 2,
+      "bodyCountMax": 4,
+      "veinCountMin": 3,
+      "veinCountMax": 6,
+      "reactiveBedYMin": 1.0,
+      "reactiveBedYMax": 5.0,
+      "weatheringDepth": 10.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "limestone",
+        "dolomite",
+        "shale"
+      ],
+      "materials": {
+        "siderite": "game:ore-{grade}-siderite-{rock}",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "galena": "game:ore-{grade}-galena-{rock}",
+        "sphalerite": "game:ore-{grade}-sphalerite-{rock}",
+        "hematite": "game:ore-{grade}-hematite-{rock}",
+        "limonite": "game:ore-{grade}-limonite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse"
+      }
+    }
+  }
+]

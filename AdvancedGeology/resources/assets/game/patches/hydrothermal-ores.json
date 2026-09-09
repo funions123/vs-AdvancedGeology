@@ -1,0 +1,261 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": { "Code": "quartz_acanthite" },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": { "Code": "quartz_electrum" },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": { "Code": "acanthite" },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": { "Code": "electrum" },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-quartz_acanthite-andesite",
+      "ore-medium-quartz_acanthite-andesite",
+      "ore-rich-quartz_acanthite-andesite",
+      "ore-bountiful-quartz_acanthite-andesite",
+      "ore-poor-quartz_electrum-andesite",
+      "ore-medium-quartz_electrum-andesite",
+      "ore-rich-quartz_electrum-andesite",
+      "ore-bountiful-quartz_electrum-andesite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-quartz_acanthite-andesite",
+      "ore-medium-quartz_acanthite-andesite",
+      "ore-rich-quartz_acanthite-andesite",
+      "ore-bountiful-quartz_acanthite-andesite",
+      "ore-poor-quartz_electrum-andesite",
+      "ore-medium-quartz_electrum-andesite",
+      "ore-rich-quartz_electrum-andesite",
+      "ore-bountiful-quartz_electrum-andesite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-quartz_acanthite-andesite",
+      "crystalizedore-medium-quartz_acanthite-andesite",
+      "crystalizedore-rich-quartz_acanthite-andesite",
+      "crystalizedore-bountiful-quartz_acanthite-andesite",
+      "crystalizedore-poor-quartz_electrum-andesite",
+      "crystalizedore-medium-quartz_electrum-andesite",
+      "crystalizedore-rich-quartz_electrum-andesite",
+      "crystalizedore-bountiful-quartz_electrum-andesite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-quartz_acanthite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-quartz_electrum-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-poor-quartz_acanthite-*",
+    "value": 10,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-medium-quartz_acanthite-*",
+    "value": 15,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-rich-quartz_acanthite-*",
+    "value": 20,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-bountiful-quartz_acanthite-*",
+    "value": 25,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-poor-quartz_electrum-*",
+    "value": 5,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-medium-quartz_electrum-*",
+    "value": 10,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-rich-quartz_electrum-*",
+    "value": 15,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-bountiful-quartz_electrum-*",
+    "value": 20,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-poor-quartz_acanthite-*",
+    "value": 20,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-medium-quartz_acanthite-*",
+    "value": 30,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-rich-quartz_acanthite-*",
+    "value": 40,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-bountiful-quartz_acanthite-*",
+    "value": 50,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-poor-quartz_electrum-*",
+    "value": 10,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-medium-quartz_electrum-*",
+    "value": 20,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-rich-quartz_electrum-*",
+    "value": 30,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-bountiful-quartz_electrum-*",
+    "value": 40,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/crystalByType/*-quartz_acanthite-*",
+    "value": { "base": "game:item/resource/nugget/acanthite" },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/textures/crystalByType/*-quartz_electrum-*",
+    "value": { "base": "game:item/resource/nugget/electrum" },
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-acanthite",
+    "value": {
+      "meltingPoint": 961,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-silver" }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-electrum",
+    "value": {
+      "meltingPoint": 1010,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-electrum" }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/1/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/2/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/3/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/8/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/9/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/10/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/11/skipVariants/ore/-",
+    "value": ["quartz_acanthite", "quartz_electrum"],
+    "file": "game:recipes/grid/nuggets.json"
+  }
+]

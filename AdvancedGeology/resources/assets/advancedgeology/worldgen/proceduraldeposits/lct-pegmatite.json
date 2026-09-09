@@ -1,0 +1,84 @@
+[
+  {
+    "code": "lct-pegmatite",
+    "enabled": true,
+    "template": "splineNetwork",
+    "priority": 90,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.05,
+      "yMode": "worldRelative",
+      "minYRel": 0.05,
+      "maxYRel": 0.5
+    },
+    "spline": {
+      "horizontalRadius": 72,
+      "verticalHalfHeight": 48,
+      "branchMin": 2,
+      "branchMax": 3,
+      "trunkLength": 100,
+      "branchLengthFraction": 0.36,
+      "segmentLength": 4,
+      "upwardSlopeMin": 0.3,
+      "upwardSlopeMax": 0.46,
+      "maxStepAngleDeg": 3.5,
+      "sheetRollMinDeg": 0,
+      "sheetRollMaxDeg": 8,
+      "branchDivergenceDeg": 40,
+      "thickness": 9,
+      "width": 30,
+      "branchScale": 0.62,
+      "pinchScaleMin": 0.8,
+      "pinchScaleMax": 1.2,
+      "lepidoliteLensMin": 2,
+      "lepidoliteLensMax": 3,
+      "coreRatio": 0.3,
+      "intermediateRatio": 0.75,
+      "lensAlongMin": 0.15,
+      "lensAlongMax": 0.8,
+      "albiteFraction": 0.14,
+      "schorlFraction": 0.22,
+      "lepidoliteFraction": 0.16,
+      "polluciteFraction": 0.05,
+      "spodumeneFraction": 0.13,
+      "berylFraction": 0.085,
+      "cassiteriteFraction": 0.09,
+      "tantaliteFraction": 0.07,
+      "columbiteFraction": 0.07
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": ["gneiss", "schist", "quartzite", "amphibolite", "greenstone"],
+      "materials": {
+        "wall": "game:rock-pegmatite",
+        "schorl": "game:ore-gem-tourmalineschorl-pegmatite",
+        "orthoclase": "game:ore-orthoclase-pegmatite",
+        "intermediate": "game:ore-microcline-pegmatite",
+        "core": "game:ore-quartz-pegmatite",
+        "albite": "game:ore-albite-pegmatite",
+        "lepidolite": "game:ore-{grade}-lepidolite-pegmatite",
+        "pollucite": "game:ore-{grade}-pollucite-pegmatite",
+        "spodumene": "game:ore-{grade}-spodumene-pegmatite",
+        "beryl": "game:ore-{grade}-beryl-pegmatite",
+        "cassiterite": "game:ore-{grade}-cassiterite-pegmatite",
+        "tantalite": "game:ore-{grade}-tantalite-pegmatite",
+        "columbite": "game:ore-{grade}-columbite-pegmatite",
+        "red-clay": "game:rawclay-red-none",
+        "kaolinite": "advancedgeology:rawkaolinite-sparse"
+      }
+    }
+  }
+]

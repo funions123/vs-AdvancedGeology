@@ -1,0 +1,57 @@
+[
+  {
+    "code": "besshi-vms",
+    "enabled": true,
+    "template": "besshiVms",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.25,
+      "maxYRel": 0.55
+    },
+    "besshiVms": {
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 35,
+      "supergeneDepth": 8
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "basalt",
+        "greenstone",
+        "sandstone",
+        "shale",
+        "claystone"
+      ],
+      "materials": {
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
+        "sphalerite": "game:ore-{grade}-sphalerite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "chert": "game:rock-chert",
+        "chert-hematite": "game:ore-poor-hematite-chert",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "yellow-gossan": "advancedgeology:yellowgossansoil-sparse",
+        "chalcocite": "game:ore-{grade}-chalcocite-{rock}",
+        "smithsonite": "game:ore-{grade}-smithsonite-{rock}",
+        "limonite": "game:ore-{grade}-limonite-{rock}"
+      }
+    }
+  }
+]

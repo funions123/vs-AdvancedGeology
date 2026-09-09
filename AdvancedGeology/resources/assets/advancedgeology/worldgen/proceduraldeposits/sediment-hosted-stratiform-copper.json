@@ -1,0 +1,51 @@
+[
+  {
+    "code": "sediment-hosted-stratiform-copper",
+    "enabled": true,
+    "template": "stratiformCopper",
+    "priority": 86,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.20,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.52
+    },
+    "stratiformCopper": {
+      "horizontalRadius": 38,
+      "verticalHalfHeight": 30,
+      "supergeneDepth": 8,
+      "strikeMinDeg": 0.0,
+      "strikeMaxDeg": 180.0,
+      "bedDipMinDeg": 1.5,
+      "bedDipMaxDeg": 7.0,
+      "frontOffsetMin": -6.0,
+      "frontOffsetMax": 6.0,
+      "lensCountMin": 1,
+      "lensCountMax": 3,
+      "faultCountMin": 1,
+      "faultCountMax": 3
+    },
+    "terrainOrientation": { "enabled": false },
+    "source": { "enabled": false },
+    "supergene": { "enabled": false },
+    "weathering": { "enabled": true },
+    "palette": {
+      "replaceableRockVariants": ["sandstone"],
+      "materials": {
+        "native-copper": "game:ore-{grade}-nativecopper-sandstone",
+        "chalcocite": "game:ore-{grade}-chalcocite-sandstone",
+        "bornite": "game:ore-{grade}-bornite-sandstone",
+        "chalcopyrite": "game:ore-{grade}-chalcopyrite-sandstone",
+        "malachite": "game:ore-{grade}-malachite-sandstone",
+        "azurite": "game:ore-{grade}-azurite-sandstone",
+        "pyrite": "game:ore-pyrite-sandstone",
+        "carbonate": "game:rock-limestone",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "limonite": "game:ore-{grade}-limonite-sandstone"
+      }
+    }
+  }
+]

@@ -7,8 +7,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "labradorite",
@@ -17,8 +16,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "amazonite",
@@ -27,8 +25,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "sunstone",
@@ -37,8 +34,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "almandine",
@@ -47,8 +43,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "pyrope",
@@ -57,8 +52,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "tsavorite",
@@ -67,8 +61,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "demantoid",
@@ -77,8 +70,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "uvarovite",
@@ -87,8 +79,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "spessartine",
@@ -97,8 +88,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "chrysoberyl",
@@ -107,8 +97,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "aquamarine",
@@ -117,8 +106,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "heliodor",
@@ -127,8 +115,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "opalwhite",
@@ -137,8 +124,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "opalblack",
@@ -147,8 +133,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "opalcrystal",
@@ -157,8 +142,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "opalfire",
@@ -167,8 +151,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "zirconwhite",
@@ -177,8 +160,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "zirconred",
@@ -187,8 +169,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "zircongreen",
@@ -197,8 +178,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "zirconyellow",
@@ -207,8 +187,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "zirconbrown",
@@ -217,8 +196,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "zirconblue",
@@ -227,8 +205,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "tourmalineschorl",
@@ -237,8 +214,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": true
+      "providedByCanBase": false
     },
     {
       "code": "tourmalinerubellite",
@@ -247,8 +223,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": true
+      "providedByCanBase": false
     },
     {
       "code": "tourmalineverdelite",
@@ -257,8 +232,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": true
+      "providedByCanBase": false
     },
     {
       "code": "tourmalineindicolite",
@@ -267,8 +241,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "tourmalinedravite",
@@ -277,8 +250,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "tourmalinechrome",
@@ -287,8 +259,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "spinelred",
@@ -297,8 +268,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": true
+      "providedByCanBase": false
     },
     {
       "code": "spinelblue",
@@ -307,8 +277,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "spinelorange",
@@ -317,8 +286,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "spinelgreen",
@@ -327,8 +295,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "spinelblack",
@@ -337,8 +304,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "ruby",
@@ -347,8 +313,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": true,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": true
     },
     {
       "code": "citrine",
@@ -357,8 +322,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": true,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": true
     },
     {
       "code": "sapphire",
@@ -367,8 +331,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "tanzanite",
@@ -377,8 +340,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "topazblue",
@@ -387,8 +349,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": true
+      "providedByCanBase": false
     },
     {
       "code": "topazimperial",
@@ -397,8 +358,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "topazred",
@@ -407,8 +367,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "topazsherry",
@@ -417,8 +376,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "agatewhite",
@@ -427,8 +385,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "agatered",
@@ -437,8 +394,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "agateblue",
@@ -447,8 +403,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "agateblack",
@@ -457,8 +412,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jasperred",
@@ -467,8 +421,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jasperyellow",
@@ -477,8 +430,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jaspergreen",
@@ -487,8 +439,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jasperblack",
@@ -497,8 +448,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jasperblue",
@@ -507,8 +457,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jadeimperial",
@@ -517,8 +466,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jadeblack",
@@ -527,8 +475,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jadelavender",
@@ -537,8 +484,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "jadekhotan",
@@ -547,8 +493,7 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
     },
     {
       "code": "alexandrite",
@@ -557,8 +502,16 @@
       "eligibleGroups": [
         "jewelry"
       ],
-      "providedByCanBase": false,
-      "providedByCanGeoAddons": false
+      "providedByCanBase": false
+    },
+    {
+      "code": "celestine",
+      "displayName": "Celestine",
+      "buff": "temporalgrasp",
+      "eligibleGroups": [
+        "jewelry"
+      ],
+      "providedByCanBase": false
     }
   ]
 }

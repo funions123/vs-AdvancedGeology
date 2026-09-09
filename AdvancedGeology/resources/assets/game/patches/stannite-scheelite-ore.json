@@ -1,0 +1,389 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "stibnite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "stannite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-stannite-rhyolite",
+      "ore-medium-stannite-rhyolite",
+      "ore-rich-stannite-rhyolite",
+      "ore-bountiful-stannite-rhyolite",
+      "ore-poor-stannite-dacite",
+      "ore-medium-stannite-dacite",
+      "ore-rich-stannite-dacite",
+      "ore-bountiful-stannite-dacite",
+      "ore-poor-stannite-andesite",
+      "ore-medium-stannite-andesite",
+      "ore-rich-stannite-andesite",
+      "ore-bountiful-stannite-andesite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-stannite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-stannite-rhyolite",
+      "ore-medium-stannite-rhyolite",
+      "ore-rich-stannite-rhyolite",
+      "ore-bountiful-stannite-rhyolite",
+      "ore-poor-stannite-dacite",
+      "ore-medium-stannite-dacite",
+      "ore-rich-stannite-dacite",
+      "ore-bountiful-stannite-dacite",
+      "ore-poor-stannite-andesite",
+      "ore-medium-stannite-andesite",
+      "ore-rich-stannite-andesite",
+      "ore-bountiful-stannite-andesite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-stannite-rhyolite",
+      "crystalizedore-medium-stannite-rhyolite",
+      "crystalizedore-rich-stannite-rhyolite",
+      "crystalizedore-bountiful-stannite-rhyolite",
+      "crystalizedore-poor-stannite-dacite",
+      "crystalizedore-medium-stannite-dacite",
+      "crystalizedore-rich-stannite-dacite",
+      "crystalizedore-bountiful-stannite-dacite",
+      "crystalizedore-poor-stannite-andesite",
+      "crystalizedore-medium-stannite-andesite",
+      "crystalizedore-rich-stannite-andesite",
+      "crystalizedore-bountiful-stannite-andesite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-stannite-rhyolite-free",
+      "looseores-stannite-dacite-free",
+      "looseores-stannite-andesite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_stannite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-stannite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_stannite_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "scheelite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-scheelite-limestone",
+      "ore-medium-scheelite-limestone",
+      "ore-rich-scheelite-limestone",
+      "ore-bountiful-scheelite-limestone",
+      "ore-poor-scheelite-whitemarble",
+      "ore-medium-scheelite-whitemarble",
+      "ore-rich-scheelite-whitemarble",
+      "ore-bountiful-scheelite-whitemarble",
+      "ore-poor-scheelite-dolomite",
+      "ore-medium-scheelite-dolomite",
+      "ore-rich-scheelite-dolomite",
+      "ore-bountiful-scheelite-dolomite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-scheelite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-scheelite-limestone",
+      "ore-medium-scheelite-limestone",
+      "ore-rich-scheelite-limestone",
+      "ore-bountiful-scheelite-limestone",
+      "ore-poor-scheelite-whitemarble",
+      "ore-medium-scheelite-whitemarble",
+      "ore-rich-scheelite-whitemarble",
+      "ore-bountiful-scheelite-whitemarble",
+      "ore-poor-scheelite-dolomite",
+      "ore-medium-scheelite-dolomite",
+      "ore-rich-scheelite-dolomite",
+      "ore-bountiful-scheelite-dolomite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-scheelite-limestone",
+      "crystalizedore-medium-scheelite-limestone",
+      "crystalizedore-rich-scheelite-limestone",
+      "crystalizedore-bountiful-scheelite-limestone",
+      "crystalizedore-poor-scheelite-whitemarble",
+      "crystalizedore-medium-scheelite-whitemarble",
+      "crystalizedore-rich-scheelite-whitemarble",
+      "crystalizedore-bountiful-scheelite-whitemarble",
+      "crystalizedore-poor-scheelite-dolomite",
+      "crystalizedore-medium-scheelite-dolomite",
+      "crystalizedore-rich-scheelite-dolomite",
+      "crystalizedore-bountiful-scheelite-dolomite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-scheelite-limestone-free",
+      "looseores-scheelite-whitemarble-free",
+      "looseores-scheelite-dolomite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_scheelite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-scheelite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_scheelite_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/1/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/2/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/3/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/8/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/9/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/10/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/11/skipVariants/ore/-",
+    "value": [
+      "stannite",
+      "scheelite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-stibnite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_stibnite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-stibnite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_stibnite_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/1/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/2/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/3/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/8/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/9/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/10/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/11/skipVariants/ore/-",
+    "value": [
+      "stibnite"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-tetrahedrite-dolomite",
+      "ore-medium-tetrahedrite-dolomite",
+      "ore-rich-tetrahedrite-dolomite",
+      "ore-bountiful-tetrahedrite-dolomite",
+      "ore-bountiful-malachite-dolomite",
+      "ore-poor-malachite-slate",
+      "ore-medium-malachite-slate",
+      "ore-rich-malachite-slate",
+      "ore-bountiful-malachite-slate",
+      "ore-poor-malachite-schist",
+      "ore-medium-malachite-schist",
+      "ore-rich-malachite-schist",
+      "ore-bountiful-malachite-schist",
+      "ore-poor-chalcopyrite-slate",
+      "ore-medium-chalcopyrite-slate",
+      "ore-rich-chalcopyrite-slate",
+      "ore-bountiful-chalcopyrite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-tetrahedrite-dolomite",
+      "ore-medium-tetrahedrite-dolomite",
+      "ore-rich-tetrahedrite-dolomite",
+      "ore-bountiful-tetrahedrite-dolomite",
+      "ore-bountiful-malachite-dolomite",
+      "ore-poor-malachite-slate",
+      "ore-medium-malachite-slate",
+      "ore-rich-malachite-slate",
+      "ore-bountiful-malachite-slate",
+      "ore-poor-malachite-schist",
+      "ore-medium-malachite-schist",
+      "ore-rich-malachite-schist",
+      "ore-bountiful-malachite-schist",
+      "ore-poor-chalcopyrite-slate",
+      "ore-medium-chalcopyrite-slate",
+      "ore-rich-chalcopyrite-slate",
+      "ore-bountiful-chalcopyrite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-tetrahedrite-dolomite",
+      "crystalizedore-medium-tetrahedrite-dolomite",
+      "crystalizedore-rich-tetrahedrite-dolomite",
+      "crystalizedore-bountiful-tetrahedrite-dolomite",
+      "crystalizedore-bountiful-malachite-dolomite",
+      "crystalizedore-poor-malachite-slate",
+      "crystalizedore-medium-malachite-slate",
+      "crystalizedore-rich-malachite-slate",
+      "crystalizedore-bountiful-malachite-slate",
+      "crystalizedore-poor-malachite-schist",
+      "crystalizedore-medium-malachite-schist",
+      "crystalizedore-rich-malachite-schist",
+      "crystalizedore-bountiful-malachite-schist",
+      "crystalizedore-poor-chalcopyrite-slate",
+      "crystalizedore-medium-chalcopyrite-slate",
+      "crystalizedore-rich-chalcopyrite-slate",
+      "crystalizedore-bountiful-chalcopyrite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-tetrahedrite-dolomite-free",
+      "looseores-tetrahedrite-slate-free",
+      "looseores-malachite-slate-free",
+      "looseores-malachite-schist-free",
+      "looseores-chalcopyrite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

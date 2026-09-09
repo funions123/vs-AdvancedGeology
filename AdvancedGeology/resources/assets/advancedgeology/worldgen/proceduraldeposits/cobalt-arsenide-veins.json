@@ -1,0 +1,102 @@
+[
+  {
+    "code": "cobalt-arsenide-veins",
+    "enabled": true,
+    "template": "cobaltArsenideVein",
+    "priority": 100,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.18,
+      "yMode": "worldRelative",
+      "minYRel": 0.18,
+      "maxYRel": 0.45
+    },
+    "cobaltArsenideVein": {
+      "horizontalRadius": 46,
+      "verticalHalfHeight": 35,
+      "supergeneDepth": 8,
+      "sillContactInfluence": 5.0,
+      "dipAngleDegMin": 70.0,
+      "dipAngleDegMax": 87.0,
+      "strikeAngleDegMin": -40.0,
+      "strikeAngleDegMax": 40.0,
+      "principalCountMin": 4,
+      "principalCountMax": 8,
+      "splayCountMin": 1,
+      "splayCountMax": 3,
+      "contactBaseYMin": -3.0,
+      "contactBaseYMax": 2.0,
+      "sillThicknessMin": 8.0,
+      "sillThicknessMax": 14.0,
+      "contactTiltXMin": -0.09,
+      "contactTiltXMax": 0.09,
+      "contactTiltZMin": -0.07,
+      "contactTiltZMax": 0.07,
+      "offsetWalkMin": 6.0,
+      "offsetWalkMax": 10.0,
+      "principalStrikeJitter": 14.0,
+      "principalDipJitter": 8.0,
+      "principalOffsetJitter": 1.5,
+      "principalCenterAlongSpread": 7.0,
+      "principalCenterYMin": -3.0,
+      "principalCenterYMax": 1.0,
+      "principalLengthHalfMin": 17.0,
+      "principalLengthHalfMax": 28.0,
+      "principalHeightHalfMin": 29.0,
+      "principalHeightHalfMax": 38.0,
+      "principalThicknessMin": 1.4,
+      "principalThicknessMax": 3.0,
+      "principalRelayCenterSpread": 10.0,
+      "principalRelayWidthMin": 2.5,
+      "principalRelayWidthMax": 5.0,
+      "principalRelayShiftSpread": 1.5,
+      "splayStrikeOffsetMin": 16.0,
+      "splayStrikeOffsetMax": 30.0,
+      "splayDipJitter": 9.0,
+      "splayOffsetMin": 2.0,
+      "splayOffsetMax": 4.5,
+      "splayAlongOffsetMin": 5.0,
+      "splayAlongOffsetMax": 11.0,
+      "splayCenterYMin": -3.0,
+      "splayCenterYMax": 4.0,
+      "splayLengthHalfMin": 10.0,
+      "splayLengthHalfMax": 18.0,
+      "splayHeightHalfMin": 20.0,
+      "splayHeightHalfMax": 30.0,
+      "splayThicknessMin": 1.0,
+      "splayThicknessMax": 2.1,
+      "splayRelayCenterSpread": 5.0,
+      "splayRelayWidthMin": 2.0,
+      "splayRelayWidthMax": 4.0,
+      "splayRelayShiftSpread": 1.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": ["gneiss", "schist"],
+      "materials": {
+        "nickeline": "game:ore-{grade}-nickeline-{rock}",
+        "cobaltite": "game:ore-{grade}-cobaltite-{rock}",
+        "native-silver": "game:ore-{grade}-quartz_nativesilver-{rock}",
+        "native-bismuth": "game:ore-{grade}-nativebismuth-{rock}",
+        "acanthite": "game:ore-{grade}-quartz_acanthite-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "carbonate": "game:rock-dolomite",
+        "erythrite": "game:ore-{grade}-erythrite-{rock}",
+        "annabergite": "game:ore-{grade}-annabergite-{rock}"
+      }
+    }
+  }
+]

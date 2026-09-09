@@ -1,0 +1,404 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-quartz_nativegold-greenstone",
+      "ore-medium-quartz_nativegold-greenstone",
+      "ore-rich-quartz_nativegold-greenstone",
+      "ore-bountiful-quartz_nativegold-greenstone",
+      "ore-poor-quartz_nativegold-slate",
+      "ore-medium-quartz_nativegold-slate",
+      "ore-rich-quartz_nativegold-slate",
+      "ore-bountiful-quartz_nativegold-slate",
+      "ore-poor-quartz_nativegold-schist",
+      "ore-medium-quartz_nativegold-schist",
+      "ore-rich-quartz_nativegold-schist",
+      "ore-bountiful-quartz_nativegold-schist",
+      "ore-poor-quartz_nativegold-phyllite",
+      "ore-medium-quartz_nativegold-phyllite",
+      "ore-rich-quartz_nativegold-phyllite",
+      "ore-bountiful-quartz_nativegold-phyllite",
+      "ore-poor-quartz_nativegold-amphibolite",
+      "ore-medium-quartz_nativegold-amphibolite",
+      "ore-rich-quartz_nativegold-amphibolite",
+      "ore-bountiful-quartz_nativegold-amphibolite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-quartz_nativegold-greenstone",
+      "ore-medium-quartz_nativegold-greenstone",
+      "ore-rich-quartz_nativegold-greenstone",
+      "ore-bountiful-quartz_nativegold-greenstone",
+      "ore-poor-quartz_nativegold-slate",
+      "ore-medium-quartz_nativegold-slate",
+      "ore-rich-quartz_nativegold-slate",
+      "ore-bountiful-quartz_nativegold-slate",
+      "ore-poor-quartz_nativegold-schist",
+      "ore-medium-quartz_nativegold-schist",
+      "ore-rich-quartz_nativegold-schist",
+      "ore-bountiful-quartz_nativegold-schist",
+      "ore-poor-quartz_nativegold-phyllite",
+      "ore-medium-quartz_nativegold-phyllite",
+      "ore-rich-quartz_nativegold-phyllite",
+      "ore-bountiful-quartz_nativegold-phyllite",
+      "ore-poor-quartz_nativegold-amphibolite",
+      "ore-medium-quartz_nativegold-amphibolite",
+      "ore-rich-quartz_nativegold-amphibolite",
+      "ore-bountiful-quartz_nativegold-amphibolite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-quartz_nativegold-greenstone",
+      "crystalizedore-medium-quartz_nativegold-greenstone",
+      "crystalizedore-rich-quartz_nativegold-greenstone",
+      "crystalizedore-bountiful-quartz_nativegold-greenstone",
+      "crystalizedore-poor-quartz_nativegold-slate",
+      "crystalizedore-medium-quartz_nativegold-slate",
+      "crystalizedore-rich-quartz_nativegold-slate",
+      "crystalizedore-bountiful-quartz_nativegold-slate",
+      "crystalizedore-poor-quartz_nativegold-schist",
+      "crystalizedore-medium-quartz_nativegold-schist",
+      "crystalizedore-rich-quartz_nativegold-schist",
+      "crystalizedore-bountiful-quartz_nativegold-schist",
+      "crystalizedore-poor-quartz_nativegold-phyllite",
+      "crystalizedore-medium-quartz_nativegold-phyllite",
+      "crystalizedore-rich-quartz_nativegold-phyllite",
+      "crystalizedore-bountiful-quartz_nativegold-phyllite",
+      "crystalizedore-poor-quartz_nativegold-amphibolite",
+      "crystalizedore-medium-quartz_nativegold-amphibolite",
+      "crystalizedore-rich-quartz_nativegold-amphibolite",
+      "crystalizedore-bountiful-quartz_nativegold-amphibolite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-quartz_nativegold-greenstone-free",
+      "looseores-quartz_nativegold-slate-free",
+      "looseores-quartz_nativegold-schist-free",
+      "looseores-quartz_nativegold-phyllite-free",
+      "looseores-quartz_nativegold-amphibolite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-chromite-pyroxenite",
+      "ore-medium-chromite-pyroxenite",
+      "ore-rich-chromite-pyroxenite",
+      "ore-bountiful-chromite-pyroxenite",
+      "ore-poor-chromite-anorthosite",
+      "ore-medium-chromite-anorthosite",
+      "ore-rich-chromite-anorthosite",
+      "ore-bountiful-chromite-anorthosite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-chromite-pyroxenite",
+      "ore-medium-chromite-pyroxenite",
+      "ore-rich-chromite-pyroxenite",
+      "ore-bountiful-chromite-pyroxenite",
+      "ore-poor-chromite-anorthosite",
+      "ore-medium-chromite-anorthosite",
+      "ore-rich-chromite-anorthosite",
+      "ore-bountiful-chromite-anorthosite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-chromite-pyroxenite",
+      "crystalizedore-medium-chromite-pyroxenite",
+      "crystalizedore-rich-chromite-pyroxenite",
+      "crystalizedore-bountiful-chromite-pyroxenite",
+      "crystalizedore-poor-chromite-anorthosite",
+      "crystalizedore-medium-chromite-anorthosite",
+      "crystalizedore-rich-chromite-anorthosite",
+      "crystalizedore-bountiful-chromite-anorthosite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-chromite-pyroxenite-free",
+      "looseores-chromite-anorthosite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-chromite-peridotite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-chromite-peridotite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-chromite-peridotite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-chromite-peridotite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-ilmenite-anorthosite",
+      "ore-medium-ilmenite-anorthosite",
+      "ore-rich-ilmenite-anorthosite",
+      "ore-bountiful-ilmenite-anorthosite",
+      "ore-poor-ilmenite-granulite",
+      "ore-medium-ilmenite-granulite",
+      "ore-rich-ilmenite-granulite",
+      "ore-bountiful-ilmenite-granulite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-ilmenite-anorthosite",
+      "ore-medium-ilmenite-anorthosite",
+      "ore-rich-ilmenite-anorthosite",
+      "ore-bountiful-ilmenite-anorthosite",
+      "ore-poor-ilmenite-granulite",
+      "ore-medium-ilmenite-granulite",
+      "ore-rich-ilmenite-granulite",
+      "ore-bountiful-ilmenite-granulite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-ilmenite-anorthosite",
+      "crystalizedore-medium-ilmenite-anorthosite",
+      "crystalizedore-rich-ilmenite-anorthosite",
+      "crystalizedore-bountiful-ilmenite-anorthosite",
+      "crystalizedore-poor-ilmenite-granulite",
+      "crystalizedore-medium-ilmenite-granulite",
+      "crystalizedore-rich-ilmenite-granulite",
+      "crystalizedore-bountiful-ilmenite-granulite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-ilmenite-anorthosite-free",
+      "looseores-ilmenite-granulite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-siderite-granite",
+      "ore-medium-siderite-granite",
+      "ore-rich-siderite-granite",
+      "ore-bountiful-siderite-granite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-siderite-granite",
+      "ore-medium-siderite-granite",
+      "ore-rich-siderite-granite",
+      "ore-bountiful-siderite-granite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-siderite-granite",
+      "crystalizedore-medium-siderite-granite",
+      "crystalizedore-rich-siderite-granite",
+      "crystalizedore-bountiful-siderite-granite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-siderite-granite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-magnetite-anorthosite",
+      "ore-medium-magnetite-anorthosite",
+      "ore-rich-magnetite-anorthosite",
+      "ore-bountiful-magnetite-anorthosite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-magnetite-anorthosite",
+      "ore-medium-magnetite-anorthosite",
+      "ore-rich-magnetite-anorthosite",
+      "ore-bountiful-magnetite-anorthosite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-magnetite-anorthosite",
+      "crystalizedore-medium-magnetite-anorthosite",
+      "crystalizedore-rich-magnetite-anorthosite",
+      "crystalizedore-bountiful-magnetite-anorthosite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-magnetite-anorthosite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-cryolite-gneiss"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-cryolite-gneiss-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-quartz-anorthosite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-quartz-anorthosite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-apatite-anorthosite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-apatite-anorthosite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-phosphorite-mudstone"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-phosphorite-mudstone-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-medium-topazblue-granite",
+      "ore-medium-topazblue-gneiss",
+      "ore-medium-topazblue-syenite",
+      "ore-medium-topazblue-pegmatite"
+    ],
+    "file": "game:blocktypes/stone/ore-gem.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-fluorite-gneiss",
+      "ore-fluorite-syenite",
+      "ore-microcline-granite",
+      "ore-microcline-gneiss",
+      "ore-microcline-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  }
+]

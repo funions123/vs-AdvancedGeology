@@ -1,0 +1,15 @@
+[
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "ore-alum-tuff",
+    "file": "game:blocktypes/stone/ore-ungraded.json",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/allowedVariants/-",
+    "value": "looseores-alum-tuff-free",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

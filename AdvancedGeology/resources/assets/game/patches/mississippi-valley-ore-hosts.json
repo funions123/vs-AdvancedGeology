@@ -1,0 +1,76 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-rich-galena-chalk",
+      "ore-bountiful-galena-chalk",
+      "ore-bountiful-sphalerite-chalk",
+      "ore-poor-limonite-chalk",
+      "ore-medium-limonite-chalk",
+      "ore-rich-limonite-chalk",
+      "ore-bountiful-limonite-chalk",
+      "ore-bountiful-galena-sandstone",
+      "ore-bountiful-sphalerite-sandstone",
+      "ore-rich-chalcopyrite-sandstone",
+      "ore-bountiful-chalcopyrite-sandstone"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-rich-galena-chalk",
+      "ore-bountiful-galena-chalk",
+      "ore-bountiful-sphalerite-chalk",
+      "ore-poor-limonite-chalk",
+      "ore-medium-limonite-chalk",
+      "ore-rich-limonite-chalk",
+      "ore-bountiful-limonite-chalk",
+      "ore-bountiful-galena-sandstone",
+      "ore-bountiful-sphalerite-sandstone",
+      "ore-rich-chalcopyrite-sandstone",
+      "ore-bountiful-chalcopyrite-sandstone"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-rich-galena-chalk",
+      "crystalizedore-bountiful-galena-chalk",
+      "crystalizedore-bountiful-sphalerite-chalk",
+      "crystalizedore-poor-limonite-chalk",
+      "crystalizedore-medium-limonite-chalk",
+      "crystalizedore-rich-limonite-chalk",
+      "crystalizedore-bountiful-limonite-chalk",
+      "crystalizedore-bountiful-galena-sandstone",
+      "crystalizedore-bountiful-sphalerite-sandstone",
+      "crystalizedore-rich-chalcopyrite-sandstone",
+      "crystalizedore-bountiful-chalcopyrite-sandstone"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-fluorite-dolomite",
+      "ore-pyrite-chalk"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-fluorite-dolomite-free",
+      "looseores-chalcopyrite-chalk-free",
+      "looseores-limonite-chalk-free",
+      "looseores-pyrite-chalk-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "code": "volcanic-alunite",
+    "enabled": true,
+    "template": "volcanicAlunite",
+    "priority": 88,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 352,
+      "chance": 0.20,
+      "yMode": "surfaceOffset",
+      "surfaceOffsetMin": -28,
+      "surfaceOffsetMax": -6
+    },
+    "climate": {
+      "enabled": true,
+      "minRain": 0.0,
+      "maxRain": 0.25,
+      "minTemp": 5.0,
+      "maxTemp": 50.0
+    },
+    "volcanicAlunite": {
+      "horizontalRadius": 42,
+      "verticalHalfHeight": 26,
+      "capBaseYMin": -8.0,
+      "capBaseYMax": -3.0,
+      "capTopYMin": 8.0,
+      "capTopYMax": 13.0,
+      "capRadiusMin": 27.0,
+      "capRadiusMax": 35.0,
+      "conduitCountMin": 1,
+      "conduitCountMax": 3,
+      "conduitSpacingMin": 7.0,
+      "conduitSpacingMax": 12.0,
+      "conduitXJitter": 3.0,
+      "conduitZSpread": 6.0,
+      "conduitRadiusMin": 3.2,
+      "conduitRadiusMax": 5.4,
+      "lensCountMin": 3,
+      "lensCountMax": 5,
+      "lensCenterJitter": 7.0,
+      "lensRadiusXMin": 13.0,
+      "lensRadiusXMax": 19.0,
+      "lensRadiusZMin": 9.0,
+      "lensRadiusZMax": 15.0,
+      "lensHalfThicknessMin": 2.0,
+      "lensHalfThicknessMax": 3.6,
+      "vugCountMin": 4,
+      "vugCountMax": 8,
+      "vugCenterJitter": 4.0,
+      "vugRadiusMin": 1.2,
+      "vugRadiusMax": 2.4
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["rhyolite", "dacite", "andesite", "tuff"],
+      "materials": {
+        "alunite": "game:ore-alunite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "gypsum": "game:rock-gypsum"
+      }
+    }
+  }
+]

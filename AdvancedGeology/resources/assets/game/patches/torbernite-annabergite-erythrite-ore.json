@@ -1,0 +1,281 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "torbernite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "annabergite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "erythrite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-torbernite-gneiss",
+      "ore-medium-torbernite-gneiss",
+      "ore-rich-torbernite-gneiss",
+      "ore-bountiful-torbernite-gneiss",
+      "ore-poor-torbernite-schist",
+      "ore-medium-torbernite-schist",
+      "ore-rich-torbernite-schist",
+      "ore-bountiful-torbernite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-torbernite-gneiss",
+      "ore-medium-torbernite-gneiss",
+      "ore-rich-torbernite-gneiss",
+      "ore-bountiful-torbernite-gneiss",
+      "ore-poor-torbernite-schist",
+      "ore-medium-torbernite-schist",
+      "ore-rich-torbernite-schist",
+      "ore-bountiful-torbernite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-torbernite-gneiss",
+      "crystalizedore-medium-torbernite-gneiss",
+      "crystalizedore-rich-torbernite-gneiss",
+      "crystalizedore-bountiful-torbernite-gneiss",
+      "crystalizedore-poor-torbernite-schist",
+      "crystalizedore-medium-torbernite-schist",
+      "crystalizedore-rich-torbernite-schist",
+      "crystalizedore-bountiful-torbernite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-torbernite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-torbernite-gneiss-free",
+      "looseores-torbernite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_torbernite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-torbernite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_torbernite_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-annabergite-gneiss",
+      "ore-medium-annabergite-gneiss",
+      "ore-rich-annabergite-gneiss",
+      "ore-bountiful-annabergite-gneiss",
+      "ore-poor-annabergite-schist",
+      "ore-medium-annabergite-schist",
+      "ore-rich-annabergite-schist",
+      "ore-bountiful-annabergite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-annabergite-gneiss",
+      "ore-medium-annabergite-gneiss",
+      "ore-rich-annabergite-gneiss",
+      "ore-bountiful-annabergite-gneiss",
+      "ore-poor-annabergite-schist",
+      "ore-medium-annabergite-schist",
+      "ore-rich-annabergite-schist",
+      "ore-bountiful-annabergite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-annabergite-gneiss",
+      "crystalizedore-medium-annabergite-gneiss",
+      "crystalizedore-rich-annabergite-gneiss",
+      "crystalizedore-bountiful-annabergite-gneiss",
+      "crystalizedore-poor-annabergite-schist",
+      "crystalizedore-medium-annabergite-schist",
+      "crystalizedore-rich-annabergite-schist",
+      "crystalizedore-bountiful-annabergite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-annabergite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-annabergite-gneiss-free",
+      "looseores-annabergite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_annabergite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-annabergite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_annabergite_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-erythrite-gneiss",
+      "ore-medium-erythrite-gneiss",
+      "ore-rich-erythrite-gneiss",
+      "ore-bountiful-erythrite-gneiss",
+      "ore-poor-erythrite-schist",
+      "ore-medium-erythrite-schist",
+      "ore-rich-erythrite-schist",
+      "ore-bountiful-erythrite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-erythrite-gneiss",
+      "ore-medium-erythrite-gneiss",
+      "ore-rich-erythrite-gneiss",
+      "ore-bountiful-erythrite-gneiss",
+      "ore-poor-erythrite-schist",
+      "ore-medium-erythrite-schist",
+      "ore-rich-erythrite-schist",
+      "ore-bountiful-erythrite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-erythrite-gneiss",
+      "crystalizedore-medium-erythrite-gneiss",
+      "crystalizedore-rich-erythrite-gneiss",
+      "crystalizedore-bountiful-erythrite-gneiss",
+      "crystalizedore-poor-erythrite-schist",
+      "crystalizedore-medium-erythrite-schist",
+      "crystalizedore-rich-erythrite-schist",
+      "crystalizedore-bountiful-erythrite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-erythrite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-erythrite-gneiss-free",
+      "looseores-erythrite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_erythrite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-erythrite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_erythrite_looseores_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

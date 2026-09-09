@@ -5,7 +5,7 @@
     "value": {
       "Code": "periclase"
     },
-    "file": "game:worldproperties/block/ore-ungraded.json"
+    "file": "game:worldproperties/block/ore-graded.json"
   },
   {
     "op": "add",
@@ -46,6 +46,7 @@
       "ore-orthoclase-granite",
       "ore-orthoclase-rhyolite",
       "ore-orthoclase-syenite",
+      "ore-orthoclase-pegmatite",
       "ore-microcline-granite",
       "ore-microcline-migmatite",
       "ore-microcline-pegmatite",
@@ -55,18 +56,72 @@
       "ore-alunite-rhyolite",
       "ore-alunite-dacite",
       "ore-alunite-andesite",
-      "ore-alunite-tuff",
-      "ore-periclase-dolomite",
-      "ore-periclase-greenmarble",
-      "ore-periclase-whitemarble"
+      "ore-alunite-tuff"
     ],
     "file": "game:blocktypes/stone/ore-ungraded.json"
   },
   {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-periclase-dolomite",
+      "ore-medium-periclase-dolomite",
+      "ore-rich-periclase-dolomite",
+      "ore-bountiful-periclase-dolomite",
+      "ore-poor-periclase-greenmarble",
+      "ore-medium-periclase-greenmarble",
+      "ore-rich-periclase-greenmarble",
+      "ore-bountiful-periclase-greenmarble",
+      "ore-poor-periclase-whitemarble",
+      "ore-medium-periclase-whitemarble",
+      "ore-rich-periclase-whitemarble",
+      "ore-bountiful-periclase-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-poor-periclase-dolomite",
+      "ore-medium-periclase-dolomite",
+      "ore-rich-periclase-dolomite",
+      "ore-bountiful-periclase-dolomite",
+      "ore-poor-periclase-greenmarble",
+      "ore-medium-periclase-greenmarble",
+      "ore-rich-periclase-greenmarble",
+      "ore-bountiful-periclase-greenmarble",
+      "ore-poor-periclase-whitemarble",
+      "ore-medium-periclase-whitemarble",
+      "ore-rich-periclase-whitemarble",
+      "ore-bountiful-periclase-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-poor-periclase-dolomite",
+      "crystalizedore-medium-periclase-dolomite",
+      "crystalizedore-rich-periclase-dolomite",
+      "crystalizedore-bountiful-periclase-dolomite",
+      "crystalizedore-poor-periclase-greenmarble",
+      "crystalizedore-medium-periclase-greenmarble",
+      "crystalizedore-rich-periclase-greenmarble",
+      "crystalizedore-bountiful-periclase-greenmarble",
+      "crystalizedore-poor-periclase-whitemarble",
+      "crystalizedore-medium-periclase-whitemarble",
+      "crystalizedore-rich-periclase-whitemarble",
+      "crystalizedore-bountiful-periclase-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
     "op": "add",
-    "path": "/requiredMiningTierByType/ore-periclase-*",
+    "path": "/requiredMiningTierByType/ore-*-periclase-*",
     "value": 2,
-    "file": "game:blocktypes/stone/ore-ungraded.json"
+    "file": "game:blocktypes/stone/ore-graded.json"
   },
   {
     "op": "add",
@@ -99,6 +154,7 @@
       "looseores-orthoclase-granite-free",
       "looseores-orthoclase-rhyolite-free",
       "looseores-orthoclase-syenite-free",
+      "looseores-orthoclase-pegmatite-free",
       "looseores-microcline-granite-free",
       "looseores-microcline-migmatite-free",
       "looseores-microcline-pegmatite-free",
@@ -128,7 +184,7 @@
       "looseores-periclase-*": [
         {
           "type": "item",
-          "code": "ore-{ore}"
+          "code": "ore-poor-{ore}-{rock}"
         }
       ],
       "looseores-microcline-*": [

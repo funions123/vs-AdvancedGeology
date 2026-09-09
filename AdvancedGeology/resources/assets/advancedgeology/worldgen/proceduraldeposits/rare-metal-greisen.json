@@ -1,0 +1,66 @@
+[
+  {
+    "code": "rare-metal-greisen",
+    "enabled": true,
+    "template": "greisenStockwork",
+    "priority": 93,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.20,
+      "yMode": "worldRelative",
+      "minYRel": 0.10,
+      "maxYRel": 0.42
+    },
+    "greisen": {
+      "family": "RareMetal",
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 36,
+      "cupolaRadiusX": 29,
+      "cupolaRadiusZ": 25,
+      "cupolaHeight": 21,
+      "lodeThickness": 2.2,
+      "veinMin": 6,
+      "veinMax": 9,
+      "podMin": 5,
+      "podMax": 8,
+      "mainStrikeDeg": 25,
+      "weatheringDepthMax": 4
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": ["granite", "slate", "schist", "gneiss"],
+      "materials": {
+        "columbite": "game:ore-{grade}-columbite-{rock}",
+        "tantalite": "game:ore-{grade}-tantalite-{rock}",
+        "microlite": "game:ore-{grade}-pyrochlore-{rock}",
+        "pyrochlore": "game:ore-{grade}-pyrochlore-{rock}",
+        "lepidolite": "game:ore-{grade}-lepidolite-{rock}",
+        "spodumene": "game:ore-{grade}-spodumene-{rock}",
+        "pollucite": "game:ore-{grade}-pollucite-{rock}",
+        "beryl": "game:ore-{grade}-beryl-{rock}",
+        "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
+        "topaz": "game:ore-gem-topazblue-{rock}",
+        "fluorite": "game:ore-fluorite-{rock}",
+        "tourmaline": "game:ore-gem-tourmalineschorl-{rock}",
+        "albite": "game:ore-albite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "gossan": "advancedgeology:gossansoil-sparse",
+        "kaolinite": "advancedgeology:rawkaolinite-sparse"
+      }
+    }
+  }
+]

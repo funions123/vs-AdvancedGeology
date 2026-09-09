@@ -1,0 +1,71 @@
+[
+  {
+    "code": "folded-anthracite",
+    "enabled": true,
+    "template": "foldedAnthracite",
+    "priority": 82,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.1,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.50
+    },
+    "anthracite": {
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 30,
+      "foldAmplitudeMin": 8.0,
+      "foldAmplitudeMax": 12.0,
+      "foldFrequencyMin": 0.075,
+      "foldFrequencyMax": 0.11,
+      "regionalDipMin": -0.05,
+      "regionalDipMax": 0.05,
+      "thrustStrikeOffsetMin": 35.0,
+      "thrustStrikeOffsetMax": 70.0,
+      "thrustOffsetMin": -8.0,
+      "thrustOffsetMax": 8.0,
+      "thrustThrowMin": 6.0,
+      "thrustThrowMax": 11.0,
+      "thrustWidthMin": 9.0,
+      "thrustWidthMax": 15.0,
+      "seamCountMin": 1,
+      "seamCountMax": 3,
+      "seamHalfThicknessMin": 0.95,
+      "seamHalfThicknessMax": 1.25,
+      "seamRadiusAlongMin": 20.0,
+      "seamRadiusAlongMax": 24.0,
+      "seamRadiusAcrossMin": 14.0,
+      "seamRadiusAcrossMax": 18.0,
+      "seamLevelStartMin": -17.0,
+      "seamLevelStartMax": -13.0,
+      "seamLevelIncrementMin": 8.0,
+      "seamLevelIncrementMax": 12.0,
+      "partingChance": 0.58
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "slate",
+        "phyllite",
+        "quartzite"
+      ],
+      "materials": {
+        "anthracite": "game:ore-anthracite-{rock}",
+        "slate-parting": "game:rock-slate"
+      }
+    }
+  }
+]

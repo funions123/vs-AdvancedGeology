@@ -1,0 +1,76 @@
+[
+  {
+    "code": "almaden-stratiform-cinnabar",
+    "enabled": true,
+    "template": "stratiformCinnabar",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.18,
+      "yMode": "worldRelative",
+      "minYRel": 0.25,
+      "maxYRel": 0.55
+    },
+    "stratiformCinnabar": {
+      "horizontalRadius": 46,
+      "verticalHalfHeight": 30,
+      "strikeDegMin": 76.0,
+      "strikeDegMax": 104.0,
+      "dipDegMin": 76.0,
+      "dipDegMax": 88.0,
+      "systemOffsetSpread": 3.0,
+      "oreLevelCount": 3,
+      "levelSpacing": 10.0,
+      "levelOffsetJitter": 0.7,
+      "hostHalfMin": 2.5,
+      "hostHalfMax": 3.8,
+      "oreHalfMin": 1.1,
+      "oreHalfMax": 2.0,
+      "centerAlongSpread": 5.0,
+      "centerDipSpread": 4.0,
+      "radiusAlongMin": 19.0,
+      "radiusAlongMax": 29.0,
+      "radiusDipMin": 22.0,
+      "radiusDipMax": 31.0,
+      "jointSetsPerLevel": 2,
+      "jointAngleSpread": 0.5,
+      "jointOffsetSpread": 8.0,
+      "jointLengthMin": 12.0,
+      "jointLengthMax": 22.0,
+      "jointWidthMin": 0.18,
+      "jointWidthMax": 0.42,
+      "diatremeXSpread": 14.0,
+      "diatremeZSpread": 10.0,
+      "diatremeBottomMin": -30.0,
+      "diatremeBottomMax": -25.0,
+      "diatremeTopMin": 15.0,
+      "diatremeTopMax": 23.0,
+      "diatremeBaseRadiusMin": 2.5,
+      "diatremeBaseRadiusMax": 4.0,
+      "diatremeTopRadiusMin": 5.5,
+      "diatremeTopRadiusMax": 8.0
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": ["quartzite", "shale", "slate", "sandstone"],
+      "materials": {
+        "cinnabar": "game:ore-cinnabar-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}"
+      }
+    }
+  }
+]

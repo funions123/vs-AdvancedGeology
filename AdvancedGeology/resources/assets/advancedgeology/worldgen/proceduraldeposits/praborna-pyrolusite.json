@@ -1,0 +1,54 @@
+[
+  {
+    "code": "praborna-pyrolusite",
+    "enabled": true,
+    "template": "prabornaPyrolusite",
+    "priority": 85,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 256,
+      "chance": 0.25,
+      "yMode": "worldRelative",
+      "minYRel": 0.20,
+      "maxYRel": 0.48
+    },
+    "praborna": {
+      "horizontalRadius": 48,
+      "verticalHalfHeight": 28,
+      "strikeDeg": 0,
+      "dipDeg": 16,
+      "dipDirectionDeg": 90,
+      "lensCount": 3,
+      "quartzVeinCount": 4,
+      "contactY": 6,
+      "oxidationDepth": 10,
+      "weatheringDepthMax": 6
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
+    "palette": {
+      "replaceableRockVariants": ["chert", "serpentinite", "slate", "schist"],
+      "materials": {
+        "pyrolusite": "game:ore-{grade}-pyrolusite-{rock}",
+        "braunite": "game:ore-{grade}-braunite-{rock}",
+        "rhodochrosite": "game:ore-medium-rhodochrosite-{rock}",
+        "spessartine": "game:ore-gem-spessartine-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "hematite": "game:ore-{grade}-hematite-{rock}",
+        "breccia": "game:crackedrock-{rock}",
+        "black-gossan": "advancedgeology:blackgossansoil-sparse"
+      }
+    }
+  }
+]
