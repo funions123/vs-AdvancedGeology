@@ -6,7 +6,7 @@
   "textureWidth": 16,
   "textureHeight": 16,
   "textures": {
-    "aquamarine": "block/stone/gem/celestine"
+    "celestine": "block/stone/gem/celestine"
   },
   "elements": [
     {

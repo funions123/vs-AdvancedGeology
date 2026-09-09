@@ -1,0 +1,33 @@
+[
+  {
+    "op": "move",
+    "path": "/tmp_added_ore_loose_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-celestine-*": [
+        { "type": "item", "code": "ore-celestine", "quantity": { "avg": 2, "var": 1 } }
+      ],
+      "looseores-zirconia-*": [
+        { "type": "item", "code": "ore-zirconia", "quantity": { "avg": 2, "var": 1 } }
+      ],
+      "looseores-quartz_acanthite-*": [
+        { "type": "item", "code": "nugget-acanthite", "quantity": { "avg": 2, "var": 1 } }
+      ],
+      "looseores-quartz_electrum-*": [
+        { "type": "item", "code": "nugget-electrum", "quantity": { "avg": 2, "var": 1 } }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "frompath": "/tmp_added_ore_loose_default",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]
