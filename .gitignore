@@ -362,3 +362,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /local
+/AdvancedGeology/scripts
+/AdvancedGeology/resources/assets/advancedgeology/worldgen/proceduraldeposits/diagnostic-supergene-lens.json
+/AdvancedGeology.Verification
+/AdvancedGeology/scripts/generate-canjewelry-compat.py
