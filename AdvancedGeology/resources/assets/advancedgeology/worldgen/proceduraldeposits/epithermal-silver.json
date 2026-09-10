@@ -7,7 +7,7 @@
     "overlapPolicy": "higherPriorityWins",
     "placement": {
       "cellSize": 448,
-      "chance": 0.05,
+      "chance": 0.1,
       "yMode": "worldRelative",
       "minYRel": 0.4,
       "maxYRel": 0.7
@@ -60,6 +60,7 @@
       "gossanSurfaceExclusions": [
         "game:muddygravel"
       ]
-    }
+    },
+    "intrude": true
   }
 ]

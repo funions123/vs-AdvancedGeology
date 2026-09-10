@@ -7,7 +7,7 @@
     "overlapPolicy": "higherPriorityWins",
     "placement": {
       "cellSize": 320,
-      "chance": 0.11,
+      "chance": 0.22,
       "yMode": "worldRelative",
       "minYRel": 0.1,
       "maxYRel": 0.3
@@ -72,6 +72,7 @@
         "kaolinite": "advancedgeology:rawkaolinite-sparse",
         "gossan": "advancedgeology:gossansoil-sparse"
       }
-    }
+    },
+    "intrude": true
   }
 ]

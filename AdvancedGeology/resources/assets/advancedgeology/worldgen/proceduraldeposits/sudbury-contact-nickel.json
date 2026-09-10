@@ -5,10 +5,10 @@
     "template": "sudburyContactNickel",
     "priority": 98,
     "overlapPolicy": "higherPriorityWins",
-    "intrude": false,
+    "intrude": true,
     "placement": {
       "cellSize": 512,
-      "chance": 0.028,
+      "chance": 0.056,
       "yMode": "worldRelative",
       "minYRel": 0.1,
       "maxYRel": 0.3

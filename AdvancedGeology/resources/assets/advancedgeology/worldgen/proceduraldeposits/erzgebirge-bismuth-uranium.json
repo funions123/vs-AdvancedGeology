@@ -5,10 +5,10 @@
     "template": "reopenedArsenideVein",
     "priority": 100,
     "overlapPolicy": "higherPriorityWins",
-    "intrude": false,
+    "intrude": true,
     "placement": {
       "cellSize": 448,
-      "chance": 0.05,
+      "chance": 0.1,
       "yMode": "worldRelative",
       "minYRel": 0.18,
       "maxYRel": 0.44

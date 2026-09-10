@@ -8,7 +8,7 @@
     "intrude": true,
     "placement": {
       "cellSize": 640,
-      "chance": 0.02,
+      "chance": 0.04,
       "yMode": "worldRelative",
       "minYRel": 0.08,
       "maxYRel": 0.28
