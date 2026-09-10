@@ -58,9 +58,12 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "slate",
         "phyllite",
-        "quartzite"
+        "quartzite",
+        "sandstone",
+        "schist",
+        "shale",
+        "slate"
       ],
       "materials": {
         "anthracite": "game:ore-anthracite-{rock}",

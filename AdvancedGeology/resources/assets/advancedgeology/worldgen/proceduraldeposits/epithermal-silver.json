@@ -42,9 +42,11 @@
     "palette": {
       "replaceableRockVariants": [
         "andesite",
-        "rhyolite",
+        "basalt",
+        "conglomerate",
         "dacite",
-        "basalt"
+        "rhyolite",
+        "sandstone"
       ],
       "materials": {
         "primary": "game:ore-quartz-{rock}",

@@ -33,8 +33,12 @@
     "palette": {
       "replaceableRockVariants": [
         "dolomite",
-        "slate",
-        "schist"
+        "greenstone",
+        "limestone",
+        "phyllite",
+        "quartzite",
+        "schist",
+        "slate"
       ],
       "materials": {
         "tetrahedrite": "game:ore-{grade}-tetrahedrite-{rock}",

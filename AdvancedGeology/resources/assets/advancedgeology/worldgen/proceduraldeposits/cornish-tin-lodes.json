@@ -41,10 +41,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "gneiss",
         "granite",
-        "slate",
+        "phyllite",
+        "quartzite",
+        "sandstone",
         "schist",
-        "gneiss"
+        "slate",
+        "tonalite"
       ],
       "materials": {
         "cassiterite": "game:ore-{grade}-cassiterite-{rock}",

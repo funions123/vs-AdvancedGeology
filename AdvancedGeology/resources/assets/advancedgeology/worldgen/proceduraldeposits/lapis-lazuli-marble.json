@@ -32,10 +32,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "limestone",
-        "whitemarble",
+        "dolomite",
+        "gneiss",
+        "granulite",
         "greenmarble",
-        "redmarble"
+        "limestone",
+        "redmarble",
+        "whitemarble"
       ],
       "materials": {
         "lapis": "game:ore-lapislazuli-{rock}",

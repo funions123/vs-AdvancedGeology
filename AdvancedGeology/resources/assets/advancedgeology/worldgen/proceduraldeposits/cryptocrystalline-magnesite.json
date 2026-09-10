@@ -32,8 +32,10 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "serpentinite",
-        "peridotite"
+        "amphibolite",
+        "gabbro",
+        "peridotite",
+        "serpentinite"
       ],
       "materials": {
         "magnesite": "game:ore-{grade}-magnesite-{rock}",

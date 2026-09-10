@@ -62,11 +62,17 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "gneiss",
-        "schist",
-        "quartzite",
         "amphibolite",
-        "greenstone"
+        "gneiss",
+        "granite",
+        "granulite",
+        "greenstone",
+        "migmatite",
+        "phyllite",
+        "quartzite",
+        "schist",
+        "slate",
+        "tonalite"
       ],
       "materials": {
         "wall": "game:rock-pegmatite",

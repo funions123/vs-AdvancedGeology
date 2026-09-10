@@ -32,9 +32,10 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "amphibolite",
         "anorthosite",
-        "gabbro",
         "diorite",
+        "gabbro",
         "granulite"
       ],
       "materials": {

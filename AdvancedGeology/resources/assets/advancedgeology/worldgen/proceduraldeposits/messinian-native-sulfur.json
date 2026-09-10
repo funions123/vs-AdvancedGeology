@@ -38,12 +38,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "limestone",
-        "gypsum",
-        "shale",
-        "claystone",
         "chalk",
-        "dolomite"
+        "claystone",
+        "dolomite",
+        "gypsum",
+        "limestone",
+        "sandstone",
+        "shale"
       ],
       "materials": {
         "sulfur": "game:ore-sulfur-limestone",

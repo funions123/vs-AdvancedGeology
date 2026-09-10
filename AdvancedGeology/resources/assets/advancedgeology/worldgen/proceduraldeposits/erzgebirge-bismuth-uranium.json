@@ -33,7 +33,13 @@
     "palette": {
       "replaceableRockVariants": [
         "gneiss",
-        "schist"
+        "granite",
+        "granulite",
+        "migmatite",
+        "phyllite",
+        "schist",
+        "slate",
+        "tonalite"
       ],
       "materials": {
         "uraninite": "game:ore-{grade}-uranium-{rock}",

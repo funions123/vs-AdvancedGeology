@@ -13,12 +13,19 @@
     "value": [
       "ore-albite-andesite",
       "ore-albite-dacite",
+      "ore-albite-diorite",
       "ore-albite-gneiss",
       "ore-albite-granite",
+      "ore-albite-granulite",
       "ore-albite-migmatite",
       "ore-albite-pegmatite",
+      "ore-albite-phyllite",
+      "ore-albite-quartzite",
       "ore-albite-rhyolite",
-      "ore-albite-syenite"
+      "ore-albite-schist",
+      "ore-albite-slate",
+      "ore-albite-syenite",
+      "ore-albite-tonalite"
     ],
     "file": "game:blocktypes/stone/ore-ungraded.json"
   },
@@ -34,12 +41,19 @@
     "value": [
       "looseores-albite-andesite-free",
       "looseores-albite-dacite-free",
+      "looseores-albite-diorite-free",
       "looseores-albite-gneiss-free",
       "looseores-albite-granite-free",
+      "looseores-albite-granulite-free",
       "looseores-albite-migmatite-free",
       "looseores-albite-pegmatite-free",
+      "looseores-albite-phyllite-free",
+      "looseores-albite-quartzite-free",
       "looseores-albite-rhyolite-free",
-      "looseores-albite-syenite-free"
+      "looseores-albite-schist-free",
+      "looseores-albite-slate-free",
+      "looseores-albite-syenite-free",
+      "looseores-albite-tonalite-free"
     ],
     "file": "game:blocktypes/stone/looseores.json"
   },

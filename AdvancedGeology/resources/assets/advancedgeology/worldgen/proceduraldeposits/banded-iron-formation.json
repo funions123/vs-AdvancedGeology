@@ -46,10 +46,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "amphibolite",
         "chert",
-        "slate",
+        "gneiss",
+        "granulite",
+        "phyllite",
+        "quartzite",
         "schist",
-        "phyllite"
+        "slate"
       ],
       "materials": {
         "magnetite": "game:ore-{grade}-magnetite-{rock}",

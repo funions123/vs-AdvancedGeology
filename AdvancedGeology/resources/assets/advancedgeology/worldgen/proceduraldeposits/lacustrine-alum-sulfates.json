@@ -65,11 +65,11 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "chert",
         "claystone",
-        "shale",
+        "conglomerate",
         "sandstone",
-        "tuff",
-        "chert"
+        "shale"
       ],
       "materials": {
         "alum": "game:ore-alum-{rock}",

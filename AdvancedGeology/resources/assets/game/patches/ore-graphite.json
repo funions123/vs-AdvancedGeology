@@ -3,7 +3,9 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
+      "ore-graphite-amphibolite",
       "ore-graphite-gneiss",
+      "ore-graphite-granite",
       "ore-graphite-quartzite",
       "ore-graphite-schist"
     ],
@@ -23,7 +25,9 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
+      "looseores-graphite-amphibolite-free",
       "looseores-graphite-gneiss-free",
+      "looseores-graphite-granite-free",
       "looseores-graphite-granulite-free",
       "looseores-graphite-migmatite-free",
       "looseores-graphite-quartzite-free",

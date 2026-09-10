@@ -72,10 +72,12 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "shale",
-        "sandstone",
+        "chalk",
         "claystone",
-        "limestone"
+        "conglomerate",
+        "limestone",
+        "sandstone",
+        "shale"
       ],
       "materials": {
         "bituminous-coal": "game:ore-bituminouscoal-{rock}",

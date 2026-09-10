@@ -32,9 +32,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "conglomerate",
         "gneiss",
-        "schist",
-        "sandstone"
+        "granulite",
+        "migmatite",
+        "phyllite",
+        "quartzite",
+        "sandstone",
+        "schist"
       ],
       "materials": {
         "uraninite": "game:ore-{grade}-uranium-{rock}",

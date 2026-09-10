@@ -74,9 +74,12 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "chalk",
+        "dolomite",
+        "granite",
         "limestone",
-        "whitemarble",
-        "dolomite"
+        "schist",
+        "whitemarble"
       ],
       "materials": {
         "cassiterite": "game:ore-{grade}-cassiterite-{rock}",

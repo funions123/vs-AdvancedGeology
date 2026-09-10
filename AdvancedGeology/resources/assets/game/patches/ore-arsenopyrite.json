@@ -11,10 +11,18 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
+      "ore-arsenopyrite-amphibolite",
+      "ore-arsenopyrite-basalt",
       "ore-arsenopyrite-gneiss",
       "ore-arsenopyrite-granite",
+      "ore-arsenopyrite-granulite",
+      "ore-arsenopyrite-greenstone",
+      "ore-arsenopyrite-phyllite",
+      "ore-arsenopyrite-quartzite",
+      "ore-arsenopyrite-sandstone",
       "ore-arsenopyrite-schist",
-      "ore-arsenopyrite-slate"
+      "ore-arsenopyrite-slate",
+      "ore-arsenopyrite-tonalite"
     ],
     "file": "game:blocktypes/stone/ore-ungraded.json"
   },
@@ -28,10 +36,18 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
+      "looseores-arsenopyrite-amphibolite-free",
+      "looseores-arsenopyrite-basalt-free",
       "looseores-arsenopyrite-gneiss-free",
       "looseores-arsenopyrite-granite-free",
+      "looseores-arsenopyrite-granulite-free",
+      "looseores-arsenopyrite-greenstone-free",
+      "looseores-arsenopyrite-phyllite-free",
+      "looseores-arsenopyrite-quartzite-free",
+      "looseores-arsenopyrite-sandstone-free",
       "looseores-arsenopyrite-schist-free",
-      "looseores-arsenopyrite-slate-free"
+      "looseores-arsenopyrite-slate-free",
+      "looseores-arsenopyrite-tonalite-free"
     ],
     "file": "game:blocktypes/stone/looseores.json"
   },

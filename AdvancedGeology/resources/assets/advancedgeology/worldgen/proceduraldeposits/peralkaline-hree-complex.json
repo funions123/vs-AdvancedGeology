@@ -34,7 +34,10 @@
       "replaceableRockVariants": [
         "gneiss",
         "granite",
-        "syenite"
+        "granulite",
+        "migmatite",
+        "syenite",
+        "tonalite"
       ],
       "materials": {
         "xenotime": "game:ore-{grade}-xenotime-syenite",

@@ -32,10 +32,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "amphibolite",
         "gneiss",
+        "granite",
         "granulite",
         "migmatite",
-        "quartzite"
+        "quartzite",
+        "schist"
       ],
       "materials": {
         "graphite": "game:ore-graphite-{rock}",

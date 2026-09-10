@@ -30,10 +30,10 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "granite",
         "gneiss",
-        "syenite",
-        "pegmatite"
+        "granite",
+        "granulite",
+        "tonalite"
       ],
       "materials": {
         "cryolite": "game:ore-cryolite-granite",

@@ -42,10 +42,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "gneiss",
         "granite",
-        "slate",
+        "granulite",
+        "phyllite",
+        "quartzite",
         "schist",
-        "gneiss"
+        "slate",
+        "tonalite"
       ],
       "materials": {
         "columbite": "game:ore-{grade}-columbite-{rock}",

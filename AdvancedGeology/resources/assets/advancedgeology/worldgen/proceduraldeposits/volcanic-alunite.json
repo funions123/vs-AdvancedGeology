@@ -66,10 +66,11 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "rhyolite",
-        "dacite",
         "andesite",
-        "tuff"
+        "basalt",
+        "claystone",
+        "dacite",
+        "rhyolite"
       ],
       "materials": {
         "alunite": "game:ore-alunite-{rock}",

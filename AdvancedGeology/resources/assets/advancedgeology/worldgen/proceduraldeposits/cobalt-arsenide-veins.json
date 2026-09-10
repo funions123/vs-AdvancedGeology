@@ -86,8 +86,16 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "amphibolite",
+        "basalt",
+        "diorite",
+        "gabbro",
         "gneiss",
-        "schist"
+        "granite",
+        "granulite",
+        "phyllite",
+        "schist",
+        "slate"
       ],
       "materials": {
         "nickeline": "game:ore-{grade}-nickeline-{rock}",

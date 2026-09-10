@@ -32,11 +32,15 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "amphibolite",
+        "basalt",
+        "gneiss",
+        "granulite",
         "greenstone",
-        "slate",
-        "schist",
         "phyllite",
-        "amphibolite"
+        "quartzite",
+        "schist",
+        "slate"
       ],
       "materials": {
         "gold": "game:ore-{grade}-quartz_nativegold-{rock}",

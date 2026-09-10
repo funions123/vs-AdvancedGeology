@@ -63,10 +63,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "gabbro",
-        "peridotite",
+        "amphibolite",
         "basalt",
-        "gneiss"
+        "diorite",
+        "gabbro",
+        "gneiss",
+        "granulite",
+        "migmatite",
+        "peridotite"
       ],
       "materials": {
         "pentlandite": "game:ore-{grade}-pentlandite-{rock}",

@@ -42,9 +42,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "limestone",
+        "chalk",
         "dolomite",
-        "shale"
+        "limestone",
+        "phyllite",
+        "sandstone",
+        "schist",
+        "shale",
+        "slate"
       ],
       "materials": {
         "siderite": "game:ore-{grade}-siderite-{rock}",

@@ -3,8 +3,9 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
-      "ore-phosphorite-dolomite",
-      "ore-phosphorite-mudstone"
+      "ore-lapislazuli-dolomite",
+      "ore-lapislazuli-gneiss",
+      "ore-lapislazuli-granulite"
     ],
     "file": "game:blocktypes/stone/ore-ungraded.json"
   },
@@ -12,8 +13,9 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
-      "looseores-phosphorite-dolomite-free",
-      "looseores-phosphorite-mudstone-free"
+      "looseores-lapislazuli-dolomite-free",
+      "looseores-lapislazuli-gneiss-free",
+      "looseores-lapislazuli-granulite-free"
     ],
     "file": "game:blocktypes/stone/looseores.json"
   }

@@ -59,10 +59,15 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "andesite",
+        "basalt",
+        "dacite",
+        "diorite",
+        "gneiss",
         "granite",
         "rhyolite",
-        "dacite",
-        "andesite"
+        "sandstone",
+        "tonalite"
       ],
       "materials": {
         "bornite": "game:ore-{grade}-bornite-{rock}",

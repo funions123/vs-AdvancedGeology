@@ -49,17 +49,21 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "granite",
-        "gneiss",
-        "schist",
-        "slate",
-        "chert",
-        "serpentinite",
-        "limestone",
-        "syenite",
+        "amphibolite",
         "andesite",
+        "chert",
         "dacite",
-        "rhyolite"
+        "dolomite",
+        "gneiss",
+        "granite",
+        "limestone",
+        "migmatite",
+        "phyllite",
+        "rhyolite",
+        "schist",
+        "serpentinite",
+        "slate",
+        "tonalite"
       ],
       "materials": {
         "carbonatite": "game:rock-carbonatite",

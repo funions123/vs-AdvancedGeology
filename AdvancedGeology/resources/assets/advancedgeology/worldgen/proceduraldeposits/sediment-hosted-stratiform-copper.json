@@ -42,7 +42,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "sandstone"
+        "chalk",
+        "claystone",
+        "conglomerate",
+        "dolomite",
+        "limestone",
+        "sandstone",
+        "shale"
       ],
       "materials": {
         "native-copper": "game:ore-{grade}-nativecopper-sandstone",

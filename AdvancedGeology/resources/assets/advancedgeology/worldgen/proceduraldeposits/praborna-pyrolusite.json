@@ -40,9 +40,13 @@
     "palette": {
       "replaceableRockVariants": [
         "chert",
+        "greenstone",
+        "limestone",
+        "phyllite",
+        "quartzite",
+        "schist",
         "serpentinite",
-        "slate",
-        "schist"
+        "slate"
       ],
       "materials": {
         "pyrolusite": "game:ore-{grade}-pyrolusite-{rock}",

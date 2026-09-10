@@ -22,15 +22,27 @@
       "ore-bountiful-stibnite-andesite",
       "ore-bountiful-stibnite-dacite",
       "ore-bountiful-stibnite-rhyolite",
+      "ore-bountiful-stibnite-sandstone",
+      "ore-bountiful-stibnite-shale",
+      "ore-bountiful-stibnite-slate",
       "ore-medium-stibnite-andesite",
       "ore-medium-stibnite-dacite",
       "ore-medium-stibnite-rhyolite",
+      "ore-medium-stibnite-sandstone",
+      "ore-medium-stibnite-shale",
+      "ore-medium-stibnite-slate",
       "ore-poor-stibnite-andesite",
       "ore-poor-stibnite-dacite",
       "ore-poor-stibnite-rhyolite",
+      "ore-poor-stibnite-sandstone",
+      "ore-poor-stibnite-shale",
+      "ore-poor-stibnite-slate",
       "ore-rich-stibnite-andesite",
       "ore-rich-stibnite-dacite",
-      "ore-rich-stibnite-rhyolite"
+      "ore-rich-stibnite-rhyolite",
+      "ore-rich-stibnite-sandstone",
+      "ore-rich-stibnite-shale",
+      "ore-rich-stibnite-slate"
     ],
     "file": "game:blocktypes/stone/ore-graded.json"
   },
@@ -46,7 +58,10 @@
     "value": [
       "looseores-stibnite-andesite-free",
       "looseores-stibnite-dacite-free",
-      "looseores-stibnite-rhyolite-free"
+      "looseores-stibnite-rhyolite-free",
+      "looseores-stibnite-sandstone-free",
+      "looseores-stibnite-shale-free",
+      "looseores-stibnite-slate-free"
     ],
     "file": "game:blocktypes/stone/looseores.json"
   },
@@ -56,16 +71,29 @@
     "value": [
       "ore-bountiful-stibnite-andesite",
       "ore-bountiful-stibnite-dacite",
+      "ore-bountiful-stibnite-granite",
       "ore-bountiful-stibnite-rhyolite",
+      "ore-bountiful-stibnite-sandstone",
+      "ore-bountiful-stibnite-shale",
+      "ore-bountiful-stibnite-slate",
       "ore-medium-stibnite-andesite",
       "ore-medium-stibnite-dacite",
       "ore-medium-stibnite-rhyolite",
+      "ore-medium-stibnite-sandstone",
+      "ore-medium-stibnite-shale",
+      "ore-medium-stibnite-slate",
       "ore-poor-stibnite-andesite",
       "ore-poor-stibnite-dacite",
       "ore-poor-stibnite-rhyolite",
+      "ore-poor-stibnite-sandstone",
+      "ore-poor-stibnite-shale",
+      "ore-poor-stibnite-slate",
       "ore-rich-stibnite-andesite",
       "ore-rich-stibnite-dacite",
-      "ore-rich-stibnite-rhyolite"
+      "ore-rich-stibnite-rhyolite",
+      "ore-rich-stibnite-sandstone",
+      "ore-rich-stibnite-shale",
+      "ore-rich-stibnite-slate"
     ],
     "file": "game:itemtypes/resource/ore-graded.json"
   },
@@ -75,16 +103,29 @@
     "value": [
       "crystalizedore-bountiful-stibnite-andesite",
       "crystalizedore-bountiful-stibnite-dacite",
+      "crystalizedore-bountiful-stibnite-granite",
       "crystalizedore-bountiful-stibnite-rhyolite",
+      "crystalizedore-bountiful-stibnite-sandstone",
+      "crystalizedore-bountiful-stibnite-shale",
+      "crystalizedore-bountiful-stibnite-slate",
       "crystalizedore-medium-stibnite-andesite",
       "crystalizedore-medium-stibnite-dacite",
       "crystalizedore-medium-stibnite-rhyolite",
+      "crystalizedore-medium-stibnite-sandstone",
+      "crystalizedore-medium-stibnite-shale",
+      "crystalizedore-medium-stibnite-slate",
       "crystalizedore-poor-stibnite-andesite",
       "crystalizedore-poor-stibnite-dacite",
       "crystalizedore-poor-stibnite-rhyolite",
+      "crystalizedore-poor-stibnite-sandstone",
+      "crystalizedore-poor-stibnite-shale",
+      "crystalizedore-poor-stibnite-slate",
       "crystalizedore-rich-stibnite-andesite",
       "crystalizedore-rich-stibnite-dacite",
-      "crystalizedore-rich-stibnite-rhyolite"
+      "crystalizedore-rich-stibnite-rhyolite",
+      "crystalizedore-rich-stibnite-sandstone",
+      "crystalizedore-rich-stibnite-shale",
+      "crystalizedore-rich-stibnite-slate"
     ],
     "file": "game:itemtypes/resource/crystalizedore-graded.json"
   }

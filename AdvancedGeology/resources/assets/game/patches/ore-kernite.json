@@ -3,8 +3,7 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
-      "ore-phosphorite-dolomite",
-      "ore-phosphorite-mudstone"
+      "ore-kernite-gypsum"
     ],
     "file": "game:blocktypes/stone/ore-ungraded.json"
   },
@@ -12,8 +11,7 @@
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [
-      "looseores-phosphorite-dolomite-free",
-      "looseores-phosphorite-mudstone-free"
+      "looseores-kernite-gypsum-free"
     ],
     "file": "game:blocktypes/stone/looseores.json"
   }

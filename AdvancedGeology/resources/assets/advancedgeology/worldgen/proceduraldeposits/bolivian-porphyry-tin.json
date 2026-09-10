@@ -97,9 +97,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "rhyolite",
+        "andesite",
         "dacite",
-        "andesite"
+        "granite",
+        "rhyolite",
+        "sandstone",
+        "shale",
+        "slate"
       ],
       "materials": {
         "cassiterite": "game:ore-{grade}-cassiterite-{rock}",

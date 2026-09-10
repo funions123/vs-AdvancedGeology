@@ -66,10 +66,12 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "conglomerate",
+        "phyllite",
         "quartzite",
+        "sandstone",
         "shale",
-        "slate",
-        "sandstone"
+        "slate"
       ],
       "materials": {
         "cinnabar": "game:ore-cinnabar-{rock}",

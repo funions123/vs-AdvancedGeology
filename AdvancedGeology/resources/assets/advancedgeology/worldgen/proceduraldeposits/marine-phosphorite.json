@@ -31,13 +31,14 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "shale",
-        "claystone",
-        "limestone",
         "chalk",
         "chert",
+        "claystone",
+        "conglomerate",
+        "dolomite",
+        "limestone",
         "sandstone",
-        "conglomerate"
+        "shale"
       ],
       "materials": {
         "phosphorite": "game:ore-phosphorite-{rock}",

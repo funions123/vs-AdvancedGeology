@@ -59,11 +59,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "claystone",
-        "sandstone",
-        "limestone",
         "chalk",
-        "conglomerate"
+        "claystone",
+        "conglomerate",
+        "gypsum",
+        "limestone",
+        "sandstone",
+        "shale"
       ],
       "materials": {
         "borax": "game:ore-borax-{rock}",

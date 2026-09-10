@@ -57,6 +57,8 @@
       "replaceableRockVariants": [
         "andesite",
         "dacite",
+        "diorite",
+        "gneiss",
         "rhyolite"
       ],
       "materials": {

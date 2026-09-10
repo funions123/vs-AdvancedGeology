@@ -32,10 +32,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "basalt",
-        "greenstone",
         "andesite",
-        "chert"
+        "basalt",
+        "chert",
+        "gabbro",
+        "greenstone",
+        "serpentinite",
+        "shale"
       ],
       "materials": {
         "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",

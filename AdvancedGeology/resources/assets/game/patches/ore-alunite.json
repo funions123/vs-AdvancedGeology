@@ -12,6 +12,8 @@
     "path": "/allowedVariants/-",
     "value": [
       "ore-alunite-andesite",
+      "ore-alunite-basalt",
+      "ore-alunite-claystone",
       "ore-alunite-dacite",
       "ore-alunite-rhyolite",
       "ore-alunite-tuff"
@@ -29,6 +31,8 @@
     "path": "/allowedVariants/-",
     "value": [
       "looseores-alunite-andesite-free",
+      "looseores-alunite-basalt-free",
+      "looseores-alunite-claystone-free",
       "looseores-alunite-dacite-free",
       "looseores-alunite-rhyolite-free",
       "looseores-alunite-tuff-free"

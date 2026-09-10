@@ -34,10 +34,12 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "anorthosite",
+        "diorite",
+        "gabbro",
         "peridotite",
         "pyroxenite",
-        "gabbro",
-        "anorthosite"
+        "serpentinite"
       ],
       "materials": {
         "chromite": "game:ore-{grade}-chromite-{rock}",

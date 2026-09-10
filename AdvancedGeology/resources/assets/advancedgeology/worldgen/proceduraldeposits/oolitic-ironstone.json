@@ -42,8 +42,12 @@
     },
     "palette": {
       "replaceableRockVariants": [
-        "limestone",
+        "chalk",
+        "chert",
+        "claystone",
         "dolomite",
+        "limestone",
+        "sandstone",
         "shale"
       ],
       "materials": {

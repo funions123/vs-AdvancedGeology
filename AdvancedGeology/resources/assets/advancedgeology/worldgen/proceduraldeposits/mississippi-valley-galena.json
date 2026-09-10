@@ -31,11 +31,13 @@
     },
     "palette": {
       "replaceableRockVariants": [
+        "chalk",
+        "chert",
+        "conglomerate",
         "dolomite",
         "limestone",
-        "chalk",
-        "shale",
-        "sandstone"
+        "sandstone",
+        "shale"
       ],
       "materials": {
         "galena": "game:ore-{grade}-galena-{rock}",
