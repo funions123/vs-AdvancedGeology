@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.22,
+      "cellSize": 512,
+      "chance": 0.028,
       "yMode": "worldRelative",
       "minYRel": 0.12,
-      "maxYRel": 0.45
+      "maxYRel": 0.42
     },
     "greisen": {
       "family": "CornishTin",

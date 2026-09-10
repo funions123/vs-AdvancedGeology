@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 448,
-      "chance": 0.12,
+      "cellSize": 384,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.14,
-      "maxYRel": 0.46
+      "minYRel": 0.12,
+      "maxYRel": 0.4
     },
     "orogenicQuartzGold": {
       "horizontalRadius": 34,

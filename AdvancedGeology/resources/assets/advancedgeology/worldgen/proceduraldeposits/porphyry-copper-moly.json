@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 448,
-      "chance": 0.16,
+      "cellSize": 384,
+      "chance": 0.079,
       "yMode": "worldRelative",
       "minYRel": 0.16,
-      "maxYRel": 0.46
+      "maxYRel": 0.44
     },
     "porphyryCopperMoly": {
       "horizontalRadius": 36,

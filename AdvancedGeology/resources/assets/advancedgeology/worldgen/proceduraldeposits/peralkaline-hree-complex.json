@@ -8,10 +8,10 @@
     "intrude": true,
     "placement": {
       "cellSize": 512,
-      "chance": 0.1,
+      "chance": 0.028,
       "yMode": "worldRelative",
-      "minYRel": 0.12,
-      "maxYRel": 0.4
+      "minYRel": 0.08,
+      "maxYRel": 0.3
     },
     "peralkalineHree": {
       "horizontalRadius": 34,

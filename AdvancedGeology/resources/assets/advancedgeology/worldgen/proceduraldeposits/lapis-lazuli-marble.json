@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 448,
-      "chance": 0.1,
+      "cellSize": 384,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.18,
-      "maxYRel": 0.48
+      "minYRel": 0.12,
+      "maxYRel": 0.32
     },
     "lapisLazuliMarble": {
       "horizontalRadius": 34,

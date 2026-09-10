@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.15,
+      "cellSize": 320,
+      "chance": 0.11,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.52
+      "minYRel": 0.26,
+      "maxYRel": 0.5
     },
     "sparryMagnesite": {
       "horizontalRadius": 34,

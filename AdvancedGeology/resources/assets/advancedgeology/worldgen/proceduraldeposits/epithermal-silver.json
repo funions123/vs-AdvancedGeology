@@ -6,11 +6,11 @@
     "priority": 100,
     "overlapPolicy": "higherPriorityWins",
     "placement": {
-      "cellSize": 384,
-      "chance": 0.2,
+      "cellSize": 448,
+      "chance": 0.05,
       "yMode": "worldRelative",
-      "minYRel": 0.18,
-      "maxYRel": 0.41
+      "minYRel": 0.4,
+      "maxYRel": 0.7
     },
     "epithermal": {
       "horizontalRadius": 76,

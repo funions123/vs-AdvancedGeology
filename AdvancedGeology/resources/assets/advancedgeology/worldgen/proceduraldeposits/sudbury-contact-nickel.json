@@ -8,10 +8,10 @@
     "intrude": false,
     "placement": {
       "cellSize": 512,
-      "chance": 0.14,
+      "chance": 0.028,
       "yMode": "worldRelative",
-      "minYRel": 0.14,
-      "maxYRel": 0.44
+      "minYRel": 0.1,
+      "maxYRel": 0.3
     },
     "sudburyNickel": {
       "horizontalRadius": 62,

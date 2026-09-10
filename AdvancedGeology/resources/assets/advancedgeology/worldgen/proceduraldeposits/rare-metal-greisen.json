@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.2,
+      "cellSize": 640,
+      "chance": 0.02,
       "yMode": "worldRelative",
-      "minYRel": 0.1,
-      "maxYRel": 0.42
+      "minYRel": 0.08,
+      "maxYRel": 0.3
     },
     "greisen": {
       "family": "RareMetal",

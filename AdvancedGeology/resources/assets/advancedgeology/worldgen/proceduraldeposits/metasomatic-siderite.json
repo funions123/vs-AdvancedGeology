@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 256,
-      "chance": 0.25,
+      "cellSize": 384,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.5
+      "minYRel": 0.22,
+      "maxYRel": 0.46
     },
     "metasomaticSiderite": {
       "horizontalRadius": 42,

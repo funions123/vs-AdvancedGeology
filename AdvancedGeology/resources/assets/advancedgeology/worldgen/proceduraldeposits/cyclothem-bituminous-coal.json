@@ -8,10 +8,10 @@
     "intrude": false,
     "placement": {
       "cellSize": 320,
-      "chance": 0.25,
+      "chance": 0.11,
       "yMode": "worldRelative",
-      "minYRel": 0.4,
-      "maxYRel": 0.7
+      "minYRel": 0.34,
+      "maxYRel": 0.56
     },
     "cyclothemCoal": {
       "horizontalRadius": 44,

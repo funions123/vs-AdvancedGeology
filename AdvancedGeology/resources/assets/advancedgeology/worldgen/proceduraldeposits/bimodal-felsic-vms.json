@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 256,
-      "chance": 0.25,
+      "cellSize": 448,
+      "chance": 0.05,
       "yMode": "worldRelative",
-      "minYRel": 0.22,
-      "maxYRel": 0.52
+      "minYRel": 0.24,
+      "maxYRel": 0.48
     },
     "bimodalFelsicVms": {
       "horizontalRadius": 48,

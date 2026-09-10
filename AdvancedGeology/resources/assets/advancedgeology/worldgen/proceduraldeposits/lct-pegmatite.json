@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.05,
+      "cellSize": 512,
+      "chance": 0.028,
       "yMode": "worldRelative",
-      "minYRel": 0.05,
-      "maxYRel": 0.5
+      "minYRel": 0.06,
+      "maxYRel": 0.3
     },
     "spline": {
       "horizontalRadius": 72,

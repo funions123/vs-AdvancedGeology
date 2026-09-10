@@ -7,8 +7,8 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 352,
-      "chance": 0.14,
+      "cellSize": 256,
+      "chance": 0.133,
       "yMode": "surfaceOffset",
       "surfaceOffsetMin": -20,
       "surfaceOffsetMax": -7

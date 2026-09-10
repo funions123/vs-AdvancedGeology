@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 352,
-      "chance": 0.18,
+      "cellSize": 384,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.24,
-      "maxYRel": 0.56
+      "minYRel": 0.3,
+      "maxYRel": 0.52
     },
     "marinePhosphorite": {
       "horizontalRadius": 34,

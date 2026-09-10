@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 256,
-      "chance": 0.25,
+      "cellSize": 384,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.22,
-      "maxYRel": 0.52
+      "minYRel": 0.34,
+      "maxYRel": 0.62
     },
     "cyprusVms": {
       "horizontalRadius": 42,

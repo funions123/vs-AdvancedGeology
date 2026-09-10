@@ -8,7 +8,7 @@
     "intrude": false,
     "placement": {
       "cellSize": 320,
-      "chance": 0.22,
+      "chance": 0.11,
       "yMode": "surfaceOffset",
       "surfaceOffsetMin": -10,
       "surfaceOffsetMax": -2

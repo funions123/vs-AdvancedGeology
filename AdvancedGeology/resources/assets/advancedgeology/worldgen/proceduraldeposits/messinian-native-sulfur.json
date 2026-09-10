@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.16,
+      "cellSize": 512,
+      "chance": 0.028,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.52
+      "minYRel": 0.32,
+      "maxYRel": 0.54
     },
     "messinianSulfur": {
       "horizontalRadius": 35,

@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.1,
+      "cellSize": 320,
+      "chance": 0.11,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.5
+      "minYRel": 0.16,
+      "maxYRel": 0.36
     },
     "anthracite": {
       "horizontalRadius": 48,

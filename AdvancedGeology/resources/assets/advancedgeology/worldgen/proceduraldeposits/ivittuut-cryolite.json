@@ -8,10 +8,10 @@
     "intrude": true,
     "placement": {
       "cellSize": 640,
-      "chance": 0.05,
+      "chance": 0.02,
       "yMode": "worldRelative",
-      "minYRel": 0.14,
-      "maxYRel": 0.42
+      "minYRel": 0.08,
+      "maxYRel": 0.28
     },
     "ivittuutCryolite": {
       "horizontalRadius": 34,

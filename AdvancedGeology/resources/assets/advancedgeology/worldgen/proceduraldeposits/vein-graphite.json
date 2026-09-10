@@ -8,10 +8,10 @@
     "intrude": false,
     "placement": {
       "cellSize": 384,
-      "chance": 0.14,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.16,
-      "maxYRel": 0.48
+      "minYRel": 0.1,
+      "maxYRel": 0.3
     },
     "veinGraphite": {
       "horizontalRadius": 36,

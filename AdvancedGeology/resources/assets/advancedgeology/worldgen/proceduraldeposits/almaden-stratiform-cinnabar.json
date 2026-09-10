@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.18,
+      "cellSize": 448,
+      "chance": 0.05,
       "yMode": "worldRelative",
-      "minYRel": 0.25,
-      "maxYRel": 0.55
+      "minYRel": 0.26,
+      "maxYRel": 0.48
     },
     "stratiformCinnabar": {
       "horizontalRadius": 46,

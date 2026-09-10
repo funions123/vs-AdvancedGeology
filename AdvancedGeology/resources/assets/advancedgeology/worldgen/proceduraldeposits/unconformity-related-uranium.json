@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 448,
-      "chance": 0.12,
+      "cellSize": 512,
+      "chance": 0.028,
       "yMode": "worldRelative",
-      "minYRel": 0.16,
-      "maxYRel": 0.42
+      "minYRel": 0.14,
+      "maxYRel": 0.32
     },
     "unconformityUranium": {
       "horizontalRadius": 38,

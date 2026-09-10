@@ -8,10 +8,10 @@
     "intrude": false,
     "placement": {
       "cellSize": 320,
-      "chance": 0.2,
+      "chance": 0.11,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.54
+      "minYRel": 0.14,
+      "maxYRel": 0.34
     },
     "flakeGraphiteSchist": {
       "horizontalRadius": 34,

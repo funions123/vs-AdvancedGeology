@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.16,
+      "cellSize": 448,
+      "chance": 0.05,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.5
+      "minYRel": 0.28,
+      "maxYRel": 0.54
     },
     "porphyryTin": {
       "horizontalRadius": 40,

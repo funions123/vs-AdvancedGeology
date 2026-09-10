@@ -8,10 +8,10 @@
     "intrude": false,
     "placement": {
       "cellSize": 384,
-      "chance": 0.2,
+      "chance": 0.079,
       "yMode": "worldRelative",
-      "minYRel": 0.2,
-      "maxYRel": 0.52
+      "minYRel": 0.26,
+      "maxYRel": 0.5
     },
     "stratiformCopper": {
       "horizontalRadius": 38,

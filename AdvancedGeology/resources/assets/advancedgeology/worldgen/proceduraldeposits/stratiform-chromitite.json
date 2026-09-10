@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 416,
-      "chance": 0.13,
+      "cellSize": 448,
+      "chance": 0.05,
       "yMode": "worldRelative",
-      "minYRel": 0.16,
-      "maxYRel": 0.46
+      "minYRel": 0.1,
+      "maxYRel": 0.3
     },
     "stratiformChromitite": {
       "horizontalRadius": 34,

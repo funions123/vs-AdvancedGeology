@@ -7,11 +7,11 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.18,
+      "cellSize": 448,
+      "chance": 0.05,
       "yMode": "worldRelative",
       "minYRel": 0.18,
-      "maxYRel": 0.45
+      "maxYRel": 0.44
     },
     "cobaltArsenideVein": {
       "horizontalRadius": 46,
