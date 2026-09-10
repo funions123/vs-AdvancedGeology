@@ -1,0 +1,506 @@
+[
+  {
+    "op": "add",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/cobblestone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/cobblestone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/cobblestone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/cobblestone.json"
+  },
+  {
+    "op": "add",
+    "path": "/0/ingredients/C/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/C/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/C/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/C/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "add",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/drystone.json"
+  },
+  {
+    "op": "add",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/drystonefence.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/drystonefence.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/drystonefence.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/L/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/drystonefence.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/polishedrock.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/polishedrock.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/polishedrock.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/polishedrock.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/slabs/cobbleslabs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/slabs/cobbleslabs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/slabs/cobbleslabs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/slabs/cobbleslabs.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/slabs/polishedrockslab.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/slabs/polishedrockslab.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/slabs/polishedrockslab.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/S/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/slabs/polishedrockslab.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/slabs/stonebrickslab.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/slabs/stonebrickslab.json"
+  },
+  {
+    "op": "add",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": "umber",
+    "file": "game:recipes/grid/stairs/cobblestairs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/stairs/cobblestairs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/stairs/cobblestairs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "soapstone",
+      "gypsum",
+      "anorthosite",
+      "phosphorite",
+      "pegmatite",
+      "pyroxenite",
+      "syenite",
+      "carbonatite"
+    ],
+    "file": "game:recipes/grid/stairs/cobblestairs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/stairs/stonebrickstairs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/stairs/stonebrickstairs.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/S/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/stonebrick.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/ingredients/S/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/stonebrick.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "gneiss",
+      "schist",
+      "quartzite",
+      "dolomite",
+      "diorite",
+      "gabbro",
+      "dacite",
+      "rhyolite"
+    ],
+    "file": "game:recipes/grid/stonebricks.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/L/allowedVariants/0",
+    "value": [
+      "granulite",
+      "greenstone",
+      "amphibolite",
+      "migmatite",
+      "tonalite",
+      "serpentinite"
+    ],
+    "file": "game:recipes/grid/stonebricks.json"
+  }
+]

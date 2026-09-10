@@ -29,6 +29,12 @@ public sealed class StratiformChromititeDefinition
     [JsonProperty] public int TitanomagnetiteLayerMax { get; set; } = 5;
     [JsonProperty] public int DykeMin { get; set; } = 1;
     [JsonProperty] public int DykeMax { get; set; } = 3;
+
+    /// <summary>
+    /// Minimum spatial-hash value for a sperrylite speckle on the upper contact of the main
+    /// chromitite seam, the platinum reef position. 0.99 keeps it to the richest 1% there.
+    /// </summary>
+    [JsonProperty] public double SperryliteSpeckleThreshold { get; set; } = 0.99;
 }
 
 [JsonObject(MemberSerialization.OptIn)]
@@ -144,7 +150,7 @@ internal sealed class StratiformChromititePlan : IAdditionalDepositPlan
 {
     private const ulong Salt = 0x4348524F4D524545UL;
     private readonly int ox, oy, oz;
-    private readonly double cs, ss, tanDip, seed;
+    private readonly double cs, ss, tanDip, seed, sperryliteThreshold;
     private readonly Reef[] chromitites;
     private readonly Reef[] titanomagnetites;
     private readonly Dyke[] dykes;
@@ -175,6 +181,7 @@ internal sealed class StratiformChromititePlan : IAdditionalDepositPlan
         cs = Math.Cos(r);
         ss = Math.Sin(r);
         tanDip = Math.Tan(dip * Math.PI / 180);
+        sperryliteThreshold = s.SperryliteSpeckleThreshold;
         this.seed = seed;
         this.chromitites = chromitites;
         this.titanomagnetites = titanomagnetites;
@@ -238,7 +245,21 @@ internal sealed class StratiformChromititePlan : IAdditionalDepositPlan
             if (distance < reef.Half * (.75 + .35 * Math.Max(0, potential)) && pothole > -1.3)
             {
                 double q = distance / reef.Half;
-                if (i == 0 && q < .52) return new(ProceduralMaterialSlots.Chromite, 3);
+                if (i == 0)
+                {
+                    // The platinum reef sits on the upper contact of the main chromitite seam.
+                    if (stratY > roll && q > .55)
+                    {
+                        double speckle = AdditionalDepositMath.Hash(x * 3.1 + seed, y * 3.1, z * 3.1);
+                        if (speckle >= sperryliteThreshold)
+                        {
+                            double span = 1.0 - sperryliteThreshold;
+                            double within = span > 0.0 ? (speckle - sperryliteThreshold) / span : 0.0;
+                            return new(ProceduralMaterialSlots.Sperrylite, within > .9 ? 1 : 0);
+                        }
+                    }
+                    if (q < .52) return new(ProceduralMaterialSlots.Chromite, 3);
+                }
                 if (q < .78) return new(ProceduralMaterialSlots.Chromite, 1);
                 return new(ProceduralMaterialSlots.Chromite, 0);
             }
@@ -551,6 +572,7 @@ internal sealed class StratiformChromititeProceduralTemplate : AdditionalProcedu
         ProceduralMaterialSlots.Chromite,
         ProceduralMaterialSlots.Titanomagnetite,
         ProceduralMaterialSlots.Ilmenite,
+        ProceduralMaterialSlots.Sperrylite,
         ProceduralMaterialSlots.CriticalZone,
         ProceduralMaterialSlots.MainZone,
         ProceduralMaterialSlots.UpperZone,
@@ -559,7 +581,7 @@ internal sealed class StratiformChromititeProceduralTemplate : AdditionalProcedu
     public override string Code => "stratiformChromitite";
     public override IReadOnlyList<string> RequiredMaterialSlots => Slots;
     protected override int Radius(ProceduralDepositDefinition d) => d.StratiformChromitite.HorizontalRadius;
-    protected override bool IsValid(ProceduralDepositDefinition d) => d.StratiformChromitite.HorizontalRadius >= 30 && d.StratiformChromitite.VerticalHalfHeight >= 30 && d.StratiformChromitite.SeamMin >= 1 && d.StratiformChromitite.SeamMax >= d.StratiformChromitite.SeamMin && d.StratiformChromitite.TitanomagnetiteLayerMin >= 1 && d.StratiformChromitite.TitanomagnetiteLayerMax >= d.StratiformChromitite.TitanomagnetiteLayerMin && d.StratiformChromitite.DykeMin >= 1 && d.StratiformChromitite.DykeMax >= d.StratiformChromitite.DykeMin;
+    protected override bool IsValid(ProceduralDepositDefinition d) => d.StratiformChromitite.HorizontalRadius >= 30 && d.StratiformChromitite.VerticalHalfHeight >= 30 && d.StratiformChromitite.SeamMin >= 1 && d.StratiformChromitite.SeamMax >= d.StratiformChromitite.SeamMin && d.StratiformChromitite.TitanomagnetiteLayerMin >= 1 && d.StratiformChromitite.TitanomagnetiteLayerMax >= d.StratiformChromitite.TitanomagnetiteLayerMin && d.StratiformChromitite.DykeMin >= 1 && d.StratiformChromitite.DykeMax >= d.StratiformChromitite.DykeMin && d.StratiformChromitite.SperryliteSpeckleThreshold is >= 0.0 and <= 1.0;
     protected override StratiformChromititePlan Build(in ProceduralDepositInstance i, ProceduralDepositDefinition d) => StratiformChromititePlan.Create(i, d.StratiformChromitite);
 }
 

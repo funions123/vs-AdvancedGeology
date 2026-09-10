@@ -1,0 +1,169 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "sperrylite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "sperrylite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-sperrylite-anorthosite",
+      "ore-bountiful-sperrylite-basalt",
+      "ore-bountiful-sperrylite-gabbro",
+      "ore-bountiful-sperrylite-gneiss",
+      "ore-bountiful-sperrylite-peridotite",
+      "ore-bountiful-sperrylite-pyroxenite",
+      "ore-medium-sperrylite-anorthosite",
+      "ore-medium-sperrylite-basalt",
+      "ore-medium-sperrylite-gabbro",
+      "ore-medium-sperrylite-gneiss",
+      "ore-medium-sperrylite-peridotite",
+      "ore-medium-sperrylite-pyroxenite",
+      "ore-poor-sperrylite-anorthosite",
+      "ore-poor-sperrylite-basalt",
+      "ore-poor-sperrylite-gabbro",
+      "ore-poor-sperrylite-gneiss",
+      "ore-poor-sperrylite-peridotite",
+      "ore-poor-sperrylite-pyroxenite",
+      "ore-rich-sperrylite-anorthosite",
+      "ore-rich-sperrylite-basalt",
+      "ore-rich-sperrylite-gabbro",
+      "ore-rich-sperrylite-gneiss",
+      "ore-rich-sperrylite-peridotite",
+      "ore-rich-sperrylite-pyroxenite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-sperrylite-*",
+    "value": 4,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-sperrylite-anorthosite-free",
+      "looseores-sperrylite-basalt-free",
+      "looseores-sperrylite-gabbro-free",
+      "looseores-sperrylite-gneiss-free",
+      "looseores-sperrylite-peridotite-free",
+      "looseores-sperrylite-pyroxenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-sperrylite-anorthosite",
+      "ore-bountiful-sperrylite-basalt",
+      "ore-bountiful-sperrylite-gabbro",
+      "ore-bountiful-sperrylite-gneiss",
+      "ore-bountiful-sperrylite-peridotite",
+      "ore-bountiful-sperrylite-pyroxenite",
+      "ore-medium-sperrylite-anorthosite",
+      "ore-medium-sperrylite-basalt",
+      "ore-medium-sperrylite-gabbro",
+      "ore-medium-sperrylite-gneiss",
+      "ore-medium-sperrylite-peridotite",
+      "ore-medium-sperrylite-pyroxenite",
+      "ore-poor-sperrylite-anorthosite",
+      "ore-poor-sperrylite-basalt",
+      "ore-poor-sperrylite-gabbro",
+      "ore-poor-sperrylite-gneiss",
+      "ore-poor-sperrylite-peridotite",
+      "ore-poor-sperrylite-pyroxenite",
+      "ore-rich-sperrylite-anorthosite",
+      "ore-rich-sperrylite-basalt",
+      "ore-rich-sperrylite-gabbro",
+      "ore-rich-sperrylite-gneiss",
+      "ore-rich-sperrylite-peridotite",
+      "ore-rich-sperrylite-pyroxenite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-sperrylite-anorthosite",
+      "crystalizedore-bountiful-sperrylite-basalt",
+      "crystalizedore-bountiful-sperrylite-gabbro",
+      "crystalizedore-bountiful-sperrylite-gneiss",
+      "crystalizedore-bountiful-sperrylite-peridotite",
+      "crystalizedore-bountiful-sperrylite-pyroxenite",
+      "crystalizedore-medium-sperrylite-anorthosite",
+      "crystalizedore-medium-sperrylite-basalt",
+      "crystalizedore-medium-sperrylite-gabbro",
+      "crystalizedore-medium-sperrylite-gneiss",
+      "crystalizedore-medium-sperrylite-peridotite",
+      "crystalizedore-medium-sperrylite-pyroxenite",
+      "crystalizedore-poor-sperrylite-anorthosite",
+      "crystalizedore-poor-sperrylite-basalt",
+      "crystalizedore-poor-sperrylite-gabbro",
+      "crystalizedore-poor-sperrylite-gneiss",
+      "crystalizedore-poor-sperrylite-peridotite",
+      "crystalizedore-poor-sperrylite-pyroxenite",
+      "crystalizedore-rich-sperrylite-anorthosite",
+      "crystalizedore-rich-sperrylite-basalt",
+      "crystalizedore-rich-sperrylite-gabbro",
+      "crystalizedore-rich-sperrylite-gneiss",
+      "crystalizedore-rich-sperrylite-peridotite",
+      "crystalizedore-rich-sperrylite-pyroxenite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-sperrylite",
+    "value": {
+      "meltingPoint": 1770,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-platinum"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_sperrylite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-sperrylite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_sperrylite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

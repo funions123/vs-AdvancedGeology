@@ -1,0 +1,207 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "bastnasite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "bastnasite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-bastnasite-carbonatite",
+      "ore-bountiful-bastnasite-chert",
+      "ore-bountiful-bastnasite-gneiss",
+      "ore-bountiful-bastnasite-granite",
+      "ore-bountiful-bastnasite-limestone",
+      "ore-bountiful-bastnasite-pegmatite",
+      "ore-bountiful-bastnasite-schist",
+      "ore-bountiful-bastnasite-serpentinite",
+      "ore-bountiful-bastnasite-slate",
+      "ore-bountiful-bastnasite-syenite",
+      "ore-medium-bastnasite-carbonatite",
+      "ore-medium-bastnasite-chert",
+      "ore-medium-bastnasite-gneiss",
+      "ore-medium-bastnasite-granite",
+      "ore-medium-bastnasite-limestone",
+      "ore-medium-bastnasite-pegmatite",
+      "ore-medium-bastnasite-schist",
+      "ore-medium-bastnasite-serpentinite",
+      "ore-medium-bastnasite-slate",
+      "ore-medium-bastnasite-syenite",
+      "ore-poor-bastnasite-carbonatite",
+      "ore-poor-bastnasite-chert",
+      "ore-poor-bastnasite-gneiss",
+      "ore-poor-bastnasite-granite",
+      "ore-poor-bastnasite-limestone",
+      "ore-poor-bastnasite-pegmatite",
+      "ore-poor-bastnasite-schist",
+      "ore-poor-bastnasite-serpentinite",
+      "ore-poor-bastnasite-slate",
+      "ore-poor-bastnasite-syenite",
+      "ore-rich-bastnasite-carbonatite",
+      "ore-rich-bastnasite-chert",
+      "ore-rich-bastnasite-gneiss",
+      "ore-rich-bastnasite-granite",
+      "ore-rich-bastnasite-limestone",
+      "ore-rich-bastnasite-pegmatite",
+      "ore-rich-bastnasite-schist",
+      "ore-rich-bastnasite-serpentinite",
+      "ore-rich-bastnasite-slate",
+      "ore-rich-bastnasite-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-bastnasite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-bastnasite-carbonatite-free",
+      "looseores-bastnasite-chert-free",
+      "looseores-bastnasite-gneiss-free",
+      "looseores-bastnasite-granite-free",
+      "looseores-bastnasite-limestone-free",
+      "looseores-bastnasite-pegmatite-free",
+      "looseores-bastnasite-schist-free",
+      "looseores-bastnasite-serpentinite-free",
+      "looseores-bastnasite-slate-free",
+      "looseores-bastnasite-syenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-bastnasite-carbonatite",
+      "ore-bountiful-bastnasite-chert",
+      "ore-bountiful-bastnasite-gneiss",
+      "ore-bountiful-bastnasite-granite",
+      "ore-bountiful-bastnasite-limestone",
+      "ore-bountiful-bastnasite-pegmatite",
+      "ore-bountiful-bastnasite-schist",
+      "ore-bountiful-bastnasite-serpentinite",
+      "ore-bountiful-bastnasite-slate",
+      "ore-bountiful-bastnasite-syenite",
+      "ore-medium-bastnasite-carbonatite",
+      "ore-medium-bastnasite-chert",
+      "ore-medium-bastnasite-gneiss",
+      "ore-medium-bastnasite-granite",
+      "ore-medium-bastnasite-limestone",
+      "ore-medium-bastnasite-pegmatite",
+      "ore-medium-bastnasite-schist",
+      "ore-medium-bastnasite-serpentinite",
+      "ore-medium-bastnasite-slate",
+      "ore-medium-bastnasite-syenite",
+      "ore-poor-bastnasite-carbonatite",
+      "ore-poor-bastnasite-chert",
+      "ore-poor-bastnasite-gneiss",
+      "ore-poor-bastnasite-granite",
+      "ore-poor-bastnasite-limestone",
+      "ore-poor-bastnasite-pegmatite",
+      "ore-poor-bastnasite-schist",
+      "ore-poor-bastnasite-serpentinite",
+      "ore-poor-bastnasite-slate",
+      "ore-poor-bastnasite-syenite",
+      "ore-rich-bastnasite-carbonatite",
+      "ore-rich-bastnasite-chert",
+      "ore-rich-bastnasite-gneiss",
+      "ore-rich-bastnasite-granite",
+      "ore-rich-bastnasite-limestone",
+      "ore-rich-bastnasite-pegmatite",
+      "ore-rich-bastnasite-schist",
+      "ore-rich-bastnasite-serpentinite",
+      "ore-rich-bastnasite-slate",
+      "ore-rich-bastnasite-syenite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-bastnasite-carbonatite",
+      "crystalizedore-bountiful-bastnasite-chert",
+      "crystalizedore-bountiful-bastnasite-gneiss",
+      "crystalizedore-bountiful-bastnasite-granite",
+      "crystalizedore-bountiful-bastnasite-limestone",
+      "crystalizedore-bountiful-bastnasite-pegmatite",
+      "crystalizedore-bountiful-bastnasite-schist",
+      "crystalizedore-bountiful-bastnasite-serpentinite",
+      "crystalizedore-bountiful-bastnasite-slate",
+      "crystalizedore-bountiful-bastnasite-syenite",
+      "crystalizedore-medium-bastnasite-carbonatite",
+      "crystalizedore-medium-bastnasite-chert",
+      "crystalizedore-medium-bastnasite-gneiss",
+      "crystalizedore-medium-bastnasite-granite",
+      "crystalizedore-medium-bastnasite-limestone",
+      "crystalizedore-medium-bastnasite-pegmatite",
+      "crystalizedore-medium-bastnasite-schist",
+      "crystalizedore-medium-bastnasite-serpentinite",
+      "crystalizedore-medium-bastnasite-slate",
+      "crystalizedore-medium-bastnasite-syenite",
+      "crystalizedore-poor-bastnasite-carbonatite",
+      "crystalizedore-poor-bastnasite-chert",
+      "crystalizedore-poor-bastnasite-gneiss",
+      "crystalizedore-poor-bastnasite-granite",
+      "crystalizedore-poor-bastnasite-limestone",
+      "crystalizedore-poor-bastnasite-pegmatite",
+      "crystalizedore-poor-bastnasite-schist",
+      "crystalizedore-poor-bastnasite-serpentinite",
+      "crystalizedore-poor-bastnasite-slate",
+      "crystalizedore-poor-bastnasite-syenite",
+      "crystalizedore-rich-bastnasite-carbonatite",
+      "crystalizedore-rich-bastnasite-chert",
+      "crystalizedore-rich-bastnasite-gneiss",
+      "crystalizedore-rich-bastnasite-granite",
+      "crystalizedore-rich-bastnasite-limestone",
+      "crystalizedore-rich-bastnasite-pegmatite",
+      "crystalizedore-rich-bastnasite-schist",
+      "crystalizedore-rich-bastnasite-serpentinite",
+      "crystalizedore-rich-bastnasite-slate",
+      "crystalizedore-rich-bastnasite-syenite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_bastnasite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-bastnasite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_bastnasite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

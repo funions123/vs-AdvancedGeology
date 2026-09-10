@@ -1,0 +1,168 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "molybdenite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "molybdenite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-molybdenite-andesite",
+      "ore-bountiful-molybdenite-dacite",
+      "ore-bountiful-molybdenite-gneiss",
+      "ore-bountiful-molybdenite-granite",
+      "ore-bountiful-molybdenite-rhyolite",
+      "ore-bountiful-molybdenite-schist",
+      "ore-bountiful-molybdenite-slate",
+      "ore-medium-molybdenite-andesite",
+      "ore-medium-molybdenite-dacite",
+      "ore-medium-molybdenite-gneiss",
+      "ore-medium-molybdenite-granite",
+      "ore-medium-molybdenite-rhyolite",
+      "ore-medium-molybdenite-schist",
+      "ore-medium-molybdenite-slate",
+      "ore-poor-molybdenite-andesite",
+      "ore-poor-molybdenite-dacite",
+      "ore-poor-molybdenite-gneiss",
+      "ore-poor-molybdenite-granite",
+      "ore-poor-molybdenite-rhyolite",
+      "ore-poor-molybdenite-schist",
+      "ore-poor-molybdenite-slate",
+      "ore-rich-molybdenite-andesite",
+      "ore-rich-molybdenite-dacite",
+      "ore-rich-molybdenite-gneiss",
+      "ore-rich-molybdenite-granite",
+      "ore-rich-molybdenite-rhyolite",
+      "ore-rich-molybdenite-schist",
+      "ore-rich-molybdenite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-molybdenite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-molybdenite-andesite-free",
+      "looseores-molybdenite-dacite-free",
+      "looseores-molybdenite-gneiss-free",
+      "looseores-molybdenite-granite-free",
+      "looseores-molybdenite-rhyolite-free",
+      "looseores-molybdenite-schist-free",
+      "looseores-molybdenite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-molybdenite-andesite",
+      "ore-bountiful-molybdenite-dacite",
+      "ore-bountiful-molybdenite-gneiss",
+      "ore-bountiful-molybdenite-granite",
+      "ore-bountiful-molybdenite-rhyolite",
+      "ore-bountiful-molybdenite-schist",
+      "ore-bountiful-molybdenite-slate",
+      "ore-medium-molybdenite-andesite",
+      "ore-medium-molybdenite-dacite",
+      "ore-medium-molybdenite-gneiss",
+      "ore-medium-molybdenite-granite",
+      "ore-medium-molybdenite-rhyolite",
+      "ore-medium-molybdenite-schist",
+      "ore-medium-molybdenite-slate",
+      "ore-poor-molybdenite-andesite",
+      "ore-poor-molybdenite-dacite",
+      "ore-poor-molybdenite-gneiss",
+      "ore-poor-molybdenite-granite",
+      "ore-poor-molybdenite-rhyolite",
+      "ore-poor-molybdenite-schist",
+      "ore-poor-molybdenite-slate",
+      "ore-rich-molybdenite-andesite",
+      "ore-rich-molybdenite-dacite",
+      "ore-rich-molybdenite-gneiss",
+      "ore-rich-molybdenite-granite",
+      "ore-rich-molybdenite-rhyolite",
+      "ore-rich-molybdenite-schist",
+      "ore-rich-molybdenite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-molybdenite-andesite",
+      "crystalizedore-bountiful-molybdenite-dacite",
+      "crystalizedore-bountiful-molybdenite-gneiss",
+      "crystalizedore-bountiful-molybdenite-granite",
+      "crystalizedore-bountiful-molybdenite-rhyolite",
+      "crystalizedore-bountiful-molybdenite-schist",
+      "crystalizedore-bountiful-molybdenite-slate",
+      "crystalizedore-medium-molybdenite-andesite",
+      "crystalizedore-medium-molybdenite-dacite",
+      "crystalizedore-medium-molybdenite-gneiss",
+      "crystalizedore-medium-molybdenite-granite",
+      "crystalizedore-medium-molybdenite-rhyolite",
+      "crystalizedore-medium-molybdenite-schist",
+      "crystalizedore-medium-molybdenite-slate",
+      "crystalizedore-poor-molybdenite-andesite",
+      "crystalizedore-poor-molybdenite-dacite",
+      "crystalizedore-poor-molybdenite-gneiss",
+      "crystalizedore-poor-molybdenite-granite",
+      "crystalizedore-poor-molybdenite-rhyolite",
+      "crystalizedore-poor-molybdenite-schist",
+      "crystalizedore-poor-molybdenite-slate",
+      "crystalizedore-rich-molybdenite-andesite",
+      "crystalizedore-rich-molybdenite-dacite",
+      "crystalizedore-rich-molybdenite-gneiss",
+      "crystalizedore-rich-molybdenite-granite",
+      "crystalizedore-rich-molybdenite-rhyolite",
+      "crystalizedore-rich-molybdenite-schist",
+      "crystalizedore-rich-molybdenite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_molybdenite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-molybdenite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_molybdenite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

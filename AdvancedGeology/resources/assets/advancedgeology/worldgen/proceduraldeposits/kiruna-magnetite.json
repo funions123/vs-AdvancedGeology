@@ -54,7 +54,11 @@
       "gossanSmearHeightMax": 10
     },
     "palette": {
-      "replaceableRockVariants": ["andesite", "dacite", "rhyolite"],
+      "replaceableRockVariants": [
+        "andesite",
+        "dacite",
+        "rhyolite"
+      ],
       "materials": {
         "primary": "game:ore-{grade}-magnetite-{rock}",
         "secondary": "game:ore-{grade}-hematite-{rock}",

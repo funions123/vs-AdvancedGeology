@@ -1,0 +1,47 @@
+[
+  {
+    "code": "sparry-magnesite-replacement",
+    "enabled": true,
+    "template": "sparryMagnesiteReplacement",
+    "priority": 88,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.15,
+      "yMode": "worldRelative",
+      "minYRel": 0.2,
+      "maxYRel": 0.52
+    },
+    "sparryMagnesite": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 30,
+      "faultMin": 2,
+      "faultMax": 4,
+      "mantoMin": 3,
+      "mantoMax": 5
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "dolomite",
+        "limestone",
+        "redmarble",
+        "greenmarble",
+        "whitemarble"
+      ],
+      "materials": {
+        "magnesite": "game:ore-{grade}-magnesite-{rock}",
+        "quartz": "game:ore-quartz-{rock}"
+      }
+    }
+  }
+]

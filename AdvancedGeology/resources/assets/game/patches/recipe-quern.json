@@ -1,0 +1,30 @@
+[
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "dacite",
+      "diorite",
+      "gabbro",
+      "gneiss",
+      "quartzite",
+      "rhyolite",
+      "schist"
+    ],
+    "file": "game:blocktypes/stone/quern.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/ingredients/R/allowedVariants/-",
+    "value": [
+      "dacite",
+      "diorite",
+      "gabbro",
+      "gneiss",
+      "quartzite",
+      "rhyolite",
+      "schist"
+    ],
+    "file": "game:recipes/grid/quern.json"
+  }
+]

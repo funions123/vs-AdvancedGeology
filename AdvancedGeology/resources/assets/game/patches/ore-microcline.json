@@ -1,0 +1,63 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "microcline"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-microcline-gneiss",
+      "ore-microcline-granite",
+      "ore-microcline-migmatite",
+      "ore-microcline-pegmatite",
+      "ore-microcline-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-microcline-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-microcline-granite-free",
+      "looseores-microcline-migmatite-free",
+      "looseores-microcline-pegmatite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_microcline_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-microcline-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_microcline_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

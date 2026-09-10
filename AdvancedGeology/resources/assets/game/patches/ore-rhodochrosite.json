@@ -1,0 +1,38 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-medium-rhodochrosite-schist",
+      "ore-medium-rhodochrosite-serpentinite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-rhodochrosite-schist-free",
+      "looseores-rhodochrosite-serpentinite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-medium-rhodochrosite-schist",
+      "ore-medium-rhodochrosite-serpentinite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-medium-rhodochrosite-schist",
+      "crystalizedore-medium-rhodochrosite-serpentinite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

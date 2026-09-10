@@ -299,6 +299,7 @@ public readonly record struct SudburyContactNickelVerificationResult(
     int GangueSamples,
     int XenolithSamples,
     int PgmEnrichedSamples,
+    int SperryliteSamples,
     int GradeSpread,
     bool HostSequencePruned,
     bool Deterministic);
@@ -2868,7 +2869,7 @@ public static class ProceduralDepositVerification
         SudburyContactNickelPlan repeated = SudburyContactNickelPlan.Create(instance, settings);
 
         int pentlandite = 0, chalcopyrite = 0, pyrrhotite = 0, magnetite = 0;
-        int quartzDiorite = 0, gangue = 0, xenolith = 0, pgm = 0;
+        int quartzDiorite = 0, gangue = 0, xenolith = 0, pgm = 0, sperrylite = 0;
         var grades = new HashSet<int>();
         bool deterministic = true;
         bool hostSequencePruned = true;
@@ -2902,6 +2903,25 @@ public static class ProceduralDepositVerification
 
                         if (s.PgmEnriched) pgm++;
 
+                        if (s.Zone == SudburyContactNickelZone.Sperrylite)
+                        {
+                            if (s.SpeckleNoise < settings.SperryliteSpeckleThreshold)
+                            {
+                                throw new InvalidOperationException(
+                                    $"Sudbury nickel placed sperrylite below the speckle gate (grain {s.SpeckleNoise:F4})");
+                            }
+                            if (!s.PgmEnriched)
+                            {
+                                throw new InvalidOperationException(
+                                    "Sudbury nickel placed sperrylite outside a PGM-enriched domain");
+                            }
+                            if (s.Grade > 1)
+                            {
+                                throw new InvalidOperationException(
+                                    $"Sudbury nickel assigned platinum grade {s.Grade} above the modelled tenor");
+                            }
+                        }
+
                         switch (s.Zone)
                         {
                             case SudburyContactNickelZone.Pentlandite: pentlandite++; break;
@@ -2911,6 +2931,7 @@ public static class ProceduralDepositVerification
                             case SudburyContactNickelZone.QuartzDiorite: quartzDiorite++; break;
                             case SudburyContactNickelZone.HydrothermalGangue: gangue++; break;
                             case SudburyContactNickelZone.InclusionXenolith: xenolith++; break;
+                            case SudburyContactNickelZone.Sperrylite: sperrylite++; break;
                         }
                     }
                 }
@@ -2926,6 +2947,8 @@ public static class ProceduralDepositVerification
             || pentlandite == 0 || chalcopyrite == 0 || pyrrhotite == 0 || magnetite == 0
             || quartzDiorite == 0 || gangue == 0 || xenolith == 0
             || pgm == 0
+            || sperrylite == 0
+            || sperrylite * 20 > pgm
             || grades.Count < 4)
         {
             throw new InvalidOperationException(
@@ -2936,6 +2959,7 @@ public static class ProceduralDepositVerification
                 $"dikes={plan.OffsetDikeCount} pentlandite={pentlandite} " +
                 $"chalcopyrite={chalcopyrite} pyrrhotite={pyrrhotite} magnetite={magnetite} " +
                 $"diorite={quartzDiorite} gangue={gangue} xenolith={xenolith} pgm={pgm} " +
+                $"sperrylite={sperrylite} " +
                 $"grades=[{string.Join(",", grades.Order())}]");
         }
 
@@ -2952,6 +2976,7 @@ public static class ProceduralDepositVerification
             gangue,
             xenolith,
             pgm,
+            sperrylite,
             grades.Count,
             hostSequencePruned,
             deterministic);
@@ -3612,16 +3637,22 @@ public static class ProceduralDepositVerification
             ProceduralMaterialSlots.Gold, ProceduralMaterialSlots.Chromite, ProceduralMaterialSlots.Titanomagnetite,
             ProceduralMaterialSlots.CriticalZone, ProceduralMaterialSlots.MainZone, ProceduralMaterialSlots.UpperZone,
             ProceduralMaterialSlots.Phosphorite, ProceduralMaterialSlots.Apatite, ProceduralMaterialSlots.Lapis,
-            ProceduralMaterialSlots.Cryolite, ProceduralMaterialSlots.Ilmenite, ProceduralMaterialSlots.Dyke
+            ProceduralMaterialSlots.Cryolite, ProceduralMaterialSlots.Ilmenite, ProceduralMaterialSlots.Dyke,
+            ProceduralMaterialSlots.Sperrylite
         ];
         var missing = required.Where(slot => counts.GetValueOrDefault(slot) == 0).ToArray();
         bool separatedPackages = chromiteMaxY < titanomagnetiteMinY
             && titanomagnetiteMinY - chromiteMaxY >= 12;
-        if (!planCounts || !deterministic || missing.Length > 0 || !separatedPackages)
+        // Sperrylite is an accessory on the main reef contact, never a body of its own.
+        int reefSperrylite = counts.GetValueOrDefault(ProceduralMaterialSlots.Sperrylite);
+        bool sperryliteAccessory = reefSperrylite > 0
+            && reefSperrylite * 50 < counts.GetValueOrDefault(ProceduralMaterialSlots.Chromite);
+        if (!planCounts || !deterministic || missing.Length > 0 || !separatedPackages || !sperryliteAccessory)
         {
             throw new InvalidOperationException(
                 $"Resource-gap deposit contract failed: counts={planCounts} deterministic={deterministic} " +
-                $"missing={string.Join(",", missing)} chromiteMaxY={chromiteMaxY} titanomagnetiteMinY={titanomagnetiteMinY}");
+                $"missing={string.Join(",", missing)} chromiteMaxY={chromiteMaxY} titanomagnetiteMinY={titanomagnetiteMinY} " +
+                $"sperrylite={reefSperrylite} accessory={sperryliteAccessory}");
         }
         return $"resourceGap gold={counts.GetValueOrDefault(ProceduralMaterialSlots.Gold)} chromite={counts.GetValueOrDefault(ProceduralMaterialSlots.Chromite)} " +
             $"titanomagnetite={counts.GetValueOrDefault(ProceduralMaterialSlots.Titanomagnetite)} " +
@@ -3629,7 +3660,8 @@ public static class ProceduralDepositVerification
             $"chromiteMaxY={chromiteMaxY} titanomagnetiteMinY={titanomagnetiteMinY} " +
             $"phosphorite={counts.GetValueOrDefault(ProceduralMaterialSlots.Phosphorite)} apatite={counts.GetValueOrDefault(ProceduralMaterialSlots.Apatite)} " +
             $"lapis={counts.GetValueOrDefault(ProceduralMaterialSlots.Lapis)} cryolite={counts.GetValueOrDefault(ProceduralMaterialSlots.Cryolite)} " +
-            $"ilmenite={counts.GetValueOrDefault(ProceduralMaterialSlots.Ilmenite)} deterministic={deterministic}";
+            $"ilmenite={counts.GetValueOrDefault(ProceduralMaterialSlots.Ilmenite)} " +
+            $"sperrylite={reefSperrylite} deterministic={deterministic}";
     }
 
 

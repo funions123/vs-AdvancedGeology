@@ -1,0 +1,48 @@
+[
+  {
+    "code": "lapis-lazuli-marble",
+    "enabled": true,
+    "template": "lapisLazuliMarble",
+    "priority": 91,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 448,
+      "chance": 0.1,
+      "yMode": "worldRelative",
+      "minYRel": 0.18,
+      "maxYRel": 0.48
+    },
+    "lapisLazuliMarble": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 28,
+      "lensMin": 3,
+      "lensMax": 5,
+      "lapisDensity": 0.7,
+      "calciteRichDensity": 0.35
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "limestone",
+        "whitemarble",
+        "greenmarble",
+        "redmarble"
+      ],
+      "materials": {
+        "lapis": "game:ore-lapislazuli-{rock}",
+        "calcite": "game:rock-limestone",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "matrix": "game:rock-whitemarble"
+      }
+    }
+  }
+]

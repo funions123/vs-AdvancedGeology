@@ -40,7 +40,12 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["andesite", "rhyolite", "dacite", "basalt"],
+      "replaceableRockVariants": [
+        "andesite",
+        "rhyolite",
+        "dacite",
+        "basalt"
+      ],
       "materials": {
         "primary": "game:ore-quartz-{rock}",
         "quartz": "game:ore-quartz-{rock}",
@@ -50,7 +55,9 @@
         "geyserite": "advancedgeology:geyserite",
         "gossan": "advancedgeology:gossansoil-sparse"
       },
-      "gossanSurfaceExclusions": ["game:muddygravel"]
+      "gossanSurfaceExclusions": [
+        "game:muddygravel"
+      ]
     }
   }
 ]

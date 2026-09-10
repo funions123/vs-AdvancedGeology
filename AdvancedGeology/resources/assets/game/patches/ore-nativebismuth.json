@@ -1,0 +1,143 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "nativebismuth"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "nativebismuth"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-nativebismuth-gneiss",
+      "ore-bountiful-nativebismuth-granite",
+      "ore-bountiful-nativebismuth-schist",
+      "ore-bountiful-nativebismuth-slate",
+      "ore-medium-nativebismuth-gneiss",
+      "ore-medium-nativebismuth-granite",
+      "ore-medium-nativebismuth-schist",
+      "ore-medium-nativebismuth-slate",
+      "ore-poor-nativebismuth-gneiss",
+      "ore-poor-nativebismuth-granite",
+      "ore-poor-nativebismuth-schist",
+      "ore-poor-nativebismuth-slate",
+      "ore-rich-nativebismuth-gneiss",
+      "ore-rich-nativebismuth-granite",
+      "ore-rich-nativebismuth-schist",
+      "ore-rich-nativebismuth-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-nativebismuth-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-nativebismuth-gneiss-free",
+      "looseores-nativebismuth-granite-free",
+      "looseores-nativebismuth-schist-free",
+      "looseores-nativebismuth-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-nativebismuth-gneiss",
+      "ore-bountiful-nativebismuth-granite",
+      "ore-bountiful-nativebismuth-schist",
+      "ore-bountiful-nativebismuth-slate",
+      "ore-medium-nativebismuth-gneiss",
+      "ore-medium-nativebismuth-granite",
+      "ore-medium-nativebismuth-schist",
+      "ore-medium-nativebismuth-slate",
+      "ore-poor-nativebismuth-gneiss",
+      "ore-poor-nativebismuth-granite",
+      "ore-poor-nativebismuth-schist",
+      "ore-poor-nativebismuth-slate",
+      "ore-rich-nativebismuth-gneiss",
+      "ore-rich-nativebismuth-granite",
+      "ore-rich-nativebismuth-schist",
+      "ore-rich-nativebismuth-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-nativebismuth-gneiss",
+      "crystalizedore-bountiful-nativebismuth-granite",
+      "crystalizedore-bountiful-nativebismuth-schist",
+      "crystalizedore-bountiful-nativebismuth-slate",
+      "crystalizedore-medium-nativebismuth-gneiss",
+      "crystalizedore-medium-nativebismuth-granite",
+      "crystalizedore-medium-nativebismuth-schist",
+      "crystalizedore-medium-nativebismuth-slate",
+      "crystalizedore-poor-nativebismuth-gneiss",
+      "crystalizedore-poor-nativebismuth-granite",
+      "crystalizedore-poor-nativebismuth-schist",
+      "crystalizedore-poor-nativebismuth-slate",
+      "crystalizedore-rich-nativebismuth-gneiss",
+      "crystalizedore-rich-nativebismuth-granite",
+      "crystalizedore-rich-nativebismuth-schist",
+      "crystalizedore-rich-nativebismuth-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-nativebismuth",
+    "value": {
+      "meltingPoint": 271,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-bismuth"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_nativebismuth_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-nativebismuth-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_nativebismuth_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

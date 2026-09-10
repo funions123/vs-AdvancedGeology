@@ -1,0 +1,52 @@
+[
+  {
+    "code": "peralkaline-hree-complex",
+    "enabled": true,
+    "template": "peralkalineHreeComplex",
+    "priority": 97,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 512,
+      "chance": 0.1,
+      "yMode": "worldRelative",
+      "minYRel": 0.12,
+      "maxYRel": 0.4
+    },
+    "peralkalineHree": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 34,
+      "pegmatiteMin": 3,
+      "pegmatiteMax": 5,
+      "fractureMin": 3,
+      "fractureMax": 5
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "gneiss",
+        "granite",
+        "syenite"
+      ],
+      "materials": {
+        "xenotime": "game:ore-{grade}-xenotime-syenite",
+        "gittinsite": "game:ore-{grade}-gittinsite-syenite",
+        "zirconia": "game:ore-zirconia-syenite",
+        "pyrochlore": "game:ore-{grade}-pyrochlore-syenite",
+        "bastnasite": "game:ore-{grade}-bastnasite-syenite",
+        "quartz": "game:ore-quartz-pegmatite",
+        "fluorite": "game:ore-fluorite-pegmatite",
+        "hematite": "game:ore-poor-hematite-syenite",
+        "matrix": "game:rock-syenite"
+      }
+    }
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "erythrite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "erythrite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-erythrite-gneiss",
+      "ore-bountiful-erythrite-schist",
+      "ore-medium-erythrite-gneiss",
+      "ore-medium-erythrite-schist",
+      "ore-poor-erythrite-gneiss",
+      "ore-poor-erythrite-schist",
+      "ore-rich-erythrite-gneiss",
+      "ore-rich-erythrite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-erythrite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-erythrite-gneiss-free",
+      "looseores-erythrite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-erythrite-gneiss",
+      "ore-bountiful-erythrite-schist",
+      "ore-medium-erythrite-gneiss",
+      "ore-medium-erythrite-schist",
+      "ore-poor-erythrite-gneiss",
+      "ore-poor-erythrite-schist",
+      "ore-rich-erythrite-gneiss",
+      "ore-rich-erythrite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-erythrite-gneiss",
+      "crystalizedore-bountiful-erythrite-schist",
+      "crystalizedore-medium-erythrite-gneiss",
+      "crystalizedore-medium-erythrite-schist",
+      "crystalizedore-poor-erythrite-gneiss",
+      "crystalizedore-poor-erythrite-schist",
+      "crystalizedore-rich-erythrite-gneiss",
+      "crystalizedore-rich-erythrite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_erythrite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-erythrite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_erythrite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

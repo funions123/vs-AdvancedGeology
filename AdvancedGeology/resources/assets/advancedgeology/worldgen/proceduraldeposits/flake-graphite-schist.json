@@ -1,0 +1,45 @@
+[
+  {
+    "code": "flake-graphite-schist",
+    "enabled": true,
+    "template": "flakeGraphiteSchist",
+    "priority": 84,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 320,
+      "chance": 0.2,
+      "yMode": "worldRelative",
+      "minYRel": 0.2,
+      "maxYRel": 0.54
+    },
+    "flakeGraphiteSchist": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 30,
+      "horizonMin": 2,
+      "horizonMax": 3,
+      "shearMin": 2,
+      "shearMax": 4
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "schist",
+        "gneiss",
+        "granulite",
+        "migmatite"
+      ],
+      "materials": {
+        "graphite": "game:ore-graphite-{rock}"
+      }
+    }
+  }
+]

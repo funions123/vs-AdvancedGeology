@@ -1,0 +1,85 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-bismuthinite-andesite",
+      "ore-bountiful-bismuthinite-dacite",
+      "ore-bountiful-bismuthinite-gneiss",
+      "ore-bountiful-bismuthinite-granite",
+      "ore-bountiful-bismuthinite-rhyolite",
+      "ore-medium-bismuthinite-dacite",
+      "ore-medium-bismuthinite-gneiss",
+      "ore-medium-bismuthinite-rhyolite",
+      "ore-medium-bismuthinite-schist",
+      "ore-poor-bismuthinite-dacite",
+      "ore-poor-bismuthinite-gneiss",
+      "ore-poor-bismuthinite-rhyolite",
+      "ore-poor-bismuthinite-schist",
+      "ore-rich-bismuthinite-dacite",
+      "ore-rich-bismuthinite-gneiss",
+      "ore-rich-bismuthinite-rhyolite",
+      "ore-rich-bismuthinite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-bismuthinite-dacite-free",
+      "looseores-bismuthinite-gneiss-free",
+      "looseores-bismuthinite-rhyolite-free",
+      "looseores-bismuthinite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-bismuthinite-andesite",
+      "ore-bountiful-bismuthinite-dacite",
+      "ore-bountiful-bismuthinite-gneiss",
+      "ore-bountiful-bismuthinite-granite",
+      "ore-bountiful-bismuthinite-rhyolite",
+      "ore-medium-bismuthinite-dacite",
+      "ore-medium-bismuthinite-gneiss",
+      "ore-medium-bismuthinite-rhyolite",
+      "ore-medium-bismuthinite-schist",
+      "ore-poor-bismuthinite-dacite",
+      "ore-poor-bismuthinite-gneiss",
+      "ore-poor-bismuthinite-rhyolite",
+      "ore-poor-bismuthinite-schist",
+      "ore-rich-bismuthinite-dacite",
+      "ore-rich-bismuthinite-gneiss",
+      "ore-rich-bismuthinite-rhyolite",
+      "ore-rich-bismuthinite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-bismuthinite-andesite",
+      "crystalizedore-bountiful-bismuthinite-dacite",
+      "crystalizedore-bountiful-bismuthinite-gneiss",
+      "crystalizedore-bountiful-bismuthinite-granite",
+      "crystalizedore-bountiful-bismuthinite-rhyolite",
+      "crystalizedore-medium-bismuthinite-dacite",
+      "crystalizedore-medium-bismuthinite-gneiss",
+      "crystalizedore-medium-bismuthinite-rhyolite",
+      "crystalizedore-medium-bismuthinite-schist",
+      "crystalizedore-poor-bismuthinite-dacite",
+      "crystalizedore-poor-bismuthinite-gneiss",
+      "crystalizedore-poor-bismuthinite-rhyolite",
+      "crystalizedore-poor-bismuthinite-schist",
+      "crystalizedore-rich-bismuthinite-dacite",
+      "crystalizedore-rich-bismuthinite-gneiss",
+      "crystalizedore-rich-bismuthinite-rhyolite",
+      "crystalizedore-rich-bismuthinite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

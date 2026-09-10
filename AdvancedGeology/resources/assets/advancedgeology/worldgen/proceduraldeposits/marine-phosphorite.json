@@ -1,0 +1,48 @@
+[
+  {
+    "code": "marine-phosphorite",
+    "enabled": true,
+    "template": "marinePhosphorite",
+    "priority": 82,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 352,
+      "chance": 0.18,
+      "yMode": "worldRelative",
+      "minYRel": 0.24,
+      "maxYRel": 0.56
+    },
+    "marinePhosphorite": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 28,
+      "bedMin": 2,
+      "bedMax": 4,
+      "marginDensity": 0.3
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "shale",
+        "claystone",
+        "limestone",
+        "chalk",
+        "chert",
+        "sandstone",
+        "conglomerate"
+      ],
+      "materials": {
+        "phosphorite": "game:ore-phosphorite-{rock}",
+        "apatite": "game:ore-apatite-{rock}"
+      }
+    }
+  }
+]

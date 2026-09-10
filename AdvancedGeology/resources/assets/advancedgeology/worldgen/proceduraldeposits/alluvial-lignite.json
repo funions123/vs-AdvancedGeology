@@ -71,7 +71,12 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["claystone", "sandstone", "shale", "conglomerate"],
+      "replaceableRockVariants": [
+        "claystone",
+        "sandstone",
+        "shale",
+        "conglomerate"
+      ],
       "materials": {
         "lignite": "game:ore-lignite-{rock}",
         "clay-parting": "game:rock-claystone",

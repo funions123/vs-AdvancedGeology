@@ -1,0 +1,87 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-chromite-anorthosite",
+      "ore-bountiful-chromite-peridotite",
+      "ore-bountiful-chromite-pyroxenite",
+      "ore-bountiful-chromite-serpentinite",
+      "ore-medium-chromite-anorthosite",
+      "ore-medium-chromite-gabbro",
+      "ore-medium-chromite-pyroxenite",
+      "ore-medium-chromite-serpentinite",
+      "ore-poor-chromite-anorthosite",
+      "ore-poor-chromite-gabbro",
+      "ore-poor-chromite-pyroxenite",
+      "ore-poor-chromite-sandstone",
+      "ore-poor-chromite-serpentinite",
+      "ore-rich-chromite-anorthosite",
+      "ore-rich-chromite-gabbro",
+      "ore-rich-chromite-pyroxenite",
+      "ore-rich-chromite-serpentinite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-chromite-anorthosite-free",
+      "looseores-chromite-gabbro-free",
+      "looseores-chromite-peridotite-free",
+      "looseores-chromite-pyroxenite-free",
+      "looseores-chromite-sandstone-free",
+      "looseores-chromite-serpentinite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-chromite-anorthosite",
+      "ore-bountiful-chromite-peridotite",
+      "ore-bountiful-chromite-pyroxenite",
+      "ore-bountiful-chromite-serpentinite",
+      "ore-medium-chromite-anorthosite",
+      "ore-medium-chromite-gabbro",
+      "ore-medium-chromite-pyroxenite",
+      "ore-medium-chromite-serpentinite",
+      "ore-poor-chromite-anorthosite",
+      "ore-poor-chromite-gabbro",
+      "ore-poor-chromite-pyroxenite",
+      "ore-poor-chromite-sandstone",
+      "ore-poor-chromite-serpentinite",
+      "ore-rich-chromite-anorthosite",
+      "ore-rich-chromite-gabbro",
+      "ore-rich-chromite-pyroxenite",
+      "ore-rich-chromite-serpentinite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-chromite-anorthosite",
+      "crystalizedore-bountiful-chromite-peridotite",
+      "crystalizedore-bountiful-chromite-pyroxenite",
+      "crystalizedore-bountiful-chromite-serpentinite",
+      "crystalizedore-medium-chromite-anorthosite",
+      "crystalizedore-medium-chromite-gabbro",
+      "crystalizedore-medium-chromite-pyroxenite",
+      "crystalizedore-medium-chromite-serpentinite",
+      "crystalizedore-poor-chromite-anorthosite",
+      "crystalizedore-poor-chromite-gabbro",
+      "crystalizedore-poor-chromite-pyroxenite",
+      "crystalizedore-poor-chromite-sandstone",
+      "crystalizedore-poor-chromite-serpentinite",
+      "crystalizedore-rich-chromite-anorthosite",
+      "crystalizedore-rich-chromite-gabbro",
+      "crystalizedore-rich-chromite-pyroxenite",
+      "crystalizedore-rich-chromite-serpentinite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

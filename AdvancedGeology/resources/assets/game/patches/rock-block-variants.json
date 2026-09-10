@@ -1,0 +1,80 @@
+[
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "amphibolite",
+      "anorthosite",
+      "carbonatite",
+      "dacite",
+      "diorite",
+      "dolomite",
+      "gabbro",
+      "gneiss",
+      "granulite",
+      "greenstone",
+      "gypsum",
+      "migmatite",
+      "pegmatite",
+      "phosphorite",
+      "pyroxenite",
+      "quartzite",
+      "rhyolite",
+      "schist",
+      "serpentinite",
+      "soapstone",
+      "syenite",
+      "tonalite",
+      "umber"
+    ],
+    "file": "game:blocktypes/stone/cobble/fanned.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "anorthosite",
+      "carbonatite",
+      "gypsum",
+      "pegmatite",
+      "phosphorite",
+      "pyroxenite",
+      "soapstone",
+      "syenite",
+      "umber"
+    ],
+    "file": "game:blocktypes/stone/polished/polishedrock.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/1/states/-",
+    "value": [
+      "anorthosite",
+      "carbonatite",
+      "gypsum",
+      "pegmatite",
+      "phosphorite",
+      "pyroxenite",
+      "soapstone",
+      "syenite",
+      "umber"
+    ],
+    "file": "game:blocktypes/stone/polished/polishedrockold.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "anorthosite",
+      "carbonatite",
+      "gypsum",
+      "pegmatite",
+      "phosphorite",
+      "pyroxenite",
+      "soapstone",
+      "syenite",
+      "umber"
+    ],
+    "file": "game:blocktypes/stone/polished/polishedrockslab.json"
+  }
+]

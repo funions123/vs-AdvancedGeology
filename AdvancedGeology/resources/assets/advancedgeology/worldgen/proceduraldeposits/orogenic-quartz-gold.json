@@ -1,0 +1,50 @@
+[
+  {
+    "code": "orogenic-quartz-gold",
+    "enabled": true,
+    "template": "orogenicQuartzGold",
+    "priority": 96,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 448,
+      "chance": 0.12,
+      "yMode": "worldRelative",
+      "minYRel": 0.14,
+      "maxYRel": 0.46
+    },
+    "orogenicQuartzGold": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 30,
+      "lodeMin": 3,
+      "lodeMax": 5,
+      "splayMin": 2,
+      "splayMax": 4
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "greenstone",
+        "slate",
+        "schist",
+        "phyllite",
+        "amphibolite"
+      ],
+      "materials": {
+        "gold": "game:ore-{grade}-quartz_nativegold-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "pyrite": "game:ore-pyrite-{rock}",
+        "arsenopyrite": "game:ore-arsenopyrite-{rock}",
+        "carbonate": "game:rock-limestone"
+      }
+    }
+  }
+]

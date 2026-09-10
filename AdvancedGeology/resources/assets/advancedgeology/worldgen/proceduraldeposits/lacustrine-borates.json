@@ -8,7 +8,7 @@
     "intrude": false,
     "placement": {
       "cellSize": 320,
-      "chance": 0.20,
+      "chance": 0.2,
       "yMode": "surfaceOffset",
       "surfaceOffsetMin": -22,
       "surfaceOffsetMax": -8
@@ -63,7 +63,15 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["claystone", "sandstone", "shale", "limestone", "chalk", "conglomerate", "chert"],
+      "replaceableRockVariants": [
+        "claystone",
+        "sandstone",
+        "shale",
+        "limestone",
+        "chalk",
+        "conglomerate",
+        "chert"
+      ],
       "materials": {
         "borax": "game:ore-borax-{rock}",
         "kernite": "game:ore-kernite-{rock}",

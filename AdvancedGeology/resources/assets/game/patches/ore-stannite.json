@@ -1,0 +1,130 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "stannite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "stannite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-stannite-andesite",
+      "ore-bountiful-stannite-dacite",
+      "ore-bountiful-stannite-rhyolite",
+      "ore-medium-stannite-andesite",
+      "ore-medium-stannite-dacite",
+      "ore-medium-stannite-rhyolite",
+      "ore-poor-stannite-andesite",
+      "ore-poor-stannite-dacite",
+      "ore-poor-stannite-rhyolite",
+      "ore-rich-stannite-andesite",
+      "ore-rich-stannite-dacite",
+      "ore-rich-stannite-rhyolite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-stannite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-stannite-andesite-free",
+      "looseores-stannite-dacite-free",
+      "looseores-stannite-rhyolite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-stannite-andesite",
+      "ore-bountiful-stannite-dacite",
+      "ore-bountiful-stannite-rhyolite",
+      "ore-medium-stannite-andesite",
+      "ore-medium-stannite-dacite",
+      "ore-medium-stannite-rhyolite",
+      "ore-poor-stannite-andesite",
+      "ore-poor-stannite-dacite",
+      "ore-poor-stannite-rhyolite",
+      "ore-rich-stannite-andesite",
+      "ore-rich-stannite-dacite",
+      "ore-rich-stannite-rhyolite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-stannite-andesite",
+      "crystalizedore-bountiful-stannite-dacite",
+      "crystalizedore-bountiful-stannite-rhyolite",
+      "crystalizedore-medium-stannite-andesite",
+      "crystalizedore-medium-stannite-dacite",
+      "crystalizedore-medium-stannite-rhyolite",
+      "crystalizedore-poor-stannite-andesite",
+      "crystalizedore-poor-stannite-dacite",
+      "crystalizedore-poor-stannite-rhyolite",
+      "crystalizedore-rich-stannite-andesite",
+      "crystalizedore-rich-stannite-dacite",
+      "crystalizedore-rich-stannite-rhyolite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-stannite",
+    "value": {
+      "meltingPoint": 232,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-tin"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_stannite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-stannite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_stannite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

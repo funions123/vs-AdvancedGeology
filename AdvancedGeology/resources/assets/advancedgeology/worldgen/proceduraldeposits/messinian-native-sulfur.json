@@ -10,7 +10,7 @@
       "cellSize": 384,
       "chance": 0.16,
       "yMode": "worldRelative",
-      "minYRel": 0.20,
+      "minYRel": 0.2,
       "maxYRel": 0.52
     },
     "messinianSulfur": {
@@ -25,13 +25,26 @@
       "basinRadiusAcrossMin": 24.0,
       "basinRadiusAcrossMax": 28.0,
       "primaryGypsumHalfThickness": 0.55,
-      "celestineGemFraction": 0.10
+      "celestineGemFraction": 0.1
     },
-    "source": { "enabled": false },
-    "supergene": { "enabled": false },
-    "weathering": { "enabled": false },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
     "palette": {
-      "replaceableRockVariants": ["limestone", "gypsum", "shale", "claystone", "chalk", "dolomite"],
+      "replaceableRockVariants": [
+        "limestone",
+        "gypsum",
+        "shale",
+        "claystone",
+        "chalk",
+        "dolomite"
+      ],
       "materials": {
         "sulfur": "game:ore-sulfur-limestone",
         "authigenic-carbonate": "game:rock-limestone",

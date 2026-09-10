@@ -1,0 +1,117 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "annabergite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "annabergite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-annabergite-gneiss",
+      "ore-bountiful-annabergite-schist",
+      "ore-medium-annabergite-gneiss",
+      "ore-medium-annabergite-schist",
+      "ore-poor-annabergite-gneiss",
+      "ore-poor-annabergite-schist",
+      "ore-rich-annabergite-gneiss",
+      "ore-rich-annabergite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-annabergite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-annabergite-gneiss-free",
+      "looseores-annabergite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-annabergite-gneiss",
+      "ore-bountiful-annabergite-schist",
+      "ore-medium-annabergite-gneiss",
+      "ore-medium-annabergite-schist",
+      "ore-poor-annabergite-gneiss",
+      "ore-poor-annabergite-schist",
+      "ore-rich-annabergite-gneiss",
+      "ore-rich-annabergite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-annabergite-gneiss",
+      "crystalizedore-bountiful-annabergite-schist",
+      "crystalizedore-medium-annabergite-gneiss",
+      "crystalizedore-medium-annabergite-schist",
+      "crystalizedore-poor-annabergite-gneiss",
+      "crystalizedore-poor-annabergite-schist",
+      "crystalizedore-rich-annabergite-gneiss",
+      "crystalizedore-rich-annabergite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-annabergite",
+    "value": {
+      "meltingPoint": 1455,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-nickel"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_annabergite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-annabergite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_annabergite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

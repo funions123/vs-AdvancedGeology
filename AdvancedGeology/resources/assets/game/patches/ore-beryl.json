@@ -1,0 +1,142 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "beryl"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "beryl"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-beryl-gneiss",
+      "ore-bountiful-beryl-granite",
+      "ore-bountiful-beryl-pegmatite",
+      "ore-bountiful-beryl-schist",
+      "ore-bountiful-beryl-slate",
+      "ore-medium-beryl-gneiss",
+      "ore-medium-beryl-granite",
+      "ore-medium-beryl-pegmatite",
+      "ore-medium-beryl-schist",
+      "ore-medium-beryl-slate",
+      "ore-poor-beryl-gneiss",
+      "ore-poor-beryl-granite",
+      "ore-poor-beryl-pegmatite",
+      "ore-poor-beryl-schist",
+      "ore-poor-beryl-slate",
+      "ore-rich-beryl-gneiss",
+      "ore-rich-beryl-granite",
+      "ore-rich-beryl-pegmatite",
+      "ore-rich-beryl-schist",
+      "ore-rich-beryl-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-beryl-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-beryl-gneiss-free",
+      "looseores-beryl-granite-free",
+      "looseores-beryl-pegmatite-free",
+      "looseores-beryl-schist-free",
+      "looseores-beryl-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-beryl-gneiss",
+      "ore-bountiful-beryl-granite",
+      "ore-bountiful-beryl-pegmatite",
+      "ore-bountiful-beryl-schist",
+      "ore-bountiful-beryl-slate",
+      "ore-medium-beryl-gneiss",
+      "ore-medium-beryl-granite",
+      "ore-medium-beryl-pegmatite",
+      "ore-medium-beryl-schist",
+      "ore-medium-beryl-slate",
+      "ore-poor-beryl-gneiss",
+      "ore-poor-beryl-granite",
+      "ore-poor-beryl-pegmatite",
+      "ore-poor-beryl-schist",
+      "ore-poor-beryl-slate",
+      "ore-rich-beryl-gneiss",
+      "ore-rich-beryl-granite",
+      "ore-rich-beryl-pegmatite",
+      "ore-rich-beryl-schist",
+      "ore-rich-beryl-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-beryl-gneiss",
+      "crystalizedore-bountiful-beryl-granite",
+      "crystalizedore-bountiful-beryl-pegmatite",
+      "crystalizedore-bountiful-beryl-schist",
+      "crystalizedore-bountiful-beryl-slate",
+      "crystalizedore-medium-beryl-gneiss",
+      "crystalizedore-medium-beryl-granite",
+      "crystalizedore-medium-beryl-pegmatite",
+      "crystalizedore-medium-beryl-schist",
+      "crystalizedore-medium-beryl-slate",
+      "crystalizedore-poor-beryl-gneiss",
+      "crystalizedore-poor-beryl-granite",
+      "crystalizedore-poor-beryl-pegmatite",
+      "crystalizedore-poor-beryl-schist",
+      "crystalizedore-poor-beryl-slate",
+      "crystalizedore-rich-beryl-gneiss",
+      "crystalizedore-rich-beryl-granite",
+      "crystalizedore-rich-beryl-pegmatite",
+      "crystalizedore-rich-beryl-schist",
+      "crystalizedore-rich-beryl-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_beryl_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-beryl-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_beryl_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

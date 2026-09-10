@@ -8,7 +8,7 @@
     "intrude": false,
     "placement": {
       "cellSize": 352,
-      "chance": 0.20,
+      "chance": 0.2,
       "yMode": "surfaceOffset",
       "surfaceOffsetMin": -28,
       "surfaceOffsetMax": -6
@@ -65,7 +65,12 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["rhyolite", "dacite", "andesite", "tuff"],
+      "replaceableRockVariants": [
+        "rhyolite",
+        "dacite",
+        "andesite",
+        "tuff"
+      ],
       "materials": {
         "alunite": "game:ore-alunite-{rock}",
         "quartz": "game:ore-quartz-{rock}",

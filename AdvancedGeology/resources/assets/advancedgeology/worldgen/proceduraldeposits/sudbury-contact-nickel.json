@@ -62,11 +62,17 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["gabbro", "peridotite", "basalt", "gneiss"],
+      "replaceableRockVariants": [
+        "gabbro",
+        "peridotite",
+        "basalt",
+        "gneiss"
+      ],
       "materials": {
         "pentlandite": "game:ore-{grade}-pentlandite-{rock}",
         "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",
         "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "sperrylite": "game:ore-{grade}-sperrylite-{rock}",
         "pyrite": "game:ore-pyrite-{rock}",
         "quartz": "game:ore-quartz-{rock}",
         "intermediate": "game:rock-diorite",

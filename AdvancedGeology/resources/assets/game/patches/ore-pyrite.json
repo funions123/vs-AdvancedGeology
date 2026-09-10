@@ -1,0 +1,95 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pyrite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-pyrite-andesite",
+      "ore-pyrite-basalt",
+      "ore-pyrite-chalk",
+      "ore-pyrite-chert",
+      "ore-pyrite-claystone",
+      "ore-pyrite-dacite",
+      "ore-pyrite-dolomite",
+      "ore-pyrite-gneiss",
+      "ore-pyrite-granite",
+      "ore-pyrite-greenstone",
+      "ore-pyrite-limestone",
+      "ore-pyrite-phyllite",
+      "ore-pyrite-quartzite",
+      "ore-pyrite-rhyolite",
+      "ore-pyrite-sandstone",
+      "ore-pyrite-schist",
+      "ore-pyrite-serpentinite",
+      "ore-pyrite-shale",
+      "ore-pyrite-slate",
+      "ore-pyrite-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-pyrite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-pyrite-andesite-free",
+      "looseores-pyrite-basalt-free",
+      "looseores-pyrite-chalk-free",
+      "looseores-pyrite-chert-free",
+      "looseores-pyrite-claystone-free",
+      "looseores-pyrite-dacite-free",
+      "looseores-pyrite-dolomite-free",
+      "looseores-pyrite-gneiss-free",
+      "looseores-pyrite-granite-free",
+      "looseores-pyrite-greenstone-free",
+      "looseores-pyrite-limestone-free",
+      "looseores-pyrite-phyllite-free",
+      "looseores-pyrite-quartzite-free",
+      "looseores-pyrite-rhyolite-free",
+      "looseores-pyrite-sandstone-free",
+      "looseores-pyrite-schist-free",
+      "looseores-pyrite-serpentinite-free",
+      "looseores-pyrite-shale-free",
+      "looseores-pyrite-slate-free",
+      "looseores-pyrite-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_pyrite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-pyrite-*": [
+        {
+          "type": "item",
+          "code": "ore-pyrite"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_pyrite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

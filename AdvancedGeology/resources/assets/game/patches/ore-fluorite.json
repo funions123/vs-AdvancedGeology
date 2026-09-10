@@ -1,0 +1,45 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-fluorite-andesite",
+      "ore-fluorite-carbonatite",
+      "ore-fluorite-chert",
+      "ore-fluorite-dacite",
+      "ore-fluorite-dolomite",
+      "ore-fluorite-gneiss",
+      "ore-fluorite-granite",
+      "ore-fluorite-limestone",
+      "ore-fluorite-pegmatite",
+      "ore-fluorite-rhyolite",
+      "ore-fluorite-schist",
+      "ore-fluorite-serpentinite",
+      "ore-fluorite-slate",
+      "ore-fluorite-syenite",
+      "ore-fluorite-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-fluorite-andesite-free",
+      "looseores-fluorite-carbonatite-free",
+      "looseores-fluorite-chert-free",
+      "looseores-fluorite-dacite-free",
+      "looseores-fluorite-dolomite-free",
+      "looseores-fluorite-gneiss-free",
+      "looseores-fluorite-granite-free",
+      "looseores-fluorite-limestone-free",
+      "looseores-fluorite-pegmatite-free",
+      "looseores-fluorite-rhyolite-free",
+      "looseores-fluorite-schist-free",
+      "looseores-fluorite-serpentinite-free",
+      "looseores-fluorite-slate-free",
+      "looseores-fluorite-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

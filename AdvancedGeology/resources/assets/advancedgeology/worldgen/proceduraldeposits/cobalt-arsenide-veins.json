@@ -85,7 +85,10 @@
       "enabled": true
     },
     "palette": {
-      "replaceableRockVariants": ["gneiss", "schist"],
+      "replaceableRockVariants": [
+        "gneiss",
+        "schist"
+      ],
       "materials": {
         "nickeline": "game:ore-{grade}-nickeline-{rock}",
         "cobaltite": "game:ore-{grade}-cobaltite-{rock}",

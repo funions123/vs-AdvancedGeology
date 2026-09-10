@@ -20,7 +20,8 @@ public enum SudburyContactNickelZone
     Norite,
     UpperSic,
     FootwallRock,
-    InclusionXenolith
+    InclusionXenolith,
+    Sperrylite
 }
 
 [JsonObject(MemberSerialization.OptIn)]
@@ -133,6 +134,13 @@ public sealed class SudburyContactNickelDefinition
 
     [JsonProperty]
     public double OffsetDikeDistanceMax { get; set; } = 34.0;
+
+    /// <summary>
+    /// Minimum spatial-hash value for a sperrylite speckle inside a PGM-enriched sulfide domain.
+    /// 0.995 keeps platinum arsenide to the richest 0.5% of those voxels.
+    /// </summary>
+    [JsonProperty]
+    public double SperryliteSpeckleThreshold { get; set; } = 0.995;
 }
 
 /// <summary>
@@ -144,7 +152,8 @@ public readonly record struct SudburyContactNickelSample(
     bool InContactOre = false,
     bool InFootwallVein = false,
     bool InOffsetDike = false,
-    bool PgmEnriched = false);
+    bool PgmEnriched = false,
+    double SpeckleNoise = 0.0);
 /// <summary>
 /// Pentlandite, chalcopyrite, pyrrhotite, magnetite, quartz diorite, gangue, and breccia form contact pods in basal embayments with descending footwall veins and offset dike lenses.
 /// </summary>
@@ -167,6 +176,7 @@ internal sealed class SudburyContactNickelPlan
     private readonly double systemZ;
     private readonly double noriteThickness;
     private readonly double seed;
+    private readonly double sperryliteSpeckleThreshold;
 
     private readonly ContactSurface contact;
     private readonly Embayment[] embayments;
@@ -195,6 +205,7 @@ internal sealed class SudburyContactNickelPlan
         double systemZ,
         double noriteThickness,
         double seed,
+        double sperryliteSpeckleThreshold,
         ContactSurface contact,
         Embayment[] embayments,
         OrePod[] orePods,
@@ -212,6 +223,7 @@ internal sealed class SudburyContactNickelPlan
         this.systemZ = systemZ;
         this.noriteThickness = noriteThickness;
         this.seed = seed;
+        this.sperryliteSpeckleThreshold = sperryliteSpeckleThreshold;
         this.contact = contact;
         this.embayments = embayments;
         this.orePods = orePods;
@@ -375,6 +387,7 @@ internal sealed class SudburyContactNickelPlan
             systemZ,
             noriteThickness,
             seed,
+            settings.SperryliteSpeckleThreshold,
             contact,
             embayments,
             orePods,
@@ -644,8 +657,28 @@ internal sealed class SudburyContactNickelPlan
         bool inOffsetDike,
         bool pgmEnriched)
     {
+        // Sperrylite is the platinum arsenide of the Cu-rich PGM domains. It replaces the host
+        // sulfide only where the enrichment flag is already set and the speckle gate passes, so
+        // it stays a rare accessory rather than a body of its own.
+        double speckleNoise = 0.0;
+        if (pgmEnriched)
+        {
+            speckleNoise = Hash3D(x * 3.3 + seed * 1.7, y * 3.3, z * 3.3);
+            if (speckleNoise >= sperryliteSpeckleThreshold)
+            {
+                zone = SudburyContactNickelZone.Sperrylite;
+            }
+        }
+
         int grade = 0;
-        if (IsGraded(zone))
+        if (zone == SudburyContactNickelZone.Sperrylite)
+        {
+            // Platinum tenor stays low: the top tenth of qualifying speckles reaches medium.
+            double span = 1.0 - sperryliteSpeckleThreshold;
+            double within = span > 0.0 ? (speckleNoise - sperryliteSpeckleThreshold) / span : 0.0;
+            grade = within > 0.9 ? 1 : 0;
+        }
+        else if (IsGraded(zone))
         {
             double grainNoise = Hash3D(x * 2.7 + seed * 1.3, y * 2.7, z * 2.7);
             grade = grainNoise > 0.82 ? 3 : (grainNoise > 0.55 ? 2 : (grainNoise > 0.25 ? 1 : 0));
@@ -657,14 +690,16 @@ internal sealed class SudburyContactNickelPlan
             inContactOre,
             inFootwallVein,
             inOffsetDike,
-            pgmEnriched);
+            pgmEnriched,
+            speckleNoise);
     }
 
     internal static bool IsGraded(SudburyContactNickelZone zone)
     {
         return zone == SudburyContactNickelZone.Pentlandite
             || zone == SudburyContactNickelZone.Chalcopyrite
-            || zone == SudburyContactNickelZone.Magnetite;
+            || zone == SudburyContactNickelZone.Magnetite
+            || zone == SudburyContactNickelZone.Sperrylite;
     }
 
     /// <summary><c>getPodSample</c>: edge-warped triaxial massive sulfide pod.</summary>
@@ -850,7 +885,8 @@ internal sealed class SudburyContactNickelProceduralTemplate : IProceduralDeposi
         ProceduralMaterialSlots.Chalcopyrite,
         ProceduralMaterialSlots.Pyrite,
         ProceduralMaterialSlots.Magnetite,
-        ProceduralMaterialSlots.Quartz
+        ProceduralMaterialSlots.Quartz,
+        ProceduralMaterialSlots.Sperrylite
     };
 
     public string Code => "sudburyContactNickel";
@@ -904,7 +940,8 @@ internal sealed class SudburyContactNickelProceduralTemplate : IProceduralDeposi
             && settings.OffsetDikeCountMin >= 1
             && settings.OffsetDikeCountMax >= settings.OffsetDikeCountMin
             && settings.OffsetDikeDistanceMin > 0.0
-            && settings.OffsetDikeDistanceMax >= settings.OffsetDikeDistanceMin;
+            && settings.OffsetDikeDistanceMax >= settings.OffsetDikeDistanceMin
+            && settings.SperryliteSpeckleThreshold is >= 0.0 and <= 1.0;
         error = valid ? string.Empty : "invalid sudbury contact nickel settings";
         return valid;
     }
@@ -982,6 +1019,7 @@ public sealed partial class ProceduralDepositWorldGenSystem
         slots[(int)SudburyContactNickelZone.Pentlandite] = compiled.GetSlotId(ProceduralMaterialSlots.Pentlandite);
         slots[(int)SudburyContactNickelZone.Chalcopyrite] = compiled.GetSlotId(ProceduralMaterialSlots.Chalcopyrite);
         slots[(int)SudburyContactNickelZone.Magnetite] = compiled.GetSlotId(ProceduralMaterialSlots.Magnetite);
+        slots[(int)SudburyContactNickelZone.Sperrylite] = compiled.GetSlotId(ProceduralMaterialSlots.Sperrylite);
 
         // Per the plan pyrrhotite maps to pyrite: it has no ore of its own in this mod.
         slots[(int)SudburyContactNickelZone.Pyrrhotite] = compiled.GetSlotId(ProceduralMaterialSlots.Pyrite);

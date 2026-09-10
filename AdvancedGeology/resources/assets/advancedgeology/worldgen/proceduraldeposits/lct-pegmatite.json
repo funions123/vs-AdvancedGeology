@@ -61,7 +61,13 @@
       "enabled": true
     },
     "palette": {
-      "replaceableRockVariants": ["gneiss", "schist", "quartzite", "amphibolite", "greenstone"],
+      "replaceableRockVariants": [
+        "gneiss",
+        "schist",
+        "quartzite",
+        "amphibolite",
+        "greenstone"
+      ],
       "materials": {
         "wall": "game:rock-pegmatite",
         "schorl": "game:ore-gem-tourmalineschorl-pegmatite",

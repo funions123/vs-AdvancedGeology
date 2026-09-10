@@ -10,7 +10,7 @@
       "cellSize": 256,
       "chance": 0.25,
       "yMode": "worldRelative",
-      "minYRel": 0.20,
+      "minYRel": 0.2,
       "maxYRel": 0.48
     },
     "praborna": {
@@ -38,7 +38,12 @@
       "enabled": true
     },
     "palette": {
-      "replaceableRockVariants": ["chert", "serpentinite", "slate", "schist"],
+      "replaceableRockVariants": [
+        "chert",
+        "serpentinite",
+        "slate",
+        "schist"
+      ],
       "materials": {
         "pyrolusite": "game:ore-{grade}-pyrolusite-{rock}",
         "braunite": "game:ore-{grade}-braunite-{rock}",

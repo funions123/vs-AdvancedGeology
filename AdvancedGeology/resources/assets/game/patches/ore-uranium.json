@@ -1,0 +1,69 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-uranium-gneiss",
+      "ore-bountiful-uranium-sandstone",
+      "ore-bountiful-uranium-schist",
+      "ore-medium-uranium-gneiss",
+      "ore-medium-uranium-sandstone",
+      "ore-medium-uranium-schist",
+      "ore-poor-uranium-gneiss",
+      "ore-poor-uranium-sandstone",
+      "ore-poor-uranium-schist",
+      "ore-rich-uranium-gneiss",
+      "ore-rich-uranium-sandstone",
+      "ore-rich-uranium-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-uranium-gneiss-free",
+      "looseores-uranium-sandstone-free",
+      "looseores-uranium-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-uranium-gneiss",
+      "ore-bountiful-uranium-sandstone",
+      "ore-bountiful-uranium-schist",
+      "ore-medium-uranium-gneiss",
+      "ore-medium-uranium-sandstone",
+      "ore-medium-uranium-schist",
+      "ore-poor-uranium-gneiss",
+      "ore-poor-uranium-sandstone",
+      "ore-poor-uranium-schist",
+      "ore-rich-uranium-gneiss",
+      "ore-rich-uranium-sandstone",
+      "ore-rich-uranium-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-uranium-gneiss",
+      "crystalizedore-bountiful-uranium-sandstone",
+      "crystalizedore-bountiful-uranium-schist",
+      "crystalizedore-medium-uranium-gneiss",
+      "crystalizedore-medium-uranium-sandstone",
+      "crystalizedore-medium-uranium-schist",
+      "crystalizedore-poor-uranium-gneiss",
+      "crystalizedore-poor-uranium-sandstone",
+      "crystalizedore-poor-uranium-schist",
+      "crystalizedore-rich-uranium-gneiss",
+      "crystalizedore-rich-uranium-sandstone",
+      "crystalizedore-rich-uranium-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

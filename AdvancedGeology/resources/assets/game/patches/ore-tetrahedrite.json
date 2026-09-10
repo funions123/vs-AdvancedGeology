@@ -1,0 +1,143 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tetrahedrite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tetrahedrite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-tetrahedrite-dacite",
+      "ore-bountiful-tetrahedrite-dolomite",
+      "ore-bountiful-tetrahedrite-gneiss",
+      "ore-medium-tetrahedrite-andesite",
+      "ore-medium-tetrahedrite-dacite",
+      "ore-medium-tetrahedrite-dolomite",
+      "ore-medium-tetrahedrite-gneiss",
+      "ore-medium-tetrahedrite-phyllite",
+      "ore-medium-tetrahedrite-quartzite",
+      "ore-medium-tetrahedrite-schist",
+      "ore-poor-tetrahedrite-andesite",
+      "ore-poor-tetrahedrite-dacite",
+      "ore-poor-tetrahedrite-dolomite",
+      "ore-poor-tetrahedrite-gneiss",
+      "ore-poor-tetrahedrite-phyllite",
+      "ore-poor-tetrahedrite-quartzite",
+      "ore-poor-tetrahedrite-schist",
+      "ore-rich-tetrahedrite-andesite",
+      "ore-rich-tetrahedrite-dacite",
+      "ore-rich-tetrahedrite-dolomite",
+      "ore-rich-tetrahedrite-gneiss",
+      "ore-rich-tetrahedrite-quartzite",
+      "ore-rich-tetrahedrite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-tetrahedrite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-tetrahedrite-andesite-free",
+      "looseores-tetrahedrite-dacite-free",
+      "looseores-tetrahedrite-dolomite-free",
+      "looseores-tetrahedrite-gneiss-free",
+      "looseores-tetrahedrite-phyllite-free",
+      "looseores-tetrahedrite-quartzite-free",
+      "looseores-tetrahedrite-schist-free",
+      "looseores-tetrahedrite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-tetrahedrite-dacite",
+      "ore-bountiful-tetrahedrite-dolomite",
+      "ore-bountiful-tetrahedrite-gneiss",
+      "ore-medium-tetrahedrite-andesite",
+      "ore-medium-tetrahedrite-dacite",
+      "ore-medium-tetrahedrite-dolomite",
+      "ore-medium-tetrahedrite-gneiss",
+      "ore-medium-tetrahedrite-phyllite",
+      "ore-medium-tetrahedrite-quartzite",
+      "ore-medium-tetrahedrite-schist",
+      "ore-poor-tetrahedrite-andesite",
+      "ore-poor-tetrahedrite-dacite",
+      "ore-poor-tetrahedrite-dolomite",
+      "ore-poor-tetrahedrite-gneiss",
+      "ore-poor-tetrahedrite-phyllite",
+      "ore-poor-tetrahedrite-quartzite",
+      "ore-poor-tetrahedrite-schist",
+      "ore-rich-tetrahedrite-andesite",
+      "ore-rich-tetrahedrite-dacite",
+      "ore-rich-tetrahedrite-dolomite",
+      "ore-rich-tetrahedrite-gneiss",
+      "ore-rich-tetrahedrite-quartzite",
+      "ore-rich-tetrahedrite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-tetrahedrite-dacite",
+      "crystalizedore-bountiful-tetrahedrite-dolomite",
+      "crystalizedore-bountiful-tetrahedrite-gneiss",
+      "crystalizedore-medium-tetrahedrite-andesite",
+      "crystalizedore-medium-tetrahedrite-dacite",
+      "crystalizedore-medium-tetrahedrite-dolomite",
+      "crystalizedore-medium-tetrahedrite-gneiss",
+      "crystalizedore-medium-tetrahedrite-phyllite",
+      "crystalizedore-medium-tetrahedrite-quartzite",
+      "crystalizedore-medium-tetrahedrite-schist",
+      "crystalizedore-poor-tetrahedrite-andesite",
+      "crystalizedore-poor-tetrahedrite-dacite",
+      "crystalizedore-poor-tetrahedrite-dolomite",
+      "crystalizedore-poor-tetrahedrite-gneiss",
+      "crystalizedore-poor-tetrahedrite-phyllite",
+      "crystalizedore-poor-tetrahedrite-quartzite",
+      "crystalizedore-poor-tetrahedrite-schist",
+      "crystalizedore-rich-tetrahedrite-andesite",
+      "crystalizedore-rich-tetrahedrite-dacite",
+      "crystalizedore-rich-tetrahedrite-dolomite",
+      "crystalizedore-rich-tetrahedrite-gneiss",
+      "crystalizedore-rich-tetrahedrite-quartzite",
+      "crystalizedore-rich-tetrahedrite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-tetrahedrite",
+    "value": {
+      "meltingPoint": 1084,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-copper"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  }
+]

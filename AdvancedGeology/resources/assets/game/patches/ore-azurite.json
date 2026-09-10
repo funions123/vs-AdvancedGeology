@@ -1,0 +1,183 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "azurite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "azurite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-azurite-conglomerate",
+      "ore-bountiful-azurite-dolomite",
+      "ore-bountiful-azurite-greenmarble",
+      "ore-bountiful-azurite-limestone",
+      "ore-bountiful-azurite-redmarble",
+      "ore-bountiful-azurite-sandstone",
+      "ore-bountiful-azurite-schist",
+      "ore-bountiful-azurite-slate",
+      "ore-bountiful-azurite-whitemarble",
+      "ore-medium-azurite-conglomerate",
+      "ore-medium-azurite-dolomite",
+      "ore-medium-azurite-greenmarble",
+      "ore-medium-azurite-limestone",
+      "ore-medium-azurite-redmarble",
+      "ore-medium-azurite-sandstone",
+      "ore-medium-azurite-schist",
+      "ore-medium-azurite-slate",
+      "ore-medium-azurite-whitemarble",
+      "ore-poor-azurite-conglomerate",
+      "ore-poor-azurite-dolomite",
+      "ore-poor-azurite-greenmarble",
+      "ore-poor-azurite-limestone",
+      "ore-poor-azurite-redmarble",
+      "ore-poor-azurite-sandstone",
+      "ore-poor-azurite-schist",
+      "ore-poor-azurite-slate",
+      "ore-poor-azurite-whitemarble",
+      "ore-rich-azurite-conglomerate",
+      "ore-rich-azurite-dolomite",
+      "ore-rich-azurite-greenmarble",
+      "ore-rich-azurite-limestone",
+      "ore-rich-azurite-redmarble",
+      "ore-rich-azurite-sandstone",
+      "ore-rich-azurite-schist",
+      "ore-rich-azurite-slate",
+      "ore-rich-azurite-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-azurite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-azurite-conglomerate-free",
+      "looseores-azurite-dolomite-free",
+      "looseores-azurite-greenmarble-free",
+      "looseores-azurite-limestone-free",
+      "looseores-azurite-redmarble-free",
+      "looseores-azurite-sandstone-free",
+      "looseores-azurite-schist-free",
+      "looseores-azurite-slate-free",
+      "looseores-azurite-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-azurite-conglomerate",
+      "ore-bountiful-azurite-dolomite",
+      "ore-bountiful-azurite-greenmarble",
+      "ore-bountiful-azurite-limestone",
+      "ore-bountiful-azurite-redmarble",
+      "ore-bountiful-azurite-sandstone",
+      "ore-bountiful-azurite-schist",
+      "ore-bountiful-azurite-slate",
+      "ore-bountiful-azurite-whitemarble",
+      "ore-medium-azurite-conglomerate",
+      "ore-medium-azurite-dolomite",
+      "ore-medium-azurite-greenmarble",
+      "ore-medium-azurite-limestone",
+      "ore-medium-azurite-redmarble",
+      "ore-medium-azurite-sandstone",
+      "ore-medium-azurite-schist",
+      "ore-medium-azurite-slate",
+      "ore-medium-azurite-whitemarble",
+      "ore-poor-azurite-conglomerate",
+      "ore-poor-azurite-dolomite",
+      "ore-poor-azurite-greenmarble",
+      "ore-poor-azurite-limestone",
+      "ore-poor-azurite-redmarble",
+      "ore-poor-azurite-sandstone",
+      "ore-poor-azurite-schist",
+      "ore-poor-azurite-slate",
+      "ore-poor-azurite-whitemarble",
+      "ore-rich-azurite-conglomerate",
+      "ore-rich-azurite-dolomite",
+      "ore-rich-azurite-greenmarble",
+      "ore-rich-azurite-limestone",
+      "ore-rich-azurite-redmarble",
+      "ore-rich-azurite-sandstone",
+      "ore-rich-azurite-schist",
+      "ore-rich-azurite-slate",
+      "ore-rich-azurite-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-azurite-conglomerate",
+      "crystalizedore-bountiful-azurite-dolomite",
+      "crystalizedore-bountiful-azurite-greenmarble",
+      "crystalizedore-bountiful-azurite-limestone",
+      "crystalizedore-bountiful-azurite-redmarble",
+      "crystalizedore-bountiful-azurite-sandstone",
+      "crystalizedore-bountiful-azurite-schist",
+      "crystalizedore-bountiful-azurite-slate",
+      "crystalizedore-bountiful-azurite-whitemarble",
+      "crystalizedore-medium-azurite-conglomerate",
+      "crystalizedore-medium-azurite-dolomite",
+      "crystalizedore-medium-azurite-greenmarble",
+      "crystalizedore-medium-azurite-limestone",
+      "crystalizedore-medium-azurite-redmarble",
+      "crystalizedore-medium-azurite-sandstone",
+      "crystalizedore-medium-azurite-schist",
+      "crystalizedore-medium-azurite-slate",
+      "crystalizedore-medium-azurite-whitemarble",
+      "crystalizedore-poor-azurite-conglomerate",
+      "crystalizedore-poor-azurite-dolomite",
+      "crystalizedore-poor-azurite-greenmarble",
+      "crystalizedore-poor-azurite-limestone",
+      "crystalizedore-poor-azurite-redmarble",
+      "crystalizedore-poor-azurite-sandstone",
+      "crystalizedore-poor-azurite-schist",
+      "crystalizedore-poor-azurite-slate",
+      "crystalizedore-poor-azurite-whitemarble",
+      "crystalizedore-rich-azurite-conglomerate",
+      "crystalizedore-rich-azurite-dolomite",
+      "crystalizedore-rich-azurite-greenmarble",
+      "crystalizedore-rich-azurite-limestone",
+      "crystalizedore-rich-azurite-redmarble",
+      "crystalizedore-rich-azurite-sandstone",
+      "crystalizedore-rich-azurite-schist",
+      "crystalizedore-rich-azurite-slate",
+      "crystalizedore-rich-azurite-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-azurite",
+    "value": {
+      "meltingPoint": 1084,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-copper"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  }
+]

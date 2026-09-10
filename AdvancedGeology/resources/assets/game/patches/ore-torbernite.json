@@ -1,0 +1,103 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "torbernite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "torbernite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-torbernite-gneiss",
+      "ore-bountiful-torbernite-schist",
+      "ore-medium-torbernite-gneiss",
+      "ore-medium-torbernite-schist",
+      "ore-poor-torbernite-gneiss",
+      "ore-poor-torbernite-schist",
+      "ore-rich-torbernite-gneiss",
+      "ore-rich-torbernite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-torbernite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-torbernite-gneiss-free",
+      "looseores-torbernite-schist-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-torbernite-gneiss",
+      "ore-bountiful-torbernite-schist",
+      "ore-medium-torbernite-gneiss",
+      "ore-medium-torbernite-schist",
+      "ore-poor-torbernite-gneiss",
+      "ore-poor-torbernite-schist",
+      "ore-rich-torbernite-gneiss",
+      "ore-rich-torbernite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-torbernite-gneiss",
+      "crystalizedore-bountiful-torbernite-schist",
+      "crystalizedore-medium-torbernite-gneiss",
+      "crystalizedore-medium-torbernite-schist",
+      "crystalizedore-poor-torbernite-gneiss",
+      "crystalizedore-poor-torbernite-schist",
+      "crystalizedore-rich-torbernite-gneiss",
+      "crystalizedore-rich-torbernite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_torbernite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-torbernite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_torbernite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bituminouscoal-dolomite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-bituminouscoal-dolomite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

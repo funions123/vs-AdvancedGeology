@@ -1,0 +1,156 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "bornite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "bornite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-bornite-andesite",
+      "ore-bountiful-bornite-dacite",
+      "ore-bountiful-bornite-granite",
+      "ore-bountiful-bornite-rhyolite",
+      "ore-bountiful-bornite-sandstone",
+      "ore-medium-bornite-andesite",
+      "ore-medium-bornite-dacite",
+      "ore-medium-bornite-granite",
+      "ore-medium-bornite-rhyolite",
+      "ore-medium-bornite-sandstone",
+      "ore-poor-bornite-andesite",
+      "ore-poor-bornite-dacite",
+      "ore-poor-bornite-granite",
+      "ore-poor-bornite-rhyolite",
+      "ore-poor-bornite-sandstone",
+      "ore-rich-bornite-andesite",
+      "ore-rich-bornite-dacite",
+      "ore-rich-bornite-granite",
+      "ore-rich-bornite-rhyolite",
+      "ore-rich-bornite-sandstone"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-bornite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-bornite-andesite-free",
+      "looseores-bornite-dacite-free",
+      "looseores-bornite-granite-free",
+      "looseores-bornite-rhyolite-free",
+      "looseores-bornite-sandstone-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-bornite-andesite",
+      "ore-bountiful-bornite-dacite",
+      "ore-bountiful-bornite-granite",
+      "ore-bountiful-bornite-rhyolite",
+      "ore-bountiful-bornite-sandstone",
+      "ore-medium-bornite-andesite",
+      "ore-medium-bornite-dacite",
+      "ore-medium-bornite-granite",
+      "ore-medium-bornite-rhyolite",
+      "ore-medium-bornite-sandstone",
+      "ore-poor-bornite-andesite",
+      "ore-poor-bornite-dacite",
+      "ore-poor-bornite-granite",
+      "ore-poor-bornite-rhyolite",
+      "ore-poor-bornite-sandstone",
+      "ore-rich-bornite-andesite",
+      "ore-rich-bornite-dacite",
+      "ore-rich-bornite-granite",
+      "ore-rich-bornite-rhyolite",
+      "ore-rich-bornite-sandstone"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-bornite-andesite",
+      "crystalizedore-bountiful-bornite-dacite",
+      "crystalizedore-bountiful-bornite-granite",
+      "crystalizedore-bountiful-bornite-rhyolite",
+      "crystalizedore-bountiful-bornite-sandstone",
+      "crystalizedore-medium-bornite-andesite",
+      "crystalizedore-medium-bornite-dacite",
+      "crystalizedore-medium-bornite-granite",
+      "crystalizedore-medium-bornite-rhyolite",
+      "crystalizedore-medium-bornite-sandstone",
+      "crystalizedore-poor-bornite-andesite",
+      "crystalizedore-poor-bornite-dacite",
+      "crystalizedore-poor-bornite-granite",
+      "crystalizedore-poor-bornite-rhyolite",
+      "crystalizedore-poor-bornite-sandstone",
+      "crystalizedore-rich-bornite-andesite",
+      "crystalizedore-rich-bornite-dacite",
+      "crystalizedore-rich-bornite-granite",
+      "crystalizedore-rich-bornite-rhyolite",
+      "crystalizedore-rich-bornite-sandstone"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-bornite",
+    "value": {
+      "meltingPoint": 1084,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-copper"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_bornite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-bornite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_bornite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

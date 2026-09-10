@@ -1,0 +1,207 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "monazite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "monazite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-monazite-carbonatite",
+      "ore-bountiful-monazite-chert",
+      "ore-bountiful-monazite-gneiss",
+      "ore-bountiful-monazite-granite",
+      "ore-bountiful-monazite-limestone",
+      "ore-bountiful-monazite-pegmatite",
+      "ore-bountiful-monazite-schist",
+      "ore-bountiful-monazite-serpentinite",
+      "ore-bountiful-monazite-slate",
+      "ore-bountiful-monazite-syenite",
+      "ore-medium-monazite-carbonatite",
+      "ore-medium-monazite-chert",
+      "ore-medium-monazite-gneiss",
+      "ore-medium-monazite-granite",
+      "ore-medium-monazite-limestone",
+      "ore-medium-monazite-pegmatite",
+      "ore-medium-monazite-schist",
+      "ore-medium-monazite-serpentinite",
+      "ore-medium-monazite-slate",
+      "ore-medium-monazite-syenite",
+      "ore-poor-monazite-carbonatite",
+      "ore-poor-monazite-chert",
+      "ore-poor-monazite-gneiss",
+      "ore-poor-monazite-granite",
+      "ore-poor-monazite-limestone",
+      "ore-poor-monazite-pegmatite",
+      "ore-poor-monazite-schist",
+      "ore-poor-monazite-serpentinite",
+      "ore-poor-monazite-slate",
+      "ore-poor-monazite-syenite",
+      "ore-rich-monazite-carbonatite",
+      "ore-rich-monazite-chert",
+      "ore-rich-monazite-gneiss",
+      "ore-rich-monazite-granite",
+      "ore-rich-monazite-limestone",
+      "ore-rich-monazite-pegmatite",
+      "ore-rich-monazite-schist",
+      "ore-rich-monazite-serpentinite",
+      "ore-rich-monazite-slate",
+      "ore-rich-monazite-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-monazite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-monazite-carbonatite-free",
+      "looseores-monazite-chert-free",
+      "looseores-monazite-gneiss-free",
+      "looseores-monazite-granite-free",
+      "looseores-monazite-limestone-free",
+      "looseores-monazite-pegmatite-free",
+      "looseores-monazite-schist-free",
+      "looseores-monazite-serpentinite-free",
+      "looseores-monazite-slate-free",
+      "looseores-monazite-syenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-monazite-carbonatite",
+      "ore-bountiful-monazite-chert",
+      "ore-bountiful-monazite-gneiss",
+      "ore-bountiful-monazite-granite",
+      "ore-bountiful-monazite-limestone",
+      "ore-bountiful-monazite-pegmatite",
+      "ore-bountiful-monazite-schist",
+      "ore-bountiful-monazite-serpentinite",
+      "ore-bountiful-monazite-slate",
+      "ore-bountiful-monazite-syenite",
+      "ore-medium-monazite-carbonatite",
+      "ore-medium-monazite-chert",
+      "ore-medium-monazite-gneiss",
+      "ore-medium-monazite-granite",
+      "ore-medium-monazite-limestone",
+      "ore-medium-monazite-pegmatite",
+      "ore-medium-monazite-schist",
+      "ore-medium-monazite-serpentinite",
+      "ore-medium-monazite-slate",
+      "ore-medium-monazite-syenite",
+      "ore-poor-monazite-carbonatite",
+      "ore-poor-monazite-chert",
+      "ore-poor-monazite-gneiss",
+      "ore-poor-monazite-granite",
+      "ore-poor-monazite-limestone",
+      "ore-poor-monazite-pegmatite",
+      "ore-poor-monazite-schist",
+      "ore-poor-monazite-serpentinite",
+      "ore-poor-monazite-slate",
+      "ore-poor-monazite-syenite",
+      "ore-rich-monazite-carbonatite",
+      "ore-rich-monazite-chert",
+      "ore-rich-monazite-gneiss",
+      "ore-rich-monazite-granite",
+      "ore-rich-monazite-limestone",
+      "ore-rich-monazite-pegmatite",
+      "ore-rich-monazite-schist",
+      "ore-rich-monazite-serpentinite",
+      "ore-rich-monazite-slate",
+      "ore-rich-monazite-syenite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-monazite-carbonatite",
+      "crystalizedore-bountiful-monazite-chert",
+      "crystalizedore-bountiful-monazite-gneiss",
+      "crystalizedore-bountiful-monazite-granite",
+      "crystalizedore-bountiful-monazite-limestone",
+      "crystalizedore-bountiful-monazite-pegmatite",
+      "crystalizedore-bountiful-monazite-schist",
+      "crystalizedore-bountiful-monazite-serpentinite",
+      "crystalizedore-bountiful-monazite-slate",
+      "crystalizedore-bountiful-monazite-syenite",
+      "crystalizedore-medium-monazite-carbonatite",
+      "crystalizedore-medium-monazite-chert",
+      "crystalizedore-medium-monazite-gneiss",
+      "crystalizedore-medium-monazite-granite",
+      "crystalizedore-medium-monazite-limestone",
+      "crystalizedore-medium-monazite-pegmatite",
+      "crystalizedore-medium-monazite-schist",
+      "crystalizedore-medium-monazite-serpentinite",
+      "crystalizedore-medium-monazite-slate",
+      "crystalizedore-medium-monazite-syenite",
+      "crystalizedore-poor-monazite-carbonatite",
+      "crystalizedore-poor-monazite-chert",
+      "crystalizedore-poor-monazite-gneiss",
+      "crystalizedore-poor-monazite-granite",
+      "crystalizedore-poor-monazite-limestone",
+      "crystalizedore-poor-monazite-pegmatite",
+      "crystalizedore-poor-monazite-schist",
+      "crystalizedore-poor-monazite-serpentinite",
+      "crystalizedore-poor-monazite-slate",
+      "crystalizedore-poor-monazite-syenite",
+      "crystalizedore-rich-monazite-carbonatite",
+      "crystalizedore-rich-monazite-chert",
+      "crystalizedore-rich-monazite-gneiss",
+      "crystalizedore-rich-monazite-granite",
+      "crystalizedore-rich-monazite-limestone",
+      "crystalizedore-rich-monazite-pegmatite",
+      "crystalizedore-rich-monazite-schist",
+      "crystalizedore-rich-monazite-serpentinite",
+      "crystalizedore-rich-monazite-slate",
+      "crystalizedore-rich-monazite-syenite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_monazite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-monazite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_monazite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "columbite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "columbite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-columbite-gneiss",
+      "ore-bountiful-columbite-granite",
+      "ore-bountiful-columbite-pegmatite",
+      "ore-bountiful-columbite-schist",
+      "ore-bountiful-columbite-slate",
+      "ore-medium-columbite-gneiss",
+      "ore-medium-columbite-granite",
+      "ore-medium-columbite-pegmatite",
+      "ore-medium-columbite-schist",
+      "ore-medium-columbite-slate",
+      "ore-poor-columbite-gneiss",
+      "ore-poor-columbite-granite",
+      "ore-poor-columbite-pegmatite",
+      "ore-poor-columbite-schist",
+      "ore-poor-columbite-slate",
+      "ore-rich-columbite-gneiss",
+      "ore-rich-columbite-granite",
+      "ore-rich-columbite-pegmatite",
+      "ore-rich-columbite-schist",
+      "ore-rich-columbite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-columbite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-columbite-gneiss-free",
+      "looseores-columbite-granite-free",
+      "looseores-columbite-pegmatite-free",
+      "looseores-columbite-schist-free",
+      "looseores-columbite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-columbite-gneiss",
+      "ore-bountiful-columbite-granite",
+      "ore-bountiful-columbite-pegmatite",
+      "ore-bountiful-columbite-schist",
+      "ore-bountiful-columbite-slate",
+      "ore-medium-columbite-gneiss",
+      "ore-medium-columbite-granite",
+      "ore-medium-columbite-pegmatite",
+      "ore-medium-columbite-schist",
+      "ore-medium-columbite-slate",
+      "ore-poor-columbite-gneiss",
+      "ore-poor-columbite-granite",
+      "ore-poor-columbite-pegmatite",
+      "ore-poor-columbite-schist",
+      "ore-poor-columbite-slate",
+      "ore-rich-columbite-gneiss",
+      "ore-rich-columbite-granite",
+      "ore-rich-columbite-pegmatite",
+      "ore-rich-columbite-schist",
+      "ore-rich-columbite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-columbite-gneiss",
+      "crystalizedore-bountiful-columbite-granite",
+      "crystalizedore-bountiful-columbite-pegmatite",
+      "crystalizedore-bountiful-columbite-schist",
+      "crystalizedore-bountiful-columbite-slate",
+      "crystalizedore-medium-columbite-gneiss",
+      "crystalizedore-medium-columbite-granite",
+      "crystalizedore-medium-columbite-pegmatite",
+      "crystalizedore-medium-columbite-schist",
+      "crystalizedore-medium-columbite-slate",
+      "crystalizedore-poor-columbite-gneiss",
+      "crystalizedore-poor-columbite-granite",
+      "crystalizedore-poor-columbite-pegmatite",
+      "crystalizedore-poor-columbite-schist",
+      "crystalizedore-poor-columbite-slate",
+      "crystalizedore-rich-columbite-gneiss",
+      "crystalizedore-rich-columbite-granite",
+      "crystalizedore-rich-columbite-pegmatite",
+      "crystalizedore-rich-columbite-schist",
+      "crystalizedore-rich-columbite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_columbite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-columbite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_columbite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

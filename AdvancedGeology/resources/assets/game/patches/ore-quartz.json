@@ -1,0 +1,48 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-quartz-amphibolite",
+      "ore-quartz-anorthosite",
+      "ore-quartz-dacite",
+      "ore-quartz-dolomite",
+      "ore-quartz-gabbro",
+      "ore-quartz-gneiss",
+      "ore-quartz-granulite",
+      "ore-quartz-greenstone",
+      "ore-quartz-migmatite",
+      "ore-quartz-pegmatite",
+      "ore-quartz-quartzite",
+      "ore-quartz-rhyolite",
+      "ore-quartz-schist",
+      "ore-quartz-serpentinite",
+      "ore-quartz-tonalite",
+      "ore-quartz-tuff"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-quartz-amphibolite-free",
+      "looseores-quartz-anorthosite-free",
+      "looseores-quartz-dacite-free",
+      "looseores-quartz-dolomite-free",
+      "looseores-quartz-gabbro-free",
+      "looseores-quartz-gneiss-free",
+      "looseores-quartz-granulite-free",
+      "looseores-quartz-greenstone-free",
+      "looseores-quartz-migmatite-free",
+      "looseores-quartz-pegmatite-free",
+      "looseores-quartz-quartzite-free",
+      "looseores-quartz-rhyolite-free",
+      "looseores-quartz-schist-free",
+      "looseores-quartz-serpentinite-free",
+      "looseores-quartz-tonalite-free",
+      "looseores-quartz-tuff-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

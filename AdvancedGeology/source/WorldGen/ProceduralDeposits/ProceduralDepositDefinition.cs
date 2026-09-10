@@ -807,6 +807,7 @@ public static class ProceduralMaterialSlots
     public const string Bornite = "bornite";
     public const string Trona = "trona";
     public const string Pentlandite = "pentlandite";
+    public const string Sperrylite = "sperrylite";
     public const string Kernite = "kernite";
     public const string NativeCopper = "native-copper";
     public const string Graphite = "graphite";

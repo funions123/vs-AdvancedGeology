@@ -16,7 +16,7 @@
     "climate": {
       "enabled": true,
       "minRain": 0.0,
-      "maxRain": 0.20,
+      "maxRain": 0.2,
       "minTemp": 5.0,
       "maxTemp": 50.0
     },
@@ -58,7 +58,13 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["claystone", "sandstone", "limestone", "chalk", "conglomerate"],
+      "replaceableRockVariants": [
+        "claystone",
+        "sandstone",
+        "limestone",
+        "chalk",
+        "conglomerate"
+      ],
       "materials": {
         "borax": "game:ore-borax-{rock}",
         "gypsum": "game:rock-gypsum"

@@ -1,0 +1,63 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "alunite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-alunite-andesite",
+      "ore-alunite-dacite",
+      "ore-alunite-rhyolite",
+      "ore-alunite-tuff"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-alunite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-alunite-andesite-free",
+      "looseores-alunite-dacite-free",
+      "looseores-alunite-rhyolite-free",
+      "looseores-alunite-tuff-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_alunite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-alunite-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_alunite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

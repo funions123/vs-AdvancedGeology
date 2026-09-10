@@ -10,7 +10,7 @@
       "cellSize": 256,
       "chance": 0.25,
       "yMode": "worldRelative",
-      "minYRel": 0.20,
+      "minYRel": 0.2,
       "maxYRel": 0.55
     },
     "mvt": {

@@ -65,7 +65,12 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["quartzite", "shale", "slate", "sandstone"],
+      "replaceableRockVariants": [
+        "quartzite",
+        "shale",
+        "slate",
+        "sandstone"
+      ],
       "materials": {
         "cinnabar": "game:ore-cinnabar-{rock}",
         "quartz": "game:ore-quartz-{rock}",

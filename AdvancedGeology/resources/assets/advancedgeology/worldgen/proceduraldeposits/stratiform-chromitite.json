@@ -1,0 +1,54 @@
+[
+  {
+    "code": "stratiform-chromitite",
+    "enabled": true,
+    "template": "stratiformChromitite",
+    "priority": 90,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 416,
+      "chance": 0.13,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.46
+    },
+    "stratiformChromitite": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 34,
+      "seamMin": 2,
+      "seamMax": 3,
+      "titanomagnetiteLayerMin": 3,
+      "titanomagnetiteLayerMax": 5,
+      "dykeMin": 1,
+      "dykeMax": 3
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "peridotite",
+        "pyroxenite",
+        "gabbro",
+        "anorthosite"
+      ],
+      "materials": {
+        "chromite": "game:ore-{grade}-chromite-{rock}",
+        "titanomagnetite": "game:ore-{grade}-titanomagnetite-{rock}",
+        "ilmenite": "game:ore-{grade}-ilmenite-{rock}",
+        "sperrylite": "game:ore-{grade}-sperrylite-{rock}",
+        "critical-zone": "game:rock-pyroxenite",
+        "main-zone": "game:rock-gabbro",
+        "upper-zone": "game:rock-anorthosite",
+        "dyke": "game:rock-basalt"
+      }
+    }
+  }
+]

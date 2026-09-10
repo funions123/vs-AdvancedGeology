@@ -30,12 +30,25 @@
       "veinletCountMin": 28,
       "veinletCountMax": 40
     },
-    "terrainOrientation": { "enabled": false },
-    "source": { "enabled": false },
-    "supergene": { "enabled": false },
-    "weathering": { "enabled": true },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
     "palette": {
-      "replaceableRockVariants": ["granite", "rhyolite", "dacite", "andesite"],
+      "replaceableRockVariants": [
+        "granite",
+        "rhyolite",
+        "dacite",
+        "andesite"
+      ],
       "materials": {
         "bornite": "game:ore-{grade}-bornite-{rock}",
         "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",

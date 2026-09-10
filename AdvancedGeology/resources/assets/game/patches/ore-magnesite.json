@@ -1,0 +1,205 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "magnesite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "magnesite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-magnesite-dolomite",
+      "ore-bountiful-magnesite-greenmarble",
+      "ore-bountiful-magnesite-limestone",
+      "ore-bountiful-magnesite-peridotite",
+      "ore-bountiful-magnesite-redmarble",
+      "ore-bountiful-magnesite-serpentinite",
+      "ore-bountiful-magnesite-whitemarble",
+      "ore-medium-magnesite-dolomite",
+      "ore-medium-magnesite-greenmarble",
+      "ore-medium-magnesite-limestone",
+      "ore-medium-magnesite-peridotite",
+      "ore-medium-magnesite-redmarble",
+      "ore-medium-magnesite-serpentinite",
+      "ore-medium-magnesite-whitemarble",
+      "ore-poor-magnesite-dolomite",
+      "ore-poor-magnesite-greenmarble",
+      "ore-poor-magnesite-limestone",
+      "ore-poor-magnesite-peridotite",
+      "ore-poor-magnesite-redmarble",
+      "ore-poor-magnesite-serpentinite",
+      "ore-poor-magnesite-whitemarble",
+      "ore-rich-magnesite-dolomite",
+      "ore-rich-magnesite-greenmarble",
+      "ore-rich-magnesite-limestone",
+      "ore-rich-magnesite-peridotite",
+      "ore-rich-magnesite-redmarble",
+      "ore-rich-magnesite-serpentinite",
+      "ore-rich-magnesite-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-magnesite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-magnesite-serpentinite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-magnesite-dolomite",
+      "ore-bountiful-magnesite-greenmarble",
+      "ore-bountiful-magnesite-limestone",
+      "ore-bountiful-magnesite-peridotite",
+      "ore-bountiful-magnesite-redmarble",
+      "ore-bountiful-magnesite-serpentinite",
+      "ore-bountiful-magnesite-whitemarble",
+      "ore-medium-magnesite-dolomite",
+      "ore-medium-magnesite-greenmarble",
+      "ore-medium-magnesite-limestone",
+      "ore-medium-magnesite-peridotite",
+      "ore-medium-magnesite-redmarble",
+      "ore-medium-magnesite-serpentinite",
+      "ore-medium-magnesite-whitemarble",
+      "ore-poor-magnesite-dolomite",
+      "ore-poor-magnesite-greenmarble",
+      "ore-poor-magnesite-limestone",
+      "ore-poor-magnesite-peridotite",
+      "ore-poor-magnesite-redmarble",
+      "ore-poor-magnesite-serpentinite",
+      "ore-poor-magnesite-whitemarble",
+      "ore-rich-magnesite-dolomite",
+      "ore-rich-magnesite-greenmarble",
+      "ore-rich-magnesite-limestone",
+      "ore-rich-magnesite-peridotite",
+      "ore-rich-magnesite-redmarble",
+      "ore-rich-magnesite-serpentinite",
+      "ore-rich-magnesite-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-bountiful-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 2.33
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-medium-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 1.33
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-poor-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 1
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/ore-rich-magnesite-*",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-magnesite"
+      },
+      "quantity": {
+        "avg": 1.66
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-magnesite-dolomite",
+      "crystalizedore-bountiful-magnesite-greenmarble",
+      "crystalizedore-bountiful-magnesite-limestone",
+      "crystalizedore-bountiful-magnesite-peridotite",
+      "crystalizedore-bountiful-magnesite-redmarble",
+      "crystalizedore-bountiful-magnesite-serpentinite",
+      "crystalizedore-bountiful-magnesite-whitemarble",
+      "crystalizedore-medium-magnesite-dolomite",
+      "crystalizedore-medium-magnesite-greenmarble",
+      "crystalizedore-medium-magnesite-limestone",
+      "crystalizedore-medium-magnesite-peridotite",
+      "crystalizedore-medium-magnesite-redmarble",
+      "crystalizedore-medium-magnesite-serpentinite",
+      "crystalizedore-medium-magnesite-whitemarble",
+      "crystalizedore-poor-magnesite-dolomite",
+      "crystalizedore-poor-magnesite-greenmarble",
+      "crystalizedore-poor-magnesite-limestone",
+      "crystalizedore-poor-magnesite-peridotite",
+      "crystalizedore-poor-magnesite-redmarble",
+      "crystalizedore-poor-magnesite-serpentinite",
+      "crystalizedore-poor-magnesite-whitemarble",
+      "crystalizedore-rich-magnesite-dolomite",
+      "crystalizedore-rich-magnesite-greenmarble",
+      "crystalizedore-rich-magnesite-limestone",
+      "crystalizedore-rich-magnesite-peridotite",
+      "crystalizedore-rich-magnesite-redmarble",
+      "crystalizedore-rich-magnesite-serpentinite",
+      "crystalizedore-rich-magnesite-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/variantgroups/0/states/-",
+    "value": [
+      "magnesite"
+    ],
+    "file": "game:itemtypes/resource/crushed/crushed.json"
+  }
+]

@@ -1,0 +1,659 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "agateblack"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "agateblue"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "agatered"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "agatewhite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "alexandrite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "almandine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "amazonite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "aquamarine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "celestine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "chrysoberyl"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "citrine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "demantoid"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "heliodor"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jadeblack"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jadeimperial"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jadekhotan"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jadelavender"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jasperblack"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jasperblue"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jaspergreen"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jasperred"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "jasperyellow"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "labradorite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "moonstone"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "opalblack"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "opalcrystal"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "opalfire"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "opalwhite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "pyrope"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "ruby"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "sapphire"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spessartine"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spinelblack"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spinelblue"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spinelgreen"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spinelorange"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spinelred"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "sunstone"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tanzanite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "topazblue"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "topazimperial"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "topazred"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "topazsherry"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tourmalinechrome"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tourmalinedravite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tourmalineindicolite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tourmalinerubellite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tourmalineschorl"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tourmalineverdelite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "tsavorite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "uvarovite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "zirconblue"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "zirconbrown"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "zircongreen"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "zirconred"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "zirconwhite"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "zirconyellow"
+    },
+    "file": "game:worldproperties/block/ore-gem-rough.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-gem-agateblack-andesite",
+      "ore-gem-agateblack-basalt",
+      "ore-gem-agateblack-greenstone",
+      "ore-gem-agateblack-rhyolite",
+      "ore-gem-agateblue-andesite",
+      "ore-gem-agateblue-basalt",
+      "ore-gem-agateblue-greenstone",
+      "ore-gem-agateblue-rhyolite",
+      "ore-gem-agatered-andesite",
+      "ore-gem-agatered-basalt",
+      "ore-gem-agatered-greenstone",
+      "ore-gem-agatered-rhyolite",
+      "ore-gem-agatewhite-andesite",
+      "ore-gem-agatewhite-basalt",
+      "ore-gem-agatewhite-greenstone",
+      "ore-gem-agatewhite-rhyolite",
+      "ore-gem-alexandrite-pegmatite",
+      "ore-gem-alexandrite-phyllite",
+      "ore-gem-alexandrite-schist",
+      "ore-gem-almandine-amphibolite",
+      "ore-gem-almandine-gneiss",
+      "ore-gem-almandine-granulite",
+      "ore-gem-almandine-schist",
+      "ore-gem-amazonite-granite",
+      "ore-gem-amazonite-pegmatite",
+      "ore-gem-aquamarine-gneiss",
+      "ore-gem-aquamarine-granite",
+      "ore-gem-aquamarine-pegmatite",
+      "ore-gem-chrysoberyl-gneiss",
+      "ore-gem-chrysoberyl-granite",
+      "ore-gem-chrysoberyl-pegmatite",
+      "ore-gem-chrysoberyl-schist",
+      "ore-gem-citrine-granite",
+      "ore-gem-citrine-pegmatite",
+      "ore-gem-citrine-rhyolite",
+      "ore-gem-demantoid-gabbro",
+      "ore-gem-demantoid-peridotite",
+      "ore-gem-demantoid-pyroxenite",
+      "ore-gem-demantoid-serpentinite",
+      "ore-gem-heliodor-granite",
+      "ore-gem-heliodor-pegmatite",
+      "ore-gem-heliodor-rhyolite",
+      "ore-gem-jadeblack-amphibolite",
+      "ore-gem-jadeblack-peridotite",
+      "ore-gem-jadeblack-serpentinite",
+      "ore-gem-jadeimperial-amphibolite",
+      "ore-gem-jadeimperial-greenstone",
+      "ore-gem-jadeimperial-serpentinite",
+      "ore-gem-jadekhotan-amphibolite",
+      "ore-gem-jadekhotan-serpentinite",
+      "ore-gem-jadekhotan-whitemarble",
+      "ore-gem-jadelavender-amphibolite",
+      "ore-gem-jadelavender-greenstone",
+      "ore-gem-jadelavender-serpentinite",
+      "ore-gem-jasperblack-greenstone",
+      "ore-gem-jasperblack-rhyolite",
+      "ore-gem-jasperblack-tuff",
+      "ore-gem-jasperblue-greenstone",
+      "ore-gem-jasperblue-rhyolite",
+      "ore-gem-jasperblue-tuff",
+      "ore-gem-jaspergreen-greenstone",
+      "ore-gem-jaspergreen-rhyolite",
+      "ore-gem-jaspergreen-tuff",
+      "ore-gem-jasperred-greenstone",
+      "ore-gem-jasperred-rhyolite",
+      "ore-gem-jasperred-tuff",
+      "ore-gem-jasperyellow-greenstone",
+      "ore-gem-jasperyellow-rhyolite",
+      "ore-gem-jasperyellow-tuff",
+      "ore-gem-labradorite-anorthosite",
+      "ore-gem-labradorite-gabbro",
+      "ore-gem-labradorite-granulite",
+      "ore-gem-moonstone-granite",
+      "ore-gem-moonstone-rhyolite",
+      "ore-gem-opalblack-basalt",
+      "ore-gem-opalblack-claystone",
+      "ore-gem-opalblack-sandstone",
+      "ore-gem-opalcrystal-claystone",
+      "ore-gem-opalcrystal-rhyolite",
+      "ore-gem-opalcrystal-sandstone",
+      "ore-gem-opalfire-andesite",
+      "ore-gem-opalfire-basalt",
+      "ore-gem-opalfire-rhyolite",
+      "ore-gem-opalwhite-claystone",
+      "ore-gem-opalwhite-rhyolite",
+      "ore-gem-opalwhite-sandstone",
+      "ore-gem-pyrope-peridotite",
+      "ore-gem-pyrope-pyroxenite",
+      "ore-gem-pyrope-serpentinite",
+      "ore-gem-ruby-amphibolite",
+      "ore-gem-ruby-basalt",
+      "ore-gem-ruby-gneiss",
+      "ore-gem-ruby-whitemarble",
+      "ore-gem-sapphire-amphibolite",
+      "ore-gem-sapphire-basalt",
+      "ore-gem-sapphire-gneiss",
+      "ore-gem-sapphire-syenite",
+      "ore-gem-spessartine-chert",
+      "ore-gem-spessartine-gneiss",
+      "ore-gem-spessartine-granite",
+      "ore-gem-spessartine-pegmatite",
+      "ore-gem-spessartine-rhyolite",
+      "ore-gem-spessartine-schist",
+      "ore-gem-spessartine-serpentinite",
+      "ore-gem-spessartine-slate",
+      "ore-gem-spinelblack-gabbro",
+      "ore-gem-spinelblack-greenmarble",
+      "ore-gem-spinelblack-serpentinite",
+      "ore-gem-spinelblue-basalt",
+      "ore-gem-spinelblue-gneiss",
+      "ore-gem-spinelblue-whitemarble",
+      "ore-gem-spinelgreen-gneiss",
+      "ore-gem-spinelgreen-greenmarble",
+      "ore-gem-spinelgreen-serpentinite",
+      "ore-gem-spinelorange-basalt",
+      "ore-gem-spinelorange-gneiss",
+      "ore-gem-spinelorange-whitemarble",
+      "ore-gem-spinelred-basalt",
+      "ore-gem-spinelred-gneiss",
+      "ore-gem-spinelred-whitemarble",
+      "ore-gem-sunstone-andesite",
+      "ore-gem-sunstone-anorthosite",
+      "ore-gem-sunstone-basalt",
+      "ore-gem-tanzanite-amphibolite",
+      "ore-gem-tanzanite-gneiss",
+      "ore-gem-tanzanite-schist",
+      "ore-gem-topazblue-granite",
+      "ore-gem-topazblue-pegmatite",
+      "ore-gem-topazblue-rhyolite",
+      "ore-gem-topazimperial-granite",
+      "ore-gem-topazimperial-pegmatite",
+      "ore-gem-topazimperial-rhyolite",
+      "ore-gem-topazred-granite",
+      "ore-gem-topazred-pegmatite",
+      "ore-gem-topazred-rhyolite",
+      "ore-gem-topazsherry-granite",
+      "ore-gem-topazsherry-pegmatite",
+      "ore-gem-topazsherry-rhyolite",
+      "ore-gem-tourmalinechrome-greenmarble",
+      "ore-gem-tourmalinechrome-schist",
+      "ore-gem-tourmalinechrome-serpentinite",
+      "ore-gem-tourmalinedravite-gneiss",
+      "ore-gem-tourmalinedravite-greenmarble",
+      "ore-gem-tourmalinedravite-schist",
+      "ore-gem-tourmalineindicolite-gneiss",
+      "ore-gem-tourmalineindicolite-granite",
+      "ore-gem-tourmalineindicolite-pegmatite",
+      "ore-gem-tourmalinerubellite-gneiss",
+      "ore-gem-tourmalinerubellite-granite",
+      "ore-gem-tourmalinerubellite-pegmatite",
+      "ore-gem-tourmalineschorl-andesite",
+      "ore-gem-tourmalineschorl-dacite",
+      "ore-gem-tourmalineschorl-granite",
+      "ore-gem-tourmalineschorl-pegmatite",
+      "ore-gem-tourmalineschorl-rhyolite",
+      "ore-gem-tourmalineschorl-schist",
+      "ore-gem-tourmalineverdelite-gneiss",
+      "ore-gem-tourmalineverdelite-granite",
+      "ore-gem-tourmalineverdelite-pegmatite",
+      "ore-gem-tsavorite-gneiss",
+      "ore-gem-tsavorite-greenmarble",
+      "ore-gem-tsavorite-greenstone",
+      "ore-gem-uvarovite-gabbro",
+      "ore-gem-uvarovite-peridotite",
+      "ore-gem-uvarovite-serpentinite",
+      "ore-gem-zirconblue-gneiss",
+      "ore-gem-zirconblue-granite",
+      "ore-gem-zirconblue-pegmatite",
+      "ore-gem-zirconblue-syenite",
+      "ore-gem-zirconbrown-gneiss",
+      "ore-gem-zirconbrown-granite",
+      "ore-gem-zirconbrown-pegmatite",
+      "ore-gem-zirconbrown-syenite",
+      "ore-gem-zircongreen-gneiss",
+      "ore-gem-zircongreen-granite",
+      "ore-gem-zircongreen-pegmatite",
+      "ore-gem-zircongreen-syenite",
+      "ore-gem-zirconred-gneiss",
+      "ore-gem-zirconred-granite",
+      "ore-gem-zirconred-pegmatite",
+      "ore-gem-zirconred-syenite",
+      "ore-gem-zirconwhite-gneiss",
+      "ore-gem-zirconwhite-granite",
+      "ore-gem-zirconwhite-pegmatite",
+      "ore-gem-zirconwhite-syenite",
+      "ore-gem-zirconyellow-gneiss",
+      "ore-gem-zirconyellow-granite",
+      "ore-gem-zirconyellow-pegmatite",
+      "ore-gem-zirconyellow-syenite",
+      "ore-medium-celestine-limestone",
+      "ore-medium-topazblue-gneiss",
+      "ore-medium-topazblue-granite",
+      "ore-medium-topazblue-pegmatite",
+      "ore-medium-topazblue-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-gem.json"
+  }
+]

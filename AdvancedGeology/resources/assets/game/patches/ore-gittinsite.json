@@ -1,0 +1,72 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "gittinsite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "gittinsite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-gittinsite-pegmatite",
+      "ore-bountiful-gittinsite-syenite",
+      "ore-medium-gittinsite-pegmatite",
+      "ore-medium-gittinsite-syenite",
+      "ore-poor-gittinsite-pegmatite",
+      "ore-poor-gittinsite-syenite",
+      "ore-rich-gittinsite-pegmatite",
+      "ore-rich-gittinsite-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-gittinsite-pegmatite-free",
+      "looseores-gittinsite-syenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-gittinsite-pegmatite",
+      "ore-bountiful-gittinsite-syenite",
+      "ore-medium-gittinsite-pegmatite",
+      "ore-medium-gittinsite-syenite",
+      "ore-poor-gittinsite-pegmatite",
+      "ore-poor-gittinsite-syenite",
+      "ore-rich-gittinsite-pegmatite",
+      "ore-rich-gittinsite-syenite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-gittinsite-pegmatite",
+      "crystalizedore-bountiful-gittinsite-syenite",
+      "crystalizedore-medium-gittinsite-pegmatite",
+      "crystalizedore-medium-gittinsite-syenite",
+      "crystalizedore-poor-gittinsite-pegmatite",
+      "crystalizedore-poor-gittinsite-syenite",
+      "crystalizedore-rich-gittinsite-pegmatite",
+      "crystalizedore-rich-gittinsite-syenite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

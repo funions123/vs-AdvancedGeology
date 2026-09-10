@@ -1,0 +1,82 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-wolframite-gneiss",
+      "ore-bountiful-wolframite-granite",
+      "ore-bountiful-wolframite-schist",
+      "ore-bountiful-wolframite-slate",
+      "ore-medium-wolframite-gneiss",
+      "ore-medium-wolframite-granite",
+      "ore-medium-wolframite-schist",
+      "ore-medium-wolframite-slate",
+      "ore-poor-wolframite-gneiss",
+      "ore-poor-wolframite-granite",
+      "ore-poor-wolframite-schist",
+      "ore-poor-wolframite-slate",
+      "ore-rich-wolframite-gneiss",
+      "ore-rich-wolframite-granite",
+      "ore-rich-wolframite-schist",
+      "ore-rich-wolframite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-wolframite-gneiss-free",
+      "looseores-wolframite-granite-free",
+      "looseores-wolframite-schist-free",
+      "looseores-wolframite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-wolframite-gneiss",
+      "ore-bountiful-wolframite-granite",
+      "ore-bountiful-wolframite-schist",
+      "ore-bountiful-wolframite-slate",
+      "ore-medium-wolframite-gneiss",
+      "ore-medium-wolframite-granite",
+      "ore-medium-wolframite-schist",
+      "ore-medium-wolframite-slate",
+      "ore-poor-wolframite-gneiss",
+      "ore-poor-wolframite-granite",
+      "ore-poor-wolframite-schist",
+      "ore-poor-wolframite-slate",
+      "ore-rich-wolframite-gneiss",
+      "ore-rich-wolframite-granite",
+      "ore-rich-wolframite-schist",
+      "ore-rich-wolframite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-wolframite-gneiss",
+      "crystalizedore-bountiful-wolframite-granite",
+      "crystalizedore-bountiful-wolframite-schist",
+      "crystalizedore-bountiful-wolframite-slate",
+      "crystalizedore-medium-wolframite-gneiss",
+      "crystalizedore-medium-wolframite-granite",
+      "crystalizedore-medium-wolframite-schist",
+      "crystalizedore-medium-wolframite-slate",
+      "crystalizedore-poor-wolframite-gneiss",
+      "crystalizedore-poor-wolframite-granite",
+      "crystalizedore-poor-wolframite-schist",
+      "crystalizedore-poor-wolframite-slate",
+      "crystalizedore-rich-wolframite-gneiss",
+      "crystalizedore-rich-wolframite-granite",
+      "crystalizedore-rich-wolframite-schist",
+      "crystalizedore-rich-wolframite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

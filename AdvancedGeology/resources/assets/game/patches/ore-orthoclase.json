@@ -1,0 +1,63 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "orthoclase"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-orthoclase-granite",
+      "ore-orthoclase-pegmatite",
+      "ore-orthoclase-rhyolite",
+      "ore-orthoclase-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-orthoclase-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-orthoclase-granite-free",
+      "looseores-orthoclase-pegmatite-free",
+      "looseores-orthoclase-rhyolite-free",
+      "looseores-orthoclase-syenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_orthoclase_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-orthoclase-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_orthoclase_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

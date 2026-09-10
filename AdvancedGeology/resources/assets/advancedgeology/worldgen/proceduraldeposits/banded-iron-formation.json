@@ -10,7 +10,7 @@
       "cellSize": 256,
       "chance": 0.25,
       "yMode": "worldRelative",
-      "minYRel": 0.20,
+      "minYRel": 0.2,
       "maxYRel": 0.48
     },
     "bandedIron": {
@@ -45,7 +45,12 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["chert", "slate", "schist", "phyllite"],
+      "replaceableRockVariants": [
+        "chert",
+        "slate",
+        "schist",
+        "phyllite"
+      ],
       "materials": {
         "magnetite": "game:ore-{grade}-magnetite-{rock}",
         "hematite": "game:ore-{grade}-hematite-{rock}",

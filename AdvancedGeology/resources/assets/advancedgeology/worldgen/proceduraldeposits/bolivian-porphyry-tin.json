@@ -10,8 +10,8 @@
       "cellSize": 384,
       "chance": 0.16,
       "yMode": "worldRelative",
-      "minYRel": 0.20,
-      "maxYRel": 0.50
+      "minYRel": 0.2,
+      "maxYRel": 0.5
     },
     "porphyryTin": {
       "horizontalRadius": 40,
@@ -81,7 +81,7 @@
       "clastRadiusYMax": 1.5,
       "clastRadiusZMin": 0.8,
       "clastRadiusZMax": 1.7,
-      "stibniteSpeckleThreshold": 0.90
+      "stibniteSpeckleThreshold": 0.9
     },
     "terrainOrientation": {
       "enabled": false
@@ -96,7 +96,11 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["rhyolite", "dacite", "andesite"],
+      "replaceableRockVariants": [
+        "rhyolite",
+        "dacite",
+        "andesite"
+      ],
       "materials": {
         "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
         "stannite": "game:ore-{grade}-stannite-{rock}",

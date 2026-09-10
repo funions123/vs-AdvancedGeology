@@ -1,0 +1,46 @@
+[
+  {
+    "code": "unconformity-related-uranium",
+    "enabled": true,
+    "template": "unconformityUranium",
+    "priority": 101,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 448,
+      "chance": 0.12,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.42
+    },
+    "unconformityUranium": {
+      "horizontalRadius": 38,
+      "verticalHalfHeight": 34,
+      "splayMin": 1,
+      "splayMax": 2,
+      "perchedMin": 0,
+      "perchedMax": 2
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "gneiss",
+        "schist",
+        "sandstone"
+      ],
+      "materials": {
+        "uraninite": "game:ore-{grade}-uranium-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "hematite": "game:ore-{grade}-hematite-{rock}"
+      }
+    }
+  }
+]

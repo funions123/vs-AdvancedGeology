@@ -8,9 +8,9 @@
     "intrude": false,
     "placement": {
       "cellSize": 384,
-      "chance": 0.20,
+      "chance": 0.2,
       "yMode": "worldRelative",
-      "minYRel": 0.20,
+      "minYRel": 0.2,
       "maxYRel": 0.52
     },
     "stratiformCopper": {
@@ -28,12 +28,22 @@
       "faultCountMin": 1,
       "faultCountMax": 3
     },
-    "terrainOrientation": { "enabled": false },
-    "source": { "enabled": false },
-    "supergene": { "enabled": false },
-    "weathering": { "enabled": true },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": true
+    },
     "palette": {
-      "replaceableRockVariants": ["sandstone"],
+      "replaceableRockVariants": [
+        "sandstone"
+      ],
       "materials": {
         "native-copper": "game:ore-{grade}-nativecopper-sandstone",
         "chalcocite": "game:ore-{grade}-chalcocite-sandstone",

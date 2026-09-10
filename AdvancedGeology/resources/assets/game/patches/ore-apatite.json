@@ -1,0 +1,83 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "apatite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-apatite-andesite",
+      "ore-apatite-anorthosite",
+      "ore-apatite-basalt",
+      "ore-apatite-carbonatite",
+      "ore-apatite-chert",
+      "ore-apatite-dacite",
+      "ore-apatite-gneiss",
+      "ore-apatite-granite",
+      "ore-apatite-limestone",
+      "ore-apatite-phosphorite",
+      "ore-apatite-rhyolite",
+      "ore-apatite-schist",
+      "ore-apatite-serpentinite",
+      "ore-apatite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-apatite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-apatite-andesite-free",
+      "looseores-apatite-anorthosite-free",
+      "looseores-apatite-basalt-free",
+      "looseores-apatite-carbonatite-free",
+      "looseores-apatite-chert-free",
+      "looseores-apatite-dacite-free",
+      "looseores-apatite-gneiss-free",
+      "looseores-apatite-granite-free",
+      "looseores-apatite-limestone-free",
+      "looseores-apatite-phosphorite-free",
+      "looseores-apatite-rhyolite-free",
+      "looseores-apatite-schist-free",
+      "looseores-apatite-serpentinite-free",
+      "looseores-apatite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_apatite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-apatite-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_apatite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

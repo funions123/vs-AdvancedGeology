@@ -1,0 +1,50 @@
+[
+  {
+    "code": "anorthosite-ilmenite",
+    "enabled": true,
+    "template": "anorthositeIlmenite",
+    "priority": 93,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 416,
+      "chance": 0.12,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.46
+    },
+    "anorthositeIlmenite": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 28,
+      "satelliteMin": 2,
+      "satelliteMax": 5,
+      "dykeMin": 1,
+      "dykeMax": 2
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "anorthosite",
+        "gabbro",
+        "diorite",
+        "granulite"
+      ],
+      "materials": {
+        "ilmenite": "game:ore-{grade}-ilmenite-{rock}",
+        "magnetite": "game:ore-{grade}-magnetite-{rock}",
+        "apatite": "game:ore-apatite-{rock}",
+        "raft": "game:rock-anorthosite",
+        "root": "game:rock-gabbro",
+        "dyke": "game:rock-basalt"
+      }
+    }
+  }
+]

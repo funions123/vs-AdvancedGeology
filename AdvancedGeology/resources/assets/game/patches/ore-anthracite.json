@@ -1,0 +1,28 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-anthracite-greenmarble",
+      "ore-anthracite-phyllite",
+      "ore-anthracite-quartzite",
+      "ore-anthracite-redmarble",
+      "ore-anthracite-slate",
+      "ore-anthracite-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-anthracite-greenmarble-free",
+      "looseores-anthracite-phyllite-free",
+      "looseores-anthracite-quartzite-free",
+      "looseores-anthracite-redmarble-free",
+      "looseores-anthracite-slate-free",
+      "looseores-anthracite-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

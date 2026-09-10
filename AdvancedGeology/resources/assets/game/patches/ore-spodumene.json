@@ -1,0 +1,142 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spodumene"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "spodumene"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-spodumene-gneiss",
+      "ore-bountiful-spodumene-granite",
+      "ore-bountiful-spodumene-pegmatite",
+      "ore-bountiful-spodumene-schist",
+      "ore-bountiful-spodumene-slate",
+      "ore-medium-spodumene-gneiss",
+      "ore-medium-spodumene-granite",
+      "ore-medium-spodumene-pegmatite",
+      "ore-medium-spodumene-schist",
+      "ore-medium-spodumene-slate",
+      "ore-poor-spodumene-gneiss",
+      "ore-poor-spodumene-granite",
+      "ore-poor-spodumene-pegmatite",
+      "ore-poor-spodumene-schist",
+      "ore-poor-spodumene-slate",
+      "ore-rich-spodumene-gneiss",
+      "ore-rich-spodumene-granite",
+      "ore-rich-spodumene-pegmatite",
+      "ore-rich-spodumene-schist",
+      "ore-rich-spodumene-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-spodumene-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-spodumene-gneiss-free",
+      "looseores-spodumene-granite-free",
+      "looseores-spodumene-pegmatite-free",
+      "looseores-spodumene-schist-free",
+      "looseores-spodumene-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-spodumene-gneiss",
+      "ore-bountiful-spodumene-granite",
+      "ore-bountiful-spodumene-pegmatite",
+      "ore-bountiful-spodumene-schist",
+      "ore-bountiful-spodumene-slate",
+      "ore-medium-spodumene-gneiss",
+      "ore-medium-spodumene-granite",
+      "ore-medium-spodumene-pegmatite",
+      "ore-medium-spodumene-schist",
+      "ore-medium-spodumene-slate",
+      "ore-poor-spodumene-gneiss",
+      "ore-poor-spodumene-granite",
+      "ore-poor-spodumene-pegmatite",
+      "ore-poor-spodumene-schist",
+      "ore-poor-spodumene-slate",
+      "ore-rich-spodumene-gneiss",
+      "ore-rich-spodumene-granite",
+      "ore-rich-spodumene-pegmatite",
+      "ore-rich-spodumene-schist",
+      "ore-rich-spodumene-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-spodumene-gneiss",
+      "crystalizedore-bountiful-spodumene-granite",
+      "crystalizedore-bountiful-spodumene-pegmatite",
+      "crystalizedore-bountiful-spodumene-schist",
+      "crystalizedore-bountiful-spodumene-slate",
+      "crystalizedore-medium-spodumene-gneiss",
+      "crystalizedore-medium-spodumene-granite",
+      "crystalizedore-medium-spodumene-pegmatite",
+      "crystalizedore-medium-spodumene-schist",
+      "crystalizedore-medium-spodumene-slate",
+      "crystalizedore-poor-spodumene-gneiss",
+      "crystalizedore-poor-spodumene-granite",
+      "crystalizedore-poor-spodumene-pegmatite",
+      "crystalizedore-poor-spodumene-schist",
+      "crystalizedore-poor-spodumene-slate",
+      "crystalizedore-rich-spodumene-gneiss",
+      "crystalizedore-rich-spodumene-granite",
+      "crystalizedore-rich-spodumene-pegmatite",
+      "crystalizedore-rich-spodumene-schist",
+      "crystalizedore-rich-spodumene-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_spodumene_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-spodumene-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_spodumene_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

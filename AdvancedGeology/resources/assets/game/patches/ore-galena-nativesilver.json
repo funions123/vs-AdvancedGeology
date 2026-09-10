@@ -1,0 +1,59 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-medium-galena_nativesilver-amphibolite",
+      "ore-medium-galena_nativesilver-dolomite",
+      "ore-medium-galena_nativesilver-greenstone",
+      "ore-medium-galena_nativesilver-phyllite",
+      "ore-medium-galena_nativesilver-schist",
+      "ore-medium-galena_nativesilver-slate",
+      "ore-poor-galena_nativesilver-amphibolite",
+      "ore-poor-galena_nativesilver-dolomite",
+      "ore-poor-galena_nativesilver-greenstone",
+      "ore-poor-galena_nativesilver-phyllite",
+      "ore-poor-galena_nativesilver-schist",
+      "ore-poor-galena_nativesilver-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-medium-galena_nativesilver-amphibolite",
+      "ore-medium-galena_nativesilver-dolomite",
+      "ore-medium-galena_nativesilver-greenstone",
+      "ore-medium-galena_nativesilver-phyllite",
+      "ore-medium-galena_nativesilver-schist",
+      "ore-medium-galena_nativesilver-slate",
+      "ore-poor-galena_nativesilver-amphibolite",
+      "ore-poor-galena_nativesilver-dolomite",
+      "ore-poor-galena_nativesilver-greenstone",
+      "ore-poor-galena_nativesilver-phyllite",
+      "ore-poor-galena_nativesilver-schist",
+      "ore-poor-galena_nativesilver-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-medium-galena_nativesilver-amphibolite",
+      "crystalizedore-medium-galena_nativesilver-dolomite",
+      "crystalizedore-medium-galena_nativesilver-greenstone",
+      "crystalizedore-medium-galena_nativesilver-phyllite",
+      "crystalizedore-medium-galena_nativesilver-schist",
+      "crystalizedore-medium-galena_nativesilver-slate",
+      "crystalizedore-poor-galena_nativesilver-amphibolite",
+      "crystalizedore-poor-galena_nativesilver-dolomite",
+      "crystalizedore-poor-galena_nativesilver-greenstone",
+      "crystalizedore-poor-galena_nativesilver-phyllite",
+      "crystalizedore-poor-galena_nativesilver-schist",
+      "crystalizedore-poor-galena_nativesilver-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

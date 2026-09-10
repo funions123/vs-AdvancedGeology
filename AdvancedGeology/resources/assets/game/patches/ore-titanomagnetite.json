@@ -1,0 +1,129 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "titanomagnetite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "titanomagnetite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-titanomagnetite-anorthosite",
+      "ore-bountiful-titanomagnetite-gabbro",
+      "ore-bountiful-titanomagnetite-peridotite",
+      "ore-bountiful-titanomagnetite-pyroxenite",
+      "ore-medium-titanomagnetite-anorthosite",
+      "ore-medium-titanomagnetite-gabbro",
+      "ore-medium-titanomagnetite-peridotite",
+      "ore-medium-titanomagnetite-pyroxenite",
+      "ore-poor-titanomagnetite-anorthosite",
+      "ore-poor-titanomagnetite-gabbro",
+      "ore-poor-titanomagnetite-peridotite",
+      "ore-poor-titanomagnetite-pyroxenite",
+      "ore-rich-titanomagnetite-anorthosite",
+      "ore-rich-titanomagnetite-gabbro",
+      "ore-rich-titanomagnetite-peridotite",
+      "ore-rich-titanomagnetite-pyroxenite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-titanomagnetite-*",
+    "value": 4,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-titanomagnetite-anorthosite-free",
+      "looseores-titanomagnetite-gabbro-free",
+      "looseores-titanomagnetite-peridotite-free",
+      "looseores-titanomagnetite-pyroxenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-titanomagnetite-anorthosite",
+      "ore-bountiful-titanomagnetite-gabbro",
+      "ore-bountiful-titanomagnetite-peridotite",
+      "ore-bountiful-titanomagnetite-pyroxenite",
+      "ore-medium-titanomagnetite-anorthosite",
+      "ore-medium-titanomagnetite-gabbro",
+      "ore-medium-titanomagnetite-peridotite",
+      "ore-medium-titanomagnetite-pyroxenite",
+      "ore-poor-titanomagnetite-anorthosite",
+      "ore-poor-titanomagnetite-gabbro",
+      "ore-poor-titanomagnetite-peridotite",
+      "ore-poor-titanomagnetite-pyroxenite",
+      "ore-rich-titanomagnetite-anorthosite",
+      "ore-rich-titanomagnetite-gabbro",
+      "ore-rich-titanomagnetite-peridotite",
+      "ore-rich-titanomagnetite-pyroxenite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-titanomagnetite-anorthosite",
+      "crystalizedore-bountiful-titanomagnetite-gabbro",
+      "crystalizedore-bountiful-titanomagnetite-peridotite",
+      "crystalizedore-bountiful-titanomagnetite-pyroxenite",
+      "crystalizedore-medium-titanomagnetite-anorthosite",
+      "crystalizedore-medium-titanomagnetite-gabbro",
+      "crystalizedore-medium-titanomagnetite-peridotite",
+      "crystalizedore-medium-titanomagnetite-pyroxenite",
+      "crystalizedore-poor-titanomagnetite-anorthosite",
+      "crystalizedore-poor-titanomagnetite-gabbro",
+      "crystalizedore-poor-titanomagnetite-peridotite",
+      "crystalizedore-poor-titanomagnetite-pyroxenite",
+      "crystalizedore-rich-titanomagnetite-anorthosite",
+      "crystalizedore-rich-titanomagnetite-gabbro",
+      "crystalizedore-rich-titanomagnetite-peridotite",
+      "crystalizedore-rich-titanomagnetite-pyroxenite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_titanomagnetite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-titanomagnetite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_titanomagnetite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

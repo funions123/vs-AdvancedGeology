@@ -1,0 +1,220 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "siderite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "siderite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-siderite-chert",
+      "ore-bountiful-siderite-dolomite",
+      "ore-bountiful-siderite-granite",
+      "ore-bountiful-siderite-limestone",
+      "ore-bountiful-siderite-phyllite",
+      "ore-bountiful-siderite-schist",
+      "ore-bountiful-siderite-shale",
+      "ore-bountiful-siderite-slate",
+      "ore-medium-siderite-chalk",
+      "ore-medium-siderite-chert",
+      "ore-medium-siderite-claystone",
+      "ore-medium-siderite-dolomite",
+      "ore-medium-siderite-granite",
+      "ore-medium-siderite-greenmarble",
+      "ore-medium-siderite-limestone",
+      "ore-medium-siderite-phyllite",
+      "ore-medium-siderite-redmarble",
+      "ore-medium-siderite-schist",
+      "ore-medium-siderite-shale",
+      "ore-medium-siderite-slate",
+      "ore-medium-siderite-whitemarble",
+      "ore-poor-siderite-chalk",
+      "ore-poor-siderite-chert",
+      "ore-poor-siderite-claystone",
+      "ore-poor-siderite-dolomite",
+      "ore-poor-siderite-granite",
+      "ore-poor-siderite-greenmarble",
+      "ore-poor-siderite-limestone",
+      "ore-poor-siderite-phyllite",
+      "ore-poor-siderite-redmarble",
+      "ore-poor-siderite-schist",
+      "ore-poor-siderite-shale",
+      "ore-poor-siderite-slate",
+      "ore-poor-siderite-whitemarble",
+      "ore-rich-siderite-chert",
+      "ore-rich-siderite-dolomite",
+      "ore-rich-siderite-granite",
+      "ore-rich-siderite-limestone",
+      "ore-rich-siderite-phyllite",
+      "ore-rich-siderite-schist",
+      "ore-rich-siderite-shale",
+      "ore-rich-siderite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-siderite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-siderite-chalk-free",
+      "looseores-siderite-chert-free",
+      "looseores-siderite-claystone-free",
+      "looseores-siderite-dolomite-free",
+      "looseores-siderite-granite-free",
+      "looseores-siderite-greenmarble-free",
+      "looseores-siderite-limestone-free",
+      "looseores-siderite-phyllite-free",
+      "looseores-siderite-redmarble-free",
+      "looseores-siderite-schist-free",
+      "looseores-siderite-shale-free",
+      "looseores-siderite-slate-free",
+      "looseores-siderite-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-siderite-chert",
+      "ore-bountiful-siderite-dolomite",
+      "ore-bountiful-siderite-granite",
+      "ore-bountiful-siderite-limestone",
+      "ore-bountiful-siderite-phyllite",
+      "ore-bountiful-siderite-schist",
+      "ore-bountiful-siderite-shale",
+      "ore-bountiful-siderite-slate",
+      "ore-medium-siderite-chalk",
+      "ore-medium-siderite-chert",
+      "ore-medium-siderite-claystone",
+      "ore-medium-siderite-dolomite",
+      "ore-medium-siderite-granite",
+      "ore-medium-siderite-greenmarble",
+      "ore-medium-siderite-limestone",
+      "ore-medium-siderite-phyllite",
+      "ore-medium-siderite-redmarble",
+      "ore-medium-siderite-schist",
+      "ore-medium-siderite-shale",
+      "ore-medium-siderite-slate",
+      "ore-medium-siderite-whitemarble",
+      "ore-poor-siderite-chalk",
+      "ore-poor-siderite-chert",
+      "ore-poor-siderite-claystone",
+      "ore-poor-siderite-dolomite",
+      "ore-poor-siderite-granite",
+      "ore-poor-siderite-greenmarble",
+      "ore-poor-siderite-limestone",
+      "ore-poor-siderite-phyllite",
+      "ore-poor-siderite-redmarble",
+      "ore-poor-siderite-schist",
+      "ore-poor-siderite-shale",
+      "ore-poor-siderite-slate",
+      "ore-poor-siderite-whitemarble",
+      "ore-rich-siderite-chert",
+      "ore-rich-siderite-dolomite",
+      "ore-rich-siderite-granite",
+      "ore-rich-siderite-limestone",
+      "ore-rich-siderite-phyllite",
+      "ore-rich-siderite-schist",
+      "ore-rich-siderite-shale",
+      "ore-rich-siderite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-siderite-chert",
+      "crystalizedore-bountiful-siderite-dolomite",
+      "crystalizedore-bountiful-siderite-granite",
+      "crystalizedore-bountiful-siderite-limestone",
+      "crystalizedore-bountiful-siderite-phyllite",
+      "crystalizedore-bountiful-siderite-schist",
+      "crystalizedore-bountiful-siderite-shale",
+      "crystalizedore-bountiful-siderite-slate",
+      "crystalizedore-medium-siderite-chalk",
+      "crystalizedore-medium-siderite-chert",
+      "crystalizedore-medium-siderite-claystone",
+      "crystalizedore-medium-siderite-dolomite",
+      "crystalizedore-medium-siderite-granite",
+      "crystalizedore-medium-siderite-greenmarble",
+      "crystalizedore-medium-siderite-limestone",
+      "crystalizedore-medium-siderite-phyllite",
+      "crystalizedore-medium-siderite-redmarble",
+      "crystalizedore-medium-siderite-schist",
+      "crystalizedore-medium-siderite-shale",
+      "crystalizedore-medium-siderite-slate",
+      "crystalizedore-medium-siderite-whitemarble",
+      "crystalizedore-poor-siderite-chalk",
+      "crystalizedore-poor-siderite-chert",
+      "crystalizedore-poor-siderite-claystone",
+      "crystalizedore-poor-siderite-dolomite",
+      "crystalizedore-poor-siderite-granite",
+      "crystalizedore-poor-siderite-greenmarble",
+      "crystalizedore-poor-siderite-limestone",
+      "crystalizedore-poor-siderite-phyllite",
+      "crystalizedore-poor-siderite-redmarble",
+      "crystalizedore-poor-siderite-schist",
+      "crystalizedore-poor-siderite-shale",
+      "crystalizedore-poor-siderite-slate",
+      "crystalizedore-poor-siderite-whitemarble",
+      "crystalizedore-rich-siderite-chert",
+      "crystalizedore-rich-siderite-dolomite",
+      "crystalizedore-rich-siderite-granite",
+      "crystalizedore-rich-siderite-limestone",
+      "crystalizedore-rich-siderite-phyllite",
+      "crystalizedore-rich-siderite-schist",
+      "crystalizedore-rich-siderite-shale",
+      "crystalizedore-rich-siderite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-siderite",
+    "value": {
+      "meltingPoint": 1482,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ironbloom"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "add",
+    "path": "/crushingPropsByType/nugget-siderite",
+    "value": {
+      "crushedStack": {
+        "type": "item",
+        "code": "crushed-iron"
+      },
+      "quantity": {
+        "avg": 0.33
+      },
+      "hardnessTier": 3
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  }
+]

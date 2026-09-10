@@ -1,0 +1,220 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "quartz_electrum"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "electrum"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-quartz_electrum-andesite",
+      "ore-medium-quartz_electrum-andesite",
+      "ore-poor-quartz_electrum-andesite",
+      "ore-rich-quartz_electrum-andesite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-quartz_electrum-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-quartz_electrum-andesite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-quartz_electrum-andesite",
+      "ore-medium-quartz_electrum-andesite",
+      "ore-poor-quartz_electrum-andesite",
+      "ore-rich-quartz_electrum-andesite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-bountiful-quartz_electrum-*",
+    "value": 20,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-medium-quartz_electrum-*",
+    "value": 10,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-poor-quartz_electrum-*",
+    "value": 5,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/ore-rich-quartz_electrum-*",
+    "value": 15,
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-quartz_electrum-andesite",
+      "crystalizedore-medium-quartz_electrum-andesite",
+      "crystalizedore-poor-quartz_electrum-andesite",
+      "crystalizedore-rich-quartz_electrum-andesite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-bountiful-quartz_electrum-*",
+    "value": 40,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-medium-quartz_electrum-*",
+    "value": 20,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-poor-quartz_electrum-*",
+    "value": 10,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/metalUnitsByType/*-rich-quartz_electrum-*",
+    "value": 30,
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-electrum",
+    "value": {
+      "meltingPoint": 1010,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-electrum"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/0/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/1/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/10/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/11/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/2/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/3/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/8/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/9/skipVariants/ore/-",
+    "value": [
+      "quartz_electrum"
+    ],
+    "file": "game:recipes/grid/nuggets.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_quartz_electrum_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-quartz_electrum-*": [
+        {
+          "type": "item",
+          "code": "nugget-electrum",
+          "quantity": {
+            "avg": 2,
+            "var": 1
+          }
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_quartz_electrum_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

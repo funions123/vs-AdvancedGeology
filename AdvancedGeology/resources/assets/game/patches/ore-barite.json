@@ -1,0 +1,85 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "barite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-barite-andesite",
+      "ore-barite-basalt",
+      "ore-barite-chalk",
+      "ore-barite-chert",
+      "ore-barite-dacite",
+      "ore-barite-dolomite",
+      "ore-barite-gneiss",
+      "ore-barite-granite",
+      "ore-barite-limestone",
+      "ore-barite-phyllite",
+      "ore-barite-rhyolite",
+      "ore-barite-sandstone",
+      "ore-barite-schist",
+      "ore-barite-shale",
+      "ore-barite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-barite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-barite-andesite-free",
+      "looseores-barite-basalt-free",
+      "looseores-barite-chalk-free",
+      "looseores-barite-chert-free",
+      "looseores-barite-dacite-free",
+      "looseores-barite-dolomite-free",
+      "looseores-barite-gneiss-free",
+      "looseores-barite-granite-free",
+      "looseores-barite-limestone-free",
+      "looseores-barite-phyllite-free",
+      "looseores-barite-rhyolite-free",
+      "looseores-barite-sandstone-free",
+      "looseores-barite-schist-free",
+      "looseores-barite-shale-free",
+      "looseores-barite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_barite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-barite-*": [
+        {
+          "type": "item",
+          "code": "ore-barite"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_barite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

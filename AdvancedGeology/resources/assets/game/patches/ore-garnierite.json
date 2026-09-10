@@ -1,0 +1,92 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "garnierite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "garnierite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-garnierite-gabbro",
+      "ore-bountiful-garnierite-peridotite",
+      "ore-medium-garnierite-gabbro",
+      "ore-medium-garnierite-peridotite",
+      "ore-poor-garnierite-gabbro",
+      "ore-poor-garnierite-peridotite",
+      "ore-rich-garnierite-gabbro",
+      "ore-rich-garnierite-peridotite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-garnierite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-garnierite-gabbro-free",
+      "looseores-garnierite-peridotite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-garnierite-gabbro",
+      "ore-bountiful-garnierite-peridotite",
+      "ore-medium-garnierite-gabbro",
+      "ore-medium-garnierite-peridotite",
+      "ore-poor-garnierite-gabbro",
+      "ore-poor-garnierite-peridotite",
+      "ore-rich-garnierite-gabbro",
+      "ore-rich-garnierite-peridotite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-garnierite-gabbro",
+      "crystalizedore-bountiful-garnierite-peridotite",
+      "crystalizedore-medium-garnierite-gabbro",
+      "crystalizedore-medium-garnierite-peridotite",
+      "crystalizedore-poor-garnierite-gabbro",
+      "crystalizedore-poor-garnierite-peridotite",
+      "crystalizedore-rich-garnierite-gabbro",
+      "crystalizedore-rich-garnierite-peridotite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-garnierite",
+    "value": {
+      "meltingPoint": 1455,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": {
+        "type": "item",
+        "code": "ingot-nickel"
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  }
+]

@@ -8,9 +8,9 @@
     "intrude": true,
     "placement": {
       "cellSize": 384,
-      "chance": 0.20,
+      "chance": 0.2,
       "yMode": "worldRelative",
-      "minYRel": 0.10,
+      "minYRel": 0.1,
       "maxYRel": 0.42
     },
     "greisen": {
@@ -39,7 +39,12 @@
       "enabled": true
     },
     "palette": {
-      "replaceableRockVariants": ["granite", "slate", "schist", "gneiss"],
+      "replaceableRockVariants": [
+        "granite",
+        "slate",
+        "schist",
+        "gneiss"
+      ],
       "materials": {
         "molybdenite": "game:ore-{grade}-molybdenite-{rock}",
         "bismuthinite": "game:ore-{grade}-bismuthinite-{rock}",

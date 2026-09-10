@@ -1,0 +1,46 @@
+[
+  {
+    "code": "cryptocrystalline-magnesite",
+    "enabled": true,
+    "template": "cryptocrystallineMagnesite",
+    "priority": 89,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 320,
+      "chance": 0.16,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.48
+    },
+    "cryptocrystallineMagnesite": {
+      "horizontalRadius": 34,
+      "verticalHalfHeight": 28,
+      "veinMin": 5,
+      "veinMax": 8,
+      "podMin": 5,
+      "podMax": 9
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "serpentinite",
+        "peridotite"
+      ],
+      "materials": {
+        "magnesite": "game:ore-{grade}-magnesite-{rock}",
+        "quartz": "game:ore-quartz-{rock}",
+        "olivine": "game:ore-olivine-peridotite",
+        "soapstone": "game:rock-soapstone"
+      }
+    }
+  }
+]

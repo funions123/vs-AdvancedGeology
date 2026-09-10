@@ -1,0 +1,46 @@
+[
+  {
+    "code": "vein-graphite",
+    "enabled": true,
+    "template": "veinGraphite",
+    "priority": 92,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": false,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.14,
+      "yMode": "worldRelative",
+      "minYRel": 0.16,
+      "maxYRel": 0.48
+    },
+    "veinGraphite": {
+      "horizontalRadius": 36,
+      "verticalHalfHeight": 36,
+      "principalMin": 3,
+      "principalMax": 5,
+      "branchMin": 1,
+      "branchMax": 2
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "gneiss",
+        "granulite",
+        "migmatite",
+        "quartzite"
+      ],
+      "materials": {
+        "graphite": "game:ore-graphite-{rock}",
+        "quartz": "game:ore-quartz-{rock}"
+      }
+    }
+  }
+]

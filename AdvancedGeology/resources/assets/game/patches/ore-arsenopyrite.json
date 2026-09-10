@@ -1,0 +1,63 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "arsenopyrite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-arsenopyrite-gneiss",
+      "ore-arsenopyrite-granite",
+      "ore-arsenopyrite-schist",
+      "ore-arsenopyrite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-arsenopyrite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-arsenopyrite-gneiss-free",
+      "looseores-arsenopyrite-granite-free",
+      "looseores-arsenopyrite-schist-free",
+      "looseores-arsenopyrite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_arsenopyrite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-arsenopyrite-*": [
+        {
+          "type": "item",
+          "code": "ore-arsenopyrite"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_arsenopyrite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

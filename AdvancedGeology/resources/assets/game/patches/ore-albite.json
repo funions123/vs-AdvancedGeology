@@ -1,0 +1,71 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "albite"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-albite-andesite",
+      "ore-albite-dacite",
+      "ore-albite-gneiss",
+      "ore-albite-granite",
+      "ore-albite-migmatite",
+      "ore-albite-pegmatite",
+      "ore-albite-rhyolite",
+      "ore-albite-syenite"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-albite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-albite-andesite-free",
+      "looseores-albite-dacite-free",
+      "looseores-albite-gneiss-free",
+      "looseores-albite-granite-free",
+      "looseores-albite-migmatite-free",
+      "looseores-albite-pegmatite-free",
+      "looseores-albite-rhyolite-free",
+      "looseores-albite-syenite-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_albite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-albite-*": [
+        {
+          "type": "item",
+          "code": "ore-{ore}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_albite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

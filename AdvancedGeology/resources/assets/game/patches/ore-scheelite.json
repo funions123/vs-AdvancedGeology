@@ -1,0 +1,116 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "scheelite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "scheelite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-scheelite-dolomite",
+      "ore-bountiful-scheelite-limestone",
+      "ore-bountiful-scheelite-whitemarble",
+      "ore-medium-scheelite-dolomite",
+      "ore-medium-scheelite-limestone",
+      "ore-medium-scheelite-whitemarble",
+      "ore-poor-scheelite-dolomite",
+      "ore-poor-scheelite-limestone",
+      "ore-poor-scheelite-whitemarble",
+      "ore-rich-scheelite-dolomite",
+      "ore-rich-scheelite-limestone",
+      "ore-rich-scheelite-whitemarble"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-scheelite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-scheelite-dolomite-free",
+      "looseores-scheelite-limestone-free",
+      "looseores-scheelite-whitemarble-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-scheelite-dolomite",
+      "ore-bountiful-scheelite-limestone",
+      "ore-bountiful-scheelite-whitemarble",
+      "ore-medium-scheelite-dolomite",
+      "ore-medium-scheelite-limestone",
+      "ore-medium-scheelite-whitemarble",
+      "ore-poor-scheelite-dolomite",
+      "ore-poor-scheelite-limestone",
+      "ore-poor-scheelite-whitemarble",
+      "ore-rich-scheelite-dolomite",
+      "ore-rich-scheelite-limestone",
+      "ore-rich-scheelite-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-scheelite-dolomite",
+      "crystalizedore-bountiful-scheelite-limestone",
+      "crystalizedore-bountiful-scheelite-whitemarble",
+      "crystalizedore-medium-scheelite-dolomite",
+      "crystalizedore-medium-scheelite-limestone",
+      "crystalizedore-medium-scheelite-whitemarble",
+      "crystalizedore-poor-scheelite-dolomite",
+      "crystalizedore-poor-scheelite-limestone",
+      "crystalizedore-poor-scheelite-whitemarble",
+      "crystalizedore-rich-scheelite-dolomite",
+      "crystalizedore-rich-scheelite-limestone",
+      "crystalizedore-rich-scheelite-whitemarble"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_scheelite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-scheelite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_scheelite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-ilmenite-anorthosite",
+      "ore-bountiful-ilmenite-gabbro",
+      "ore-bountiful-ilmenite-granulite",
+      "ore-medium-ilmenite-anorthosite",
+      "ore-medium-ilmenite-diorite",
+      "ore-medium-ilmenite-gabbro",
+      "ore-medium-ilmenite-granulite",
+      "ore-poor-ilmenite-anorthosite",
+      "ore-poor-ilmenite-diorite",
+      "ore-poor-ilmenite-gabbro",
+      "ore-poor-ilmenite-granulite",
+      "ore-poor-ilmenite-sandstone",
+      "ore-rich-ilmenite-anorthosite",
+      "ore-rich-ilmenite-diorite",
+      "ore-rich-ilmenite-gabbro",
+      "ore-rich-ilmenite-granulite"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-ilmenite-anorthosite-free",
+      "looseores-ilmenite-diorite-free",
+      "looseores-ilmenite-gabbro-free",
+      "looseores-ilmenite-granulite-free",
+      "looseores-ilmenite-sandstone-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-ilmenite-anorthosite",
+      "ore-bountiful-ilmenite-gabbro",
+      "ore-bountiful-ilmenite-granulite",
+      "ore-medium-ilmenite-anorthosite",
+      "ore-medium-ilmenite-diorite",
+      "ore-medium-ilmenite-gabbro",
+      "ore-medium-ilmenite-granulite",
+      "ore-poor-ilmenite-anorthosite",
+      "ore-poor-ilmenite-diorite",
+      "ore-poor-ilmenite-gabbro",
+      "ore-poor-ilmenite-granulite",
+      "ore-poor-ilmenite-sandstone",
+      "ore-rich-ilmenite-anorthosite",
+      "ore-rich-ilmenite-diorite",
+      "ore-rich-ilmenite-gabbro",
+      "ore-rich-ilmenite-granulite"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-ilmenite-anorthosite",
+      "crystalizedore-bountiful-ilmenite-gabbro",
+      "crystalizedore-bountiful-ilmenite-granulite",
+      "crystalizedore-medium-ilmenite-anorthosite",
+      "crystalizedore-medium-ilmenite-diorite",
+      "crystalizedore-medium-ilmenite-gabbro",
+      "crystalizedore-medium-ilmenite-granulite",
+      "crystalizedore-poor-ilmenite-anorthosite",
+      "crystalizedore-poor-ilmenite-diorite",
+      "crystalizedore-poor-ilmenite-gabbro",
+      "crystalizedore-poor-ilmenite-granulite",
+      "crystalizedore-poor-ilmenite-sandstone",
+      "crystalizedore-rich-ilmenite-anorthosite",
+      "crystalizedore-rich-ilmenite-diorite",
+      "crystalizedore-rich-ilmenite-gabbro",
+      "crystalizedore-rich-ilmenite-granulite"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

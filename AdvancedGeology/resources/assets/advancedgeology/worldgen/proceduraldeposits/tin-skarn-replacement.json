@@ -58,7 +58,7 @@
       "podRadiusZMax": 5.0,
       "stratigraphicFloor": -27.0,
       "stratigraphicCeiling": 15.0,
-      "fluoriteSpeckleThreshold": 0.90
+      "fluoriteSpeckleThreshold": 0.9
     },
     "terrainOrientation": {
       "enabled": false
@@ -73,7 +73,11 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["limestone", "whitemarble", "dolomite"],
+      "replaceableRockVariants": [
+        "limestone",
+        "whitemarble",
+        "dolomite"
+      ],
       "materials": {
         "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
         "scheelite": "game:ore-{grade}-scheelite-{rock}",

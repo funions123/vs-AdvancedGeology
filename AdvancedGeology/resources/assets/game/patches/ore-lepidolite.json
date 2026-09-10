@@ -1,0 +1,142 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "lepidolite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "lepidolite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-lepidolite-gneiss",
+      "ore-bountiful-lepidolite-granite",
+      "ore-bountiful-lepidolite-pegmatite",
+      "ore-bountiful-lepidolite-schist",
+      "ore-bountiful-lepidolite-slate",
+      "ore-medium-lepidolite-gneiss",
+      "ore-medium-lepidolite-granite",
+      "ore-medium-lepidolite-pegmatite",
+      "ore-medium-lepidolite-schist",
+      "ore-medium-lepidolite-slate",
+      "ore-poor-lepidolite-gneiss",
+      "ore-poor-lepidolite-granite",
+      "ore-poor-lepidolite-pegmatite",
+      "ore-poor-lepidolite-schist",
+      "ore-poor-lepidolite-slate",
+      "ore-rich-lepidolite-gneiss",
+      "ore-rich-lepidolite-granite",
+      "ore-rich-lepidolite-pegmatite",
+      "ore-rich-lepidolite-schist",
+      "ore-rich-lepidolite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-lepidolite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-lepidolite-gneiss-free",
+      "looseores-lepidolite-granite-free",
+      "looseores-lepidolite-pegmatite-free",
+      "looseores-lepidolite-schist-free",
+      "looseores-lepidolite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-lepidolite-gneiss",
+      "ore-bountiful-lepidolite-granite",
+      "ore-bountiful-lepidolite-pegmatite",
+      "ore-bountiful-lepidolite-schist",
+      "ore-bountiful-lepidolite-slate",
+      "ore-medium-lepidolite-gneiss",
+      "ore-medium-lepidolite-granite",
+      "ore-medium-lepidolite-pegmatite",
+      "ore-medium-lepidolite-schist",
+      "ore-medium-lepidolite-slate",
+      "ore-poor-lepidolite-gneiss",
+      "ore-poor-lepidolite-granite",
+      "ore-poor-lepidolite-pegmatite",
+      "ore-poor-lepidolite-schist",
+      "ore-poor-lepidolite-slate",
+      "ore-rich-lepidolite-gneiss",
+      "ore-rich-lepidolite-granite",
+      "ore-rich-lepidolite-pegmatite",
+      "ore-rich-lepidolite-schist",
+      "ore-rich-lepidolite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-lepidolite-gneiss",
+      "crystalizedore-bountiful-lepidolite-granite",
+      "crystalizedore-bountiful-lepidolite-pegmatite",
+      "crystalizedore-bountiful-lepidolite-schist",
+      "crystalizedore-bountiful-lepidolite-slate",
+      "crystalizedore-medium-lepidolite-gneiss",
+      "crystalizedore-medium-lepidolite-granite",
+      "crystalizedore-medium-lepidolite-pegmatite",
+      "crystalizedore-medium-lepidolite-schist",
+      "crystalizedore-medium-lepidolite-slate",
+      "crystalizedore-poor-lepidolite-gneiss",
+      "crystalizedore-poor-lepidolite-granite",
+      "crystalizedore-poor-lepidolite-pegmatite",
+      "crystalizedore-poor-lepidolite-schist",
+      "crystalizedore-poor-lepidolite-slate",
+      "crystalizedore-rich-lepidolite-gneiss",
+      "crystalizedore-rich-lepidolite-granite",
+      "crystalizedore-rich-lepidolite-pegmatite",
+      "crystalizedore-rich-lepidolite-schist",
+      "crystalizedore-rich-lepidolite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_lepidolite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-lepidolite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_lepidolite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

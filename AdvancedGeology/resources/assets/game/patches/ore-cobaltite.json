@@ -1,0 +1,75 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "cobaltite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "cobaltite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-cobaltite-gneiss",
+      "ore-medium-cobaltite-gneiss",
+      "ore-medium-cobaltite-granite",
+      "ore-medium-cobaltite-schist",
+      "ore-poor-cobaltite-gneiss",
+      "ore-poor-cobaltite-granite",
+      "ore-poor-cobaltite-schist",
+      "ore-rich-cobaltite-gneiss",
+      "ore-rich-cobaltite-granite",
+      "ore-rich-cobaltite-schist"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-cobaltite-*",
+    "value": 3,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-cobaltite-gneiss",
+      "ore-medium-cobaltite-gneiss",
+      "ore-medium-cobaltite-granite",
+      "ore-medium-cobaltite-schist",
+      "ore-poor-cobaltite-gneiss",
+      "ore-poor-cobaltite-granite",
+      "ore-poor-cobaltite-schist",
+      "ore-rich-cobaltite-gneiss",
+      "ore-rich-cobaltite-granite",
+      "ore-rich-cobaltite-schist"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-cobaltite-gneiss",
+      "crystalizedore-medium-cobaltite-gneiss",
+      "crystalizedore-medium-cobaltite-granite",
+      "crystalizedore-medium-cobaltite-schist",
+      "crystalizedore-poor-cobaltite-gneiss",
+      "crystalizedore-poor-cobaltite-granite",
+      "crystalizedore-poor-cobaltite-schist",
+      "crystalizedore-rich-cobaltite-gneiss",
+      "crystalizedore-rich-cobaltite-granite",
+      "crystalizedore-rich-cobaltite-schist"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  }
+]

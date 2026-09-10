@@ -40,7 +40,12 @@
       "enabled": true
     },
     "palette": {
-      "replaceableRockVariants": ["granite", "slate", "schist", "gneiss"],
+      "replaceableRockVariants": [
+        "granite",
+        "slate",
+        "schist",
+        "gneiss"
+      ],
       "materials": {
         "cassiterite": "game:ore-{grade}-cassiterite-{rock}",
         "wolframite": "game:ore-{grade}-wolframite-{rock}",

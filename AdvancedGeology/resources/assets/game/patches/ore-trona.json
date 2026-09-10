@@ -1,0 +1,69 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "trona"
+    },
+    "file": "game:worldproperties/block/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-trona-chalk",
+      "ore-trona-chert",
+      "ore-trona-claystone",
+      "ore-trona-conglomerate",
+      "ore-trona-limestone",
+      "ore-trona-sandstone",
+      "ore-trona-shale"
+    ],
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-trona-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-ungraded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-trona-chalk-free",
+      "looseores-trona-chert-free",
+      "looseores-trona-claystone-free",
+      "looseores-trona-conglomerate-free",
+      "looseores-trona-limestone-free",
+      "looseores-trona-sandstone-free",
+      "looseores-trona-shale-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_trona_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-trona-*": [
+        {
+          "type": "item",
+          "code": "ore-trona"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_trona_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]

@@ -10,8 +10,8 @@
       "cellSize": 320,
       "chance": 0.25,
       "yMode": "worldRelative",
-      "minYRel": 0.40,
-      "maxYRel": 0.70
+      "minYRel": 0.4,
+      "maxYRel": 0.7
     },
     "cyclothemCoal": {
       "horizontalRadius": 44,
@@ -71,7 +71,12 @@
       "enabled": false
     },
     "palette": {
-      "replaceableRockVariants": ["shale", "sandstone", "claystone", "limestone"],
+      "replaceableRockVariants": [
+        "shale",
+        "sandstone",
+        "claystone",
+        "limestone"
+      ],
       "materials": {
         "bituminous-coal": "game:ore-bituminouscoal-{rock}",
         "shale-parting": "game:rock-shale",

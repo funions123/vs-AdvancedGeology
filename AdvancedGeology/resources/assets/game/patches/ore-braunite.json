@@ -1,0 +1,129 @@
+[
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "braunite"
+    },
+    "file": "game:worldproperties/block/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
+      "Code": "braunite"
+    },
+    "file": "game:worldproperties/block/ore-nugget.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-braunite-chert",
+      "ore-bountiful-braunite-schist",
+      "ore-bountiful-braunite-serpentinite",
+      "ore-bountiful-braunite-slate",
+      "ore-medium-braunite-chert",
+      "ore-medium-braunite-schist",
+      "ore-medium-braunite-serpentinite",
+      "ore-medium-braunite-slate",
+      "ore-poor-braunite-chert",
+      "ore-poor-braunite-schist",
+      "ore-poor-braunite-serpentinite",
+      "ore-poor-braunite-slate",
+      "ore-rich-braunite-chert",
+      "ore-rich-braunite-schist",
+      "ore-rich-braunite-serpentinite",
+      "ore-rich-braunite-slate"
+    ],
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "add",
+    "path": "/requiredMiningTierByType/ore-*-braunite-*",
+    "value": 2,
+    "file": "game:blocktypes/stone/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "looseores-braunite-chert-free",
+      "looseores-braunite-schist-free",
+      "looseores-braunite-serpentinite-free",
+      "looseores-braunite-slate-free"
+    ],
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "ore-bountiful-braunite-chert",
+      "ore-bountiful-braunite-schist",
+      "ore-bountiful-braunite-serpentinite",
+      "ore-bountiful-braunite-slate",
+      "ore-medium-braunite-chert",
+      "ore-medium-braunite-schist",
+      "ore-medium-braunite-serpentinite",
+      "ore-medium-braunite-slate",
+      "ore-poor-braunite-chert",
+      "ore-poor-braunite-schist",
+      "ore-poor-braunite-serpentinite",
+      "ore-poor-braunite-slate",
+      "ore-rich-braunite-chert",
+      "ore-rich-braunite-schist",
+      "ore-rich-braunite-serpentinite",
+      "ore-rich-braunite-slate"
+    ],
+    "file": "game:itemtypes/resource/ore-graded.json"
+  },
+  {
+    "op": "addeach",
+    "path": "/allowedVariants/-",
+    "value": [
+      "crystalizedore-bountiful-braunite-chert",
+      "crystalizedore-bountiful-braunite-schist",
+      "crystalizedore-bountiful-braunite-serpentinite",
+      "crystalizedore-bountiful-braunite-slate",
+      "crystalizedore-medium-braunite-chert",
+      "crystalizedore-medium-braunite-schist",
+      "crystalizedore-medium-braunite-serpentinite",
+      "crystalizedore-medium-braunite-slate",
+      "crystalizedore-poor-braunite-chert",
+      "crystalizedore-poor-braunite-schist",
+      "crystalizedore-poor-braunite-serpentinite",
+      "crystalizedore-poor-braunite-slate",
+      "crystalizedore-rich-braunite-chert",
+      "crystalizedore-rich-braunite-schist",
+      "crystalizedore-rich-braunite-serpentinite",
+      "crystalizedore-rich-braunite-slate"
+    ],
+    "file": "game:itemtypes/resource/crystalizedore-graded.json"
+  },
+  {
+    "op": "move",
+    "path": "/tmp_ore_braunite_looseores_default",
+    "frompath": "/dropsByType/*",
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType",
+    "value": {
+      "looseores-braunite-*": [
+        {
+          "type": "item",
+          "code": "ore-poor-{ore}-{rock}"
+        }
+      ]
+    },
+    "file": "game:blocktypes/stone/looseores.json"
+  },
+  {
+    "op": "move",
+    "path": "/dropsByType/*",
+    "frompath": "/tmp_ore_braunite_looseores_default",
+    "file": "game:blocktypes/stone/looseores.json"
+  }
+]
