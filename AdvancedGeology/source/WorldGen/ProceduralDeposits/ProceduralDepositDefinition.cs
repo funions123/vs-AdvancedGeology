@@ -845,6 +845,7 @@ internal sealed class CompiledProceduralDeposit
     private readonly int[][][] resolvedBlocks;
     private readonly int[] resolvedSlotCounts;
     private readonly int[][] directBlockIds;
+    private readonly int[][] fallbackBlockIds;
     private readonly HashSet<string> sourceRockVariants;
     private readonly bool[] replaceableHosts;
     private readonly bool[] naturalRockHosts;
@@ -902,6 +903,38 @@ internal sealed class CompiledProceduralDeposit
                     continue;
                 }
                 directBlockIds[slot][grade] = ResolveDirectBlock(api, ApplyGrade(codePattern, graded, grade));
+            }
+        }
+
+        // A body may be emplaced into any rock it is allowed to replace, but a host-indexed
+        // material only has a block for the rock variants its ore is actually registered in.
+        // Without a fallback the voxel resolves to 0 and is silently skipped, which erases
+        // whole zones of intruding deposits. Fall back to the deposit's own declared hosts:
+        // an intrusion carries its own wall rock, so that is the geologically correct filler.
+        fallbackBlockIds = new int[materials.Length][];
+        string[] declaredHosts = definition.Palette.ReplaceableRockVariants
+            .Where(variant => !string.IsNullOrWhiteSpace(variant))
+            .ToArray();
+        for (int slot = 0; slot < materials.Length; slot++)
+        {
+            string codePattern = materials[slot].Value;
+            bool graded = codePattern.Contains("{grade}", StringComparison.Ordinal);
+            int gradeCount = resolvedBlocks[slot].Length;
+            fallbackBlockIds[slot] = new int[gradeCount];
+            if (!codePattern.Contains("{rock}", StringComparison.Ordinal)) continue;
+
+            for (int grade = 0; grade < gradeCount; grade++)
+            {
+                string coded = ApplyGrade(codePattern, graded, grade);
+                foreach (string variant in declaredHosts)
+                {
+                    int resolved = ResolveDirectBlock(
+                        api,
+                        coded.Replace("{rock}", variant, StringComparison.Ordinal));
+                    if (resolved == 0) continue;
+                    fallbackBlockIds[slot][grade] = resolved;
+                    break;
+                }
             }
         }
         replaceableHosts = new bool[blockCount];
@@ -1026,14 +1059,28 @@ internal sealed class CompiledProceduralDeposit
         if ((uint)slotId >= (uint)resolvedBlocks.Length) return 0;
         int[][] byGrade = resolvedBlocks[slotId];
         int[] direct = directBlockIds[slotId];
+        int[] fallback = fallbackBlockIds[slotId];
         for (int grade = Math.Min(gradeIndex, byGrade.Length - 1); grade >= 0; grade--)
         {
             int[]? byHost = byGrade[grade];
-            int resolved = byHost != null && (uint)hostBlockId < (uint)byHost.Length ? byHost[hostBlockId] : 0;
-            if (resolved != 0) return resolved;
-            if (direct[grade] != 0) return direct[grade];
+            int hostResolved = byHost != null && (uint)hostBlockId < (uint)byHost.Length ? byHost[hostBlockId] : 0;
+            int selected = SelectResolution(hostResolved, direct[grade], fallback[grade]);
+            if (selected != 0) return selected;
         }
         return 0;
+    }
+
+    /// <summary>
+    /// Resolution precedence for one grade: the ore registered for the live host rock wins;
+    /// otherwise a host-independent material; otherwise the same ore registered in one of the
+    /// deposit's own declared hosts. The last case covers intruding bodies, which may be
+    /// emplaced in country rock their ore was never registered against.
+    /// </summary>
+    internal static int SelectResolution(int hostResolved, int direct, int declaredHostFallback)
+    {
+        if (hostResolved != 0) return hostResolved;
+        if (direct != 0) return direct;
+        return declaredHostFallback;
     }
 
     public int ResolveWeatheredBlock(int slotId, int gradeIndex, int hostBlockId, bool buried)

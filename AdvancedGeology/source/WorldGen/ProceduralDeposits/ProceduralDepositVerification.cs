@@ -3352,6 +3352,19 @@ public static class ProceduralDepositVerification
             && CompiledProceduralDeposit.AllowsRockReplacement(false, true, true)
             && !CompiledProceduralDeposit.AllowsRockReplacement(false, false, true)
             && !CompiledProceduralDeposit.AllowsRockReplacement(false, true, false);
+
+        // An intruding body is emplaced into country rock its ore may never be registered
+        // against; without the declared-host fallback those voxels resolve to 0 and vanish.
+        bool resolutionFallbackValid =
+            CompiledProceduralDeposit.SelectResolution(11, 12, 13) == 11
+            && CompiledProceduralDeposit.SelectResolution(0, 12, 13) == 12
+            && CompiledProceduralDeposit.SelectResolution(0, 0, 13) == 13
+            && CompiledProceduralDeposit.SelectResolution(0, 0, 0) == 0;
+        if (!resolutionFallbackValid)
+        {
+            throw new InvalidOperationException(
+                "Material resolution precedence broken: host, direct, declared-host fallback");
+        }
         if (!intrusionValid)
         {
             throw new InvalidOperationException("Intrusion policy replaces non-rocks or ignores eligible source hosts");
@@ -3750,4 +3763,5 @@ public static class ProceduralDepositVerification
             }
         }
     }
+
 }
