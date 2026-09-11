@@ -2,6 +2,11 @@
   {
     "code": "messinian-native-sulfur",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "sulfur"
+      ]
+    },
     "template": "messinianSulfur",
     "priority": 83,
     "overlapPolicy": "higherPriorityWins",

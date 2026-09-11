@@ -2,6 +2,11 @@
   {
     "code": "oolitic-ironstone",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "hematite"
+      ]
+    },
     "template": "ooliticIronstone",
     "priority": 80,
     "overlapPolicy": "higherPriorityWins",

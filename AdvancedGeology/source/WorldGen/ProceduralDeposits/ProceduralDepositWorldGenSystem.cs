@@ -79,6 +79,9 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         serverApi = api;
         api.Event.InitWorldGenerator(() => InitializeWorldDefinitions(api), "standard");
         api.Event.GetWorldgenBlockAccessor(provider => blockAccessor = provider.GetBlockAccessor(false));
+        api.Event.MapRegionGeneration(GenerateProspectingMaps, "standard");
+        api.Event.MapRegionNeighborsLoaded(GenerateProspectingMaps, "standard");
+        api.Event.MapRegionLoaded += RefreshLoadedProspectingMaps;
         api.Event.ChunkColumnGeneration(GenerateChunkColumn, EnumWorldGenPass.TerrainFeatures, "standard");
     }
 
@@ -88,6 +91,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         planCache.Clear();
         planCacheOrder.Clear();
         missingTerrainContext.Clear();
+        featureBasePpt.Clear();
 
         if (loadedDefinitions.Count == 0)
         {
@@ -271,10 +275,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                     compiled.CodeHash,
                     cellX,
                     cellZ);
-                if (ProceduralDepositMath.UnitDouble(featureId ^ ChanceSalt) >= definition.Placement.Chance) continue;
-
-                int centerX = cellX * cellSize + (int)(ProceduralDepositMath.UnitDouble(featureId ^ XSalt) * cellSize);
-                int centerZ = cellZ * cellSize + (int)(ProceduralDepositMath.UnitDouble(featureId ^ ZSalt) * cellSize);
+                if (!TryGetFeatureCenter(definition, featureId, cellX, cellZ, out int centerX, out int centerZ)) continue;
                 if (centerX + reach < baseX || centerX - reach >= baseX + ChunkSize ||
                     centerZ + reach < baseZ || centerZ - reach >= baseZ + ChunkSize)
                 {
@@ -2389,7 +2390,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             api.Logger.Error("[AdvancedGeology] Procedural deposit in {0} has no code", location);
             return false;
         }
-        if (definition.Placement == null
+        if (definition.Prospecting == null
+            || definition.Placement == null
             || definition.Geometry == null
             || definition.Epithermal == null
             || definition.Spline == null
@@ -2401,6 +2403,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             || definition.Supergene == null
             || definition.Weathering == null
             || definition.Palette == null
+            || definition.Prospecting.MajorMinerals == null
             || definition.Source.EligibleRockVariants == null
             || definition.Palette.ReplaceableRockVariants == null
             || definition.Palette.GossanSurfaceExclusions == null)
@@ -2430,6 +2433,16 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             return false;
         }
         definition.Palette.MigrateLegacyMaterials();
+        if (definition.Prospecting.MajorMinerals.Length == 0
+            || definition.Prospecting.MajorMinerals.Any(string.IsNullOrWhiteSpace)
+            || definition.Prospecting.MajorMinerals.Distinct(StringComparer.Ordinal).Count() != definition.Prospecting.MajorMinerals.Length
+            || definition.Prospecting.SignalRadius < 32
+            || definition.Prospecting.CenterShift < 0
+            || definition.Prospecting.CenterShift > definition.Prospecting.SignalRadius * 2)
+        {
+            api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid major-mineral prospecting metadata", definition.Code);
+            return false;
+        }
         if (definition.Placement.CellSize < 32 || definition.Placement.Chance < 0 || definition.Placement.Chance > 1)
         {
             api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid placement settings", definition.Code);

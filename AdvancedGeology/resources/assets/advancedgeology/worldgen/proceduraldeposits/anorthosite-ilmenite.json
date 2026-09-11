@@ -2,6 +2,12 @@
   {
     "code": "anorthosite-ilmenite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "ilmenite",
+        "magnetite"
+      ]
+    },
     "template": "anorthositeIlmenite",
     "priority": 93,
     "overlapPolicy": "higherPriorityWins",

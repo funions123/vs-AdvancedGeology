@@ -2,6 +2,12 @@
   {
     "code": "besshi-vms",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "chalcopyrite",
+        "sphalerite"
+      ]
+    },
     "template": "besshiVms",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

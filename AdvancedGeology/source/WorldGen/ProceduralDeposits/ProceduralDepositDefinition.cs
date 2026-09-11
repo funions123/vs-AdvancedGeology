@@ -18,6 +18,9 @@ public sealed class ProceduralDepositDefinition
     public bool Enabled { get; set; } = true;
 
     [JsonProperty]
+    public ProceduralProspectingDefinition Prospecting { get; set; } = new();
+
+    [JsonProperty]
     public int Priority { get; set; } = 100;
 
     [JsonProperty]
@@ -180,6 +183,19 @@ public sealed class ProceduralDepositDefinition
 
     [JsonProperty]
     public ProceduralPaletteDefinition Palette { get; set; } = new();
+}
+
+[JsonObject(MemberSerialization.OptIn)]
+public sealed class ProceduralProspectingDefinition
+{
+    [JsonProperty]
+    public string[] MajorMinerals { get; set; } = Array.Empty<string>();
+
+    [JsonProperty]
+    public int SignalRadius { get; set; } = 64;
+
+    [JsonProperty]
+    public int CenterShift { get; set; } = 72;
 }
 
 [JsonObject(MemberSerialization.OptIn)]

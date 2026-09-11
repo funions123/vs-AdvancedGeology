@@ -2,6 +2,13 @@
   {
     "code": "lacustrine-borates",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "borax",
+        "kernite",
+        "trona"
+      ]
+    },
     "template": "lacustrineBorate",
     "priority": 76,
     "overlapPolicy": "higherPriorityWins",

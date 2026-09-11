@@ -2,6 +2,12 @@
   {
     "code": "cornish-tin-lodes",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "cassiterite",
+        "wolframite"
+      ]
+    },
     "template": "greisenStockwork",
     "priority": 95,
     "overlapPolicy": "higherPriorityWins",

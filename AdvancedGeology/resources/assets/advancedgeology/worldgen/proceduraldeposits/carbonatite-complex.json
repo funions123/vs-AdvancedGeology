@@ -2,6 +2,13 @@
   {
     "code": "carbonatite-complex",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "pyrochlore",
+        "monazite",
+        "bastnasite"
+      ]
+    },
     "template": "carbonatiteComplex",
     "priority": 110,
     "overlapPolicy": "higherPriorityWins",

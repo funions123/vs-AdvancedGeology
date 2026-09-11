@@ -1,0 +1,386 @@
+[
+  {
+    "code": "alum",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "rock-alum",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "alunite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-alunite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "anthracite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "ore-anthracite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "bastnasite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-bastnasite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "bismuthinite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-bismuthinite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "bituminouscoal",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "ore-bituminouscoal",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "borax",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-borax",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "cassiterite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-cassiterite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "chalcocite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-chalcocite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "chalcopyrite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-chalcopyrite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "chromite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-chromite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "cinnabar",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-cinnabar",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "cobaltite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-cobaltite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "columbite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-columbite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "cryolite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-cryolite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "galena",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-galena",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "gold",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-nativegold",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "graphite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-graphite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "hematite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-hematite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "ilmenite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-ilmenite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "kernite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-kernite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "lapis",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-lapislazuli",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "lignite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "ore-lignite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "magnesite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-magnesite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "magnetite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-magnetite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "molybdenite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-molybdenite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "monazite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-monazite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "nativebismuth",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-nativebismuth",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "nativecopper",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-nativecopper",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "nickeline",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-nickeline",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "pentlandite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-pentlandite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "phosphorite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-phosphorite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "pyrochlore",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-pyrochlore",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "pyrolusite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-pyrolusite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "scheelite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-scheelite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "siderite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-siderite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "silver",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-nativesilver",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "sphalerite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-sphalerite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "spodumene",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-spodumene",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "stannite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-stannite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "sulfur",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-sulfur",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "tantalite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-tantalite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "tetrahedrite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-tetrahedrite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "trona",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-trona",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "uranium",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-uranium",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "wolframite",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-wolframite",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "xenotime",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-nugget-xenotime",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  },
+  {
+    "code": "zirconia",
+    "triesPerChunk": 0.0,
+    "withOreMap": true,
+    "handbookPageCode": "item-ore-zirconia",
+    "generator": "procedural-prospecting",
+    "attributes": {}
+  }
+]

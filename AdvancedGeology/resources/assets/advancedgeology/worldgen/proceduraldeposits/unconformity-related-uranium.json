@@ -2,6 +2,11 @@
   {
     "code": "unconformity-related-uranium",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "uranium"
+      ]
+    },
     "template": "unconformityUranium",
     "priority": 101,
     "overlapPolicy": "higherPriorityWins",

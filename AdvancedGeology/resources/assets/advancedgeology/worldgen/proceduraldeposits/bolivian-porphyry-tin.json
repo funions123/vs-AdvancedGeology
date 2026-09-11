@@ -2,6 +2,12 @@
   {
     "code": "bolivian-porphyry-tin",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "cassiterite",
+        "stannite"
+      ]
+    },
     "template": "porphyryTin",
     "priority": 95,
     "overlapPolicy": "higherPriorityWins",

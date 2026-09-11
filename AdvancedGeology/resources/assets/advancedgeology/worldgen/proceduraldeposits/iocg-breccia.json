@@ -2,6 +2,12 @@
   {
     "code": "iocg-breccia",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "magnetite",
+        "chalcopyrite"
+      ]
+    },
     "template": "iocgBreccia",
     "priority": 96,
     "overlapPolicy": "higherPriorityWins",

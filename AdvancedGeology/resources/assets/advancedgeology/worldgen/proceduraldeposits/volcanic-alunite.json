@@ -2,6 +2,11 @@
   {
     "code": "volcanic-alunite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "alunite"
+      ]
+    },
     "template": "volcanicAlunite",
     "priority": 88,
     "overlapPolicy": "higherPriorityWins",

@@ -2,6 +2,11 @@
   {
     "code": "sparry-magnesite-replacement",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "magnesite"
+      ]
+    },
     "template": "sparryMagnesiteReplacement",
     "priority": 88,
     "overlapPolicy": "higherPriorityWins",

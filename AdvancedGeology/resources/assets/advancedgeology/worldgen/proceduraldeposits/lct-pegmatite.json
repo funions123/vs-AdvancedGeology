@@ -2,6 +2,13 @@
   {
     "code": "lct-pegmatite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "spodumene",
+        "tantalite",
+        "columbite"
+      ]
+    },
     "template": "splineNetwork",
     "priority": 90,
     "overlapPolicy": "higherPriorityWins",

@@ -2,6 +2,12 @@
   {
     "code": "mississippi-valley-galena",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "sphalerite",
+        "galena"
+      ]
+    },
     "template": "mississippiValley",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

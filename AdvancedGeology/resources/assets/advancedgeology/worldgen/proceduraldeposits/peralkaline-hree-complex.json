@@ -2,6 +2,12 @@
   {
     "code": "peralkaline-hree-complex",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "xenotime",
+        "zirconia"
+      ]
+    },
     "template": "peralkalineHreeComplex",
     "priority": 97,
     "overlapPolicy": "higherPriorityWins",

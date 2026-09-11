@@ -2,6 +2,12 @@
   {
     "code": "mobi-greisen",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "molybdenite",
+        "bismuthinite"
+      ]
+    },
     "template": "greisenStockwork",
     "priority": 94,
     "overlapPolicy": "higherPriorityWins",

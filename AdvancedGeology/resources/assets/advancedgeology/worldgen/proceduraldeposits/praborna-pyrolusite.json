@@ -2,6 +2,11 @@
   {
     "code": "praborna-pyrolusite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "pyrolusite"
+      ]
+    },
     "template": "prabornaPyrolusite",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

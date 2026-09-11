@@ -2,6 +2,11 @@
   {
     "code": "metasomatic-siderite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "siderite"
+      ]
+    },
     "template": "metasomaticSiderite",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

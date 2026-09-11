@@ -2,6 +2,12 @@
   {
     "code": "sudbury-contact-nickel",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "pentlandite",
+        "chalcopyrite"
+      ]
+    },
     "template": "sudburyContactNickel",
     "priority": 98,
     "overlapPolicy": "higherPriorityWins",

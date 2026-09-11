@@ -2,6 +2,11 @@
   {
     "code": "flake-graphite-schist",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "graphite"
+      ]
+    },
     "template": "flakeGraphiteSchist",
     "priority": 84,
     "overlapPolicy": "higherPriorityWins",

@@ -2,6 +2,12 @@
   {
     "code": "cobalt-arsenide-veins",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "nickeline",
+        "cobaltite"
+      ]
+    },
     "template": "cobaltArsenideVein",
     "priority": 100,
     "overlapPolicy": "higherPriorityWins",

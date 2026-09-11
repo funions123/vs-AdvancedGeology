@@ -2,6 +2,12 @@
   {
     "code": "porphyry-copper-moly",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "chalcopyrite",
+        "molybdenite"
+      ]
+    },
     "template": "porphyryCopperMoly",
     "priority": 94,
     "overlapPolicy": "higherPriorityWins",

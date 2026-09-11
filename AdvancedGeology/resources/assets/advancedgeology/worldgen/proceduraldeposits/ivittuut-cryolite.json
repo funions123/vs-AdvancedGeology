@@ -2,6 +2,11 @@
   {
     "code": "ivittuut-cryolite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "cryolite"
+      ]
+    },
     "template": "ivittuutCryolite",
     "priority": 99,
     "overlapPolicy": "higherPriorityWins",

@@ -2,6 +2,12 @@
   {
     "code": "erzgebirge-bismuth-uranium",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "uranium",
+        "nativebismuth"
+      ]
+    },
     "template": "reopenedArsenideVein",
     "priority": 100,
     "overlapPolicy": "higherPriorityWins",

@@ -2,6 +2,11 @@
   {
     "code": "schwaz-tetrahedrite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "tetrahedrite"
+      ]
+    },
     "template": "schwazTetrahedrite",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

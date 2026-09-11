@@ -2,6 +2,11 @@
   {
     "code": "stratiform-chromitite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "chromite"
+      ]
+    },
     "template": "stratiformChromitite",
     "priority": 90,
     "overlapPolicy": "higherPriorityWins",

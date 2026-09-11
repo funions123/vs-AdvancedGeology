@@ -2,6 +2,11 @@
   {
     "code": "alluvial-lignite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "lignite"
+      ]
+    },
     "template": "alluvialLignite",
     "priority": 80,
     "overlapPolicy": "higherPriorityWins",

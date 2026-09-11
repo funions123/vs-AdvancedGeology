@@ -42,7 +42,8 @@ namespace AdvancedGeology
 
             DepositGeneratorRegistry.RegisterDepositGenerator<LayeredSurfaceDepositGenerator>("disc-layeredsurface");
             DepositGeneratorRegistry.RegisterDepositGenerator<SaltDomeDepositGenerator>("saltdome");
-            api.Logger.Notification("[AdvancedGeology] Registered custom deposit generators: disc-layeredsurface, saltdome");
+            DepositGeneratorRegistry.RegisterDepositGenerator<ProceduralProspectingDepositGenerator>("procedural-prospecting");
+            api.Logger.Notification("[AdvancedGeology] Registered custom deposit generators: disc-layeredsurface, saltdome, procedural-prospecting");
 
 
             // Hidden silver grade system only runs when Industrial Story is installed.
@@ -109,8 +110,8 @@ namespace AdvancedGeology
 
         /// <summary>
         /// Enforces exclusive procedural ore generation by disabling every conventional deposit
-        /// except standalone gem, rock, and soil clusters. This also suppresses vanilla and any
-        /// externally supplied conventional ore definitions before GenDeposits finalizes them.
+        /// except standalone gem, rock, soil, and non-generating prospecting registrations. This
+        /// also suppresses externally supplied conventional ore definitions before GenDeposits finalizes them.
         /// </summary>
         private static void SuppressLegacyOreDeposits(ICoreAPI api)
         {
@@ -119,6 +120,7 @@ namespace AdvancedGeology
             int preservedGemFiles = 0;
             int preservedRockFiles = 0;
             int preservedSoilFiles = 0;
+            int preservedProspectingFiles = 0;
 
             foreach ((AssetLocation location, IAsset asset) in api.Assets.AllAssets.ToArray())
             {
@@ -131,6 +133,7 @@ namespace AdvancedGeology
                     if (relative.StartsWith("gem/", StringComparison.Ordinal)) preservedGemFiles++;
                     else if (relative.StartsWith("rock/", StringComparison.Ordinal)) preservedRockFiles++;
                     else if (relative.StartsWith("soil/", StringComparison.Ordinal)) preservedSoilFiles++;
+                    else if (relative.StartsWith("prospecting/", StringComparison.Ordinal)) preservedProspectingFiles++;
                     continue;
                 }
 
@@ -142,10 +145,11 @@ namespace AdvancedGeology
                 "[AdvancedGeology] Disabled {0} conventional ore deposit asset file(s)",
                 suppressedFiles);
             api.Logger.Notification(
-                "[AdvancedGeology] Preserved conventional cluster asset files: {0} gem, {1} rock, {2} soil",
+                "[AdvancedGeology] Preserved conventional cluster and metadata files: {0} gem, {1} rock, {2} soil, {3} prospecting",
                 preservedGemFiles,
                 preservedRockFiles,
-                preservedSoilFiles);
+                preservedSoilFiles,
+                preservedProspectingFiles);
         }
 
         public static bool IsConventionalOreDepositAssetPath(string path)
@@ -157,7 +161,8 @@ namespace AdvancedGeology
             string relative = normalized[prefix.Length..];
             return !relative.StartsWith("gem/", StringComparison.Ordinal)
                 && !relative.StartsWith("rock/", StringComparison.Ordinal)
-                && !relative.StartsWith("soil/", StringComparison.Ordinal);
+                && !relative.StartsWith("soil/", StringComparison.Ordinal)
+                && !relative.StartsWith("prospecting/", StringComparison.Ordinal);
         }
 
 

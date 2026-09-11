@@ -2,6 +2,12 @@
   {
     "code": "cyprus-vms",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "chalcopyrite",
+        "sphalerite"
+      ]
+    },
     "template": "cyprusVms",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

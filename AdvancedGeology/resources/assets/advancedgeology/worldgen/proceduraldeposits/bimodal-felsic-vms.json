@@ -2,6 +2,13 @@
   {
     "code": "bimodal-felsic-vms",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "chalcopyrite",
+        "sphalerite",
+        "galena"
+      ]
+    },
     "template": "bimodalFelsicVms",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

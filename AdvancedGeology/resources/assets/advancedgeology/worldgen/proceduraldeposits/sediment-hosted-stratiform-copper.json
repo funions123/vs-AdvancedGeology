@@ -2,6 +2,12 @@
   {
     "code": "sediment-hosted-stratiform-copper",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "chalcocite",
+        "nativecopper"
+      ]
+    },
     "template": "stratiformCopper",
     "priority": 86,
     "overlapPolicy": "higherPriorityWins",

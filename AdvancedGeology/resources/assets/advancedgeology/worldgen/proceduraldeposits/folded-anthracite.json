@@ -2,6 +2,11 @@
   {
     "code": "folded-anthracite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "anthracite"
+      ]
+    },
     "template": "foldedAnthracite",
     "priority": 82,
     "overlapPolicy": "higherPriorityWins",

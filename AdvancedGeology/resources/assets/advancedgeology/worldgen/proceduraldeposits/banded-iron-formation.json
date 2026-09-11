@@ -2,6 +2,12 @@
   {
     "code": "banded-iron-formation",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "hematite",
+        "magnetite"
+      ]
+    },
     "template": "bandedIronFormation",
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",

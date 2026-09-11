@@ -2,6 +2,11 @@
   {
     "code": "vein-graphite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "graphite"
+      ]
+    },
     "template": "veinGraphite",
     "priority": 92,
     "overlapPolicy": "higherPriorityWins",

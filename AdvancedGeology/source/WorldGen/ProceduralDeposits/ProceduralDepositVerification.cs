@@ -3339,6 +3339,7 @@ public static class ProceduralDepositVerification
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/gem/diamond.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/rock/marble.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/soil/clay.json")
+            && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/prospecting/procedural-major-minerals.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/proceduraldeposits/lct-pegmatite.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("blocktypes/stone/ore-graded.json");
         if (!suppressionValid)

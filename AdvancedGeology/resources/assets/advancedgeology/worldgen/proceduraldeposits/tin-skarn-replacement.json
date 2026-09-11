@@ -2,6 +2,12 @@
   {
     "code": "tin-skarn-replacement",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "cassiterite",
+        "scheelite"
+      ]
+    },
     "template": "tinSkarn",
     "priority": 92,
     "overlapPolicy": "higherPriorityWins",

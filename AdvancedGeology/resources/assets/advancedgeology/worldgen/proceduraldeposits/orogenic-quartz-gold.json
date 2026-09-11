@@ -2,6 +2,11 @@
   {
     "code": "orogenic-quartz-gold",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "gold"
+      ]
+    },
     "template": "orogenicQuartzGold",
     "priority": 96,
     "overlapPolicy": "higherPriorityWins",

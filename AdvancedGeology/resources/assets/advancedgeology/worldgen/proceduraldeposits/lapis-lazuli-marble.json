@@ -2,6 +2,11 @@
   {
     "code": "lapis-lazuli-marble",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "lapis"
+      ]
+    },
     "template": "lapisLazuliMarble",
     "priority": 91,
     "overlapPolicy": "higherPriorityWins",

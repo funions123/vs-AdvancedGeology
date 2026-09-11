@@ -2,6 +2,11 @@
   {
     "code": "playa-borates",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "borax"
+      ]
+    },
     "template": "playaBorate",
     "priority": 78,
     "overlapPolicy": "higherPriorityWins",

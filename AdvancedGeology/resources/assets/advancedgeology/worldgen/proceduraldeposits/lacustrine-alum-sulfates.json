@@ -2,6 +2,12 @@
   {
     "code": "lacustrine-alum-sulfates",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "alum",
+        "alunite"
+      ]
+    },
     "template": "lacustrineAlum",
     "priority": 77,
     "overlapPolicy": "higherPriorityWins",

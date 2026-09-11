@@ -2,6 +2,11 @@
   {
     "code": "marine-phosphorite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "phosphorite"
+      ]
+    },
     "template": "marinePhosphorite",
     "priority": 82,
     "overlapPolicy": "higherPriorityWins",

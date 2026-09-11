@@ -2,6 +2,11 @@
   {
     "code": "cyclothem-bituminous-coal",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "bituminouscoal"
+      ]
+    },
     "template": "cyclothemCoal",
     "priority": 80,
     "overlapPolicy": "higherPriorityWins",

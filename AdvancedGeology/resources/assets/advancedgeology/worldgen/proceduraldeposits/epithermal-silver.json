@@ -2,6 +2,11 @@
   {
     "code": "epithermal-silver",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "silver"
+      ]
+    },
     "template": "epithermalVein",
     "priority": 100,
     "overlapPolicy": "higherPriorityWins",

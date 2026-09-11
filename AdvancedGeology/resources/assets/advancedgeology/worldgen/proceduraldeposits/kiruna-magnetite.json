@@ -2,6 +2,11 @@
   {
     "code": "kiruna-magnetite",
     "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "magnetite"
+      ]
+    },
     "template": "sheetedPlate",
     "priority": 95,
     "overlapPolicy": "higherPriorityWins",
