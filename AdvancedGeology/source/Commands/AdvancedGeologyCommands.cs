@@ -25,6 +25,7 @@ internal static class AdvancedGeologyCommands
             .EndSubCommand();
     }
 
+
     private static TextCommandResult DeleteRock(ICoreServerAPI api, TextCommandCallingArgs args)
     {
         string requested = ((string)args[0]).Trim().ToLowerInvariant();

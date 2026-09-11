@@ -43,7 +43,7 @@ namespace AdvancedGeology
             DepositGeneratorRegistry.RegisterDepositGenerator<LayeredSurfaceDepositGenerator>("disc-layeredsurface");
             DepositGeneratorRegistry.RegisterDepositGenerator<SaltDomeDepositGenerator>("saltdome");
             DepositGeneratorRegistry.RegisterDepositGenerator<ProceduralProspectingDepositGenerator>("procedural-prospecting");
-            api.Logger.Notification("[AdvancedGeology] Registered custom deposit generators: disc-layeredsurface, saltdome, procedural-prospecting");
+            api.Logger.VerboseDebug("[AdvancedGeology] Registered custom deposit generators: disc-layeredsurface, saltdome, procedural-prospecting");
 
 
             // Hidden silver grade system only runs when Industrial Story is installed.
@@ -51,7 +51,7 @@ namespace AdvancedGeology
             if (SilverGradeSystem.Active)
             {
                 SilverGradeSystem.RegisterIgnoredAttribute();
-                api.Logger.Notification("[AdvancedGeology] Industrial Story detected: hidden silver grade system enabled");
+                api.Logger.VerboseDebug("[AdvancedGeology] Industrial Story detected: hidden silver grade system enabled");
             }
         }
 
@@ -60,9 +60,10 @@ namespace AdvancedGeology
             base.Start(api);
 
             bool canJewelryEnabled = api.ModLoader.IsModEnabled("canjewelry");
+            harmony = new Harmony("advancedgeology");
+            harmony.CreateClassProcessor(typeof(Patch_ForestFloorSystem_CheckAndReplaceForestFloor)).Patch();
             if (!SilverGradeSystem.Active && !canJewelryEnabled) return;
 
-            harmony = new Harmony("advancedgeology");
             if (SilverGradeSystem.Active) harmony.PatchAll();
             if (canJewelryEnabled)
             {
@@ -109,9 +110,9 @@ namespace AdvancedGeology
 
 
         /// <summary>
-        /// Enforces exclusive procedural ore generation by disabling every conventional deposit
-        /// except standalone gem, rock, soil, and non-generating prospecting registrations. This
-        /// also suppresses externally supplied conventional ore definitions before GenDeposits finalizes them.
+        /// Enforces exclusive procedural ore generation by disabling conventional deposits except
+        /// standalone gem, rock, soil, non-generating prospecting registrations, and AdvancedGeology's
+        /// custom halite salt-dome definition.
         /// </summary>
         private static void SuppressLegacyOreDeposits(ICoreAPI api)
         {
@@ -121,12 +122,18 @@ namespace AdvancedGeology
             int preservedRockFiles = 0;
             int preservedSoilFiles = 0;
             int preservedProspectingFiles = 0;
+            int preservedSaltDomeFiles = 0;
 
             foreach ((AssetLocation location, IAsset asset) in api.Assets.AllAssets.ToArray())
             {
                 string path = location.Path.Replace('\\', '/').ToLowerInvariant();
                 if (!path.StartsWith("worldgen/deposits/", StringComparison.Ordinal)) continue;
 
+                if (IsSaltDomeDepositAssetPath(location))
+                {
+                    preservedSaltDomeFiles++;
+                    continue;
+                }
                 if (!IsConventionalOreDepositAssetPath(path))
                 {
                     string relative = path["worldgen/deposits/".Length..];
@@ -141,15 +148,22 @@ namespace AdvancedGeology
                 suppressedFiles++;
             }
 
-            api.Logger.Notification(
-                "[AdvancedGeology] Disabled {0} conventional ore deposit asset file(s)",
-                suppressedFiles);
-            api.Logger.Notification(
-                "[AdvancedGeology] Preserved conventional cluster and metadata files: {0} gem, {1} rock, {2} soil, {3} prospecting",
+            api.Logger.VerboseDebug(
+                "[AdvancedGeology] Disabled {0} conventional ore deposit asset file(s); preserved {1} gem, {2} rock, {3} soil, {4} prospecting, {5} salt dome",
+                suppressedFiles,
                 preservedGemFiles,
                 preservedRockFiles,
                 preservedSoilFiles,
-                preservedProspectingFiles);
+                preservedProspectingFiles,
+                preservedSaltDomeFiles);
+        }
+
+        public static bool IsSaltDomeDepositAssetPath(AssetLocation location)
+        {
+            return location.Domain.Equals("advancedgeology", StringComparison.OrdinalIgnoreCase)
+                && location.Path.Replace('\\', '/').Equals(
+                    "worldgen/deposits/mineralore/halite.json",
+                    StringComparison.OrdinalIgnoreCase);
         }
 
         public static bool IsConventionalOreDepositAssetPath(string path)
@@ -215,7 +229,7 @@ namespace AdvancedGeology
                 break;
             }
 
-            api.Logger.Notification("[AdvancedGeology] Block layer mapping verification complete");
+            api.Logger.VerboseDebug("[AdvancedGeology] Block layer mapping verification complete");
         }
     }
 }

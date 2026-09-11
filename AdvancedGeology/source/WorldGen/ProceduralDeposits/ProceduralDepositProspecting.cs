@@ -74,15 +74,34 @@ public static class ProceduralProspectingSignal
 
     public static double Peak(in ProceduralProspectingFeature feature)
     {
-        double maximum = 0.0;
-        int searchRadius = feature.CenterShift + 48;
-        for (int z = feature.CenterZ - searchRadius; z <= feature.CenterZ + searchRadius; z += 2)
+        double angle = ProceduralDepositMath.UnitDouble(feature.FeatureId ^ ShiftAngleSalt) * Math.Tau;
+        double shiftDistance = feature.CenterShift * Math.Sqrt(ProceduralDepositMath.UnitDouble(feature.FeatureId ^ ShiftDistanceSalt));
+        double centerX = feature.CenterX + Math.Cos(angle) * shiftDistance;
+        double centerZ = feature.CenterZ + Math.Sin(angle) * shiftDistance;
+        double searchRadius = Math.Min(36.0, feature.SignalRadius * 0.48) + 8.0;
+        double bestX = centerX;
+        double bestZ = centerZ;
+        double maximum = Sample(feature, bestX, bestZ);
+
+        for (double step = 8.0; step >= 1.0; step /= 2.0)
         {
-            for (int x = feature.CenterX - searchRadius; x <= feature.CenterX + searchRadius; x += 2)
+            double minimumX = step == 8.0 ? centerX - searchRadius : bestX - step * 2.0;
+            double maximumX = step == 8.0 ? centerX + searchRadius : bestX + step * 2.0;
+            double minimumZ = step == 8.0 ? centerZ - searchRadius : bestZ - step * 2.0;
+            double maximumZ = step == 8.0 ? centerZ + searchRadius : bestZ + step * 2.0;
+            for (double z = minimumZ; z <= maximumZ; z += step)
             {
-                maximum = Math.Max(maximum, Sample(feature, x, z));
+                for (double x = minimumX; x <= maximumX; x += step)
+                {
+                    double sample = Sample(feature, x, z);
+                    if (sample <= maximum) continue;
+                    maximum = sample;
+                    bestX = x;
+                    bestZ = z;
+                }
             }
         }
+
         return maximum;
     }
 
@@ -97,17 +116,17 @@ public static class ProceduralProspectingSignal
 public sealed partial class ProceduralDepositWorldGenSystem
 {
     private const int ProspectingScanRadius = GlobalConstants.ChunkSize;
+    private const string ProspectingMapVersionKey = "advancedgeology:prospectingMapVersion";
+    private const byte ProspectingMapVersion = 1;
     private const int ProspectingMapPadding = 1;
     private readonly Dictionary<ulong, Dictionary<string, double>> featureBasePpt = new();
 
-    private void RefreshLoadedProspectingMaps(Vec2i mapCoord, IMapRegion mapRegion)
-    {
-        GenerateProspectingMaps(mapRegion, mapCoord.X, mapCoord.Y, null);
-    }
 
     private void GenerateProspectingMaps(IMapRegion mapRegion, int regionX, int regionZ, ITreeAttribute? chunkGenParams)
     {
         if (definitions.Count == 0 || serverApi == null) return;
+        byte[]? version = mapRegion.GetModdata(ProspectingMapVersionKey);
+        if (version is { Length: > 0 } && version[0] == ProspectingMapVersion) return;
 
         int regionSize = serverApi.WorldManager.RegionSize;
         int innerSize = regionSize / TerraGenConfig.oreMapScale;
@@ -159,6 +178,8 @@ public sealed partial class ProceduralDepositWorldGenSystem
         {
             mapRegion.OreMaps[mineral] = map;
         }
+        mapRegion.SetModdata(ProspectingMapVersionKey, new[] { ProspectingMapVersion });
+        mapRegion.DirtyForSaving = true;
     }
 
     private void CollectProspectingFeatures(

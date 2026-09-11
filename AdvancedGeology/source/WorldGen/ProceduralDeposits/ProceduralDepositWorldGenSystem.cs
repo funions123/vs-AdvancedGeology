@@ -79,9 +79,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         serverApi = api;
         api.Event.InitWorldGenerator(() => InitializeWorldDefinitions(api), "standard");
         api.Event.GetWorldgenBlockAccessor(provider => blockAccessor = provider.GetBlockAccessor(false));
-        api.Event.MapRegionGeneration(GenerateProspectingMaps, "standard");
         api.Event.MapRegionNeighborsLoaded(GenerateProspectingMaps, "standard");
-        api.Event.MapRegionLoaded += RefreshLoadedProspectingMaps;
         api.Event.ChunkColumnGeneration(GenerateChunkColumn, EnumWorldGenPass.TerrainFeatures, "standard");
     }
 
@@ -136,7 +134,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             }
             if (definition.Intrude)
             {
-                api.Logger.Notification(
+                api.Logger.VerboseDebug(
                     "[AdvancedGeology] Procedural deposit {0} intrudes from {1} source-host block variant(s) through {2} natural-rock block variant(s)",
                     definition.Code,
                     compiled.SourceHostBlockCount,
@@ -180,9 +178,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         }
         if (definitions.Count > 0)
         {
-            api.Logger.Notification(
+            api.Logger.VerboseDebug(
                 "[AdvancedGeology] Initialized {0} procedural deposit definition(s)",
-
                 definitions.Count);
         }
     }

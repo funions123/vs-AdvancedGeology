@@ -3336,6 +3336,8 @@ public static class ProceduralDepositVerification
             && AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/mineralore/quartz.json")
             && AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/coal.json")
             && AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/customore/future.json")
+            && AdvancedGeologyModSystem.IsSaltDomeDepositAssetPath(new AssetLocation("advancedgeology", "worldgen/deposits/mineralore/halite.json"))
+            && !AdvancedGeologyModSystem.IsSaltDomeDepositAssetPath(new AssetLocation("othermod", "worldgen/deposits/mineralore/halite.json"))
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/gem/diamond.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/rock/marble.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/soil/clay.json")
