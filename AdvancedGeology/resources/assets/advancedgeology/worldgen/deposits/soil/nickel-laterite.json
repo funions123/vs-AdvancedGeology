@@ -10,20 +10,6 @@
 				"name": "fertcover",
 				"allowedVariants": ["low-none", "medium-none", "low-verysparse", "medium-verysparse", "low-sparse", "medium-sparse", "low-normal", "medium-normal"]
 			},
-			"topLayerBlock": {
-				"code": "rawclay-red-*",
-				"name": "clayfertcover",
-				"allowedVariantsByInBlock": {
-					"soil-low-none": ["none"],
-					"soil-medium-none": ["none"],
-					"soil-low-verysparse": ["verysparse"],
-					"soil-medium-verysparse": ["verysparse"],
-					"soil-low-sparse": ["verysparse"],
-					"soil-medium-sparse": ["verysparse"],
-					"soil-low-normal": ["verysparse"],
-					"soil-medium-normal": ["verysparse"]
-				}
-			},
 			"rockInBlock": {
 				"code": "rock-*",
 				"name": "rock",
@@ -31,10 +17,10 @@
 			},
 			"bottomLayerBlock": { "code": "ore-medium-garnierite-{rock}" },
 			"bottomLayerThickness": 1,
+			"bottomLayerThicknessMax": 3,
 			"requireImmediateRock": true,
 			"radius": { "dist": "uniform", "avg": 20, "var": 5 },
-			"maxYRoughness": 2,
-			"withLastLayerBlockCallback": true
+			"maxYRoughness": 2
 		},
 		"climate": {
 			"minRain": 0.4,

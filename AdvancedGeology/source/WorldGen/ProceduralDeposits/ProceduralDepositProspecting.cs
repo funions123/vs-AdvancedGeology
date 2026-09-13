@@ -384,6 +384,16 @@ public sealed partial class ProceduralDepositWorldGenSystem
     }
 
 
+    /// <summary>
+    /// Multiplies a per-cell placement chance by <see cref="AdvancedGeologyConfig.GlobalMineralAbundance"/>,
+    /// clamped to a probability. A chance of 0 stays 0 - a disabled deposit cannot be scaled into existence.
+    /// </summary>
+    public static double ScaleChanceByAbundance(double chance)
+    {
+        double scaled = chance * AdvancedGeologyConfig.Active.GlobalMineralAbundance;
+        return scaled <= 0 ? 0 : Math.Min(1.0, scaled);
+    }
+
     private static bool TryGetFeatureCenter(
         ProceduralDepositDefinition definition,
         ulong featureId,
@@ -392,7 +402,8 @@ public sealed partial class ProceduralDepositWorldGenSystem
         out int centerX,
         out int centerZ)
     {
-        if (ProceduralDepositMath.UnitDouble(featureId ^ ChanceSalt) >= definition.Placement.Chance)
+        double chance = ScaleChanceByAbundance(definition.Placement.Chance);
+        if (ProceduralDepositMath.UnitDouble(featureId ^ ChanceSalt) >= chance)
         {
             centerX = 0;
             centerZ = 0;

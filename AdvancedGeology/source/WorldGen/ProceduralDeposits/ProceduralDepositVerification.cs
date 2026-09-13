@@ -5,6 +5,15 @@ using Vintagestory.API.Common;
 
 namespace AdvancedGeology.WorldGen.ProceduralDeposits;
 
+public readonly record struct ContentGateVerificationResult(
+    int TotalDefinitions,
+    int VanillaKeptDefinitions,
+    string[] DroppedDefinitions,
+    int GemSlotDefinitions,
+    int SuppressedGemSlots,
+    bool GemFallbacksValid,
+    bool KeptMineralsValid);
+
 public readonly record struct ProceduralDepositVerificationResult(
     int VoxelCount,
     int DeepPrimaryCount,
@@ -3343,7 +3352,13 @@ public static class ProceduralDepositVerification
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/soil/clay.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/prospecting/procedural-major-minerals.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/proceduraldeposits/lct-pegmatite.json")
-            && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("blocktypes/stone/ore-graded.json");
+            && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("blocktypes/stone/ore-graded.json")
+            // VanillaOresOnly prunes kaolinite only; nickel laterite smelts into vanilla nickel,
+            // and vanilla or foreign soil clusters are never touched by this gate.
+            && AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("advancedgeology", "worldgen/deposits/soil/kaolinite.json"))
+            && !AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("advancedgeology", "worldgen/deposits/soil/nickel-laterite.json"))
+            && !AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("othermod", "worldgen/deposits/soil/kaolinite.json"))
+            && !AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("game", "worldgen/deposits/soil/clay.json"));
         if (!suppressionValid)
         {
             throw new InvalidOperationException("Exclusive ore generation boundary includes a preserved category");
@@ -3765,6 +3780,111 @@ public static class ProceduralDepositVerification
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Verifies the IHateGems and VanillaOresOnly content gates against the shipped definitions.
+    /// </summary>
+    public static ContentGateVerificationResult RunContentGates(string depositDirectory)
+    {
+        string[] files = System.IO.Directory.GetFiles(depositDirectory, "*.json");
+        if (files.Length == 0) throw new InvalidOperationException($"No procedural deposit definitions found in {depositDirectory}");
+
+        var kept = new List<string>();
+        var dropped = new List<string>();
+        int gemSlotDefinitions = 0;
+        int suppressedGemSlots = 0;
+        bool gemFallbacksValid = true;
+        bool keptMineralsValid = true;
+
+        foreach (string file in files.OrderBy(path => path, StringComparer.Ordinal))
+        {
+            ProceduralDepositDefinition[]? parsed =
+                Newtonsoft.Json.JsonConvert.DeserializeObject<ProceduralDepositDefinition[]>(
+                    System.IO.File.ReadAllText(file));
+            if (parsed == null || parsed.Length == 0) throw new InvalidOperationException($"Unreadable deposit definition {file}");
+
+            foreach (ProceduralDepositDefinition definition in parsed)
+            {
+                definition.Palette.MigrateLegacyMaterials();
+                if (DepositContentFilters.IsVanillaProgressionDeposit(definition))
+                {
+                    kept.Add(definition.Code);
+                    if (!definition.Prospecting.MajorMinerals.Any(DepositContentFilters.IsVanillaProgressionMineral))
+                    {
+                        keptMineralsValid = false;
+                    }
+                }
+                else
+                {
+                    dropped.Add(definition.Code);
+                }
+
+                KeyValuePair<string, string>[] materials = definition.Palette.Materials
+                    .OrderBy(entry => entry.Key, StringComparer.Ordinal)
+                    .ToArray();
+                int gemSlots = materials.Count(entry => DepositContentFilters.IsGemMaterialSlot(entry.Key));
+                if (gemSlots == 0) continue;
+
+                gemSlotDefinitions++;
+                suppressedGemSlots += gemSlots;
+                KeyValuePair<string, string>[] suppressed = DepositContentFilters.ApplyGemSuppression(materials);
+
+                // Every gem slot must survive with a non-gem material so deposit shape and
+                // required-slot validation are unaffected.
+                if (suppressed.Length != materials.Length) gemFallbacksValid = false;
+                foreach (KeyValuePair<string, string> entry in suppressed)
+                {
+                    if (entry.Value.Contains("ore-gem-", StringComparison.Ordinal)) gemFallbacksValid = false;
+                    if (DepositContentFilters.IsGemMaterialSlot(entry.Key)
+                        && entry.Value.Contains("celestine", StringComparison.Ordinal)
+                        && entry.Value.Contains("medium", StringComparison.Ordinal))
+                    {
+                        gemFallbacksValid = false;
+                    }
+                }
+            }
+        }
+
+        // Ruling: a deposit survives VanillaOresOnly only when a major mineral feeds a vanilla
+        // recipe or vanilla metal. Messinian sulfur, magnesite, and alum qualify; alunite, trona,
+        // phosphorite, pyrolusite, and pegmatite-only rare metals do not. mobi-greisen survives on
+        // bismuthinite, and erzgebirge-bismuth-uranium on native bismuth.
+        string[] expectedDropped =
+        {
+            "carbonatite-complex",
+            "ivittuut-cryolite",
+            "lct-pegmatite",
+            "marine-phosphorite",
+            "peralkaline-hree-complex",
+            "praborna-pyrolusite",
+            "unconformity-related-uranium",
+            "volcanic-alunite"
+        };
+        string[] actualDropped = dropped.OrderBy(code => code, StringComparer.Ordinal).ToArray();
+        bool countsValid = actualDropped.SequenceEqual(expectedDropped, StringComparer.Ordinal)
+            && kept.Count > 0;
+        if (!countsValid)
+        {
+            throw new InvalidOperationException(
+                $"VanillaOresOnly drop set mismatch: expected=[{string.Join(", ", expectedDropped)}] " +
+                $"actual=[{string.Join(", ", actualDropped)}]");
+        }
+        if (!gemFallbacksValid || !keptMineralsValid || !countsValid)
+        {
+            throw new InvalidOperationException(
+                $"Content gate verification failed: gemFallbacks={gemFallbacksValid} keptMinerals={keptMineralsValid} " +
+                $"kept={kept.Count} dropped={dropped.Count}");
+        }
+
+        return new ContentGateVerificationResult(
+            kept.Count + dropped.Count,
+            kept.Count,
+            dropped.OrderBy(code => code, StringComparer.Ordinal).ToArray(),
+            gemSlotDefinitions,
+            suppressedGemSlots,
+            gemFallbacksValid,
+            keptMineralsValid);
     }
 
 }

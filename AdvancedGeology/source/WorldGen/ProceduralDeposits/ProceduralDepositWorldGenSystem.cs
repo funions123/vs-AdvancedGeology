@@ -97,9 +97,17 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             return;
         }
 
+        bool vanillaOresOnly = AdvancedGeologyConfig.Active.VanillaOresOnly;
+        int nonVanillaSkipped = 0;
         foreach (LoadedDefinition loaded in loadedDefinitions)
         {
             ProceduralDepositDefinition definition = loaded.Definition;
+            if (vanillaOresOnly && !DepositContentFilters.IsVanillaProgressionDeposit(definition))
+            {
+                nonVanillaSkipped++;
+                continue;
+            }
+
             if (!ProceduralDepositTemplateRegistry.TryGet(
                 definition.Template,
                 out IProceduralDepositTemplate template))
@@ -179,8 +187,9 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         if (definitions.Count > 0)
         {
             api.Logger.VerboseDebug(
-                "[AdvancedGeology] Initialized {0} procedural deposit definition(s)",
-                definitions.Count);
+                "[AdvancedGeology] Initialized {0} procedural deposit definition(s); skipped {1} non-vanilla definition(s)",
+                definitions.Count,
+                nonVanillaSkipped);
         }
     }
     private static string DescribeUnresolvedSlots(

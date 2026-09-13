@@ -1,4 +1,7 @@
 using System.Text;
+using System.Linq;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using AdvancedGeology.Patches;
 using AdvancedGeology.Silver;
 using AdvancedGeology.WorldGen;
@@ -39,6 +42,8 @@ namespace AdvancedGeology
                     exception.Message);
                 config = new AdvancedGeologyConfig();
             }
+            AdvancedGeologyConfig.Active = config;
+
 
             DepositGeneratorRegistry.RegisterDepositGenerator<LayeredSurfaceDepositGenerator>("disc-layeredsurface");
             DepositGeneratorRegistry.RegisterDepositGenerator<SaltDomeDepositGenerator>("saltdome");
@@ -112,7 +117,9 @@ namespace AdvancedGeology
         /// <summary>
         /// Enforces exclusive procedural ore generation by disabling conventional deposits except
         /// standalone gem, rock, soil, non-generating prospecting registrations, and AdvancedGeology's
-        /// custom halite salt-dome definition.
+        /// custom halite salt-dome definition. Gem clusters are also disabled when the player has
+        /// set <see cref="AdvancedGeologyConfig.IHateGems"/>, and non-vanilla soil deposits when they
+        /// have set <see cref="AdvancedGeologyConfig.VanillaOresOnly"/>.
         /// </summary>
         private static void SuppressLegacyOreDeposits(ICoreAPI api)
         {
@@ -123,6 +130,9 @@ namespace AdvancedGeology
             int preservedSoilFiles = 0;
             int preservedProspectingFiles = 0;
             int preservedSaltDomeFiles = 0;
+            int suppressedGemFiles = 0;
+            int suppressedSoilFiles = 0;
+            int rescaledFiles = 0;
 
             foreach ((AssetLocation location, IAsset asset) in api.Assets.AllAssets.ToArray())
             {
@@ -132,14 +142,38 @@ namespace AdvancedGeology
                 if (IsSaltDomeDepositAssetPath(location))
                 {
                     preservedSaltDomeFiles++;
+                    if (ScaleDepositTriesByAbundance(asset)) rescaledFiles++;
                     continue;
                 }
                 if (!IsConventionalOreDepositAssetPath(path))
                 {
                     string relative = path["worldgen/deposits/".Length..];
-                    if (relative.StartsWith("gem/", StringComparison.Ordinal)) preservedGemFiles++;
+                    bool isGem = relative.StartsWith("gem/", StringComparison.Ordinal);
+                    if (isGem && AdvancedGeologyConfig.Active.IHateGems)
+                    {
+                        asset.Data = emptyArray;
+                        suppressedGemFiles++;
+                        continue;
+                    }
+
+                    if (isGem)
+                    {
+                        preservedGemFiles++;
+                        if (ScaleDepositTriesByAbundance(asset)) rescaledFiles++;
+                    }
                     else if (relative.StartsWith("rock/", StringComparison.Ordinal)) preservedRockFiles++;
-                    else if (relative.StartsWith("soil/", StringComparison.Ordinal)) preservedSoilFiles++;
+                    else if (relative.StartsWith("soil/", StringComparison.Ordinal))
+                    {
+                        if (AdvancedGeologyConfig.Active.VanillaOresOnly && IsNonVanillaSoilDepositAssetPath(location))
+                        {
+                            asset.Data = emptyArray;
+                            suppressedSoilFiles++;
+                            continue;
+                        }
+
+                        preservedSoilFiles++;
+                        if (ScaleDepositTriesByAbundance(asset)) rescaledFiles++;
+                    }
                     else if (relative.StartsWith("prospecting/", StringComparison.Ordinal)) preservedProspectingFiles++;
                     continue;
                 }
@@ -149,13 +183,70 @@ namespace AdvancedGeology
             }
 
             api.Logger.VerboseDebug(
-                "[AdvancedGeology] Disabled {0} conventional ore deposit asset file(s); preserved {1} gem, {2} rock, {3} soil, {4} prospecting, {5} salt dome",
+                "[AdvancedGeology] Disabled {0} conventional ore deposit asset file(s), {1} gem file(s), {2} soil file(s); preserved {3} gem, {4} rock, {5} soil, {6} prospecting, {7} salt dome; rescaled {8} file(s) at abundance {9}",
                 suppressedFiles,
+                suppressedGemFiles,
+                suppressedSoilFiles,
                 preservedGemFiles,
                 preservedRockFiles,
                 preservedSoilFiles,
                 preservedProspectingFiles,
-                preservedSaltDomeFiles);
+                preservedSaltDomeFiles,
+                rescaledFiles,
+                AdvancedGeologyConfig.Active.GlobalMineralAbundance);
+        }
+
+        /// <summary>
+        /// Multiplies every <c>triesPerChunk</c> in a surviving conventional deposit asset, child deposits
+        /// included, by <see cref="AdvancedGeologyConfig.GlobalMineralAbundance"/>. Vanilla treats values
+        /// above 1 as repeated tries, so only the lower bound is clamped. Returns whether the asset changed.
+        /// </summary>
+        private static bool ScaleDepositTriesByAbundance(IAsset asset)
+        {
+            string? rescaled = ScaleDepositTriesJson(
+                asset.ToText(),
+                AdvancedGeologyConfig.Active.GlobalMineralAbundance);
+            if (rescaled == null) return false;
+
+            asset.Data = Encoding.UTF8.GetBytes(rescaled);
+            return true;
+        }
+
+        /// <summary>
+        /// Returns <paramref name="json"/> with every <c>triesPerChunk</c> multiplied by
+        /// <paramref name="abundance"/>, or null when nothing changed.
+        /// </summary>
+        public static string? ScaleDepositTriesJson(string json, double abundance)
+        {
+            if (abundance == 1.0) return null;
+
+            JContainer root;
+            try
+            {
+                if (JToken.Parse(json) is not JContainer parsed) return null;
+                root = parsed;
+            }
+            catch (JsonException)
+            {
+                return null;
+            }
+
+            // Materialized before mutating: assigning JProperty.Value swaps the token the walk is standing on.
+            JProperty[] tries = root.Descendants()
+                .OfType<JProperty>()
+                .Where(property =>
+                    property.Name.Equals("triesPerChunk", StringComparison.OrdinalIgnoreCase)
+                    && property.Value.Type is JTokenType.Float or JTokenType.Integer)
+                .ToArray();
+
+            if (tries.Length == 0) return null;
+
+            foreach (JProperty property in tries)
+            {
+                property.Value = Math.Max(0.0, property.Value.Value<double>() * abundance);
+            }
+
+            return root.ToString(Formatting.None);
         }
 
         public static bool IsSaltDomeDepositAssetPath(AssetLocation location)
@@ -163,6 +254,18 @@ namespace AdvancedGeology
             return location.Domain.Equals("advancedgeology", StringComparison.OrdinalIgnoreCase)
                 && location.Path.Replace('\\', '/').Equals(
                     "worldgen/deposits/mineralore/halite.json",
+                    StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>
+        /// AdvancedGeology soil deposits whose material feeds no vanilla recipe or vanilla metal.
+        /// Nickel laterite is excluded: its garnierite smelts into vanilla nickel.
+        /// </summary>
+        public static bool IsNonVanillaSoilDepositAssetPath(AssetLocation location)
+        {
+            return location.Domain.Equals("advancedgeology", StringComparison.OrdinalIgnoreCase)
+                && location.Path.Replace('\\', '/').Equals(
+                    "worldgen/deposits/soil/kaolinite.json",
                     StringComparison.OrdinalIgnoreCase);
         }
 

@@ -114,16 +114,18 @@ public class LayeredDepositBlock
 [JsonObject(MemberSerialization.OptIn)]
 public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
 {
-    // Top layer
+    // Soil column
 
     /// <summary>
-    /// The block to check for in the soil layer (replaced with TopLayerBlock).
+    /// The soil block the deposit column passes through. Required: it identifies where soil ends
+    /// and rock begins. Soil is only overwritten when <see cref="TopLayerBlock"/> is also set.
     /// </summary>
     [JsonProperty]
     public LayeredDepositBlock SoilInBlock;
 
     /// <summary>
-    /// The block to place in the soil layer.
+    /// Optional block replacing the soil above the deposit. When omitted the natural soil cap is
+    /// left untouched and the deposit exists only in the rock below.
     /// </summary>
     [JsonProperty]
     public LayeredDepositBlock TopLayerBlock;
@@ -160,10 +162,17 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     public LayeredDepositBlock BottomLayerBlock;
 
     /// <summary>
-    /// How many bottom-block layers to place in rock.
+    /// Fewest bottom-block layers to place in rock.
     /// </summary>
     [JsonProperty]
     public int BottomLayerThickness = 1;
+
+    /// <summary>
+    /// Greatest number of bottom-block layers to place in rock. Values above
+    /// <see cref="BottomLayerThickness"/> make the lens vary in thickness across its footprint.
+    /// </summary>
+    [JsonProperty]
+    public int BottomLayerThicknessMax = 0;
 
     /// <summary>
     /// If true, only generate the bottom layer when valid rock sits immediately below the soil,
@@ -200,6 +209,10 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     protected Dictionary<int, LayeredResolvedDepositBlock> middleLayerBlockByInBlockId = new Dictionary<int, LayeredResolvedDepositBlock>();
     protected Dictionary<int, LayeredResolvedDepositBlock> bottomLayerBlockByInBlockId = new Dictionary<int, LayeredResolvedDepositBlock>();
 
+    // Soil block ids the deposit column may pass through. Tracked separately from
+    // topLayerBlockByInBlockId so a deposit can leave the soil cap intact and still locate rock.
+    protected HashSet<int> soilBlockIds = new HashSet<int>();
+
     // Track which rock types are valid for bottom layer
     protected HashSet<int> validRockBlockIds = new HashSet<int>();
 
@@ -223,14 +236,19 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
             Radius = NatFloat.createUniform(10, 0);
         }
 
-        // Resolve top layer blocks (soil -> clay/other)
-        if (SoilInBlock != null && TopLayerBlock != null)
+        // Identify the soil column the deposit passes through. This is independent of
+        // TopLayerBlock: a deposit may leave the natural soil cap in place.
+        if (SoilInBlock != null)
         {
             Block[] soilBlocks = Api.World.SearchBlocks(SoilInBlock.Code);
             foreach (var block in soilBlocks)
             {
                 if (SoilInBlock.AllowedVariants != null && !WildcardUtil.Match(SoilInBlock.Code, block.Code, SoilInBlock.AllowedVariants)) continue;
                 if (SoilInBlock.AllowedVariantsByInBlock != null && !SoilInBlock.AllowedVariantsByInBlock.ContainsKey(block.Code)) continue;
+
+                soilBlockIds.Add(block.BlockId);
+
+                if (TopLayerBlock == null) continue;
 
                 string key = SoilInBlock.Name;
                 string value = WildcardUtil.GetWildcardValue(SoilInBlock.Code, block.Code);
@@ -331,7 +349,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                     IChunkBlocks chunkdata = chunks[y / chunksize].Data;
                     int blockId = chunkdata.GetBlockIdUnsafe(index3d);
 
-                    if (topLayerBlockByInBlockId.ContainsKey(blockId))
+                    if (soilBlockIds.Contains(blockId))
                     {
                         continue;
                     }
@@ -359,11 +377,14 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                 // bottom layer in rock, middle layer directly above rock, then the top layer
                 // repeated through all remaining soil up to the surface.
 
-                // Generate bottom layer (rock -> ore) in the rock, downward from the rock surface
+                // Generate bottom layer (rock -> ore) in the rock, downward from the rock surface.
+                // Thickness varies smoothly across the footprint so the lens is thickest near the
+                // deposit centre and thins toward the rim instead of being a flat slab.
                 if (shouldPlaceBottomLayer)
                 {
                     int bottomLayersPlaced = 0;
-                    for (int y = rockStartY; y > 0 && bottomLayersPlaced < BottomLayerThickness; y--)
+                    int bottomTarget = SelectBottomThickness(posx, posz, distanceToEdge, val);
+                    for (int y = rockStartY; y > 0 && bottomLayersPlaced < bottomTarget; y--)
                     {
                         int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
                         IChunkBlocks chunkdata = chunks[y / chunksize].Data;
@@ -401,7 +422,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                         int blockId = chunkdata.GetBlockIdUnsafe(index3d);
 
                         // Interrupted column (air pocket, water, non-soil): stop stacking
-                        if (!topLayerBlockByInBlockId.ContainsKey(blockId)) break;
+                        if (!soilBlockIds.Contains(blockId)) break;
 
                         chunkdata.SetBlockUnsafe(index3d, middlePlaceBlock.BlockId);
                         chunkdata.SetFluid(index3d, 0);
@@ -441,6 +462,25 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
         }
     }
 
+    /// <summary>
+    /// Picks how many rock layers this column replaces. Without BottomLayerThicknessMax the
+    /// configured thickness is used unchanged. Otherwise the count interpolates from the maximum
+    /// near the deposit centre to the minimum at the rim, with a small noise jitter so the base of
+    /// the lens is irregular rather than a stepped cone.
+    /// </summary>
+    protected int SelectBottomThickness(int posx, int posz, double distanceToEdge, double edgeReference)
+    {
+        int minimum = Math.Max(1, BottomLayerThickness);
+        int maximum = Math.Max(minimum, BottomLayerThicknessMax);
+        if (maximum == minimum) return minimum;
+
+        // distanceToEdge is 1-ish at the centre and 0 at the distorted rim.
+        double normalized = edgeReference <= 0 ? 0 : GameMath.Clamp(distanceToEdge / edgeReference, 0, 1);
+        double jitter = DistortNoiseGen.Noise(posx / 6.0, posz / 6.0) * 0.5 - 0.25;
+        double scaled = minimum + (maximum - minimum) * GameMath.Clamp(normalized + jitter, 0, 1);
+        return GameMath.Clamp((int)Math.Round(scaled), minimum, maximum);
+    }
+
     public override float GetMaxRadius()
     {
         return (Radius.avg + Radius.var) * 1.3f;
@@ -456,7 +496,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     public override void GetYMinMax(BlockPos pos, out double miny, out double maxy)
     {
         // Top layer depth varies with soil thickness; 8 covers the deepest modded soil stacks.
-        miny = pos.Y - 8 - MiddleLayerThickness - BottomLayerThickness;
+        miny = pos.Y - 8 - MiddleLayerThickness - Math.Max(BottomLayerThickness, BottomLayerThicknessMax);
         maxy = pos.Y;
     }
 }

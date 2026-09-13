@@ -897,6 +897,10 @@ internal sealed class CompiledProceduralDeposit
         KeyValuePair<string, string>[] materials = definition.Palette.Materials
             .OrderBy(entry => entry.Key, StringComparer.Ordinal)
             .ToArray();
+        if (AdvancedGeologyConfig.Active.IHateGems)
+        {
+            materials = DepositContentFilters.ApplyGemSuppression(materials);
+        }
         slotIds = new Dictionary<string, int>(materials.Length, StringComparer.Ordinal);
         int blockCount = api.World.Blocks.Count;
         resolvedBlocks = new int[materials.Length][][];
