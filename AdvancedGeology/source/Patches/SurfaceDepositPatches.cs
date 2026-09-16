@@ -6,9 +6,7 @@ using Vintagestory.ServerMods;
 
 namespace AdvancedGeology.Patches;
 
-/// <summary>
-/// Keeps clay and other soil deposits intact when tree generation paints the surrounding forest floor.
-/// </summary>
+/// <summary>Prevents forest-floor generation from replacing soil deposits.</summary>
 [HarmonyPatch(typeof(ForestFloorSystem), "CheckAndReplaceForestFloor")]
 public static class Patch_ForestFloorSystem_CheckAndReplaceForestFloor
 {

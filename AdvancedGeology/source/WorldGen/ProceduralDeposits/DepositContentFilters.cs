@@ -3,17 +3,10 @@ using System.Linq;
 
 namespace AdvancedGeology.WorldGen.ProceduralDeposits;
 
-/// <summary>
-/// Player-facing content gates for procedural deposits.
-/// </summary>
+/// <summary>Applies player-configured procedural deposit filters.</summary>
 public static class DepositContentFilters
 {
-    /// <summary>
-    /// Minerals a vanilla playthrough actually consumes, either directly in a vanilla recipe or
-    /// by smelting into a vanilla metal. Keys use the normalized prospecting mineral names from
-    /// <see cref="ProceduralDepositWorldGenSystem.NormalizeProspectingMineral"/> so this gate and
-    /// the density map agree on naming.
-    /// </summary>
+    /// <summary>Normalized minerals used by vanilla progression.</summary>
     private static readonly HashSet<string> VanillaProgressionMinerals = new(StringComparer.Ordinal)
     {
         // Iron
@@ -40,11 +33,7 @@ public static class DepositContentFilters
         "alum"
     };
 
-    /// <summary>
-    /// Gem accessory slots and the gangue slot each one degrades to when gems are disabled.
-    /// Substituting the material keeps deposit shape, volume, and slot validation intact instead
-    /// of deleting an ore deposit for its decorative minerals.
-    /// </summary>
+    /// <summary>Gem slots and their ordered gangue fallbacks.</summary>
     private static readonly (string Slot, string[] Fallbacks)[] GemSlotFallbacks =
     {
         (ProceduralMaterialSlots.Topaz, new[] { ProceduralMaterialSlots.Quartz, ProceduralMaterialSlots.Core, ProceduralMaterialSlots.Wall }),
@@ -54,9 +43,7 @@ public static class DepositContentFilters
         (ProceduralMaterialSlots.CelestineGem, new[] { ProceduralMaterialSlots.Celestine })
     };
 
-    /// <summary>
-    /// True when the deposit has at least one major mineral a vanilla playthrough consumes.
-    /// </summary>
+    /// <summary>Returns whether a deposit contributes to vanilla progression.</summary>
     public static bool IsVanillaProgressionDeposit(ProceduralDepositDefinition definition)
     {
         foreach (string mineral in definition.Prospecting.MajorMinerals)
@@ -89,10 +76,7 @@ public static class DepositContentFilters
         return false;
     }
 
-    /// <summary>
-    /// Replaces every gem accessory material with the deposit's own gangue material. Slots with no
-    /// declared fallback are dropped, which is only reachable for optional decorative slots.
-    /// </summary>
+    /// <summary>Replaces gem accessory slots with available gangue.</summary>
     public static KeyValuePair<string, string>[] ApplyGemSuppression(
         KeyValuePair<string, string>[] materials)
     {

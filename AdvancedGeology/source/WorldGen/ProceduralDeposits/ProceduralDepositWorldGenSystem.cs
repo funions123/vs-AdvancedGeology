@@ -26,6 +26,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     private const ulong AlbiteSalt = 0x414C4249544553UL;
     private const ulong SchorlSalt = 0x5343484F524C53UL;
     private const ulong SurfaceNuggetSalt = 0x4E55474745545355UL;
+    private const int MinimumOriginSurfaceDepth = 10;
     private const int SplineZoneCount = 13;
     private const int MaximumSoilDepth = 4;
     private const int PlanCacheCapacity = 64;
@@ -149,8 +150,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                     compiled.IntrusionTargetBlockCount);
             }
 
-            // Optional zones degrade to their structural parent, so an unresolved code would
-            // otherwise disappear silently.
+            // Warn when optional zones would silently disappear.
             string[] unresolvedOptional = definition.Palette.Materials.Keys
                 .Where(slot => !compiled.HasResolvedSlot(slot))
                 .OrderBy(slot => slot, StringComparer.Ordinal)
@@ -302,10 +302,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         }
     }
 
-    /// <summary>
-    /// Bounded per-feature plan cache. Large bodies span many chunk columns and every column
-    /// would otherwise rebuild the identical deterministic plan.
-    /// </summary>
+
+    /// <summary>Caches deterministic plans shared across chunk columns.</summary>
     private object? GetOrCreatePlan(
         CompiledProceduralDeposit compiled,
         in ProceduralDepositInstance instance)
@@ -361,25 +359,41 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         }
         else
         {
-            double yRel = ProceduralDepositMath.Range(
-                featureId ^ YSalt,
-                definition.Placement.MinYRel,
-                definition.Placement.MaxYRel);
-            centerY = (int)Math.Round(yRel * (serverApi!.World.BlockAccessor.MapSizeY - 1));
+            int mapHeight = serverApi!.World.BlockAccessor.MapSizeY;
+            int minimumBandY = GameMath.Clamp(
+                (int)Math.Ceiling(definition.Placement.MinYRel * (mapHeight - 1)),
+                1,
+                mapHeight - 2);
+            int maximumBandY = GameMath.Clamp(
+                (int)Math.Floor(definition.Placement.MaxYRel * (mapHeight - 1)),
+                minimumBandY,
+                mapHeight - 2);
 
-            // World-relative placement chooses a geological depth, but it must also respect the
-            // actual terrain column. Keep the top of the modelled body at or below ground instead
-            // of allowing a shallow centre to discard most of a vein into air.
             if (!TryGetSurfaceHeight(centerX, centerZ, out int surfaceY))
             {
                 instance = default;
                 return false;
             }
-            centerY = ClampWorldRelativeCenter(
-                centerY,
-                surfaceY,
-                GetMaximumVerticalReach(definition, compiled.Template));
+
+            int sampledCenterY = (int)Math.Round(ProceduralDepositMath.Range(
+                featureId ^ YSalt,
+                minimumBandY,
+                maximumBandY));
+            centerY = ClampWorldRelativeCenter(sampledCenterY, surfaceY);
             if (centerY < 1)
+            {
+                instance = default;
+                return false;
+            }
+            if (definition.Intrude
+                && !TrySelectIntrusionOriginHostY(
+                    compiled,
+                    featureId ^ YSalt,
+                    centerX,
+                    centerZ,
+                    minimumBandY,
+                    Math.Min(maximumBandY, surfaceY - MinimumOriginSurfaceDepth),
+                    out centerY))
             {
                 instance = default;
                 return false;
@@ -429,10 +443,9 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         return true;
     }
 
-    internal static int ClampWorldRelativeCenter(int sampledCenterY, int surfaceY, int verticalReach)
+    internal static int ClampWorldRelativeCenter(int sampledCenterY, int surfaceY)
     {
-        int highestValidCenter = surfaceY - Math.Max(0, verticalReach);
-        return highestValidCenter < 1 ? 0 : Math.Min(sampledCenterY, highestValidCenter);
+        return Math.Min(sampledCenterY, surfaceY - MinimumOriginSurfaceDepth);
     }
 
     internal static int GetMaximumVerticalReach(
@@ -778,6 +791,43 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         PlaceKirunaGossanSmears(candidate, request, baseX, baseZ);
     }
 
+    private bool HasPlaceableKirunaBodyColumn(
+        CompiledProceduralDeposit compiled,
+        DepositCandidate candidate,
+        IChunkColumnGenerateRequest request,
+        int worldX,
+        int worldZ,
+        int surfaceY)
+    {
+        SheetedPlateDefinition settings = compiled.Definition.SheetedPlate;
+        int minimumY = Math.Max(1, candidate.Instance.CenterY - settings.VerticalHalfHeight);
+        int maximumY = Math.Min(surfaceY, candidate.Instance.CenterY + settings.VerticalHalfHeight);
+        int primarySlot = compiled.GetSlotId(ProceduralMaterialSlots.Primary);
+        if (primarySlot < 0) return false;
+
+        for (int y = minimumY; y <= maximumY; y++)
+        {
+            SheetedPlateSample sample = candidate.SheetedPlatePlan.Sample(worldX, y, worldZ);
+            if (!sample.Inside) continue;
+            int chunkY = y / ChunkSize;
+            if ((uint)chunkY >= (uint)request.Chunks.Length) continue;
+            int localY = y % ChunkSize;
+            int localX = ProceduralDepositMath.FloorMod(worldX, ChunkSize);
+            int localZ = ProceduralDepositMath.FloorMod(worldZ, ChunkSize);
+            int index3d = ((localY * ChunkSize) + localZ) * ChunkSize + localX;
+            int hostBlockId = request.Chunks[chunkY].Data.GetBlockIdUnsafe(index3d);
+            if (!CanReplaceWithProceduralRock(compiled, hostBlockId)) continue;
+            int placeBlockId = compiled.ResolveBlock(primarySlot, SelectSheetedPlateGrade(
+                candidate.Instance.FeatureId,
+                sample,
+                worldX,
+                y,
+                worldZ),
+                hostBlockId);
+            if (placeBlockId != 0 && placeBlockId != hostBlockId) return true;
+        }
+        return false;
+    }
     private void PlaceKirunaGossanSmears(
         DepositCandidate candidate,
         IChunkColumnGenerateRequest request,
@@ -822,6 +872,16 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                         seedX,
                         seedSurfaceY,
                         seedZ) != SheetedPlateZone.Primary)
+                {
+                    continue;
+                }
+                if (!HasPlaceableKirunaBodyColumn(
+                    compiled,
+                    candidate,
+                    request,
+                    seedX,
+                    seedZ,
+                    seedSurfaceY))
                 {
                     continue;
                 }
@@ -2316,9 +2376,56 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                 accumulator.Add(dx, dz, height);
             }
         }
-
         return accumulator.TrySolve(out plane);
     }
+
+    private bool TrySelectIntrusionOriginHostY(
+        CompiledProceduralDeposit compiled,
+        ulong seed,
+        int worldX,
+        int worldZ,
+        int minimumY,
+        int maximumY,
+        out int hostY)
+    {
+        if (maximumY < minimumY)
+        {
+            hostY = 0;
+            return false;
+        }
+
+        int validHostCount = 0;
+        var position = new BlockPos(worldX, minimumY, worldZ);
+        for (int y = minimumY; y <= maximumY; y++)
+        {
+            position.Y = y;
+            if (compiled.IsReplaceableHost(blockAccessor!.GetBlock(position).BlockId)) validHostCount++;
+        }
+
+        if (validHostCount == 0)
+        {
+            hostY = 0;
+            return false;
+        }
+
+        int selectedIndex = Math.Min(
+            validHostCount - 1,
+            (int)(ProceduralDepositMath.UnitDouble(seed) * validHostCount));
+        int currentIndex = 0;
+        for (int y = minimumY; y <= maximumY; y++)
+        {
+            position.Y = y;
+            if (!compiled.IsReplaceableHost(blockAccessor!.GetBlock(position).BlockId)) continue;
+            if (currentIndex++ != selectedIndex) continue;
+            hostY = y;
+            return true;
+        }
+
+        hostY = 0;
+        return false;
+    }
+
+
 
     private bool MatchesClimate(
         ProceduralDepositDefinition definition,
@@ -2762,6 +2869,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             or EnumBlockMaterial.Sand
             or EnumBlockMaterial.Ore;
     }
+
 
     private readonly record struct LoadedDefinition(
         AssetLocation Location,

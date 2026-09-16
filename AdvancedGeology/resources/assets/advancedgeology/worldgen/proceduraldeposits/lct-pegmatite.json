@@ -95,7 +95,7 @@
         "cassiterite": "game:ore-{grade}-cassiterite-pegmatite",
         "tantalite": "game:ore-{grade}-tantalite-pegmatite",
         "columbite": "game:ore-{grade}-columbite-pegmatite",
-        "red-clay": "game:rawclay-red-none",
+        "red-clay": "game:rawclay-red-verysparse",
         "kaolinite": "advancedgeology:rawkaolinite-sparse"
       }
     }

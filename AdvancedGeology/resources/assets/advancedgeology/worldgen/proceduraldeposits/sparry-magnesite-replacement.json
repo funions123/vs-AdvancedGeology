@@ -12,8 +12,8 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
     "placement": {
-      "cellSize": 320,
-      "chance": 0.22,
+      "cellSize": 512,
+      "chance": 0.056,
       "yMode": "worldRelative",
       "minYRel": 0.26,
       "maxYRel": 0.5

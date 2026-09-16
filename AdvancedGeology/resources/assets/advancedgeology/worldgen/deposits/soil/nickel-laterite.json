@@ -15,8 +15,22 @@
 				"name": "rock",
 				"allowedVariants": [ "peridotite", "gabbro" ]
 			},
-			"bottomLayerBlock": { "code": "ore-medium-garnierite-{rock}" },
-			"bottomLayerThickness": 1,
+            "topLayerBlock": {
+                "code": "game:rawclay-red-*",
+                "name": "clayfertcover",
+                "allowedVariantsByInBlock": {
+                    "soil-low-none": ["none"],
+                    "soil-medium-none": ["none"],
+                    "soil-low-verysparse": ["verysparse"],
+                    "soil-medium-verysparse": ["verysparse"],
+                    "soil-low-sparse": ["verysparse"],
+                    "soil-medium-sparse": ["verysparse"],
+                    "soil-low-normal": ["verysparse"],
+                    "soil-medium-normal": ["verysparse"]
+                }
+            },
+            "bottomLayerBlock": { "code": "ore-medium-garnierite-{rock}" },
+            "bottomLayerThickness": 1,
 			"bottomLayerThicknessMax": 3,
 			"requireImmediateRock": true,
 			"radius": { "dist": "uniform", "avg": 20, "var": 5 },

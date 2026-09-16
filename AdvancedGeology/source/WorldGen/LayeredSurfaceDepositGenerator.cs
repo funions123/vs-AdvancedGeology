@@ -105,45 +105,29 @@ public class LayeredDepositBlock
     }
 }
 
-/// <summary>
-/// Deposit generator for layered surface deposits. Supports up to 3 layers, generated bottom-up
-/// and anchored on the rock surface: bottom (in rock), middle (a fixed thin layer in soil directly
-/// above rock), and top, which repeats through all remaining soil up to the surface. Anchoring at
-/// the rock keeps the column continuous under thick soil (worldgen mods generate soil 8+ deep).
-/// </summary>
+/// <summary>Generates rock-anchored deposits with optional soil layers.</summary>
 [JsonObject(MemberSerialization.OptIn)]
 public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
 {
     // Soil column
 
-    /// <summary>
-    /// The soil block the deposit column passes through. Required: it identifies where soil ends
-    /// and rock begins. Soil is only overwritten when <see cref="TopLayerBlock"/> is also set.
-    /// </summary>
+    /// <summary>Soil blocks traversed by the deposit column.</summary>
     [JsonProperty]
     public LayeredDepositBlock SoilInBlock;
 
-    /// <summary>
-    /// Optional block replacing the soil above the deposit. When omitted the natural soil cap is
-    /// left untouched and the deposit exists only in the rock below.
-    /// </summary>
+    /// <summary>Optional replacement for soil above the deposit.</summary>
     [JsonProperty]
     public LayeredDepositBlock TopLayerBlock;
 
-    // The top layer has no thickness setting; it always fills all soil above the middle layer
-    // up to the surface, so thicker-than-vanilla soil extends the cap.
+    // Fills soil above the middle layer.
 
     // Middle layer
 
-    /// <summary>
-    /// Optional block to place as a middle layer in soil, above the rock layer.
-    /// </summary>
+    /// <summary>Optional soil layer above rock.</summary>
     [JsonProperty]
     public LayeredDepositBlock MiddleLayerBlock;
 
-    /// <summary>
-    /// How many middle-block layers to place directly above the rock.
-    /// </summary>
+    /// <summary>Middle-layer thickness.</summary>
     [JsonProperty]
     public int MiddleLayerThickness = 0;
 
@@ -167,17 +151,11 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     [JsonProperty]
     public int BottomLayerThickness = 1;
 
-    /// <summary>
-    /// Greatest number of bottom-block layers to place in rock. Values above
-    /// <see cref="BottomLayerThickness"/> make the lens vary in thickness across its footprint.
-    /// </summary>
+    /// <summary>Maximum rock-layer thickness.</summary>
     [JsonProperty]
     public int BottomLayerThicknessMax = 0;
 
-    /// <summary>
-    /// If true, only generate the bottom layer when valid rock sits immediately below the soil,
-    /// preventing deposits from "reaching through" invalid rock layers.
-    /// </summary>
+    /// <summary>Requires valid rock directly below the soil.</summary>
     [JsonProperty]
     public bool RequireImmediateRock = true;
 
@@ -189,15 +167,11 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     [JsonProperty]
     public NatFloat Radius;
 
-    /// <summary>
-    /// Maximum Y roughness; deposits won't appear on cliffs steeper than this.
-    /// </summary>
+    /// <summary>Maximum permitted surface relief.</summary>
     [JsonProperty]
     public int MaxYRoughness = 999;
 
-    /// <summary>
-    /// Whether to use the block callback for the last layer (for grass coverage).
-    /// </summary>
+    /// <summary>Uses worldgen placement for the surface block.</summary>
     [JsonProperty]
     public bool WithLastLayerBlockCallback;
 
@@ -209,11 +183,10 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
     protected Dictionary<int, LayeredResolvedDepositBlock> middleLayerBlockByInBlockId = new Dictionary<int, LayeredResolvedDepositBlock>();
     protected Dictionary<int, LayeredResolvedDepositBlock> bottomLayerBlockByInBlockId = new Dictionary<int, LayeredResolvedDepositBlock>();
 
-    // Soil block ids the deposit column may pass through. Tracked separately from
-    // topLayerBlockByInBlockId so a deposit can leave the soil cap intact and still locate rock.
+    // Soil blocks traversed without replacement.
     protected HashSet<int> soilBlockIds = new HashSet<int>();
 
-    // Track which rock types are valid for bottom layer
+    // Valid rock hosts.
     protected HashSet<int> validRockBlockIds = new HashSet<int>();
 
     public LayeredSurfaceDepositGenerator(ICoreServerAPI api, DepositVariant variant, LCGRandom depositRand, NormalizedSimplexNoise noiseGen)
@@ -236,8 +209,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
             Radius = NatFloat.createUniform(10, 0);
         }
 
-        // Identify the soil column the deposit passes through. This is independent of
-        // TopLayerBlock: a deposit may leave the natural soil cap in place.
+        // Resolve traversable soil and optional replacements.
         if (SoilInBlock != null)
         {
             Block[] soilBlocks = Api.World.SearchBlocks(SoilInBlock.Code);
@@ -257,7 +229,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
             }
         }
 
-        // Resolve rock blocks and populate validRockBlockIds, bottom layer, and middle layer
+        // Resolve rock hosts and layer blocks.
         if (RockInBlock != null)
         {
             Block[] rockBlocks = Api.World.SearchBlocks(RockInBlock.Code);
@@ -367,19 +339,13 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
 
                 if (rockStartY <= 0) continue;
 
-                // Determine which layers can be placed based on rock validity
+                // Gate rock-anchored layers on host validity.
                 bool canPlaceOnRock = !RequireImmediateRock || foundValidRock;
                 bool shouldPlaceBottomLayer = canPlaceOnRock && bottomLayerBlockByInBlockId.Count > 0;
                 bool shouldPlaceMiddleLayer = canPlaceOnRock && middleLayerBlockByInBlockId.Count > 0;
 
-                // Layers are generated bottom-up, anchored on the rock surface, so soil columns of
-                // any thickness (worldgen mods make them 8+ deep) get a continuous deposit column:
-                // bottom layer in rock, middle layer directly above rock, then the top layer
-                // repeated through all remaining soil up to the surface.
 
-                // Generate bottom layer (rock -> ore) in the rock, downward from the rock surface.
-                // Thickness varies smoothly across the footprint so the lens is thickest near the
-                // deposit centre and thins toward the rim instead of being a flat slab.
+                // Place the variable-thickness rock layer.
                 if (shouldPlaceBottomLayer)
                 {
                     int bottomLayersPlaced = 0;
@@ -404,8 +370,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                     }
                 }
 
-                // Generate middle layer (soil -> middle block) upward from the rock surface,
-                // exactly MiddleLayerThickness blocks (clamped to the available soil)
+                // Place the fixed middle layer.
                 int middleLayersPlaced = 0;
                 if (shouldPlaceMiddleLayer &&
                     middleLayerBlockByInBlockId.TryGetValue(rockBlockId, out LayeredResolvedDepositBlock resolvedMiddleBlock) &&
@@ -413,7 +378,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                 {
                     Block middlePlaceBlock = resolvedMiddleBlock.Blocks[0];
 
-                    int middleCount = Math.Min(MiddleLayerThickness, surfaceY - rockStartY);
+                    int middleCount = Math.Min(MiddleLayerThickness, Math.Max(0, surfaceY - rockStartY - 1));
 
                     for (int y = rockStartY + 1; y <= rockStartY + middleCount; y++)
                     {
@@ -421,7 +386,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                         IChunkBlocks chunkdata = chunks[y / chunksize].Data;
                         int blockId = chunkdata.GetBlockIdUnsafe(index3d);
 
-                        // Interrupted column (air pocket, water, non-soil): stop stacking
+                        // Stop at non-soil gaps.
                         if (!soilBlockIds.Contains(blockId)) break;
 
                         chunkdata.SetBlockUnsafe(index3d, middlePlaceBlock.BlockId);
@@ -430,8 +395,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
                     }
                 }
 
-                // Generate top layer (soil -> clay) upward from above the middle layer, repeating
-                // the top block through all remaining soil up to the surface
+                // Fill remaining soil to the surface.
                 for (int y = rockStartY + middleLayersPlaced + 1; y <= surfaceY; y++)
                 {
                     int index3d = ((y % chunksize) * chunksize + lz) * chunksize + lx;
@@ -440,7 +404,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
 
                     if (!topLayerBlockByInBlockId.TryGetValue(blockId, out LayeredResolvedDepositBlock resolvedTopBlock) || resolvedTopBlock.Blocks.Length == 0)
                     {
-                        // Interrupted column: stop stacking
+                        // Stop at non-soil gaps.
                         break;
                     }
 
@@ -448,7 +412,7 @@ public class LayeredSurfaceDepositGenerator : DepositGeneratorBase
 
                     if (WithLastLayerBlockCallback && y == surfaceY)
                     {
-                        // Surface block goes through the world gen callback so grass coverage forms
+                        // Let worldgen apply surface grass.
                         BlockPos targetPos = new BlockPos(posx, y, posz);
                         placeblock.TryPlaceBlockForWorldGen(blockAccessor, targetPos, BlockFacing.UP, DepositRand);
                     }

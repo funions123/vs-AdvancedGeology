@@ -652,7 +652,7 @@ public sealed partial class ProceduralDepositWorldGenSystem
                     if(!CanReplaceWithProceduralRock(compiled,host))continue;
                     int place=compiled.ResolveBlock(slot,sample.Grade,host);
                     if(place==0||place==host)continue;
-                    blocks.SetBlockUnsafe(index,place);
+                    blocks.SetBlockUnsafe(index, place);
                     blocks.SetFluid(index,0);
                 }
             }

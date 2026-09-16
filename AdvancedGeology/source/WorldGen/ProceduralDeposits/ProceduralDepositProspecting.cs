@@ -26,6 +26,7 @@ public static class ProceduralProspectingSignal
     private const ulong WarpXSalt = 0x50524F5350574158UL;
     private const ulong WarpZSalt = 0x50524F535057415AUL;
     private const ulong IntensitySalt = 0x50524F5350494E54UL;
+    public const int DetectableRangeMultiplier = 4;
     public static ProceduralProspectingFeature Create(
         ulong featureId,
         int centerX,
@@ -38,7 +39,7 @@ public static class ProceduralProspectingSignal
             featureId,
             centerX,
             centerZ,
-            signalRadius,
+            checked(signalRadius * DetectableRangeMultiplier),
             centerShift,
             majorMinerals,
             1.0);
@@ -117,7 +118,7 @@ public sealed partial class ProceduralDepositWorldGenSystem
 {
     private const int ProspectingScanRadius = GlobalConstants.ChunkSize;
     private const string ProspectingMapVersionKey = "advancedgeology:prospectingMapVersion";
-    private const byte ProspectingMapVersion = 1;
+    private const byte ProspectingMapVersion = 2;
     private const int ProspectingMapPadding = 1;
     private readonly Dictionary<ulong, Dictionary<string, double>> featureBasePpt = new();
 
@@ -191,7 +192,9 @@ public sealed partial class ProceduralDepositWorldGenSystem
     {
         ProceduralDepositDefinition definition = compiled.Definition;
         ProceduralProspectingDefinition prospecting = definition.Prospecting;
-        int influence = prospecting.SignalRadius + prospecting.CenterShift + 36;
+        int influence = prospecting.SignalRadius * ProceduralProspectingSignal.DetectableRangeMultiplier
+            + prospecting.CenterShift
+            + 36;
         int cellSize = definition.Placement.CellSize;
         int baseX = regionX * regionSize;
         int baseZ = regionZ * regionSize;
@@ -230,7 +233,9 @@ public sealed partial class ProceduralDepositWorldGenSystem
             if (!compiled.Definition.Prospecting.MajorMinerals.Contains(mineral, StringComparer.Ordinal)) continue;
 
             ProceduralDepositDefinition definition = compiled.Definition;
-            int influence = definition.Prospecting.SignalRadius + definition.Prospecting.CenterShift + 36;
+            int influence = definition.Prospecting.SignalRadius * ProceduralProspectingSignal.DetectableRangeMultiplier
+                + definition.Prospecting.CenterShift
+                + 36;
             int cellSize = definition.Placement.CellSize;
             int minCellX = ProceduralDepositMath.FloorDiv(pos.X - influence, cellSize);
             int maxCellX = ProceduralDepositMath.FloorDiv(pos.X + influence, cellSize);
@@ -384,10 +389,7 @@ public sealed partial class ProceduralDepositWorldGenSystem
     }
 
 
-    /// <summary>
-    /// Multiplies a per-cell placement chance by <see cref="AdvancedGeologyConfig.GlobalMineralAbundance"/>,
-    /// clamped to a probability. A chance of 0 stays 0 - a disabled deposit cannot be scaled into existence.
-    /// </summary>
+    /// <summary>Scales and clamps per-cell placement chance.</summary>
     public static double ScaleChanceByAbundance(double chance)
     {
         double scaled = chance * AdvancedGeologyConfig.Active.GlobalMineralAbundance;

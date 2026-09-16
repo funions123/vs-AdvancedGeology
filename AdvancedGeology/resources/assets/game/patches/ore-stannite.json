@@ -167,7 +167,7 @@
       "looseores-stannite-*": [
         {
           "type": "item",
-          "code": "ore-poor-{ore}-{rock}"
+          "code": "nugget-{ore}"
         }
       ]
     },

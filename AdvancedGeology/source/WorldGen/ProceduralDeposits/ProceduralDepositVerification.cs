@@ -3353,8 +3353,7 @@ public static class ProceduralDepositVerification
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/deposits/prospecting/procedural-major-minerals.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("worldgen/proceduraldeposits/lct-pegmatite.json")
             && !AdvancedGeologyModSystem.IsConventionalOreDepositAssetPath("blocktypes/stone/ore-graded.json")
-            // VanillaOresOnly prunes kaolinite only; nickel laterite smelts into vanilla nickel,
-            // and vanilla or foreign soil clusters are never touched by this gate.
+            // Only AdvancedGeology kaolinite is excluded.
             && AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("advancedgeology", "worldgen/deposits/soil/kaolinite.json"))
             && !AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("advancedgeology", "worldgen/deposits/soil/nickel-laterite.json"))
             && !AdvancedGeologyModSystem.IsNonVanillaSoilDepositAssetPath(new AssetLocation("othermod", "worldgen/deposits/soil/kaolinite.json"))
@@ -3366,6 +3365,7 @@ public static class ProceduralDepositVerification
 
         bool intrusionValid =
             CompiledProceduralDeposit.AllowsRockReplacement(true, false, false)
+            && CompiledProceduralDeposit.AllowsRockReplacement(true, false, true)
             && CompiledProceduralDeposit.AllowsRockReplacement(true, true, false)
             && CompiledProceduralDeposit.AllowsRockReplacement(false, true, true)
             && !CompiledProceduralDeposit.AllowsRockReplacement(false, false, true)
@@ -3388,13 +3388,12 @@ public static class ProceduralDepositVerification
             throw new InvalidOperationException("Intrusion policy replaces non-rocks or ignores eligible source hosts");
         }
 
-        bool terrainClampValid = ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(90, 100, 35) == 65
-            && ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(40, 100, 35) == 40
-            && ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(40, 20, 35) == 0;
+        bool terrainClampValid = ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(80, 120) == 80
+            && ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(118, 120) == 110
+            && ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(140, 120) == 110;
         if (!terrainClampValid)
-
         {
-            throw new InvalidOperationException("World-relative placement does not keep the deposit roof underground");
+            throw new InvalidOperationException("World-relative placement does not preserve its band while enforcing shallow cover");
         }
 
         var buriedVariants = new Dictionary<int, int> { [17] = 19 };
@@ -3782,9 +3781,7 @@ public static class ProceduralDepositVerification
         }
     }
 
-    /// <summary>
-    /// Verifies the IHateGems and VanillaOresOnly content gates against the shipped definitions.
-    /// </summary>
+    /// <summary>Verifies shipped content-gate behavior.</summary>
     public static ContentGateVerificationResult RunContentGates(string depositDirectory)
     {
         string[] files = System.IO.Directory.GetFiles(depositDirectory, "*.json");

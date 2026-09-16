@@ -647,15 +647,11 @@ public sealed class SurfaceNuggetDefinition
     [JsonProperty]
     public bool Enabled { get; set; } = true;
 
-    /// <summary>
-    /// Per-column probability that a shallow smeltable ore leaves loose surface nuggets.
-    /// </summary>
+    /// <summary>Per-column surface nugget probability.</summary>
     [JsonProperty]
     public double Chance { get; set; } = 0.12;
 
-    /// <summary>
-    /// Greatest number of blocks an ore may sit below the terrain surface and still seed nuggets.
-    /// </summary>
+    /// <summary>Maximum ore depth that can seed surface nuggets.</summary>
     [JsonProperty]
     public int MaxDepth { get; set; } = 30;
 }
@@ -926,11 +922,7 @@ internal sealed class CompiledProceduralDeposit
             }
         }
 
-        // A body may be emplaced into any rock it is allowed to replace, but a host-indexed
-        // material only has a block for the rock variants its ore is actually registered in.
-        // Without a fallback the voxel resolves to 0 and is silently skipped, which erases
-        // whole zones of intruding deposits. Fall back to the deposit's own declared hosts:
-        // an intrusion carries its own wall rock, so that is the geologically correct filler.
+        // Use a declared-host variant when the live host lacks this material.
         fallbackBlockIds = new int[materials.Length][];
         string[] declaredHosts = definition.Palette.ReplaceableRockVariants
             .Where(variant => !string.IsNullOrWhiteSpace(variant))
@@ -959,14 +951,6 @@ internal sealed class CompiledProceduralDeposit
         }
         replaceableHosts = new bool[blockCount];
         naturalRockHosts = new bool[blockCount];
-        bool anyDirectMaterial = false;
-        foreach (int[] byGrade in directBlockIds)
-        {
-            foreach (int directBlockId in byGrade)
-            {
-                if (directBlockId != 0) anyDirectMaterial = true;
-            }
-        }
 
         foreach (Block? host in api.World.Blocks)
         {
@@ -975,10 +959,15 @@ internal sealed class CompiledProceduralDeposit
 
             naturalRockHosts[host.BlockId] = true;
             IntrusionTargetBlockCount++;
-            bool sourceEligible = replaceable.Count == 0 || replaceable.Contains(rockVariant);
-            if (!sourceEligible && !definition.Intrude) continue;
+            bool declaredHost = replaceable.Count == 0 || replaceable.Contains(rockVariant);
+            if (declaredHost)
+            {
+                // Declared hosts remain valid even when a zone lacks a host-specific block.
+                replaceableHosts[host.BlockId] = true;
+                SourceHostBlockCount++;
+            }
+            if (!declaredHost && !definition.Intrude) continue;
 
-            bool resolvedHostMaterial = false;
             for (int slot = 0; slot < materials.Length; slot++)
             {
                 string codePattern = materials[slot].Value;
@@ -988,14 +977,8 @@ internal sealed class CompiledProceduralDeposit
                 for (int grade = 0; grade < resolvedBlocks[slot].Length; grade++)
                 {
                     string coded = ApplyGrade(codePattern, graded, grade);
-                    if (ResolveSlot(api, host.BlockId, rockVariant, slot, grade, coded)) resolvedHostMaterial = true;
+                    ResolveSlot(api, host.BlockId, rockVariant, slot, grade, coded);
                 }
-            }
-            // Source hosts remain distinct from rock types crossed after intrusion.
-            if (sourceEligible)
-            {
-                replaceableHosts[host.BlockId] = resolvedHostMaterial || anyDirectMaterial;
-                if (replaceableHosts[host.BlockId]) SourceHostBlockCount++;
             }
         }
 
@@ -1014,8 +997,7 @@ internal sealed class CompiledProceduralDeposit
             }
         }
 
-        // Weathered soil assets are usually configured as a visible sparse-grass surface variant.
-        // Precompute their no-grass siblings once so buried replacements never grow underground.
+        // Map surface variants to no-grass forms for buried weathering.
         foreach (int[] byGrade in directBlockIds)
         {
             foreach (int blockId in byGrade)

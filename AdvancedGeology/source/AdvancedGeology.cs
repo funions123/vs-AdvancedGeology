@@ -115,11 +115,8 @@ namespace AdvancedGeology
 
 
         /// <summary>
-        /// Enforces exclusive procedural ore generation by disabling conventional deposits except
-        /// standalone gem, rock, soil, non-generating prospecting registrations, and AdvancedGeology's
-        /// custom halite salt-dome definition. Gem clusters are also disabled when the player has
-        /// set <see cref="AdvancedGeologyConfig.IHateGems"/>, and non-vanilla soil deposits when they
-        /// have set <see cref="AdvancedGeologyConfig.VanillaOresOnly"/>.
+        /// Disables conventional ore deposits while preserving supported gems, rocks, soils,
+        /// prospecting registrations, and the custom salt dome.
         /// </summary>
         private static void SuppressLegacyOreDeposits(ICoreAPI api)
         {
@@ -196,11 +193,7 @@ namespace AdvancedGeology
                 AdvancedGeologyConfig.Active.GlobalMineralAbundance);
         }
 
-        /// <summary>
-        /// Multiplies every <c>triesPerChunk</c> in a surviving conventional deposit asset, child deposits
-        /// included, by <see cref="AdvancedGeologyConfig.GlobalMineralAbundance"/>. Vanilla treats values
-        /// above 1 as repeated tries, so only the lower bound is clamped. Returns whether the asset changed.
-        /// </summary>
+        /// <summary>Scales conventional deposit attempts by the configured abundance.</summary>
         private static bool ScaleDepositTriesByAbundance(IAsset asset)
         {
             string? rescaled = ScaleDepositTriesJson(
@@ -212,10 +205,7 @@ namespace AdvancedGeology
             return true;
         }
 
-        /// <summary>
-        /// Returns <paramref name="json"/> with every <c>triesPerChunk</c> multiplied by
-        /// <paramref name="abundance"/>, or null when nothing changed.
-        /// </summary>
+        /// <summary>Scales every <c>triesPerChunk</c>, or returns null when unchanged.</summary>
         public static string? ScaleDepositTriesJson(string json, double abundance)
         {
             if (abundance == 1.0) return null;
@@ -231,7 +221,7 @@ namespace AdvancedGeology
                 return null;
             }
 
-            // Materialized before mutating: assigning JProperty.Value swaps the token the walk is standing on.
+            // Materialize before replacing tokens during traversal.
             JProperty[] tries = root.Descendants()
                 .OfType<JProperty>()
                 .Where(property =>
@@ -257,10 +247,7 @@ namespace AdvancedGeology
                     StringComparison.OrdinalIgnoreCase);
         }
 
-        /// <summary>
-        /// AdvancedGeology soil deposits whose material feeds no vanilla recipe or vanilla metal.
-        /// Nickel laterite is excluded: its garnierite smelts into vanilla nickel.
-        /// </summary>
+        /// <summary>Identifies AdvancedGeology soil deposits excluded by VanillaOresOnly.</summary>
         public static bool IsNonVanillaSoilDepositAssetPath(AssetLocation location)
         {
             return location.Domain.Equals("advancedgeology", StringComparison.OrdinalIgnoreCase)

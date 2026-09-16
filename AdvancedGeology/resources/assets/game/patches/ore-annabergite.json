@@ -232,7 +232,7 @@
       "looseores-annabergite-*": [
         {
           "type": "item",
-          "code": "ore-poor-{ore}-{rock}"
+          "code": "nugget-{ore}"
         }
       ]
     },
