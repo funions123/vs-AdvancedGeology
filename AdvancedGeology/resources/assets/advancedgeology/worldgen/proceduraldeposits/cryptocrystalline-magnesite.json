@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 320,
       "chance": 0.22,
-      "yMode": "worldRelative",
-      "minYRel": 0.36,
-      "maxYRel": 0.64
+      "yMode": "surfaceDepth",
+      "minDepth": 10,
+      "maxDepth": 28
     },
     "cryptocrystallineMagnesite": {
       "horizontalRadius": 34,

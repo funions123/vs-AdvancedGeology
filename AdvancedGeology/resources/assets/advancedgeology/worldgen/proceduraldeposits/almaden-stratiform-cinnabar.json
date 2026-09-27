@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 448,
       "chance": 0.1,
-      "yMode": "worldRelative",
-      "minYRel": 0.26,
-      "maxYRel": 0.48
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 53
     },
     "stratiformCinnabar": {
       "horizontalRadius": 46,

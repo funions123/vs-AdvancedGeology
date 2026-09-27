@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.12,
-      "maxYRel": 0.4
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 89
     },
     "orogenicQuartzGold": {
       "horizontalRadius": 34,

@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.14,
-      "maxYRel": 0.32
+      "yMode": "surfaceDepth",
+      "minDepth": 39,
+      "maxDepth": 84
     },
     "unconformityUranium": {
       "horizontalRadius": 38,

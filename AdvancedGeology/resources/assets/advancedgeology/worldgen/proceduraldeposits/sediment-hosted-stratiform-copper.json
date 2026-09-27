@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 320,
       "chance": 0.22,
-      "yMode": "worldRelative",
-      "minYRel": 0.26,
-      "maxYRel": 0.5
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 53
     },
     "stratiformCopper": {
       "horizontalRadius": 38,

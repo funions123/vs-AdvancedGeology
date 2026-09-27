@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.22,
-      "maxYRel": 0.46
+      "yMode": "surfaceDepth",
+      "minDepth": 17,
+      "maxDepth": 63
     },
     "praborna": {
       "horizontalRadius": 48,

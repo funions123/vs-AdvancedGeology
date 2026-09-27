@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 320,
       "chance": 0.22,
-      "yMode": "worldRelative",
-      "minYRel": 0.16,
-      "maxYRel": 0.36
+      "yMode": "surfaceDepth",
+      "minDepth": 29,
+      "maxDepth": 79
     },
     "anthracite": {
       "horizontalRadius": 48,

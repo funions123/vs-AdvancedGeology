@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 256,
       "chance": 0.266,
-      "yMode": "worldRelative",
-      "minYRel": 0.36,
-      "maxYRel": 0.6
+      "yMode": "surfaceDepth",
+      "minDepth": 10,
+      "maxDepth": 28
     },
     "lignite": {
       "horizontalRadius": 36,

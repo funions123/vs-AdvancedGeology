@@ -16,9 +16,9 @@
     "placement": {
       "cellSize": 320,
       "chance": 0.22,
-      "yMode": "surfaceOffset",
-      "surfaceOffsetMin": -22,
-      "surfaceOffsetMax": -8
+      "yMode": "surfaceDepth",
+      "minDepth": 8,
+      "maxDepth": 22
     },
     "climate": {
       "enabled": true,

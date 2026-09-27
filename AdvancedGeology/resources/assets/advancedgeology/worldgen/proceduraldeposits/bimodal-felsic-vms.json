@@ -16,9 +16,9 @@
     "placement": {
       "cellSize": 448,
       "chance": 0.1,
-      "yMode": "worldRelative",
-      "minYRel": 0.24,
-      "maxYRel": 0.48
+      "yMode": "surfaceDepth",
+      "minDepth": 21,
+      "maxDepth": 58
     },
     "bimodalFelsicVms": {
       "horizontalRadius": 48,

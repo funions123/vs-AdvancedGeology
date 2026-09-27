@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 640,
       "chance": 0.04,
-      "yMode": "worldRelative",
-      "minYRel": 0.08,
-      "maxYRel": 0.28
+      "yMode": "surfaceDepth",
+      "minDepth": 49,
+      "maxDepth": 99
     },
     "ivittuutCryolite": {
       "horizontalRadius": 34,

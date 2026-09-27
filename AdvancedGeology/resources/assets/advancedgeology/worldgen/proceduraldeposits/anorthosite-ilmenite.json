@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 448,
       "chance": 0.1,
-      "yMode": "worldRelative",
-      "minYRel": 0.1,
-      "maxYRel": 0.32
+      "yMode": "surfaceDepth",
+      "minDepth": 39,
+      "maxDepth": 94
     },
     "anorthositeIlmenite": {
       "horizontalRadius": 34,

@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.1,
-      "maxYRel": 0.3
+      "yMode": "surfaceDepth",
+      "minDepth": 44,
+      "maxDepth": 94
     },
     "sudburyNickel": {
       "horizontalRadius": 62,

@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.12,
-      "maxYRel": 0.34
+      "yMode": "surfaceDepth",
+      "minDepth": 34,
+      "maxDepth": 89
     },
     "bandedIron": {
       "horizontalRadius": 48,

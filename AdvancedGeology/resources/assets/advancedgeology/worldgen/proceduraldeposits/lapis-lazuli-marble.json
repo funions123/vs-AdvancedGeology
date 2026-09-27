@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.12,
-      "maxYRel": 0.32
+      "yMode": "surfaceDepth",
+      "minDepth": 39,
+      "maxDepth": 89
     },
     "lapisLazuliMarble": {
       "horizontalRadius": 34,

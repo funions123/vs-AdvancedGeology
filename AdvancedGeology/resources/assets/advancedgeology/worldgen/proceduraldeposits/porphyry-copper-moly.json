@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.16,
-      "maxYRel": 0.44
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 79
     },
     "porphyryCopperMoly": {
       "horizontalRadius": 36,

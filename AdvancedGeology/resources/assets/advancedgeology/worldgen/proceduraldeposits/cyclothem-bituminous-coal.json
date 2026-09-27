@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 320,
       "chance": 0.22,
-      "yMode": "worldRelative",
-      "minYRel": 0.34,
-      "maxYRel": 0.56
+      "yMode": "surfaceDepth",
+      "minDepth": 10,
+      "maxDepth": 33
     },
     "cyclothemCoal": {
       "horizontalRadius": 44,

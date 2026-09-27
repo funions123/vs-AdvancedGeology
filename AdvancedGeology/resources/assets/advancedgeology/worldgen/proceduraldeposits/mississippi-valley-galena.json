@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.28,
-      "maxYRel": 0.52
+      "yMode": "surfaceDepth",
+      "minDepth": 22,
+      "maxDepth": 48
     },
     "mvt": {
       "horizontalRadius": 42,

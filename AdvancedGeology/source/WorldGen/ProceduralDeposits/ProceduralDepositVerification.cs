@@ -506,6 +506,14 @@ public static class ProceduralDepositVerification
             throw new InvalidOperationException("Epithermal elevation or cap-thickness scenarios are invalid");
         }
 
+        (double exposureChance, double maximumProtrudingFraction) =
+            ProceduralDepositWorldGenSystem.GetProtrusionBounds(27, 70, 44);
+        if (exposureChance >= 0.5 || maximumProtrudingFraction > 0.2)
+        {
+            throw new InvalidOperationException(
+                $"Epithermal exposure exceeds limits: chance={exposureChance:F3} fraction={maximumProtrudingFraction:F3}");
+        }
+
         int attemptedAbove = 0;
         int retainedBelow = 0;
         for (int x = -45; x <= 45; x += 2)
@@ -3388,12 +3396,33 @@ public static class ProceduralDepositVerification
             throw new InvalidOperationException("Intrusion policy replaces non-rocks or ignores eligible source hosts");
         }
 
-        bool terrainClampValid = ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(80, 120) == 80
-            && ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(118, 120) == 110
-            && ProceduralDepositWorldGenSystem.ClampWorldRelativeCenter(140, 120) == 110;
+        bool crossRockContinuationValid =
+            ProceduralDepositWorldGenSystem.AllowsProceduralRockReplacement(true, true, true)
+            && ProceduralDepositWorldGenSystem.AllowsProceduralRockReplacement(false, true, true)
+            && !ProceduralDepositWorldGenSystem.AllowsProceduralRockReplacement(true, true, false)
+            && !ProceduralDepositWorldGenSystem.AllowsProceduralRockReplacement(false, false, true);
+        if (!crossRockContinuationValid)
+        {
+            throw new InvalidOperationException(
+                "Adjacent valid natural-rock hosts are blocked by procedural output protection");
+        }
+
+        bool terrainClampValid =
+            ProceduralDepositWorldGenSystem.TryGetSurfaceDepthBand(120, 10, 50, out int lowMinimumY, out int lowMaximumY)
+            && lowMinimumY == 70
+            && lowMaximumY == 110
+            && ProceduralDepositWorldGenSystem.TryGetSurfaceDepthBand(200, 10, 50, out int highMinimumY, out int highMaximumY)
+            && highMinimumY == 150
+            && highMaximumY == 190
+            && highMinimumY - lowMinimumY == 80
+            && highMaximumY - lowMaximumY == 80
+            && ProceduralDepositWorldGenSystem.TryGetSurfaceDepthBand(40, 20, 80, out int clippedMinimumY, out int clippedMaximumY)
+            && clippedMinimumY == 1
+            && clippedMaximumY == 20
+            && !ProceduralDepositWorldGenSystem.TryGetSurfaceDepthBand(15, 20, 80, out _, out _);
         if (!terrainClampValid)
         {
-            throw new InvalidOperationException("World-relative placement does not preserve its band while enforcing shallow cover");
+            throw new InvalidOperationException("Surface-depth placement does not track terrain or reject insufficient cover");
         }
 
         var buriedVariants = new Dictionary<int, int> { [17] = 19 };

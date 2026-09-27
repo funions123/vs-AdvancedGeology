@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.22,
-      "maxYRel": 0.46
+      "yMode": "surfaceDepth",
+      "minDepth": 21,
+      "maxDepth": 63
     },
     "metasomaticSiderite": {
       "horizontalRadius": 42,

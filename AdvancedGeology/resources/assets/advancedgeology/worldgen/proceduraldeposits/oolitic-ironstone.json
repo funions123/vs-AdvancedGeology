@@ -13,9 +13,9 @@
     "placement": {
       "cellSize": 320,
       "chance": 0.22,
-      "yMode": "worldRelative",
-      "minYRel": 0.32,
-      "maxYRel": 0.52
+      "yMode": "surfaceDepth",
+      "minDepth": 14,
+      "maxDepth": 38
     },
     "oolitic": {
       "horizontalRadius": 48,

@@ -16,9 +16,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.06,
-      "maxYRel": 0.3
+      "yMode": "surfaceDepth",
+      "minDepth": 44,
+      "maxDepth": 104
     },
     "spline": {
       "horizontalRadius": 72,

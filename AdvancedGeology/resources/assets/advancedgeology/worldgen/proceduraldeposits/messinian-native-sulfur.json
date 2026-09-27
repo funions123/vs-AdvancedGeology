@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.32,
-      "maxYRel": 0.54
+      "yMode": "surfaceDepth",
+      "minDepth": 22,
+      "maxDepth": 38
     },
     "messinianSulfur": {
       "horizontalRadius": 35,

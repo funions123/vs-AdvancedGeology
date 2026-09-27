@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 448,
       "chance": 0.1,
-      "yMode": "worldRelative",
-      "minYRel": 0.1,
-      "maxYRel": 0.3
+      "yMode": "surfaceDepth",
+      "minDepth": 44,
+      "maxDepth": 94
     },
     "veinGraphite": {
       "horizontalRadius": 36,

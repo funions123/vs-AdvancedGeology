@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 448,
       "chance": 0.1,
-      "yMode": "worldRelative",
-      "minYRel": 0.28,
-      "maxYRel": 0.54
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 48
     },
     "porphyryTin": {
       "horizontalRadius": 40,

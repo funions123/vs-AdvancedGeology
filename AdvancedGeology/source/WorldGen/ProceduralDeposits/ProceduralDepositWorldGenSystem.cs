@@ -26,7 +26,6 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     private const ulong AlbiteSalt = 0x414C4249544553UL;
     private const ulong SchorlSalt = 0x5343484F524C53UL;
     private const ulong SurfaceNuggetSalt = 0x4E55474745545355UL;
-    private const int MinimumOriginSurfaceDepth = 10;
     private const int SplineZoneCount = 13;
     private const int MaximumSoilDepth = 4;
     private const int PlanCacheCapacity = 64;
@@ -343,60 +342,41 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             }
             centerY = sourceY + definition.Placement.SourceOffset;
         }
-        else if (string.Equals(yMode, "surfaceOffset", StringComparison.OrdinalIgnoreCase))
-        {
-            if (!TryGetSurfaceHeight(centerX, centerZ, out int surfaceY))
-            {
-                instance = default;
-                return false;
-            }
-            int minimumOffset = Math.Min(definition.Placement.SurfaceOffsetMin, definition.Placement.SurfaceOffsetMax);
-            int maximumOffset = Math.Max(definition.Placement.SurfaceOffsetMin, definition.Placement.SurfaceOffsetMax);
-            int surfaceOffset = minimumOffset == maximumOffset
-                ? definition.Placement.SurfaceOffset
-                : (int)Math.Round(ProceduralDepositMath.Range(featureId ^ YSalt, minimumOffset, maximumOffset));
-            centerY = surfaceY + surfaceOffset;
-        }
         else
         {
-            int mapHeight = serverApi!.World.BlockAccessor.MapSizeY;
-            int minimumBandY = GameMath.Clamp(
-                (int)Math.Ceiling(definition.Placement.MinYRel * (mapHeight - 1)),
-                1,
-                mapHeight - 2);
-            int maximumBandY = GameMath.Clamp(
-                (int)Math.Floor(definition.Placement.MaxYRel * (mapHeight - 1)),
-                minimumBandY,
-                mapHeight - 2);
-
-            if (!TryGetSurfaceHeight(centerX, centerZ, out int surfaceY))
+            if (!TryGetSurfaceHeight(centerX, centerZ, out int surfaceY)
+                || !TryGetSurfaceDepthBand(
+                    surfaceY,
+                    definition.Placement.MinDepth,
+                    definition.Placement.MaxDepth,
+                    out int minimumY,
+                    out int maximumY))
             {
                 instance = default;
                 return false;
             }
 
-            int sampledCenterY = (int)Math.Round(ProceduralDepositMath.Range(
-                featureId ^ YSalt,
-                minimumBandY,
-                maximumBandY));
-            centerY = ClampWorldRelativeCenter(sampledCenterY, surfaceY);
-            if (centerY < 1)
+            if (definition.Intrude)
             {
-                instance = default;
-                return false;
-            }
-            if (definition.Intrude
-                && !TrySelectIntrusionOriginHostY(
+                if (!TrySelectIntrusionOriginHostY(
                     compiled,
                     featureId ^ YSalt,
                     centerX,
                     centerZ,
-                    minimumBandY,
-                    Math.Min(maximumBandY, surfaceY - MinimumOriginSurfaceDepth),
+                    minimumY,
+                    maximumY,
                     out centerY))
+                {
+                    instance = default;
+                    return false;
+                }
+            }
+            else
             {
-                instance = default;
-                return false;
+                centerY = (int)Math.Round(ProceduralDepositMath.Range(
+                    featureId ^ YSalt,
+                    minimumY,
+                    maximumY));
             }
         }
 
@@ -443,10 +423,32 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         return true;
     }
 
-    internal static int ClampWorldRelativeCenter(int sampledCenterY, int surfaceY)
+    internal static bool TryGetSurfaceDepthBand(
+        int surfaceY,
+        int minDepth,
+        int maxDepth,
+        out int minimumY,
+        out int maximumY)
     {
-        return Math.Min(sampledCenterY, surfaceY - MinimumOriginSurfaceDepth);
+        maximumY = surfaceY - minDepth;
+        minimumY = Math.Max(1, surfaceY - maxDepth);
+        return maximumY >= 1 && minimumY <= maximumY;
     }
+
+    internal static (double ExposureChance, double MaximumProtrudingFraction) GetProtrusionBounds(
+        int minDepth,
+        int maxDepth,
+        int verticalHalfHeight)
+    {
+        if (maxDepth < minDepth || verticalHalfHeight <= 0) return default;
+
+        int exposedDepthCount = Math.Max(0, Math.Min(maxDepth, verticalHalfHeight - 1) - minDepth + 1);
+        double exposureChance = exposedDepthCount / (double)(maxDepth - minDepth + 1);
+        double maximumProtrudingFraction = Math.Max(0, verticalHalfHeight - minDepth)
+            / (double)(verticalHalfHeight * 2);
+        return (exposureChance, maximumProtrudingFraction);
+    }
+
 
     internal static int GetMaximumVerticalReach(
         ProceduralDepositDefinition definition,
@@ -2181,7 +2183,18 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
 
     private bool CanReplaceWithProceduralRock(CompiledProceduralDeposit compiled, int blockId)
     {
-        return !IsProceduralOutput(blockId) && compiled.CanReplaceRock(blockId);
+        return AllowsProceduralRockReplacement(
+            IsProceduralOutput(blockId),
+            compiled.CanReplaceRock(blockId),
+            compiled.IsNaturalRock(blockId));
+    }
+
+    internal static bool AllowsProceduralRockReplacement(
+        bool proceduralOutput,
+        bool replaceableHost,
+        bool naturalRock)
+    {
+        return replaceableHost && (!proceduralOutput || naturalRock);
     }
 
     private bool IsProceduralOutput(int blockId)
@@ -2315,9 +2328,17 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     private bool TryFindSourceY(CompiledProceduralDeposit compiled, int worldX, int worldZ, out int sourceY)
     {
         SourceRockDefinition source = compiled.Definition.Source;
-        int worldHeight = serverApi!.World.BlockAccessor.MapSizeY;
-        int minY = GameMath.Clamp((int)(source.SearchMinYRel * worldHeight), 1, worldHeight - 2);
-        int maxY = GameMath.Clamp((int)(source.SearchMaxYRel * worldHeight), minY, worldHeight - 2);
+        if (!TryGetSurfaceHeight(worldX, worldZ, out int surfaceY)
+            || !TryGetSurfaceDepthBand(
+                surfaceY,
+                source.SearchMinDepth,
+                source.SearchMaxDepth,
+                out int minY,
+                out int maxY))
+        {
+            sourceY = 0;
+            return false;
+        }
         int currentTop = -1;
         int currentThickness = 0;
         var position = new BlockPos(worldX, maxY, worldZ);
@@ -2561,13 +2582,11 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid placement settings", definition.Code);
             return false;
         }
-        bool knownYMode = string.Equals(definition.Placement.YMode, "worldRelative", StringComparison.OrdinalIgnoreCase)
-            || string.Equals(definition.Placement.YMode, "surfaceOffset", StringComparison.OrdinalIgnoreCase)
+        bool knownYMode = string.Equals(definition.Placement.YMode, "surfaceDepth", StringComparison.OrdinalIgnoreCase)
             || string.Equals(definition.Placement.YMode, "sourceRock", StringComparison.OrdinalIgnoreCase);
         if (!knownYMode
-            || definition.Placement.MinYRel < 0
-            || definition.Placement.MaxYRel > 1
-            || definition.Placement.MaxYRel < definition.Placement.MinYRel)
+            || definition.Placement.MinDepth < 0
+            || definition.Placement.MaxDepth < definition.Placement.MinDepth)
         {
             api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid vertical placement settings", definition.Code);
             return false;
@@ -2625,9 +2644,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         }
         if (definition.Source.Enabled
             && (definition.Source.MinimumThickness < 1
-                || definition.Source.SearchMinYRel < 0
-                || definition.Source.SearchMaxYRel > 1
-                || definition.Source.SearchMaxYRel < definition.Source.SearchMinYRel))
+                || definition.Source.SearchMinDepth < 0
+                || definition.Source.SearchMaxDepth < definition.Source.SearchMinDepth))
         {
             api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid source-rock settings", definition.Code);
             return false;

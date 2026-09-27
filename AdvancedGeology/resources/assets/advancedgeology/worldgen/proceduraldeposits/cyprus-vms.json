@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.34,
-      "maxYRel": 0.62
+      "yMode": "surfaceDepth",
+      "minDepth": 10,
+      "maxDepth": 33
     },
     "cyprusVms": {
       "horizontalRadius": 42,

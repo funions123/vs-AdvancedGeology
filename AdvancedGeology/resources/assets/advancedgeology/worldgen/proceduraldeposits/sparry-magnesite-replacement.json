@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.26,
-      "maxYRel": 0.5
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 53
     },
     "sparryMagnesite": {
       "horizontalRadius": 34,

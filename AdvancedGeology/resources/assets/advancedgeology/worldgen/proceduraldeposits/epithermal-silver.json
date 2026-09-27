@@ -13,9 +13,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.4,
-      "maxYRel": 0.7
+      "yMode": "surfaceDepth",
+      "minDepth": 27,
+      "maxDepth": 70
     },
     "epithermal": {
       "horizontalRadius": 76,

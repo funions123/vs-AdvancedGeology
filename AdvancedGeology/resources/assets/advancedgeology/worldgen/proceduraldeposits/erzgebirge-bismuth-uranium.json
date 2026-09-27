@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 512,
       "chance": 0.056,
-      "yMode": "worldRelative",
-      "minYRel": 0.18,
-      "maxYRel": 0.44
+      "yMode": "surfaceDepth",
+      "minDepth": 21,
+      "maxDepth": 74
     },
     "arsenideVein": {
       "horizontalRadius": 42,

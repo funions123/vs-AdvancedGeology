@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.3,
-      "maxYRel": 0.52
+      "yMode": "surfaceDepth",
+      "minDepth": 17,
+      "maxDepth": 43
     },
     "marinePhosphorite": {
       "horizontalRadius": 34,

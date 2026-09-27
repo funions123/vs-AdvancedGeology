@@ -16,9 +16,9 @@
     "placement": {
       "cellSize": 640,
       "chance": 0.04,
-      "yMode": "worldRelative",
-      "minYRel": 0.08,
-      "maxYRel": 0.3
+      "yMode": "surfaceDepth",
+      "minDepth": 44,
+      "maxDepth": 99
     },
     "greisen": {
       "family": "RareMetal",

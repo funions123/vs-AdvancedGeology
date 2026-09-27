@@ -208,22 +208,13 @@ public sealed class ProceduralPlacementDefinition
     public double Chance { get; set; } = 0.02;
 
     [JsonProperty]
-    public string YMode { get; set; } = "worldRelative";
+    public string YMode { get; set; } = "surfaceDepth";
 
     [JsonProperty]
-    public double MinYRel { get; set; } = 0.25;
+    public int MinDepth { get; set; } = 10;
 
     [JsonProperty]
-    public double MaxYRel { get; set; } = 0.70;
-
-    [JsonProperty]
-    public int SurfaceOffset { get; set; } = -24;
-
-    [JsonProperty]
-    public int SurfaceOffsetMin { get; set; } = -24;
-
-    [JsonProperty]
-    public int SurfaceOffsetMax { get; set; } = -24;
+    public int MaxDepth { get; set; } = 50;
 
 
     [JsonProperty]
@@ -591,10 +582,10 @@ public sealed class SourceRockDefinition
     public string[] EligibleRockVariants { get; set; } = Array.Empty<string>();
 
     [JsonProperty]
-    public double SearchMinYRel { get; set; } = 0.02;
+    public int SearchMinDepth { get; set; }
 
     [JsonProperty]
-    public double SearchMaxYRel { get; set; } = 0.55;
+    public int SearchMaxDepth { get; set; } = 115;
 
     [JsonProperty]
     public int MinimumThickness { get; set; } = 6;
@@ -1027,11 +1018,15 @@ internal sealed class CompiledProceduralDeposit
         return (uint)blockId < (uint)replaceableHosts.Length && replaceableHosts[blockId];
     }
 
+    public bool IsNaturalRock(int blockId)
+    {
+        return (uint)blockId < (uint)naturalRockHosts.Length && naturalRockHosts[blockId];
+    }
+
     public bool CanReplaceRock(int blockId)
     {
         bool sourceHost = IsReplaceableHost(blockId);
-        bool naturalRock = (uint)blockId < (uint)naturalRockHosts.Length && naturalRockHosts[blockId];
-        return AllowsRockReplacement(sourceHost, Definition.Intrude, naturalRock);
+        return AllowsRockReplacement(sourceHost, Definition.Intrude, IsNaturalRock(blockId));
     }
 
     internal static bool AllowsRockReplacement(bool sourceHost, bool intrude, bool naturalRock)

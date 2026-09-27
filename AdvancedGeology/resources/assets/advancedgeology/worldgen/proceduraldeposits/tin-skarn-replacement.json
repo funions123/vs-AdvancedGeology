@@ -15,9 +15,9 @@
     "placement": {
       "cellSize": 448,
       "chance": 0.1,
-      "yMode": "worldRelative",
-      "minYRel": 0.14,
-      "maxYRel": 0.42
+      "yMode": "surfaceDepth",
+      "minDepth": 18,
+      "maxDepth": 84
     },
     "tinSkarn": {
       "horizontalRadius": 44,

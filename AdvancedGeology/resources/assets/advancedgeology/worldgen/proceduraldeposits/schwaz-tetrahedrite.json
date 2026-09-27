@@ -14,9 +14,9 @@
     "placement": {
       "cellSize": 384,
       "chance": 0.158,
-      "yMode": "worldRelative",
-      "minYRel": 0.24,
-      "maxYRel": 0.48
+      "yMode": "surfaceDepth",
+      "minDepth": 21,
+      "maxDepth": 58
     },
     "tetrahedrite": {
       "horizontalRadius": 42,
