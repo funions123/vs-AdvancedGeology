@@ -1,7 +1,7 @@
 [
 	{
 		"code": "nickel-laterite",
-		"triesPerChunk": 0.005,
+		"triesPerChunk": 0.0075,
 		"handbookPageCode": "rock-nickel-laterite",
 		"generator": "disc-layeredsurface",
 		"attributes": {

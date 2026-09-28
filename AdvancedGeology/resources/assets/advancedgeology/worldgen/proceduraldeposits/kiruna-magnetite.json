@@ -12,7 +12,7 @@
     "overlapPolicy": "higherPriorityWins",
     "placement": {
       "cellSize": 448,
-      "chance": 0.1,
+      "chance": 0.15,
       "yMode": "surfaceDepth",
       "minDepth": 44,
       "maxDepth": 94

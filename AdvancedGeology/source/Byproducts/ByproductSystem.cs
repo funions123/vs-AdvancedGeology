@@ -3,6 +3,7 @@ using System;
 using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
@@ -17,7 +18,6 @@ namespace AdvancedGeology.Byproducts;
 public static class ByproductSystem
 {
     private const string ModDataKey = "advancedgeology:byproduct-provenance";
-    private const string LiveDataKey = "advancedgeology:byproduct-provenance-cache";
     private const uint Magic = 0x42504741; // AGPB in little-endian byte order.
     private const byte FormatVersion = 1;
     private const int HeaderSize = sizeof(uint) + sizeof(byte) + sizeof(int);
@@ -29,17 +29,20 @@ public static class ByproductSystem
 
     private static readonly object RegistryLock = new();
     private static readonly Dictionary<ulong, CompiledProceduralDeposit> DefinitionsByHash = new();
+    private static ConditionalWeakTable<IWorldChunk, ProvenanceCache> caches = new();
 
     /// <summary>Clears world-specific compiled definition registrations during world transitions.</summary>
     public static void Initialize()
     {
         lock (RegistryLock) DefinitionsByHash.Clear();
+        caches = new ConditionalWeakTable<IWorldChunk, ProvenanceCache>();
     }
 
     /// <summary>Clears world-specific compiled definition registrations during shutdown.</summary>
     public static void Dispose()
     {
         lock (RegistryLock) DefinitionsByHash.Clear();
+        caches = new ConditionalWeakTable<IWorldChunk, ProvenanceCache>();
     }
 
     internal static bool Register(CompiledProceduralDeposit compiled, out string error)
@@ -74,7 +77,7 @@ public static class ByproductSystem
         bool configured = compiled.HasByproducts
             && compiled.TryGetByproductSlotForBlock(blockId, out slotId);
         if (!configured
-            && !chunk.LiveModData.ContainsKey(LiveDataKey)
+            && !caches.TryGetValue(chunk, out _)
             && serverChunk.GetServerModdata(ModDataKey) is not { Length: > 0 })
         {
             return;
@@ -99,12 +102,8 @@ public static class ByproductSystem
     /// <summary>Serializes pending worldgen provenance once after all writes to this chunk complete.</summary>
     public static void FlushChunk(IWorldChunk chunk)
     {
-        if (chunk is not IServerChunk serverChunk
-            || !chunk.LiveModData.TryGetValue(LiveDataKey, out object? value)
-            || value is not ProvenanceCache cache)
-        {
+        if (chunk is not IServerChunk serverChunk || !caches.TryGetValue(chunk, out ProvenanceCache? cache))
             return;
-        }
 
         lock (cache)
         {
@@ -118,7 +117,7 @@ public static class ByproductSystem
     public static void ClearPlacement(IWorldChunk chunk, int index3d)
     {
         if (chunk is not IServerChunk serverChunk || (uint)index3d >= MaximumEntries) return;
-        if (!chunk.LiveModData.ContainsKey(LiveDataKey)
+        if (!caches.TryGetValue(chunk, out _)
             && serverChunk.GetServerModdata(ModDataKey) is not { Length: > 0 })
         {
             return;
@@ -153,7 +152,7 @@ public static class ByproductSystem
         ProvenanceRecord record = default;
         IWorldChunk? chunk = world.BlockAccessor.GetChunkAtBlockPos(pos);
         if (chunk is IServerChunk serverChunk
-            && (chunk.LiveModData.ContainsKey(LiveDataKey)
+            && (caches.TryGetValue(chunk, out _)
                 || serverChunk.GetServerModdata(ModDataKey) is { Length: > 0 }))
         {
             ProvenanceCache cache = GetCache(chunk, serverChunk);
@@ -198,7 +197,7 @@ public static class ByproductSystem
         if (world == null || pos == null) return;
         IWorldChunk? chunk = world.BlockAccessor.GetChunkAtBlockPos(pos);
         if (chunk is not IServerChunk serverChunk) return;
-        if (!chunk.LiveModData.ContainsKey(LiveDataKey)
+        if (!caches.TryGetValue(chunk, out _)
             && serverChunk.GetServerModdata(ModDataKey) is not { Length: > 0 }) return;
 
         ProvenanceCache cache = GetCache(chunk, serverChunk);
@@ -224,21 +223,8 @@ public static class ByproductSystem
         return result < 0 ? result + divisor : result;
     }
 
-    private static ProvenanceCache GetCache(IWorldChunk chunk, IServerChunk serverChunk)
-    {
-        lock (chunk.LiveModData)
-        {
-            if (chunk.LiveModData.TryGetValue(LiveDataKey, out object? value)
-                && value is ProvenanceCache cached)
-            {
-                return cached;
-            }
-
-            ProvenanceCache loaded = Deserialize(serverChunk.GetServerModdata(ModDataKey));
-            chunk.LiveModData[LiveDataKey] = loaded;
-            return loaded;
-        }
-    }
+    private static ProvenanceCache GetCache(IWorldChunk chunk, IServerChunk serverChunk) =>
+        caches.GetValue(chunk, _ => Deserialize(serverChunk.GetServerModdata(ModDataKey)));
 
     private static ProvenanceCache Deserialize(byte[]? data)
     {

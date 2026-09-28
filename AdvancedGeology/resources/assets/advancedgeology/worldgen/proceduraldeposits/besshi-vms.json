@@ -14,7 +14,7 @@
     "intrude": false,
     "placement": {
       "cellSize": 448,
-      "chance": 0.1,
+      "chance": 0.15,
       "yMode": "surfaceDepth",
       "minDepth": 21,
       "maxDepth": 58
