@@ -90,6 +90,14 @@
     "weathering": {
       "enabled": true
     },
+    "byproducts": {
+      "nickeline": {
+        "Co": [
+          0.02,
+          0.1
+        ]
+      }
+    },
     "palette": {
       "replaceableRockVariants": [
         "amphibolite",

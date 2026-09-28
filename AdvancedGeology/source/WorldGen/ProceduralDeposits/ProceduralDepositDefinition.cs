@@ -183,7 +183,74 @@ public sealed class ProceduralDepositDefinition
 
     [JsonProperty]
     public ProceduralPaletteDefinition Palette { get; set; } = new();
+    /// <summary>
+    /// Per-deposit, per-ore-slot trace content: each element maps to [minimum, maximum]
+    /// fractions of the dropped ore item's metal units. Unlisted elements are absent.
+    /// </summary>
+    [JsonProperty]
+    public Dictionary<string, Dictionary<string, double[]>> Byproducts { get; set; } = new(StringComparer.Ordinal);
+
+    internal bool ValidateByproducts(out string error)
+    {
+        error = string.Empty;
+        if (Byproducts == null)
+        {
+            error = "byproducts cannot be null";
+            return false;
+        }
+
+        foreach ((string mineral, Dictionary<string, double[]>? elements) in Byproducts)
+        {
+            if (string.IsNullOrWhiteSpace(mineral)
+                || !Palette.Materials.TryGetValue(mineral, out string? materialCode))
+            {
+                error = $"byproduct mineral slot '{mineral}' is not declared in palette.materials";
+                return false;
+            }
+            int pathOffset = materialCode.IndexOf(':') + 1;
+            if (!materialCode.AsSpan(pathOffset).StartsWith("ore-", StringComparison.Ordinal))
+            {
+                error = $"byproduct mineral slot '{mineral}' does not resolve from an ore block pattern";
+                return false;
+            }
+            if (elements == null || elements.Count == 0)
+            {
+                error = $"byproduct mineral slot '{mineral}' has no elements";
+                return false;
+            }
+
+            foreach ((string element, double[]? grades) in elements)
+            {
+                if (string.IsNullOrWhiteSpace(element) || grades is not { Length: 2 }
+                    || !double.IsFinite(grades[0]) || !double.IsFinite(grades[1])
+                    || grades[0] <= 0 || grades[1] < grades[0])
+                {
+                    error = $"byproduct range for '{mineral}/{element}' must be [minimum, maximum], with 0 < minimum <= maximum";
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
+
+internal sealed class CompiledByproductRule
+{
+    public CompiledByproductRule(string mineral, Dictionary<string, double[]> elements)
+    {
+        Mineral = mineral;
+        Elements = elements
+            .OrderBy(entry => entry.Key, StringComparer.Ordinal)
+            .ToDictionary(
+                entry => entry.Key,
+                entry => (double[])entry.Value.Clone(),
+                StringComparer.Ordinal);
+    }
+
+    public string Mineral { get; }
+    public IReadOnlyDictionary<string, double[]> Elements { get; }
+}
+
 
 [JsonObject(MemberSerialization.OptIn)]
 public sealed class ProceduralProspectingDefinition
@@ -854,6 +921,8 @@ internal sealed class CompiledProceduralDeposit
     private readonly bool[] naturalRockHosts;
     private readonly bool[] excludedGossanSurfaces;
     private readonly Dictionary<int, int> buriedWeatheringVariants = new();
+    private readonly Dictionary<int, int> byproductSlotsByBlockId = new();
+    private readonly Dictionary<int, CompiledByproductRule> byproductRulesBySlot = new();
 
     private static readonly string[] GradeNames = { "poor", "medium", "rich", "bountiful" };
 
@@ -862,6 +931,8 @@ internal sealed class CompiledProceduralDeposit
     public int SourceHostBlockCount { get; private set; }
     public int IntrusionTargetBlockCount { get; private set; }
     public int ExcludedGossanSurfaceCount { get; private set; }
+    public string? ByproductValidationError { get; private set; }
+    internal bool HasByproducts => byproductRulesBySlot.Count > 0;
 
     public ulong CodeHash { get; }
     public int MaximumHorizontalReach { get; }
@@ -1006,6 +1077,8 @@ internal sealed class CompiledProceduralDeposit
                 if (buried?.Code != null) buriedWeatheringVariants[blockId] = buried.BlockId;
             }
         }
+
+        CompileByproducts();
     }
 
     public bool IsExcludedGossanSurface(int blockId)
@@ -1037,6 +1110,100 @@ internal sealed class CompiledProceduralDeposit
     public int GetSlotId(string name)
     {
         return slotIds.TryGetValue(name, out int slotId) ? slotId : -1;
+    }
+
+    internal bool TryGetByproductSlotForBlock(int blockId, out int slotId)
+    {
+        return byproductSlotsByBlockId.TryGetValue(blockId, out slotId);
+    }
+
+    internal bool TryGetByproductRule(int slotId, out CompiledByproductRule rule)
+    {
+        return byproductRulesBySlot.TryGetValue(slotId, out rule!);
+    }
+
+    private void CompileByproducts()
+    {
+        if (!Definition.ValidateByproducts(out string validationError))
+        {
+            ByproductValidationError = validationError;
+            return;
+        }
+
+        foreach ((string mineral, Dictionary<string, double[]> elements) in Definition.Byproducts)
+        {
+            int slotId = GetSlotId(mineral);
+            if (slotId < 0)
+            {
+                ByproductValidationError = $"byproduct mineral slot '{mineral}' was not compiled";
+                break;
+            }
+
+            var rule = new CompiledByproductRule(mineral, elements);
+            byproductRulesBySlot.Add(slotId, rule);
+            for (int grade = 0; grade < resolvedBlocks[slotId].Length; grade++)
+            {
+                int[]? byHost = resolvedBlocks[slotId][grade];
+                if (byHost != null)
+                {
+                    foreach (int blockId in byHost)
+                    {
+                        if (blockId != 0 && !RegisterByproductBlock(mineral, slotId, blockId)) break;
+                    }
+                }
+                if (ByproductValidationError != null) break;
+                int direct = directBlockIds[slotId][grade];
+                if (direct != 0 && !RegisterByproductBlock(mineral, slotId, direct)) break;
+                int fallback = fallbackBlockIds[slotId][grade];
+                if (fallback != 0 && !RegisterByproductBlock(mineral, slotId, fallback)) break;
+            }
+            if (ByproductValidationError != null) break;
+        }
+
+        if (ByproductValidationError != null)
+        {
+            byproductSlotsByBlockId.Clear();
+            byproductRulesBySlot.Clear();
+        }
+    }
+
+    private bool RegisterByproductBlock(string mineral, int slotId, int blockId)
+    {
+        if (byproductSlotsByBlockId.TryGetValue(blockId, out int registeredSlot))
+        {
+            if (registeredSlot == slotId) return true;
+            ByproductValidationError = $"byproduct mineral slot '{mineral}' shares block id {blockId} with another configured byproduct slot";
+            return false;
+        }
+        for (int otherSlot = 0; otherSlot < resolvedBlocks.Length; otherSlot++)
+        {
+            if (otherSlot == slotId || !SlotResolvesToBlock(otherSlot, blockId)) continue;
+            string? otherMineral = slotIds.FirstOrDefault(entry => entry.Value == otherSlot).Key;
+            ByproductValidationError = $"byproduct mineral slot '{mineral}' shares block id {blockId} with palette slot '{otherMineral ?? otherSlot.ToString()}'";
+            return false;
+        }
+        byproductSlotsByBlockId[blockId] = slotId;
+        return true;
+    }
+
+    private IEnumerable<int> EnumerateResolvedBlocks(int slotId)
+    {
+        foreach (int[]? byHost in resolvedBlocks[slotId])
+        {
+            if (byHost == null) continue;
+            foreach (int blockId in byHost) yield return blockId;
+        }
+        foreach (int blockId in directBlockIds[slotId]) yield return blockId;
+        foreach (int blockId in fallbackBlockIds[slotId]) yield return blockId;
+    }
+
+    private bool SlotResolvesToBlock(int slotId, int expectedBlockId)
+    {
+        foreach (int blockId in EnumerateResolvedBlocks(slotId))
+        {
+            if (blockId == expectedBlockId) return true;
+        }
+        return false;
     }
 
     public static int GradeCount => GradeNames.Length;

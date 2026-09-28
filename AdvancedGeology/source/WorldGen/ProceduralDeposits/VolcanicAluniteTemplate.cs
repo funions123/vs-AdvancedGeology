@@ -549,6 +549,7 @@ public sealed partial class ProceduralDepositWorldGenSystem
                     if (placeBlockId == 0 || placeBlockId == hostBlockId) continue;
 
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }

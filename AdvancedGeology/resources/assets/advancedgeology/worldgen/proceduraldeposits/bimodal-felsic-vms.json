@@ -37,6 +37,24 @@
     "weathering": {
       "enabled": true
     },
+    "byproducts": {
+      "sphalerite": {
+        "Ga": [
+          0.001,
+          0.005
+        ],
+        "In": [
+          0.0005,
+          0.0025
+        ]
+      },
+      "chalcopyrite": {
+        "Au": [
+          0.0001,
+          0.0005
+        ]
+      }
+    },
     "palette": {
       "replaceableRockVariants": [
         "andesite",

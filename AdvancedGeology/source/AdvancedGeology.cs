@@ -3,7 +3,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using AdvancedGeology.Patches;
-using AdvancedGeology.Silver;
+using AdvancedGeology.Byproducts;
 using AdvancedGeology.WorldGen;
 using HarmonyLib;
 using Vintagestory.API.Common;
@@ -51,13 +51,7 @@ namespace AdvancedGeology
             api.Logger.VerboseDebug("[AdvancedGeology] Registered custom deposit generators: disc-layeredsurface, saltdome, procedural-prospecting");
 
 
-            // Hidden silver grade system only runs when Industrial Story is installed.
-            SilverGradeSystem.SetActive(api.ModLoader.IsModEnabled("industrialstory"));
-            if (SilverGradeSystem.Active)
-            {
-                SilverGradeSystem.RegisterIgnoredAttribute();
-                api.Logger.VerboseDebug("[AdvancedGeology] Industrial Story detected: hidden silver grade system enabled");
-            }
+            ByproductComposition.RegisterIgnoredAttribute();
         }
 
         public override void Start(ICoreAPI api)
@@ -67,9 +61,7 @@ namespace AdvancedGeology
             bool canJewelryEnabled = api.ModLoader.IsModEnabled("canjewelry");
             harmony = new Harmony("advancedgeology");
             harmony.CreateClassProcessor(typeof(Patch_ForestFloorSystem_CheckAndReplaceForestFloor)).Patch();
-            if (!SilverGradeSystem.Active && !canJewelryEnabled) return;
-
-            if (SilverGradeSystem.Active) harmony.PatchAll();
+            ByproductPatches.Apply(harmony);
             if (canJewelryEnabled)
             {
                 CanJewelryAcquisitionPatch.Apply(harmony, api);
@@ -88,14 +80,12 @@ namespace AdvancedGeology
                 CanJewelryGemCompatibility.ScheduleRuntimeVerification(api);
             }
 
-            if (SilverGradeSystem.Active)
-            {
-                SilverGradeSystem.BuildNoise(api.World.Seed);
-            }
+
         }
 
         public override void Dispose()
         {
+            ByproductSystem.Dispose();
             harmony?.UnpatchAll("advancedgeology");
             base.Dispose();
         }

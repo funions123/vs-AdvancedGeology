@@ -86,6 +86,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     private void InitializeWorldDefinitions(ICoreServerAPI api)
     {
         definitions.Clear();
+        AdvancedGeology.Byproducts.ByproductSystem.Initialize();
         planCache.Clear();
         planCacheOrder.Clear();
         missingTerrainContext.Clear();
@@ -121,6 +122,11 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             }
 
             var compiled = new CompiledProceduralDeposit(definition, template, api);
+            if (compiled.ByproductValidationError is string byproductValidationError)
+            {
+                api.Logger.Error("[AdvancedGeology] Procedural deposit {0}: {1}", definition.Code, byproductValidationError);
+                continue;
+            }
             if (definition.Palette.GossanSurfaceExclusions.Length > 0 && compiled.ExcludedGossanSurfaceCount == 0)
             {
                 api.Logger.Warning(
@@ -173,6 +179,11 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                 && !compiled.HasResolvedSlot(ProceduralMaterialSlots.Gossan))
             {
                 api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has no resolvable gossan material", definition.Code);
+                continue;
+            }
+            if (!AdvancedGeology.Byproducts.ByproductSystem.Register(compiled, out string byproductError))
+            {
+                api.Logger.Error("[AdvancedGeology] Procedural deposit {0}: {1}", definition.Code, byproductError);
                 continue;
             }
             definitions.Add(compiled);
@@ -254,6 +265,10 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         }
 
         PlaceSurfaceNuggets(request, baseX, baseZ, candidates);
+        foreach (IWorldChunk chunk in request.Chunks)
+        {
+            AdvancedGeology.Byproducts.ByproductSystem.FlushChunk(chunk);
+        }
     }
 
     private void CollectCandidates(
@@ -565,6 +580,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                         if (placeBlockId == 0) continue;
 
                         data.SetBlockUnsafe(index3d, placeBlockId);
+                        AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, instance.FeatureId, compiled);
                         data.SetFluid(index3d, 0);
                     }
                 }
@@ -649,6 +665,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                         if (compiled.GeyseriteBlockId == 0
                             || !CanReplaceWithProceduralRock(compiled, hostBlockId)) continue;
                         data.SetBlockUnsafe(index3d, compiled.GeyseriteBlockId);
+                        AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, compiled.GeyseriteBlockId, candidate.Instance.FeatureId, compiled);
                         data.SetFluid(index3d, 0);
                         continue;
                     }
@@ -663,6 +680,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                     int placeBlockId = compiled.ResolveBlock(slotId, hostBlockId);
                     if (placeBlockId == 0) continue;
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
 
@@ -786,6 +804,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
 
 
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }
@@ -971,6 +990,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                         hostBlockId);
                     if (placeBlockId == 0) continue;
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }
@@ -1044,6 +1064,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                     if (placeBlockId == 0) continue;
 
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }
@@ -1136,6 +1157,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                     if (placeBlockId == 0) continue;
 
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }
@@ -1264,6 +1286,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                     if (placeBlockId == 0) continue;
 
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }
@@ -1671,6 +1694,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
 
 
                     data.SetBlockUnsafe(index3d, placeBlockId);
+                    AdvancedGeology.Byproducts.ByproductSystem.RecordPlacement(request.Chunks[chunkY], index3d, placeBlockId, candidate.Instance.FeatureId, compiled);
                     data.SetFluid(index3d, 0);
                 }
             }
@@ -2024,6 +2048,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         if (gossanBlockId == 0) return;
 
         data.SetBlockUnsafe(index3d, gossanBlockId);
+        AdvancedGeology.Byproducts.ByproductSystem.ClearPlacement(request.Chunks[chunkY], index3d);
         data.SetFluid(index3d, 0);
     }
 
@@ -2144,6 +2169,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         if (gossanBlockId == 0) return;
 
         data.SetBlockUnsafe(index3d, gossanBlockId);
+        AdvancedGeology.Byproducts.ByproductSystem.ClearPlacement(request.Chunks[chunkY], index3d);
         data.SetFluid(index3d, 0);
     }
 
@@ -2164,6 +2190,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         if (!CanReplaceWithCap(existingBlockId)) return;
 
         data.SetBlockUnsafe(index3d, placeBlockId);
+        AdvancedGeology.Byproducts.ByproductSystem.ClearPlacement(request.Chunks[chunkY], index3d);
         data.SetFluid(index3d, 0);
     }
 
@@ -2256,6 +2283,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             int placeBlockId = compiled.ResolveWeatheredBlock(gossanSlot, 0, existingId, y < surfaceY);
             if (placeBlockId == 0) break;
             data.SetBlockUnsafe(index3d, placeBlockId);
+            AdvancedGeology.Byproducts.ByproductSystem.ClearPlacement(request.Chunks[chunkY], index3d);
             data.SetFluid(index3d, 0);
             remaining--;
         }
