@@ -209,7 +209,7 @@
     "op": "add",
     "path": "/combustiblePropsByType/*-annabergite",
     "value": {
-      "meltingPoint": 1455,
+      "meltingPoint": 1330,
       "meltingDuration": 30,
       "smeltedRatio": 20,
       "smeltedStack": {

@@ -79,7 +79,7 @@
     "op": "add",
     "path": "/combustiblePropsByType/*-garnierite",
     "value": {
-      "meltingPoint": 1455,
+      "meltingPoint": 1330,
       "meltingDuration": 30,
       "smeltedRatio": 20,
       "smeltedStack": {
