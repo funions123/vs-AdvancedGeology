@@ -502,6 +502,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             "lacustrineAlum" => definition.LacustrineBorate.VerticalHalfHeight,
             "porphyryCopperMoly" => definition.PorphyryCopperMoly.VerticalHalfHeight,
             "stratiformCopper" => definition.StratiformCopper.VerticalHalfHeight,
+            "massiveNativeCopper" => definition.MassiveNativeCopper.VerticalHalfHeight,
             "veinGraphite" => definition.VeinGraphite.VerticalHalfHeight,
             "flakeGraphiteSchist" => definition.FlakeGraphiteSchist.VerticalHalfHeight,
             "unconformityUranium" => definition.UnconformityUranium.VerticalHalfHeight,

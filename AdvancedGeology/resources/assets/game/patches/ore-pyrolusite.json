@@ -16,6 +16,21 @@
     "file": "game:worldproperties/block/ore-nugget.json"
   },
   {
+    "op": "add",
+    "path": "/combustiblePropsByType/*-pyrolusite",
+    "value": {
+      "meltingPoint": 1400,
+      "meltingDuration": 30,
+      "smeltedRatio": 10,
+      "smeltedStack": {
+        "type": "block",
+        "code": "glass-blue",
+        "stacksize": 1
+      }
+    },
+    "file": "game:itemtypes/resource/nugget.json"
+  },
+  {
     "op": "addeach",
     "path": "/allowedVariants/-",
     "value": [

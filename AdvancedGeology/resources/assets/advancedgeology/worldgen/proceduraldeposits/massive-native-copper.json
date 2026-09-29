@@ -1,0 +1,52 @@
+[
+  {
+    "code": "massive-native-copper",
+    "enabled": true,
+    "prospecting": {
+      "majorMinerals": [
+        "nativecopper"
+      ]
+    },
+    "template": "massiveNativeCopper",
+    "priority": 87,
+    "overlapPolicy": "higherPriorityWins",
+    "intrude": true,
+    "placement": {
+      "cellSize": 384,
+      "chance": 0.237,
+      "yMode": "surfaceDepth",
+      "minDepth": 12,
+      "maxDepth": 32
+    },
+    "massiveNativeCopper": {
+      "horizontalRadius": 42,
+      "verticalHalfHeight": 35,
+      "oxidationDepth": 8
+    },
+    "terrainOrientation": {
+      "enabled": false
+    },
+    "source": {
+      "enabled": false
+    },
+    "supergene": {
+      "enabled": false
+    },
+    "weathering": {
+      "enabled": false
+    },
+    "palette": {
+      "replaceableRockVariants": [
+        "basalt"
+      ],
+      "materials": {
+        "native-copper": "game:ore-{grade}-nativecopper-basalt",
+        "malachite": "game:ore-{grade}-malachite-basalt",
+        "azurite": "game:ore-{grade}-azurite-basalt",
+        "pyrite": "game:ore-pyrite-basalt",
+        "quartz": "game:ore-quartz-basalt",
+        "carbonate": "game:rock-limestone"
+      }
+    }
+  }
+]

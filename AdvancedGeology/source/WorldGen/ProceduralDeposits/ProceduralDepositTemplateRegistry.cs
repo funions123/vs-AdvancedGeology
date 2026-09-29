@@ -58,6 +58,7 @@ internal static class ProceduralDepositTemplateRegistry
         Register(new LacustrineAlumProceduralTemplate());
         Register(new PorphyryCopperMolyProceduralTemplate());
         Register(new StratiformCopperProceduralTemplate());
+        Register(new MassiveNativeCopperProceduralTemplate());
         Register(new VeinGraphiteProceduralTemplate());
         Register(new FlakeGraphiteSchistProceduralTemplate());
         Register(new UnconformityUraniumProceduralTemplate());

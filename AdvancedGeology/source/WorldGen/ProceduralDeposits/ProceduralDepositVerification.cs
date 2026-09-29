@@ -359,6 +359,10 @@ public readonly record struct StratiformCopperVerificationResult(
     bool OreRequiresLens,
     bool Deterministic);
 
+public readonly record struct MassiveNativeCopperVerificationResult(
+    int Veins, int Massive, int Stringers, int Oxide, int Amygdules, int Breccia,
+    bool Finite, bool DepthBounded, bool Deterministic);
+
 public readonly record struct ClimateFilterVerificationResult(
     bool DisabledBypassesFilter,
     bool InclusiveBounds,
@@ -3258,6 +3262,42 @@ public static class ProceduralDepositVerification
         return new StratiformCopperVerificationResult(lensCount, faultCount, native, chalcocite,
             bornite, chalcopyrite, malachite, azurite, pyrite, carbonate, gossan, limonite,
             grades.Count, oreRequiresLens, deterministic);
+    }
+
+    public static MassiveNativeCopperVerificationResult RunMassiveNativeCopper()
+    {
+        ulong id = ProceduralDepositMath.FeatureId(487152, 0, 3, -2);
+        var instance = new ProceduralDepositInstance(id, 0, 90, 0, 1, 0, 0, 0);
+        var settings = new MassiveNativeCopperDefinition();
+        MassiveNativeCopperPlan plan = MassiveNativeCopperPlan.Create(instance, settings);
+        MassiveNativeCopperPlan again = MassiveNativeCopperPlan.Create(instance, settings);
+        int massive = 0, stringers = 0, oxide = 0, amygdules = 0, breccia = 0;
+        bool finite = true, depthBounded = true, deterministic = true;
+        for (int surfaceY = 96; surfaceY <= 120; surfaceY += 12)
+        for (int x = -48; x <= 48; x++)
+        for (int z = -48; z <= 48; z++)
+        for (int y = 65; y <= surfaceY; y++)
+        {
+            MassiveNativeCopperSample sample = plan.Evaluate(x, y, z, surfaceY);
+            if (sample != again.Evaluate(x, y, z, surfaceY)) deterministic = false;
+            if (sample.Zone == MassiveNativeCopperZone.None) continue;
+            if (Math.Abs(x) > 42 || Math.Abs(z) > 42 || Math.Abs(y - instance.CenterY) > 35) finite = false;
+            if (sample.Zone == MassiveNativeCopperZone.Oxide && (surfaceY - y < 1 || surfaceY - y > 8)) depthBounded = false;
+            switch (sample.Zone)
+            {
+                case MassiveNativeCopperZone.Massive: massive++; break;
+                case MassiveNativeCopperZone.Stringer: stringers++; break;
+                case MassiveNativeCopperZone.Oxide: oxide++; break;
+                case MassiveNativeCopperZone.Amygdule: amygdules++; break;
+                case MassiveNativeCopperZone.Breccia: breccia++; break;
+            }
+        }
+        bool surfaceClipped = plan.Evaluate(0, 121, 0, 120).Zone == MassiveNativeCopperZone.None;
+        if (!deterministic || !finite || !depthBounded || !surfaceClipped || plan.VeinCount < 2 || plan.VeinCount > 4
+            || massive == 0 || stringers == 0 || oxide == 0 || amygdules == 0 || breccia == 0)
+            throw new InvalidOperationException($"Massive native copper coverage failed: veins={plan.VeinCount} massive={massive} stringers={stringers} oxide={oxide} amygdules={amygdules} breccia={breccia} finite={finite} depth={depthBounded} deterministic={deterministic}");
+        return new MassiveNativeCopperVerificationResult(plan.VeinCount, massive, stringers, oxide,
+            amygdules, breccia, finite, depthBounded, deterministic);
     }
 
     public static ClimateFilterVerificationResult RunClimateFilter()

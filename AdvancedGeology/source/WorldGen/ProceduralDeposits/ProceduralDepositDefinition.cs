@@ -128,6 +128,9 @@ public sealed class ProceduralDepositDefinition
     public StratiformCopperDefinition StratiformCopper { get; set; } = new();
 
     [JsonProperty]
+    public MassiveNativeCopperDefinition MassiveNativeCopper { get; set; } = new();
+
+    [JsonProperty]
     public VeinGraphiteDefinition VeinGraphite { get; set; } = new();
 
     [JsonProperty]
