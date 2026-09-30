@@ -106,7 +106,7 @@ namespace AdvancedGeology
 
         /// <summary>
         /// Disables conventional ore deposits while preserving supported gems, rocks, soils,
-        /// prospecting registrations, and the custom salt dome.
+        /// prospecting registrations, saltpeter, and the custom salt dome.
         /// </summary>
         private static void SuppressLegacyOreDeposits(ICoreAPI api)
         {
@@ -253,7 +253,8 @@ namespace AdvancedGeology
             if (!normalized.StartsWith(prefix, StringComparison.Ordinal)) return false;
 
             string relative = normalized[prefix.Length..];
-            return !relative.StartsWith("gem/", StringComparison.Ordinal)
+            return !relative.Equals("mineralore/saltpeter.json", StringComparison.Ordinal)
+                && !relative.StartsWith("gem/", StringComparison.Ordinal)
                 && !relative.StartsWith("rock/", StringComparison.Ordinal)
                 && !relative.StartsWith("soil/", StringComparison.Ordinal)
                 && !relative.StartsWith("prospecting/", StringComparison.Ordinal);

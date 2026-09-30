@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ModName>AdvancedGeology</ModName>
     <ModType>code</ModType>
-    <ModVersion>2.0.3</ModVersion>
+    <ModVersion>2.0.4</ModVersion>
     <ModId>advancedgeology</ModId>
     <Description>Overhauls ore generation to be highly realistic</Description>
     <Side>universal</Side>
@@ -108,6 +108,11 @@
     <Reference Include="$(GameDirectory)/Lib/OpenTK*.dll" Private="false" />
     <!-- External libraries -->
     <Reference Include="$(ExternalLibDir)/**/*.dll" Private="false" Condition="'$(ExternalLibDir)' != ''" />
+  </ItemGroup>
+
+  <!-- Keep verification code in its separate project without exposing mod internals publicly. -->
+  <ItemGroup>
+    <InternalsVisibleTo Include="AdvancedGeology.Verification" />
   </ItemGroup>
 
   <!-- Creating local settings file -->
