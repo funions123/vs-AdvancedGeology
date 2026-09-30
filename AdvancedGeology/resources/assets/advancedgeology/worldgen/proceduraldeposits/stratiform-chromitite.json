@@ -37,6 +37,14 @@
     "weathering": {
       "enabled": false
     },
+    "byproducts": {
+      "titanomagnetite": {
+        "V": [
+          0.005,
+          0.02
+        ]
+      }
+    },
     "palette": {
       "replaceableRockVariants": [
         "anorthosite",

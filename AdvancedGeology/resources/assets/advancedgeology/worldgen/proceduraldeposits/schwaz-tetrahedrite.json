@@ -35,6 +35,14 @@
     "weathering": {
       "enabled": true
     },
+    "byproducts": {
+      "tetrahedrite": {
+        "Ag": [
+          0.005,
+          0.02
+        ]
+      }
+    },
     "palette": {
       "replaceableRockVariants": [
         "dolomite",
