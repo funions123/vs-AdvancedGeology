@@ -12,8 +12,8 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 512,
-      "chance": 0.056,
+      "cellSize": 640,
+      "chance": 0.04,
       "yMode": "surfaceDepth",
       "minDepth": 44,
       "maxDepth": 94
@@ -40,8 +40,8 @@
     "byproducts": {
       "titanomagnetite": {
         "V": [
-          0.005,
-          0.02
+          0.02,
+          0.05
         ]
       }
     },

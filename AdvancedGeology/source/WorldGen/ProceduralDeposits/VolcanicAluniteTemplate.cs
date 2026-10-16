@@ -526,11 +526,12 @@ public sealed partial class ProceduralDepositWorldGenSystem
             {
                 int worldZ = baseZ + localZ;
                 int surfaceY = heightMap[localZ * ChunkSize + localX];
-                int maximumY = Math.Min(surfaceY, maximumPrototypeY);
+                int shift = GetDrapeShift(candidate, surfaceY);
+                int maximumY = Math.Min(surfaceY, maximumPrototypeY - shift);
 
-                for (int y = minimumY; y <= maximumY; y++)
+                for (int y = Math.Max(1, minimumY - shift); y <= maximumY; y++)
                 {
-                    VolcanicAluniteSample sample = plan.Evaluate(worldX, y, worldZ, surfaceY);
+                    VolcanicAluniteSample sample = plan.Evaluate(worldX, y + shift, worldZ, surfaceY + shift);
                     if (sample.Zone == VolcanicAluniteZone.None) continue;
 
                     int targetSlot = zoneSlots[(int)sample.Zone];

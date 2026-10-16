@@ -346,6 +346,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
     {
         ProceduralDepositDefinition definition = compiled.Definition;
         int centerY;
+        int centerSurfaceY = 0;
         string yMode = definition.Placement.YMode;
 
         if (string.Equals(yMode, "sourceRock", StringComparison.OrdinalIgnoreCase))
@@ -359,9 +360,9 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         }
         else
         {
-            if (!TryGetSurfaceHeight(centerX, centerZ, out int surfaceY)
+            if (!TryGetSurfaceHeight(centerX, centerZ, out centerSurfaceY)
                 || !TryGetSurfaceDepthBand(
-                    surfaceY,
+                    centerSurfaceY,
                     definition.Placement.MinDepth,
                     definition.Placement.MaxDepth,
                     out int minimumY,
@@ -371,9 +372,9 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                 return false;
             }
 
-            if (definition.Intrude)
+            if (definition.Intrude || definition.Placement.SelectHostDepth)
             {
-                if (!TrySelectIntrusionOriginHostY(
+                if (!TrySelectHostY(
                     compiled,
                     featureId ^ YSalt,
                     centerX,
@@ -434,8 +435,15 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             Math.Cos(yaw),
             Math.Sin(yaw),
             plane.GradientX,
-            plane.GradientZ);
+            plane.GradientZ,
+            centerSurfaceY);
         return true;
+    }
+
+    /// <summary>Drape offset: evaluate the plan at y + shift, place at y. Zero when not draped.</summary>
+    internal static int GetDrapeShift(in DepositCandidate candidate, int surfaceY)
+    {
+        return candidate.Compiled.Definition.Drape ? candidate.Instance.SurfaceY - surfaceY : 0;
     }
 
     internal static bool TryGetSurfaceDepthBand(
@@ -1023,18 +1031,22 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             for (int localZ = 0; localZ < ChunkSize; localZ++)
             {
                 int worldZ = baseZ + localZ;
-                int maximumY = Math.Min(heightMap[localZ * ChunkSize + localX], maximumPrototypeY);
+                int surfaceY = heightMap[localZ * ChunkSize + localX];
+                int shift = GetDrapeShift(candidate, surfaceY);
+                int columnMinimumY = Math.Max(1, minimumY - shift);
+                int maximumY = Math.Min(surfaceY, maximumPrototypeY - shift);
 
-                for (int y = minimumY; y <= maximumY; y++)
+                for (int y = columnMinimumY; y <= maximumY; y++)
                 {
-                    OoliticIronstoneSample sample = plan.Sample(worldX, y, worldZ);
+                    int planY = y + shift;
+                    OoliticIronstoneSample sample = plan.Sample(worldX, planY, worldZ);
                     if (!sample.Inside && !sample.Halo) continue;
 
                     OoliticIronstoneZone zone = SelectOoliticIronstoneZone(
                         candidate.Instance.FeatureId,
                         sample,
                         worldX,
-                        y,
+                        planY,
                         worldZ);
                     if (zone == OoliticIronstoneZone.None) continue;
 
@@ -1050,7 +1062,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
                         candidate.Instance.FeatureId,
                         sample,
                         worldX,
-                        y,
+                        planY,
                         worldZ);
                     int slot = zone switch
                     {
@@ -1226,11 +1238,13 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             {
                 int worldZ = baseZ + localZ;
                 int surfaceY = heightMap[localZ * ChunkSize + localX];
-                int maximumY = Math.Min(surfaceY, maximumPrototypeY);
+                int shift = GetDrapeShift(candidate, surfaceY);
+                int columnMinimumY = Math.Max(1, minimumY - shift);
+                int maximumY = Math.Min(surfaceY, maximumPrototypeY - shift);
 
-                for (int y = minimumY; y <= maximumY; y++)
+                for (int y = columnMinimumY; y <= maximumY; y++)
                 {
-                    PrabornaPyrolusiteZone zone = plan.EvaluateZone(worldX, y, worldZ, surfaceY);
+                    PrabornaPyrolusiteZone zone = plan.EvaluateZone(worldX, y + shift, worldZ, surfaceY + shift);
                     if (zone == PrabornaPyrolusiteZone.None) continue;
 
                     int chunkY = y / ChunkSize;
@@ -1277,7 +1291,7 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
 
                     int grade = SelectPrabornaGrade(
                         candidate.Instance.FeatureId,
-                        plan.Sample(worldX, y, worldZ),
+                        plan.Sample(worldX, y + shift, worldZ),
                         worldX,
                         y,
                         worldZ);
@@ -2429,7 +2443,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         return accumulator.TrySolve(out plane);
     }
 
-    private bool TrySelectIntrusionOriginHostY(
+    /// <summary>Picks the host-rock y with the lowest seeded hash, so edits elsewhere in the column do not move it.</summary>
+    private bool TrySelectHostY(
         CompiledProceduralDeposit compiled,
         ulong seed,
         int worldX,
@@ -2438,41 +2453,19 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
         int maximumY,
         out int hostY)
     {
-        if (maximumY < minimumY)
-        {
-            hostY = 0;
-            return false;
-        }
-
-        int validHostCount = 0;
+        hostY = 0;
+        double best = double.MaxValue;
         var position = new BlockPos(worldX, minimumY, worldZ);
         for (int y = minimumY; y <= maximumY; y++)
         {
             position.Y = y;
-            if (compiled.IsReplaceableHost(blockAccessor!.GetBlock(position).BlockId)) validHostCount++;
-        }
-
-        if (validHostCount == 0)
-        {
-            hostY = 0;
-            return false;
-        }
-
-        int selectedIndex = Math.Min(
-            validHostCount - 1,
-            (int)(ProceduralDepositMath.UnitDouble(seed) * validHostCount));
-        int currentIndex = 0;
-        for (int y = minimumY; y <= maximumY; y++)
-        {
-            position.Y = y;
             if (!compiled.IsReplaceableHost(blockAccessor!.GetBlock(position).BlockId)) continue;
-            if (currentIndex++ != selectedIndex) continue;
+            double rank = ProceduralDepositMath.CoordinateNoise(seed, worldX, y, worldZ);
+            if (rank >= best) continue;
+            best = rank;
             hostY = y;
-            return true;
         }
-
-        hostY = 0;
-        return false;
+        return best < double.MaxValue;
     }
 
 
@@ -2616,7 +2609,8 @@ public sealed partial class ProceduralDepositWorldGenSystem : ModSystem
             || string.Equals(definition.Placement.YMode, "sourceRock", StringComparison.OrdinalIgnoreCase);
         if (!knownYMode
             || definition.Placement.MinDepth < 0
-            || definition.Placement.MaxDepth < definition.Placement.MinDepth)
+            || definition.Placement.MaxDepth < definition.Placement.MinDepth
+            || (definition.Drape && !string.Equals(definition.Placement.YMode, "surfaceDepth", StringComparison.OrdinalIgnoreCase)))
         {
             api.Logger.Error("[AdvancedGeology] Procedural deposit {0} has invalid vertical placement settings", definition.Code);
             return false;

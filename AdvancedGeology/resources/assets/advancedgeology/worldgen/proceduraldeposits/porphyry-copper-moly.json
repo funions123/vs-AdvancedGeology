@@ -14,9 +14,9 @@
     "intrude": true,
     "placement": {
       "cellSize": 384,
-      "chance": 0.237,
+      "chance": 0.087,
       "yMode": "surfaceDepth",
-      "minDepth": 18,
+      "minDepth": 6,
       "maxDepth": 79
     },
     "porphyryCopperMoly": {
@@ -47,6 +47,19 @@
     },
     "weathering": {
       "enabled": true
+    },
+    "byproducts": {
+      "molybdenite": {
+        "Re": [0.29, 0.73]
+      },
+      "bornite": {
+        "Au": [0.04, 0.099],
+        "Ag": [0.022, 0.056]
+      },
+      "chalcopyrite": {
+        "Au": [0.013, 0.032],
+        "Ag": [0.011, 0.027]
+      }
     },
     "palette": {
       "replaceableRockVariants": [

@@ -582,11 +582,12 @@ public sealed partial class ProceduralDepositWorldGenSystem
             {
                 int worldZ = baseZ + localZ;
                 int surfaceY = heightMap[localZ * ChunkSize + localX];
-                int maximumY = Math.Min(surfaceY, maximumPrototypeY);
+                int shift = GetDrapeShift(candidate, surfaceY);
+                int maximumY = Math.Min(surfaceY, maximumPrototypeY - shift);
 
-                for (int y = minimumY; y <= maximumY; y++)
+                for (int y = Math.Max(1, minimumY - shift); y <= maximumY; y++)
                 {
-                    LacustrineBorateSample sample = plan.Evaluate(worldX, y, worldZ, surfaceY);
+                    LacustrineBorateSample sample = plan.Evaluate(worldX, y + shift, worldZ, surfaceY + shift);
                     if (sample.Zone == LacustrineBorateZone.None) continue;
                     if (sample.Density < 1.0
                         && ProceduralDepositMath.CoordinateNoise(

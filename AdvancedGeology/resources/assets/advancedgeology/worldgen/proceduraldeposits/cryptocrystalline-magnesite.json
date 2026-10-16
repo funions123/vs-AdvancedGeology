@@ -11,9 +11,10 @@
     "priority": 89,
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
+    "drape": true,
     "placement": {
-      "cellSize": 320,
-      "chance": 0.22,
+      "cellSize": 512,
+      "chance": 0.056,
       "yMode": "surfaceDepth",
       "minDepth": 10,
       "maxDepth": 28
@@ -40,6 +41,8 @@
         "amphibolite",
         "gabbro",
         "peridotite",
+        "phyllite",
+        "schist",
         "serpentinite"
       ],
       "materials": {

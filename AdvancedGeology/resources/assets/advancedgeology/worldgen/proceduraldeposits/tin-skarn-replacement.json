@@ -4,8 +4,7 @@
     "enabled": true,
     "prospecting": {
       "majorMinerals": [
-        "cassiterite",
-        "scheelite"
+        "cassiterite"
       ]
     },
     "template": "tinSkarn",
@@ -14,9 +13,9 @@
     "intrude": true,
     "placement": {
       "cellSize": 448,
-      "chance": 0.15,
+      "chance": 0.098,
       "yMode": "surfaceDepth",
-      "minDepth": 18,
+      "minDepth": 6,
       "maxDepth": 84
     },
     "tinSkarn": {

@@ -58,6 +58,7 @@ public readonly record struct ProceduralTerrainFrame(
     }
 }
 
+/// <param name="SurfaceY">Centre column surface height (surfaceDepth placement only).</param>
 public readonly record struct ProceduralDepositInstance(
     ulong FeatureId,
     int CenterX,
@@ -66,7 +67,8 @@ public readonly record struct ProceduralDepositInstance(
     double CosYaw,
     double SinYaw,
     double GradientX,
-    double GradientZ);
+    double GradientZ,
+    int SurfaceY = 0);
 
 public struct ProceduralTerrainPlaneAccumulator
 {

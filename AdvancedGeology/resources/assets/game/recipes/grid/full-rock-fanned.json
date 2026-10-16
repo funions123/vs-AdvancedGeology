@@ -124,6 +124,30 @@
     "ingredients": {
       "G": {
         "type": "block",
+        "code": "gravel-syenite"
+      },
+      "S": {
+        "type": "block",
+        "code": "sand-*"
+      },
+      "L": {
+        "type": "item",
+        "code": "stone-syenite"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "cobblestonefan-syenite-north",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "SLG\tLLL\tLLL",
+    "ingredients": {
+      "G": {
+        "type": "block",
         "code": "gravel-serpentinite"
       },
       "S": {

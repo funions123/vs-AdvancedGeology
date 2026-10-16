@@ -64,10 +64,10 @@
     "attributes": {}
   },
   {
-    "code": "chalcocite",
+    "code": "bornite",
     "triesPerChunk": 0.0,
     "withOreMap": true,
-    "handbookPageCode": "item-nugget-chalcocite",
+    "handbookPageCode": "item-nugget-bornite",
     "generator": "procedural-prospecting",
     "attributes": {}
   },
@@ -268,14 +268,6 @@
     "triesPerChunk": 0.0,
     "withOreMap": true,
     "handbookPageCode": "item-nugget-pyrolusite",
-    "generator": "procedural-prospecting",
-    "attributes": {}
-  },
-  {
-    "code": "scheelite",
-    "triesPerChunk": 0.0,
-    "withOreMap": true,
-    "handbookPageCode": "item-nugget-scheelite",
     "generator": "procedural-prospecting",
     "attributes": {}
   },

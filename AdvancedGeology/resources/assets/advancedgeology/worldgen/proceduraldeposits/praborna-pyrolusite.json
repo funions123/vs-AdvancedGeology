@@ -11,23 +11,24 @@
     "priority": 85,
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
+    "drape": true,
     "placement": {
       "cellSize": 512,
-      "chance": 0.084,
+      "chance": 0.071,
       "yMode": "surfaceDepth",
-      "minDepth": 17,
-      "maxDepth": 63
+      "minDepth": 14,
+      "maxDepth": 16
     },
     "praborna": {
       "horizontalRadius": 48,
       "verticalHalfHeight": 28,
       "strikeDeg": 0,
-      "dipDeg": 16,
+      "dipDeg": 4,
       "dipDirectionDeg": 90,
       "lensCount": 3,
       "quartzVeinCount": 4,
       "contactY": 6,
-      "oxidationDepth": 10,
+      "oxidationDepth": 14,
       "weatheringDepthMax": 6
     },
     "terrainOrientation": {

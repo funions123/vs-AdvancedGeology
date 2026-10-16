@@ -14,9 +14,9 @@
     "intrude": false,
     "placement": {
       "cellSize": 384,
-      "chance": 0.237,
+      "chance": 0.111,
       "yMode": "surfaceDepth",
-      "minDepth": 10,
+      "minDepth": 6,
       "maxDepth": 33
     },
     "cyprusVms": {
@@ -36,8 +36,22 @@
     "weathering": {
       "enabled": true
     },
+    "byproducts": {
+      "chalcopyrite": {
+        "Co": [0.039, 0.098],
+        "Au": [0.024, 0.059],
+        "Ag": [0.025, 0.063]
+      },
+      "chalcocite": {
+        "Ag": [0.025, 0.063]
+      },
+      "limonite": {
+        "Au": [0.039, 0.097]
+      }
+    },
     "palette": {
       "replaceableRockVariants": [
+        "amphibolite",
         "andesite",
         "basalt",
         "chert",

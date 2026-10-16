@@ -1,355 +1,39 @@
 [
   {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-amphibolite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-dacite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "TopDown",
-      "rockGroup": "Volcanic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-diorite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "TopDown",
-      "rockGroup": "Igneous"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-gabbro",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Igneous"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-gneiss",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-granulite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-greenstone",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-migmatite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-quartzite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-rhyolite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "TopDown",
-      "rockGroup": "Volcanic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-schist",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-serpentinite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "BottomUp",
-      "rockGroup": "Metamorphic"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-tonalite",
-      "amplitudes": [
-        4,
-        2,
-        1
-      ],
-      "thresholds": [
-        2.2,
-        1.1,
-        0.5
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2
-      ],
-      "genDir": "TopDown",
-      "rockGroup": "Igneous"
-    },
-    "file": "game:worldgen/rockstrata.json"
-  },
-  {
-    "op": "add",
-    "path": "/variants/-",
-    "value": {
-      "blockcode": "rock-dolomite",
-      "amplitudes": [
-        5,
-        2.5,
-        1.25,
-        0.7
-      ],
-      "thresholds": [
-        2.5,
-        1.25,
-        0.75,
-        0.4
-      ],
-      "frequencies": [
-        0.05,
-        0.1,
-        0.2,
-        0.4
-      ],
-      "genDir": "TopDown",
-      "rockGroup": "Sedimentary"
-    },
+    "op": "replace",
+    "path": "/variants",
+    "value": [
+      { "blockcode": "rock-kimberlite", "genDir": "BottomUp", "rockGroup": "Volcanic", "amplitudes": [100], "thresholds": [80], "frequencies": [8] },
+      { "blockcode": "rock-basalt", "genDir": "TopDown", "rockGroup": "Volcanic", "amplitudes": [0.8, 0.4, 0.2], "thresholds": [0.24, 0.12, 0.06], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-andesite", "genDir": "TopDown", "rockGroup": "Volcanic", "amplitudes": [0.7, 0.35, 0.175], "thresholds": [0.21, 0.105, 0.0525], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-rhyolite", "genDir": "TopDown", "rockGroup": "Volcanic", "amplitudes": [0.5, 0.25, 0.125], "thresholds": [0.175, 0.0875, 0.0437], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-dacite", "genDir": "TopDown", "rockGroup": "Volcanic", "amplitudes": [0.5, 0.25, 0.125], "thresholds": [0.175, 0.0875, 0.0437], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-claystone", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.9, 0.45, 0.225], "thresholds": [0.27, 0.135, 0.0675], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-sandstone", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.9, 0.45, 0.225], "thresholds": [0.27, 0.135, 0.0675], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-limestone", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.9, 0.45, 0.225], "thresholds": [0.27, 0.135, 0.0675], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-shale", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.9, 0.45, 0.225], "thresholds": [0.27, 0.135, 0.0675], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-conglomerate", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.8, 0.4, 0.2], "thresholds": [0.28, 0.14, 0.07], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-dolomite", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.8, 0.4, 0.2], "thresholds": [0.28, 0.14, 0.07], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-chalk", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.7, 0.35, 0.175], "thresholds": [0.28, 0.14, 0.07], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-chert", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.6, 0.3, 0.15], "thresholds": [0.24, 0.12, 0.06], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-bauxite", "genDir": "TopDown", "rockGroup": "Sedimentary", "amplitudes": [0.5, 0.25, 0.125], "thresholds": [0.225, 0.1125, 0.0563], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-peridotite", "genDir": "BottomUp", "rockGroup": "Igneous", "amplitudes": [0.7, 0.35, 0.175], "thresholds": [0.21, 0.105, 0.0525], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-syenite", "genDir": "BottomUp", "rockGroup": "Igneous", "amplitudes": [0.5, 0.25, 0.125], "thresholds": [0.225, 0.1125, 0.0563], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-gabbro", "genDir": "BottomUp", "rockGroup": "Igneous", "amplitudes": [0.6, 0.3, 0.15], "thresholds": [0.18, 0.09, 0.045], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-granulite", "genDir": "BottomUp", "rockGroup": "Metamorphic", "amplitudes": [0.6, 0.3, 0.15], "thresholds": [0.18, 0.09, 0.045], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-slate", "genDir": "TopDown", "rockGroup": "Metamorphic", "amplitudes": [0.5, 0.25, 0.125], "thresholds": [0.15, 0.075, 0.0375], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-gneiss", "genDir": "BottomUp", "rockGroup": "Metamorphic", "amplitudes": [0.75, 0.375, 0.1875], "thresholds": [0.225, 0.1125, 0.0562], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-phyllite", "genDir": "TopDown", "rockGroup": "Metamorphic", "amplitudes": [0.4, 0.2, 0.1], "thresholds": [0.18, 0.09, 0.045], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-serpentinite", "genDir": "TopDown", "rockGroup": "Metamorphic", "amplitudes": [0.45, 0.225, 0.1125], "thresholds": [0.1575, 0.0788, 0.0394], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-migmatite", "genDir": "BottomUp", "rockGroup": "Metamorphic", "amplitudes": [0.45, 0.225, 0.1125], "thresholds": [0.1575, 0.0788, 0.0394], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-quartzite", "genDir": "TopDown", "rockGroup": "Metamorphic", "amplitudes": [0.45, 0.225, 0.1125], "thresholds": [0.1575, 0.0788, 0.0394], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-amphibolite", "genDir": "BottomUp", "rockGroup": "Metamorphic", "amplitudes": [0.6, 0.3, 0.15], "thresholds": [0.18, 0.09, 0.045], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-schist", "genDir": "TopDown", "rockGroup": "Metamorphic", "amplitudes": [0.55, 0.275, 0.1375], "thresholds": [0.165, 0.0825, 0.0413], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-greenstone", "genDir": "TopDown", "rockGroup": "Metamorphic", "amplitudes": [0.45, 0.225, 0.1125], "thresholds": [0.1575, 0.0788, 0.0394], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-diorite", "genDir": "TopDown", "rockGroup": "Igneous", "amplitudes": [0.8, 0.4, 0.2], "thresholds": [0.28, 0.14, 0.07], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-tonalite", "genDir": "TopDown", "rockGroup": "Igneous", "amplitudes": [0.8, 0.4, 0.2], "thresholds": [0.28, 0.14, 0.07], "frequencies": [0.15, 0.3, 0.6] },
+      { "blockcode": "rock-basalt", "genDir": "BottomUp", "rockGroup": "Igneous", "amplitudes": [10, 5, 2.5, 1.25], "thresholds": [9, 4, 2, 1], "frequencies": [0.05, 0.1, 0.2, 0.4] }
+    ],
     "file": "game:worldgen/rockstrata.json"
   }
 ]

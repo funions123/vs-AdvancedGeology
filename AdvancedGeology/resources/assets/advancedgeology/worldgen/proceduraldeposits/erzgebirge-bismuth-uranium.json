@@ -4,7 +4,7 @@
     "enabled": true,
     "prospecting": {
       "majorMinerals": [
-        "uranium",
+        "nickeline",
         "nativebismuth"
       ]
     },

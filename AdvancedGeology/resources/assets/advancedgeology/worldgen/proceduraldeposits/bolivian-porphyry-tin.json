@@ -14,7 +14,7 @@
     "intrude": true,
     "placement": {
       "cellSize": 448,
-      "chance": 0.15,
+      "chance": 0.075,
       "yMode": "surfaceDepth",
       "minDepth": 18,
       "maxDepth": 48
@@ -103,7 +103,7 @@
     },
     "byproducts": {
       "galena": {
-        "Ag": [0.02, 0.07]
+        "Ag": [0.15, 0.36]
       }
     },
     "palette": {

@@ -1,0 +1,38 @@
+[
+  {
+    "op": "replace",
+    "path": "/variants/0/rockstrata",
+    "value": { "Sedimentary": { "maxThickness": 8 }, "Metamorphic": { "maxThickness": 90 }, "Volcanic": { "maxThickness": 0 }, "Igneous": { "maxThickness": 255 } },
+    "file": "game:worldgen/geologicprovinces.json"
+  },
+  {
+    "op": "replace",
+    "path": "/variants/1/rockstrata",
+    "value": { "Sedimentary": { "maxThickness": 60 }, "Metamorphic": { "maxThickness": 40 }, "Volcanic": { "maxThickness": 0 }, "Igneous": { "maxThickness": 255 } },
+    "file": "game:worldgen/geologicprovinces.json"
+  },
+  {
+    "op": "replace",
+    "path": "/variants/2/rockstrata",
+    "value": { "Sedimentary": { "maxThickness": 30 }, "Metamorphic": { "maxThickness": 85 }, "Volcanic": { "maxThickness": 15 }, "Igneous": { "maxThickness": 255 } },
+    "file": "game:worldgen/geologicprovinces.json"
+  },
+  {
+    "op": "replace",
+    "path": "/variants/3/rockstrata",
+    "value": { "Sedimentary": { "maxThickness": 90 }, "Metamorphic": { "maxThickness": 25 }, "Volcanic": { "maxThickness": 0 }, "Igneous": { "maxThickness": 255 } },
+    "file": "game:worldgen/geologicprovinces.json"
+  },
+  {
+    "op": "replace",
+    "path": "/variants/4/rockstrata",
+    "value": { "Volcanic": { "maxThickness": 70 }, "Sedimentary": { "maxThickness": 20 }, "Metamorphic": { "maxThickness": 15 }, "Igneous": { "maxThickness": 255 } },
+    "file": "game:worldgen/geologicprovinces.json"
+  },
+  {
+    "op": "replace",
+    "path": "/variants/5/rockstrata",
+    "value": { "Volcanic": { "maxThickness": 40 }, "Sedimentary": { "maxThickness": 50 }, "Metamorphic": { "maxThickness": 35 }, "Igneous": { "maxThickness": 255 } },
+    "file": "game:worldgen/geologicprovinces.json"
+  }
+]

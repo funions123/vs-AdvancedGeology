@@ -638,9 +638,9 @@ public sealed partial class ProceduralDepositWorldGenSystem
         for(int lx=0;lx<ChunkSize;lx++){
             int wx=baseX+lx;
             for(int lz=0;lz<ChunkSize;lz++){
-                int wz=baseZ+lz,maxY=Math.Min(heights[lz*ChunkSize+lx],prototypeMax);
-                for(int y=minY;y<=maxY;y++){
-                    AdditionalDepositSample sample=plan.Evaluate(wx,y,wz);
+                int wz=baseZ+lz,surfaceY=heights[lz*ChunkSize+lx],shift=GetDrapeShift(candidate,surfaceY),maxY=Math.Min(surfaceY,prototypeMax-shift);
+                for(int y=Math.Max(1,minY-shift);y<=maxY;y++){
+                    AdditionalDepositSample sample=plan.Evaluate(wx,y+shift,wz);
                     if(sample.Slot==null)continue;
                     int slot=compiled.GetSlotId(sample.Slot);
                     if(slot<0)continue;

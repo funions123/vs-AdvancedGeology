@@ -50,8 +50,10 @@
         "basalt",
         "conglomerate",
         "dacite",
+        "diorite",
         "rhyolite",
-        "sandstone"
+        "sandstone",
+        "tonalite"
       ],
       "materials": {
         "primary": "game:ore-quartz-{rock}",

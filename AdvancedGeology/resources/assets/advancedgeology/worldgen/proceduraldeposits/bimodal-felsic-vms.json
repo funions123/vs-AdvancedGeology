@@ -15,7 +15,7 @@
     "intrude": false,
     "placement": {
       "cellSize": 448,
-      "chance": 0.15,
+      "chance": 0.075,
       "yMode": "surfaceDepth",
       "minDepth": 21,
       "maxDepth": 58
@@ -40,18 +40,28 @@
     "byproducts": {
       "sphalerite": {
         "Ga": [
-          0.001,
-          0.005
+          0.048,
+          0.12
         ],
         "In": [
-          0.0005,
-          0.0025
+          0.048,
+          0.12
+        ],
+        "Cd": [
+          0.048,
+          0.12
         ]
       },
       "chalcopyrite": {
         "Au": [
-          0.0001,
-          0.0005
+          0.039,
+          0.097
+        ]
+      },
+      "galena": {
+        "Ag": [
+          0.105,
+          0.26
         ]
       }
     },
@@ -62,8 +72,11 @@
         "chert",
         "dacite",
         "greenstone",
+        "phyllite",
         "rhyolite",
-        "shale"
+        "schist",
+        "shale",
+        "slate"
       ],
       "materials": {
         "chalcopyrite": "game:ore-{grade}-chalcopyrite-{rock}",

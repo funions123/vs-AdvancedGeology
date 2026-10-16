@@ -67,6 +67,16 @@
     "weathering": {
       "enabled": false
     },
+    "byproducts": {
+      "pentlandite": {
+        "Co": [0.038, 0.096],
+        "Pd": [0.014, 0.034]
+      },
+      "chalcopyrite": {
+        "Pd": [0.014, 0.034],
+        "Au": [0.017, 0.043]
+      }
+    },
     "palette": {
       "replaceableRockVariants": [
         "amphibolite",

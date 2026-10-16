@@ -150,7 +150,7 @@ internal sealed class PrabornaPyrolusitePlan
         double seed = random.Range(0.0, 1000.0);
 
         double strikeDeg = settings.StrikeDeg + random.Range(-8.0, 8.0);
-        double dipDeg = random.Range(14.0, 22.0);
+        double dipDeg = Math.Max(0.0, settings.DipDeg + random.Range(-4.0, 4.0));
         double dipDirectionDeg = settings.DipDirectionDeg + random.Range(-12.0, 12.0);
         double contactY = settings.ContactY + random.Range(-1.0, 2.0);
         double systemX = random.Range(-4.0, 4.0);

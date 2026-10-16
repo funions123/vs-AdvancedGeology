@@ -13,10 +13,10 @@
     "intrude": false,
     "placement": {
       "cellSize": 512,
-      "chance": 0.056,
+      "chance": 0.071,
       "yMode": "surfaceDepth",
-      "minDepth": 22,
-      "maxDepth": 38
+      "minDepth": 8,
+      "maxDepth": 12
     },
     "messinianSulfur": {
       "horizontalRadius": 35,

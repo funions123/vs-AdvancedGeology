@@ -3,7 +3,7 @@
   "targetRoot": "resources/assets/game/textures",
   "sourcePrefix": "diorite",
   "targetPrefix": "syenite",
-  "sourceFilesFile": "marble-profile.json",
+  "sourceFilesFile": "full-rock-profile.json",
   "shadow": "#4d494a",
   "midtone": "#888080",
   "highlight": "#c9bfbd",

@@ -13,10 +13,11 @@
     "intrude": false,
     "placement": {
       "cellSize": 320,
-      "chance": 0.22,
+      "chance": 0.088,
       "yMode": "surfaceDepth",
       "minDepth": 0,
-      "maxDepth": 0
+      "maxDepth": 0,
+      "selectHostDepth": false
     },
     "climate": {
       "enabled": true,

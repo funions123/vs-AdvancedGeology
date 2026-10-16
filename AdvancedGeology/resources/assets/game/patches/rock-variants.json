@@ -171,6 +171,18 @@
     "op": "add",
     "path": "/variants/-",
     "value": {
+      "Code": "syenite",
+      "Weight": "10",
+      "SoilpH": "6.5",
+      "WeatheringFactor": "0.7",
+      "RockGroup": "igneous_intrusive"
+    },
+    "file": "game:worldproperties/block/rock.json"
+  },
+  {
+    "op": "add",
+    "path": "/variants/-",
+    "value": {
       "Code": "amphibolite",
       "Weight": "40",
       "SoilpH": "6.5",

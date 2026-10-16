@@ -4,17 +4,17 @@
     "enabled": true,
     "prospecting": {
       "majorMinerals": [
-        "alum",
-        "alunite"
+        "alum"
       ]
     },
     "template": "lacustrineAlum",
     "priority": 77,
     "overlapPolicy": "higherPriorityWins",
     "intrude": false,
+    "drape": true,
     "placement": {
       "cellSize": 256,
-      "chance": 0.266,
+      "chance": 0.085,
       "yMode": "surfaceDepth",
       "minDepth": 12,
       "maxDepth": 20

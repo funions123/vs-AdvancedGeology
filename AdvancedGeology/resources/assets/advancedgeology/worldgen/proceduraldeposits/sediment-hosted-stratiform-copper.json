@@ -4,8 +4,8 @@
     "enabled": true,
     "prospecting": {
       "majorMinerals": [
-        "chalcocite",
-        "nativecopper"
+        "chalcopyrite",
+        "bornite"
       ]
     },
     "template": "stratiformCopper",
@@ -14,9 +14,9 @@
     "intrude": false,
     "placement": {
       "cellSize": 320,
-      "chance": 0.33,
+      "chance": 0.088,
       "yMode": "surfaceDepth",
-      "minDepth": 18,
+      "minDepth": 6,
       "maxDepth": 53
     },
     "stratiformCopper": {
@@ -45,6 +45,17 @@
     },
     "weathering": {
       "enabled": true
+    },
+    "byproducts": {
+      "chalcocite": {
+        "Ag": [0.1, 0.26]
+      },
+      "bornite": {
+        "Ag": [0.1, 0.26]
+      },
+      "chalcopyrite": {
+        "Co": [0.11, 0.28]
+      }
     },
     "palette": {
       "replaceableRockVariants": [

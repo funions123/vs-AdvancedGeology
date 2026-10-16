@@ -10,9 +10,10 @@
     "template": "ooliticIronstone",
     "priority": 80,
     "overlapPolicy": "higherPriorityWins",
+    "drape": true,
     "placement": {
-      "cellSize": 320,
-      "chance": 0.21,
+      "cellSize": 384,
+      "chance": 0.087,
       "yMode": "surfaceDepth",
       "minDepth": 14,
       "maxDepth": 38

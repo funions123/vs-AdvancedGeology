@@ -29,6 +29,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/cobblestone.json"
@@ -43,7 +44,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/cobblestone.json"
@@ -78,6 +78,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/drystone.json"
@@ -92,7 +93,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/drystone.json"
@@ -127,6 +127,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/drystone.json"
@@ -141,7 +142,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/drystone.json"
@@ -176,6 +176,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/drystonefence.json"
@@ -190,7 +191,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/drystonefence.json"
@@ -225,6 +225,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/polishedrock.json"
@@ -239,7 +240,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/polishedrock.json"
@@ -274,6 +274,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/slabs/cobbleslabs.json"
@@ -288,7 +289,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/slabs/cobbleslabs.json"
@@ -323,6 +323,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/slabs/polishedrockslab.json"
@@ -337,7 +338,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/slabs/polishedrockslab.json"
@@ -366,6 +366,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/slabs/stonebrickslab.json"
@@ -400,6 +401,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/stairs/cobblestairs.json"
@@ -414,7 +416,6 @@
       "phosphorite",
       "pegmatite",
       "pyroxenite",
-      "syenite",
       "carbonatite"
     ],
     "file": "game:recipes/grid/stairs/cobblestairs.json"
@@ -443,6 +444,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/stairs/stonebrickstairs.json"
@@ -471,6 +473,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/stonebrick.json"
@@ -499,6 +502,7 @@
       "amphibolite",
       "migmatite",
       "tonalite",
+      "syenite",
       "serpentinite"
     ],
     "file": "game:recipes/grid/stonebricks.json"

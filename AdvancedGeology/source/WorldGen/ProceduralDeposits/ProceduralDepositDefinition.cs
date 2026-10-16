@@ -32,6 +32,10 @@ public sealed class ProceduralDepositDefinition
     [JsonProperty]
     public bool Intrude { get; set; }
 
+    /// <summary>Keeps the body a constant depth below each column's surface. Requires surfaceDepth placement.</summary>
+    [JsonProperty]
+    public bool Drape { get; set; }
+
     [JsonProperty]
     public ProceduralPlacementDefinition Placement { get; set; } = new();
 
@@ -285,7 +289,9 @@ public sealed class ProceduralPlacementDefinition
 
     [JsonProperty]
     public int MaxDepth { get; set; } = 50;
-
+    /// <summary>Centres the deposit on host rock in the depth band; skips the feature if none.</summary>
+    [JsonProperty]
+    public bool SelectHostDepth { get; set; } = true;
 
     [JsonProperty]
     public int SourceOffset { get; set; } = 12;

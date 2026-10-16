@@ -12,8 +12,8 @@
     "overlapPolicy": "higherPriorityWins",
     "intrude": true,
     "placement": {
-      "cellSize": 384,
-      "chance": 0.237,
+      "cellSize": 512,
+      "chance": 0.071,
       "yMode": "surfaceDepth",
       "minDepth": 21,
       "maxDepth": 58
@@ -38,8 +38,8 @@
     "byproducts": {
       "tetrahedrite": {
         "Ag": [
-          0.005,
-          0.02
+          0.024,
+          0.059
         ]
       }
     },
