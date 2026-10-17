@@ -88,7 +88,7 @@
         "bituminous-coal": "game:ore-bituminouscoal-{rock}",
         "shale-parting": "game:rock-shale",
         "seat-earth": "game:rock-claystone",
-        "fireclay": "advancedgeology:rawkaolinite-none",
+        "fireclay": "game:rawclay-fire-none",
         "channel-sand": "game:rock-sandstone"
       }
     }

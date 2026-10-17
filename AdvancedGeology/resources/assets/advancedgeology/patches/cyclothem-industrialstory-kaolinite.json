@@ -1,0 +1,13 @@
+[
+  {
+    "op": "replace",
+    "path": "/0/palette/materials/fireclay",
+    "value": "advancedgeology:rawkaolinite-none",
+    "file": "advancedgeology:worldgen/proceduraldeposits/cyclothem-bituminous-coal.json",
+    "dependsOn": [
+      {
+        "modid": "industrialstory"
+      }
+    ]
+  }
+]

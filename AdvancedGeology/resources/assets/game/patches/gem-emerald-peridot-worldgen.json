@@ -1,0 +1,38 @@
+[
+  {
+    "op": "replace",
+    "path": "/0/withOreMap",
+    "value": false,
+    "file": "game:worldgen/deposits/gem/emerald.json"
+  },
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 4,
+    "file": "game:worldgen/deposits/gem/emerald.json"
+  },
+  {
+    "op": "replace",
+    "path": "/0/attributes/yPosRel",
+    "value": { "dist": "uniform", "avg": 1.16, "var": 1.16 },
+    "file": "game:worldgen/deposits/gem/emerald.json"
+  },
+  {
+    "op": "replace",
+    "path": "/0/withOreMap",
+    "value": false,
+    "file": "game:worldgen/deposits/gem/peridot.json"
+  },
+  {
+    "op": "replace",
+    "path": "/0/triesPerChunk",
+    "value": 4,
+    "file": "game:worldgen/deposits/gem/peridot.json"
+  },
+  {
+    "op": "replace",
+    "path": "/0/attributes/yPosRel",
+    "value": { "dist": "uniform", "avg": 1.16, "var": 1.16 },
+    "file": "game:worldgen/deposits/gem/peridot.json"
+  }
+]

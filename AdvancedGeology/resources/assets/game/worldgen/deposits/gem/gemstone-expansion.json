@@ -1,7 +1,7 @@
 [
   {
     "code": "chrysoberyl",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-chrysoberyl-rough",
     "generator": "disc-followsealevel",
@@ -25,8 +25,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -37,7 +37,7 @@
   },
   {
     "code": "chrysoberyl",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-chrysoberyl-rough",
     "generator": "disc-followsealevel",
@@ -59,8 +59,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -71,7 +71,7 @@
   },
   {
     "code": "aquamarine",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-aquamarine-rough",
     "generator": "disc-followsealevel",
@@ -94,8 +94,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -106,7 +106,7 @@
   },
   {
     "code": "aquamarine",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-aquamarine-rough",
     "generator": "disc-followsealevel",
@@ -128,8 +128,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -140,7 +140,7 @@
   },
   {
     "code": "heliodor",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-heliodor-rough",
     "generator": "disc-followsealevel",
@@ -163,8 +163,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -175,7 +175,7 @@
   },
   {
     "code": "heliodor",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-heliodor-rough",
     "generator": "disc-followsealevel",
@@ -197,8 +197,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -209,7 +209,7 @@
   },
   {
     "code": "opalwhite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-opalwhite-rough",
     "generator": "disc-followsealevel",
@@ -233,8 +233,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -245,7 +245,7 @@
   },
   {
     "code": "opalblack",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-opalblack-rough",
     "generator": "disc-followsealevel",
@@ -269,8 +269,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -281,7 +281,7 @@
   },
   {
     "code": "opalcrystal",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-opalcrystal-rough",
     "generator": "disc-followsealevel",
@@ -305,8 +305,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -317,7 +317,7 @@
   },
   {
     "code": "opalfire",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-opalfire-rough",
     "generator": "disc-followsealevel",
@@ -341,8 +341,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -353,7 +353,7 @@
   },
   {
     "code": "tourmalineschorl",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalineschorl-rough",
     "generator": "disc-followsealevel",
@@ -376,8 +376,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -388,7 +388,7 @@
   },
   {
     "code": "tourmalineschorl",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalineschorl-rough",
     "generator": "disc-followsealevel",
@@ -410,8 +410,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -422,7 +422,7 @@
   },
   {
     "code": "tourmalinerubellite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalinerubellite-rough",
     "generator": "disc-followsealevel",
@@ -445,8 +445,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -457,7 +457,7 @@
   },
   {
     "code": "tourmalinerubellite",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalinerubellite-rough",
     "generator": "disc-followsealevel",
@@ -479,8 +479,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -491,7 +491,7 @@
   },
   {
     "code": "tourmalineverdelite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalineverdelite-rough",
     "generator": "disc-followsealevel",
@@ -514,8 +514,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -526,7 +526,7 @@
   },
   {
     "code": "tourmalineverdelite",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalineverdelite-rough",
     "generator": "disc-followsealevel",
@@ -548,8 +548,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -560,7 +560,7 @@
   },
   {
     "code": "tourmalineindicolite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalineindicolite-rough",
     "generator": "disc-followsealevel",
@@ -583,8 +583,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -595,7 +595,7 @@
   },
   {
     "code": "tourmalineindicolite",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalineindicolite-rough",
     "generator": "disc-followsealevel",
@@ -617,8 +617,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -629,7 +629,7 @@
   },
   {
     "code": "tourmalinedravite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalinedravite-rough",
     "generator": "disc-followsealevel",
@@ -652,8 +652,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -664,7 +664,7 @@
   },
   {
     "code": "tourmalinedravite",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalinedravite-rough",
     "generator": "disc-followsealevel",
@@ -686,8 +686,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -698,7 +698,7 @@
   },
   {
     "code": "tourmalinechrome",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalinechrome-rough",
     "generator": "disc-followsealevel",
@@ -721,8 +721,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -733,7 +733,7 @@
   },
   {
     "code": "tourmalinechrome",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tourmalinechrome-rough",
     "generator": "disc-followsealevel",
@@ -755,8 +755,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -767,7 +767,7 @@
   },
   {
     "code": "spinelred",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelred-rough",
     "generator": "disc-followsealevel",
@@ -790,8 +790,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -802,7 +802,7 @@
   },
   {
     "code": "spinelred",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelred-rough",
     "generator": "disc-followsealevel",
@@ -824,8 +824,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -836,7 +836,7 @@
   },
   {
     "code": "spinelblue",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelblue-rough",
     "generator": "disc-followsealevel",
@@ -859,8 +859,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -871,7 +871,7 @@
   },
   {
     "code": "spinelblue",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelblue-rough",
     "generator": "disc-followsealevel",
@@ -893,8 +893,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -905,7 +905,7 @@
   },
   {
     "code": "spinelorange",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelorange-rough",
     "generator": "disc-followsealevel",
@@ -928,8 +928,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -940,7 +940,7 @@
   },
   {
     "code": "spinelorange",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelorange-rough",
     "generator": "disc-followsealevel",
@@ -962,8 +962,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -974,7 +974,7 @@
   },
   {
     "code": "spinelgreen",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelgreen-rough",
     "generator": "disc-followsealevel",
@@ -997,8 +997,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1009,7 +1009,7 @@
   },
   {
     "code": "spinelgreen",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelgreen-rough",
     "generator": "disc-followsealevel",
@@ -1031,8 +1031,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1043,7 +1043,7 @@
   },
   {
     "code": "spinelblack",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelblack-rough",
     "generator": "disc-followsealevel",
@@ -1066,8 +1066,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1078,7 +1078,7 @@
   },
   {
     "code": "spinelblack",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-spinelblack-rough",
     "generator": "disc-followsealevel",
@@ -1100,8 +1100,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1112,7 +1112,7 @@
   },
   {
     "code": "ruby",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-ruby-rough",
     "generator": "disc-followsealevel",
@@ -1136,8 +1136,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1148,7 +1148,7 @@
   },
   {
     "code": "ruby",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-ruby-rough",
     "generator": "disc-followsealevel",
@@ -1170,8 +1170,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1182,7 +1182,7 @@
   },
   {
     "code": "sapphire",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-sapphire-rough",
     "generator": "disc-followsealevel",
@@ -1206,8 +1206,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1218,7 +1218,7 @@
   },
   {
     "code": "sapphire",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-sapphire-rough",
     "generator": "disc-followsealevel",
@@ -1240,8 +1240,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1252,7 +1252,7 @@
   },
   {
     "code": "tanzanite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-tanzanite-rough",
     "generator": "disc-followsealevel",
@@ -1276,8 +1276,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1288,7 +1288,7 @@
   },
   {
     "code": "jadeimperial",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jadeimperial-rough",
     "generator": "disc-followsealevel",
@@ -1312,8 +1312,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1324,7 +1324,7 @@
   },
   {
     "code": "jadeblack",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jadeblack-rough",
     "generator": "disc-followsealevel",
@@ -1348,8 +1348,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1360,7 +1360,7 @@
   },
   {
     "code": "jadelavender",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jadelavender-rough",
     "generator": "disc-followsealevel",
@@ -1384,8 +1384,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1396,7 +1396,7 @@
   },
   {
     "code": "jadekhotan",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jadekhotan-rough",
     "generator": "disc-followsealevel",
@@ -1419,8 +1419,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1431,7 +1431,7 @@
   },
   {
     "code": "jadekhotan",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jadekhotan-rough",
     "generator": "disc-followsealevel",
@@ -1453,8 +1453,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1465,7 +1465,7 @@
   },
   {
     "code": "zirconwhite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconwhite-rough",
     "generator": "disc-followsealevel",
@@ -1488,8 +1488,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1500,7 +1500,7 @@
   },
   {
     "code": "zirconwhite",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconwhite-rough",
     "generator": "disc-followsealevel",
@@ -1523,8 +1523,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1535,7 +1535,7 @@
   },
   {
     "code": "zirconred",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconred-rough",
     "generator": "disc-followsealevel",
@@ -1558,8 +1558,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1570,7 +1570,7 @@
   },
   {
     "code": "zirconred",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconred-rough",
     "generator": "disc-followsealevel",
@@ -1593,8 +1593,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1605,7 +1605,7 @@
   },
   {
     "code": "zircongreen",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zircongreen-rough",
     "generator": "disc-followsealevel",
@@ -1628,8 +1628,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1640,7 +1640,7 @@
   },
   {
     "code": "zircongreen",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zircongreen-rough",
     "generator": "disc-followsealevel",
@@ -1663,8 +1663,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1675,7 +1675,7 @@
   },
   {
     "code": "zirconyellow",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconyellow-rough",
     "generator": "disc-followsealevel",
@@ -1698,8 +1698,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1710,7 +1710,7 @@
   },
   {
     "code": "zirconyellow",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconyellow-rough",
     "generator": "disc-followsealevel",
@@ -1733,8 +1733,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1745,7 +1745,7 @@
   },
   {
     "code": "zirconbrown",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconbrown-rough",
     "generator": "disc-followsealevel",
@@ -1768,8 +1768,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1780,7 +1780,7 @@
   },
   {
     "code": "zirconbrown",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconbrown-rough",
     "generator": "disc-followsealevel",
@@ -1803,8 +1803,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1815,7 +1815,7 @@
   },
   {
     "code": "zirconblue",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconblue-rough",
     "generator": "disc-followsealevel",
@@ -1838,8 +1838,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1850,7 +1850,7 @@
   },
   {
     "code": "zirconblue",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-zirconblue-rough",
     "generator": "disc-followsealevel",
@@ -1873,8 +1873,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1885,7 +1885,7 @@
   },
   {
     "code": "topazblue",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazblue-rough",
     "generator": "disc-followsealevel",
@@ -1908,8 +1908,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1920,7 +1920,7 @@
   },
   {
     "code": "topazblue",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazblue-rough",
     "generator": "disc-followsealevel",
@@ -1942,8 +1942,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1954,7 +1954,7 @@
   },
   {
     "code": "topazimperial",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazimperial-rough",
     "generator": "disc-followsealevel",
@@ -1977,8 +1977,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -1989,7 +1989,7 @@
   },
   {
     "code": "topazimperial",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazimperial-rough",
     "generator": "disc-followsealevel",
@@ -2011,8 +2011,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2023,7 +2023,7 @@
   },
   {
     "code": "topazred",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazred-rough",
     "generator": "disc-followsealevel",
@@ -2046,8 +2046,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2058,7 +2058,7 @@
   },
   {
     "code": "topazred",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazred-rough",
     "generator": "disc-followsealevel",
@@ -2080,8 +2080,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2092,7 +2092,7 @@
   },
   {
     "code": "topazsherry",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazsherry-rough",
     "generator": "disc-followsealevel",
@@ -2115,8 +2115,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2127,7 +2127,7 @@
   },
   {
     "code": "topazsherry",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-topazsherry-rough",
     "generator": "disc-followsealevel",
@@ -2149,8 +2149,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2161,7 +2161,7 @@
   },
   {
     "code": "agatewhite",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-agatewhite-rough",
     "generator": "disc-followsealevel",
@@ -2186,8 +2186,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2198,7 +2198,7 @@
   },
   {
     "code": "agatered",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-agatered-rough",
     "generator": "disc-followsealevel",
@@ -2223,8 +2223,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2235,7 +2235,7 @@
   },
   {
     "code": "agateblue",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-agateblue-rough",
     "generator": "disc-followsealevel",
@@ -2260,8 +2260,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2272,7 +2272,7 @@
   },
   {
     "code": "agateblack",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-agateblack-rough",
     "generator": "disc-followsealevel",
@@ -2297,8 +2297,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2309,7 +2309,7 @@
   },
   {
     "code": "jasperred",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperred-rough",
     "generator": "disc-followsealevel",
@@ -2332,8 +2332,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2344,7 +2344,7 @@
   },
   {
     "code": "jasperred",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperred-rough",
     "generator": "disc-followsealevel",
@@ -2366,8 +2366,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2378,7 +2378,7 @@
   },
   {
     "code": "jasperyellow",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperyellow-rough",
     "generator": "disc-followsealevel",
@@ -2401,8 +2401,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2413,7 +2413,7 @@
   },
   {
     "code": "jasperyellow",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperyellow-rough",
     "generator": "disc-followsealevel",
@@ -2435,8 +2435,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2447,7 +2447,7 @@
   },
   {
     "code": "jaspergreen",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jaspergreen-rough",
     "generator": "disc-followsealevel",
@@ -2470,8 +2470,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2482,7 +2482,7 @@
   },
   {
     "code": "jaspergreen",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jaspergreen-rough",
     "generator": "disc-followsealevel",
@@ -2504,8 +2504,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2516,7 +2516,7 @@
   },
   {
     "code": "jasperblack",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperblack-rough",
     "generator": "disc-followsealevel",
@@ -2539,8 +2539,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2551,7 +2551,7 @@
   },
   {
     "code": "jasperblack",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperblack-rough",
     "generator": "disc-followsealevel",
@@ -2573,8 +2573,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2585,7 +2585,7 @@
   },
   {
     "code": "jasperblue",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperblue-rough",
     "generator": "disc-followsealevel",
@@ -2608,8 +2608,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2620,7 +2620,7 @@
   },
   {
     "code": "jasperblue",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-jasperblue-rough",
     "generator": "disc-followsealevel",
@@ -2642,8 +2642,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2654,7 +2654,7 @@
   },
   {
     "code": "citrine",
-    "triesPerChunk": 1,
+    "triesPerChunk": 2,
     "withOreMap": false,
     "handbookPageCode": "item-gem-citrine-rough",
     "generator": "disc-followsealevel",
@@ -2677,8 +2677,8 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
@@ -2689,7 +2689,7 @@
   },
   {
     "code": "citrine",
-    "triesPerChunk": 16,
+    "triesPerChunk": 32,
     "withOreMap": false,
     "handbookPageCode": "item-gem-citrine-rough",
     "generator": "disc-followsealevel",
@@ -2711,8 +2711,740 @@
       },
       "yPosRel": {
         "dist": "uniform",
-        "avg": 0.6,
-        "var": 0.6
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "moonstone",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-moonstone-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "ore-orthoclase-granite"
+      },
+      "placeblock": {
+        "code": "ore-gem-moonstone-granite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "moonstone",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-moonstone-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "ore-orthoclase-rhyolite"
+      },
+      "placeblock": {
+        "code": "ore-gem-moonstone-rhyolite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "labradorite",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-labradorite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gabbro",
+          "granulite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-labradorite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "labradorite",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-labradorite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "anorthosite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-labradorite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "amazonite",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-amazonite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "ore-microcline-granite"
+      },
+      "placeblock": {
+        "code": "ore-gem-amazonite-granite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "amazonite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-amazonite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-pegmatite"
+      },
+      "placeblock": {
+        "code": "ore-gem-amazonite-pegmatite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "sunstone",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-sunstone-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "basalt"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-sunstone-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "sunstone",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-sunstone-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "anorthosite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-sunstone-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "almandine",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-almandine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "amphibolite",
+          "gneiss",
+          "granulite",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-almandine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "pyrope",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-pyrope-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "peridotite",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-pyrope-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "pyrope",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-pyrope-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pyroxenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-pyrope-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tsavorite",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tsavorite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "greenstone"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tsavorite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "tsavorite",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-tsavorite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "greenmarble"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-tsavorite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "demantoid",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-demantoid-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gabbro",
+          "peridotite",
+          "serpentinite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-demantoid-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "demantoid",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-demantoid-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pyroxenite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-demantoid-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "uvarovite",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-uvarovite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "ore-*-chromite-peridotite"
+      },
+      "placeblock": {
+        "code": "ore-gem-uvarovite-peridotite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "uvarovite",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-uvarovite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "ore-*-chromite-gabbro"
+      },
+      "placeblock": {
+        "code": "ore-gem-uvarovite-gabbro"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "uvarovite",
+    "triesPerChunk": 1,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-uvarovite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-serpentinite"
+      },
+      "placeblock": {
+        "code": "ore-gem-uvarovite-serpentinite"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spessartine",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spessartine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "gneiss",
+          "granite",
+          "rhyolite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spessartine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "spessartine",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-spessartine-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-spessartine-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "alexandrite",
+    "triesPerChunk": 2,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-alexandrite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "phyllite",
+          "schist"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-alexandrite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      }
+    }
+  },
+  {
+    "code": "alexandrite",
+    "triesPerChunk": 32,
+    "withOreMap": false,
+    "handbookPageCode": "item-gem-alexandrite-rough",
+    "generator": "disc-followsealevel",
+    "attributes": {
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "pegmatite"
+        ]
+      },
+      "placeblock": {
+        "code": "ore-gem-alexandrite-{rock}"
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 1
+      },
+      "yPosRel": {
+        "dist": "uniform",
+        "avg": 1.16,
+        "var": 1.16
       },
       "thickness": {
         "dist": "uniform",
