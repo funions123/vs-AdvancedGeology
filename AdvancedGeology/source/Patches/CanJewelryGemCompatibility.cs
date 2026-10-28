@@ -21,21 +21,12 @@ internal static class CanJewelryGemCompatibility
     private const string RuntimeDataPath = "advancedgeology:config/canjewelry-gems.json";
 
 
-    private static readonly string[] JewelryEligibility =
-    [
-        "cansimplenecklace",
-        "cantiara",
-        "cancoronet",
-        "canhoruseye",
-        "canmonocle",
-        "canarmband",
-        "cannadiyannecklace",
-        "canring",
-        "canrottenkingmask"
-    ];
+    // Fallback when no CAN base gem shares an AG gem's buff: the jewelry group, as CAN Adornments defines it.
+    private const string JewelryGroup = "$jewelry";
 
     private static readonly Dictionary<string, GemDefinition> Gems = new(StringComparer.Ordinal);
     private static readonly HashSet<string> MissingTargetWarnings = new(StringComparer.Ordinal);
+    private static readonly HashSet<string> EmptyEligibilityWarnings = new(StringComparer.Ordinal);
     private static ICoreAPI? coreApi;
     private static bool adornmentsEnabled;
 
@@ -155,7 +146,7 @@ internal static class CanJewelryGemCompatibility
             {
                 if (gemToBuff?.Contains(code) != true) missingConfigEntries++;
                 if (possibleBuffs?.Contains(code) != true) missingConfigEntries++;
-                if (eligibleItems?.Contains(code) != true) missingConfigEntries++;
+                if (eligibleItems?[code] is not ICollection<string> { Count: > 0 }) missingConfigEntries++;
             }
 
             Item? roughGem = api.World.GetItem(new AssetLocation("game", $"gem-{code}-rough"));
@@ -187,21 +178,52 @@ internal static class CanJewelryGemCompatibility
             if (matches is not ICollection collection || collection.Count != 3) directCutFailures++;
         }
 
+        int socketFailures = VerifyGemSocketing(api);
         int socketBalanceFailures = VerifySocketBalance(api, config);
 
-        if (missingItems > 0 || missingConfigEntries > 0 || directCutFailures > 0 || socketBalanceFailures > 0)
+        if (missingItems > 0 || missingConfigEntries > 0 || directCutFailures > 0 || socketFailures > 0 || socketBalanceFailures > 0)
         {
             api.Logger.Warning(
-                "[AdvancedGeology] CAN Jewelry compat verification failed: {0} missing processed items, {1} missing config entries, {2} direct-cut sample failures, {3} socket-balance failures",
+                "[AdvancedGeology] CAN Jewelry compat verification failed: {0} missing processed items, {1} missing config entries, {2} direct-cut sample failures, {3} gem-socketing failures, {4} socket-balance failures",
                 missingItems,
                 missingConfigEntries,
                 directCutFailures,
+                socketFailures,
                 socketBalanceFailures);
             return;
         }
 
         api.Logger.Notification(
-            "[AdvancedGeology] CAN Jewelry compat verification passed: 336 AG processed items, 147 injected config entries, 4 direct-cut samples with 3 shapes each, gold-first socket balance");
+            "[AdvancedGeology] CAN Jewelry compat verification passed: 336 AG processed items, AG gem config entries, 4 direct-cut samples with 3 shapes each, AG gems socket into their buff's items, gold-first socket balance");
+    }
+
+    /// <summary>
+    /// Asks CAN's own eligibility check whether AG gems fit the items their buff targets: a melee gem in a sword
+    /// and a mining gem in a pickaxe. These groups ship with CAN itself, so the probe holds without Adornments.
+    /// </summary>
+    private static int VerifyGemSocketing(ICoreServerAPI api)
+    {
+        Type? encrustableType = AccessTools.TypeByName(CanEncrustableTypeName);
+        MethodInfo? canContain = encrustableType == null
+            ? null
+            : AccessTools.Method(encrustableType, "canItemContainThisGem", [typeof(string), typeof(ItemStack)]);
+        if (canContain == null) return 1;
+
+        int failures = 0;
+        foreach ((string gem, string target) in new[]
+                 {
+                     ("spessartine", "game:blade-falx-iron"),
+                     ("chrysoberyl", "game:pickaxe-iron")
+                 })
+        {
+            Item? item = api.World.GetItem(new AssetLocation(target));
+            if (item == null || !Gems.ContainsKey(gem) || canContain.Invoke(null, [gem, new ItemStack(item)]) is not true)
+            {
+                api.Logger.Warning("[AdvancedGeology] CAN Jewelry compat: {0} cannot be socketed into {1}", gem, target);
+                failures++;
+            }
+        }
+        return failures;
     }
 
     private static int VerifySocketBalance(ICoreServerAPI api, object? config)
@@ -458,6 +480,11 @@ internal static class CanJewelryGemCompatibility
         return systemType == null ? null : AccessTools.Field(systemType, "config")?.GetValue(null);
     }
 
+    /// <summary>
+    /// Gives every AG-only gem the buff table entries and socket eligibility CAN looks up by gem code. On every
+    /// load its eligibility is overwritten with the union of what the CAN base gems sharing its buff may socket
+    /// into, so jewelry-only sets saved by earlier AG versions are corrected and server config edits carry through.
+    /// </summary>
     private static int InjectMissingConfig(object config)
     {
         IDictionary? possibleBuffs = FieldDictionary(config, "PossibleGemBuffs");
@@ -480,13 +507,44 @@ internal static class CanJewelryGemCompatibility
                 gemToBuff.Add(code, definition.Buff);
                 injected++;
             }
-            if (!eligibleItems.Contains(code))
+            // Always recompute: configs saved by earlier AG versions hold a jewelry-only set for these gems.
+            HashSet<string> eligibility = EligibilityFor(definition.Buff, gemToBuff, eligibleItems);
+            if (eligibleItems[code] is not ICollection<string> current || !current.ToHashSet().SetEquals(eligibility))
             {
-                eligibleItems.Add(code, new HashSet<string>(JewelryEligibility, StringComparer.Ordinal));
+                eligibleItems[code] = eligibility;
                 injected++;
             }
         }
         return injected;
+    }
+
+    /// <summary>The union of item fragments every CAN base gem with this buff may socket into.</summary>
+    private static HashSet<string> EligibilityFor(string buff, IDictionary gemToBuff, IDictionary eligibleItems)
+    {
+        HashSet<string> fragments = new(StringComparer.Ordinal);
+        foreach (DictionaryEntry entry in gemToBuff)
+        {
+            if (entry.Value as string != buff || entry.Key is not string donor) continue;
+            // AG-only gems are not donors; ruby and citrine are CAN's own gems and keep CAN's eligibility.
+            if (Gems.TryGetValue(donor, out GemDefinition? own) && !own.ProvidedByCanBase) continue;
+            if (eligibleItems[donor] is IEnumerable<string> donorItems) fragments.UnionWith(donorItems);
+        }
+        if (fragments.Count == 0) fragments.UnionWith(ExpandGroup(JewelryGroup));
+        if (fragments.Count == 0 && EmptyEligibilityWarnings.Add(buff))
+            coreApi?.Logger.Warning(
+                "[AdvancedGeology] CAN Jewelry compat: no CAN gem or jewelry group covers buff {0}; AG gems with it cannot be socketed",
+                buff);
+        return fragments;
+    }
+
+    /// <summary>Members of a CAN item group such as <c>$jewelry</c>, read from CAN's active group table.</summary>
+    private static IEnumerable<string> ExpandGroup(string group)
+    {
+        Type? configType = AccessTools.TypeByName(CanConfigTypeName);
+        var groups = configType == null
+            ? null
+            : AccessTools.Property(configType, "ActiveItemGroups")?.GetValue(null) as IDictionary;
+        return groups?[group.TrimStart('$')] as IEnumerable<string> ?? [];
     }
 
     private static IDictionary? FieldDictionary(object instance, string fieldName) =>
